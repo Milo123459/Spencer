@@ -1,26 +1,29 @@
 {
-  "name": "Spencer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "ts-node-dev --respawn --transpile-only --poll src/test.ts",
-    "lint": "prettier --write .",
-    "build": "tsc"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^14.11.8",
-    "prettier": "^2.1.2",
-    "ts-node": "^9.0.0",
-    "ts-node-dev": "^1.0.0-pre.63",
-    "typescript": "^4.0.3"
-  },
-  "dependencies": {
-    "@types/glob": "^7.1.3",
-    "discord.js": "^12.3.1",
-    "glob": "^7.1.6"
-  }
+	"name": "Spencer",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "ts-node-dev --respawn --transpile-only --poll src/test.ts",
+		"lint": "prettier --write .",
+		"build": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mongoose": "^5.7.36",
+		"@types/node": "^14.11.8",
+		"prettier": "^2.1.2",
+		"ts-node": "^9.0.0",
+		"ts-node-dev": "^1.0.0-pre.63",
+		"typescript": "^4.0.3"
+	},
+	"dependencies": {
+		"consola": "^2.15.0",
+		"discord.js": "^12.3.1",
+		"glob": "^7.1.6",
+		"mongoose": "^5.10.9"
+	}
 }
