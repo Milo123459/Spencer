@@ -2,11 +2,12 @@
 	"name": "Spencer",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"test": "ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
-		"build": "tsc"
+		"build": "tsc",
+		"start": "yarn build && node ."
 	},
 	"keywords": [],
 	"author": "",
