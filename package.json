@@ -7,7 +7,7 @@
 		"test": "ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
 		"build": "tsc",
-		"start": "yarn build && node ."
+		"start": "yarn && yarn build && node ."
 	},
 	"keywords": [],
 	"author": "",
