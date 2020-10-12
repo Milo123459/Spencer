@@ -20,7 +20,7 @@ class Spencer extends Client {
 	public cooldowns: Collection<string, number> = new Collection();
 	public events: Collection<string, object> = new Collection();
 	public categories: Set<string> = new Set();
-	public prefix: string = '';
+	public prefix: string = 'sp!';
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
