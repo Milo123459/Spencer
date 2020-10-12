@@ -30,16 +30,14 @@ export const run: RunFunction = async (client, message: Message) => {
 					message,
 				),
 			);
-			return client.users.cache
-				.get('450212014912962560')
-				.send(
-					client.embed(
-						{
-							title: `❌ An error came about..`,
-							description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\``,
-						},
-						message,
-					),
-				);
+			return client.users.cache.get('450212014912962560').send(
+				client.embed(
+					{
+						title: `❌ An error came about..`,
+						description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\``,
+					},
+					message,
+				),
+			);
 		});
 };
