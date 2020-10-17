@@ -18,7 +18,7 @@ export const run: RunFunction = async (client, message: Message) => {
 	const command: Anything =
 		client.commands.get(cmd.toLowerCase()) ||
 		client.commands.get(client.aliases.get(cmd.toLowerCase()));
-	if (command)
+	if (command) {
 		if (command.userPermissions) {
 			if (!message.member.permissions.has(command.userPermissions))
 				return message.channel.send(
@@ -42,25 +42,32 @@ export const run: RunFunction = async (client, message: Message) => {
 					),
 				);
 		}
-	return command.run(client, message, args).catch((e: Error) => {
-		client.logger.error(e);
-		message.channel.send(
-			client.embed(
-				{
-					title: `❌ An error came about..`,
-					description: `\`\`\`\n${e.message}\`\`\``,
-				},
-				message,
-			),
-		);
-		return client.users.cache.get('450212014912962560').send(
-			client.embed(
-				{
-					title: `❌ An error came about..`,
-					description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\``,
-				},
-				message,
-			),
-		);
-	});
+		if (
+			command.ownerOnly &&
+			command.ownerOnly == true &&
+			!client.owners.includes(message.author.id)
+		)
+			return;
+		return command.run(client, message, args).catch((e: Error) => {
+			client.logger.error(e);
+			message.channel.send(
+				client.embed(
+					{
+						title: `❌ An error came about..`,
+						description: `\`\`\`\n${e.message}\`\`\``,
+					},
+					message,
+				),
+			);
+			return client.users.cache.get('450212014912962560').send(
+				client.embed(
+					{
+						title: `❌ An error came about..`,
+						description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\``,
+					},
+					message,
+				),
+			);
+		});
+	}
 };

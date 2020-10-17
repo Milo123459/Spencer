@@ -25,6 +25,7 @@ class Spencer extends Client {
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
 	public prefix: string = 'sp!';
+	public owners: Array<string> = ['450212014912962560'];
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
