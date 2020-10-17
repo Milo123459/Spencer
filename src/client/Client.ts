@@ -7,11 +7,13 @@ import {
 	MessageEmbed,
 	MessageEmbedOptions,
 } from 'discord.js';
+import { DatabaseManager } from '../db/Database';
 import glob from 'glob';
 import { promisify } from 'util';
-import mongoose from 'mongoose';
+import mongoose, { model, SchemaDefinition } from 'mongoose';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
+import { Schema } from '../interfaces/Schema';
 const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
@@ -19,7 +21,9 @@ class Spencer extends Client {
 	public aliases: Collection<string, string> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();
 	public events: Collection<string, object> = new Collection();
+	public schemas: Collection<string, object> = new Collection();
 	public categories: Set<string> = new Set();
+	public db: DatabaseManager;
 	public prefix: string = 'sp!';
 	public constructor() {
 		super({
@@ -40,6 +44,9 @@ class Spencer extends Client {
 		const eventFiles: string[] = await globPromise(
 			`${__dirname}/../events/**/*{.js,.ts}`,
 		);
+		const schemaFiles: string[] = await globPromise(
+			`${__dirname}/../models/**/*{.js,.ts}`,
+		);
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
 			this.commands.set(cmd.name, cmd);
@@ -53,6 +60,11 @@ class Spencer extends Client {
 			this.events.set(ev.name, ev);
 			(ev.emitter || this).on(ev.name, ev.run.bind(null, this));
 		});
+		schemaFiles.map(async (schemaFile: string) => {
+			const sch = (await import(schemaFile)) as Schema;
+			this.schemas.set(sch.name, sch);
+		});
+		this.db = new DatabaseManager(this);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({

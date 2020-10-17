@@ -11,4 +11,5 @@ export interface Command {
 	description?: string;
 	cooldown?: string | number;
 	category: string;
+	userPermissions?: string | string[];
 }
