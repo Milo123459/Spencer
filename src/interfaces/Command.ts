@@ -12,4 +12,5 @@ export interface Command {
 	cooldown?: string | number;
 	category: string;
 	userPermissions?: string | string[];
+	ownerOnly?: boolean;
 }
