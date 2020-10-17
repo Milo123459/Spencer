@@ -8,7 +8,7 @@
 		"lint": "prettier --write .",
 		"build": "tsc",
 		"start": "yarn && yarn build && node .",
-		"update": "git pull && pm2 reload Spencer --update-env"
+		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env"
 	},
 	"keywords": [],
 	"author": "",
