@@ -14,11 +14,16 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
+		"bufferutil": "^4.0.1",
 		"consola": "^2.15.0",
 		"discord.js": "^12.4.1",
+		"erlpack": "discord/erlpack",
 		"glob": "^7.1.6",
 		"mongoose": "^5.10.9",
-		"tslib": "^2.0.3"
+		"sodium": "^3.0.2",
+		"tslib": "^2.0.3",
+		"utf-8-validate": "^5.0.2",
+		"zlib-sync": "^0.1.7"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^11.0.0",
