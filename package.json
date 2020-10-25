@@ -62,7 +62,8 @@
 					"fix",
 					"revert",
 					"style",
-					"test"
+					"test",
+					"deps"
 				]
 			]
 		}
