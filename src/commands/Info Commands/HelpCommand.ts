@@ -1,8 +1,9 @@
 import { Command, RunFunction } from '../../interfaces/Command';
+import { EmbedFieldData } from "discord.js";
 import ms from 'ms';
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
-	const fields = [...client.categories].map((category: string) => {
+	const fields: Array<EmbedFieldData> = [...client.categories].map((category: string) => {
 		return {
 			name: category[0].toUpperCase() + category.slice(1),
 			value: client.commands.map((cmd: Command) => `\`${cmd.name}\``).join(', '),
