@@ -1,5 +1,3 @@
-// RepeatUntil is a utility to repeat a function until a condition is met!
-
 interface RepeatOptions {
 	(): void;
 }
