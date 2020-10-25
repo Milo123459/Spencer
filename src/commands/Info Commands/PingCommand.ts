@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 export const name: string = 'ping';
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message) => {
 	const msg = await message.channel.send(
 		client.embed({ description: 'Ponging..' }, message),
 	);
