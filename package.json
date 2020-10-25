@@ -17,7 +17,8 @@
 		"consola": "^2.15.0",
 		"discord.js": "^12.4.1",
 		"glob": "^7.1.6",
-		"mongoose": "^5.10.9"
+		"mongoose": "^5.10.9",
+		"tslib": "^2.0.3"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
