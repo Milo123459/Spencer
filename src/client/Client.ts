@@ -10,7 +10,7 @@ import {
 import { DatabaseManager } from '../db/Database';
 import glob from 'glob';
 import { promisify } from 'util';
-import mongoose, { model, SchemaDefinition } from 'mongoose';
+import mongoose from 'mongoose';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
