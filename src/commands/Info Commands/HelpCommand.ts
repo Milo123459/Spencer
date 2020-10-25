@@ -1,15 +1,17 @@
 import { Command, RunFunction } from '../../interfaces/Command';
-import { EmbedFieldData } from "discord.js";
+import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import ms from 'ms';
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
-	const fields: Array<EmbedFieldData> = [...client.categories].map((category: string) => {
-		return {
-			name: category[0].toUpperCase() + category.slice(1),
-			value: client.commands.map((cmd: Command) => `\`${cmd.name}\``).join(', '),
-		};
-	});
-	const commandEmbed = client.embed({ fields }, message);
+	const fields: Array<EmbedFieldData> = [...client.categories].map(
+		(category: string) => {
+			return {
+				name: category[0].toUpperCase() + category.slice(1),
+				value: client.commands.map((cmd: Command) => `\`${cmd.name}\``).join(', '),
+			};
+		},
+	);
+	const commandEmbed: MessageEmbed = client.embed({ fields }, message);
 	if (!args[0]) return message.channel.send(commandEmbed);
 	if (
 		args[0] &&
