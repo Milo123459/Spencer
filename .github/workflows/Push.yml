@@ -18,12 +18,13 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const child_process = require('child_process');
-            const res = child_process.execSync('tokei').toString();
+            const tokei = child_process.execSync('tokei').toString();
+            const tokeiFiles = child_process.execSync('tokei --files').toString();
             ;(async() => {
               const d = await github.request('POST /repos/:owner/:repo/commits/:sha/comments', {
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 sha: context.sha,
-                body: `\`\`\`\n${res}\`\`\``
+                body: `**Tokei**: \`\`\`\n${tokei}\`\`\`**Tokei --files**: \`\`\`\n${tokeiFiles}\`\`\``
               })
             })();
