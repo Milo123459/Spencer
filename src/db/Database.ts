@@ -30,10 +30,11 @@ class DatabaseModule {
 		return Data;
 	}
 	public async delete(data: object) {
-		const Data = await this.findOne(data);
+		const Data = await this.findOne(data); // get data
 		if (!Data) return false;
-		else await Data.deleteOne();
-		return true;
+		// if no data, return false
+		else await Data.deleteOne(); // if exists delete
+		return true; // return true because the data exists & was deleted
 	}
 }
 class DatabaseManager {
