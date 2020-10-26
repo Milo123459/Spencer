@@ -7,7 +7,9 @@ interface Anything {
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
 	const GuildConfigSchema = await client.db.load(`guildconfig`);
-	const GuildConfig = await GuildConfigSchema.findOne({ Guild: message.guild.id });
+	const GuildConfig = await GuildConfigSchema.findOne({
+		Guild: message.guild.id,
+	});
 	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category: string) => {
@@ -18,11 +20,11 @@ export const run: RunFunction = async (client, message, args) => {
 					.map((cmd: Command) => `\`${cmd.name}\``)
 					.join(', '),
 			};
-		},
+		}
 	);
 	const commandEmbed: MessageEmbed = client.embed(
 		{ fields, title: `Prefix: \`${Prefix}\`` },
-		message,
+		message
 	);
 	if (!args[0]) return message.channel.send(commandEmbed);
 	if (
@@ -47,13 +49,13 @@ export const run: RunFunction = async (client, message, args) => {
 									: typeof data[1] == 'number'
 									? `\`${ms(data[1], { long: true })}\``
 									: `\`${data[1]}\``
-							}`,
+							}`
 					)
 					.join('\n'),
 				title: `Prefix: \`${Prefix}\``,
 			},
-			message,
-		),
+			message
+		)
 	);
 };
 export const category: string = 'info';

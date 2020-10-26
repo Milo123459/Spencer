@@ -7,7 +7,8 @@ class UtilsManager {
 		this.client = client;
 	}
 	public ResolveMember(message: Message, arg: string): GuildMember | boolean {
-		if (message.mentions.members.first()) return message.mentions.members.first();
+		if (message.mentions.members.first())
+			return message.mentions.members.first();
 		if (!isNaN(parseInt(arg))) return message.guild.members.cache.get(arg);
 		return false;
 	}

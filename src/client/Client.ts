@@ -42,13 +42,13 @@ class Spencer extends Client {
 			.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 			.catch((e) => this.logger.error(e));
 		const commandFiles: string[] = await globPromise(
-			`${__dirname}/../commands/**/*{.js,.ts}`,
+			`${__dirname}/../commands/**/*{.js,.ts}`
 		);
 		const eventFiles: string[] = await globPromise(
-			`${__dirname}/../events/**/*{.js,.ts}`,
+			`${__dirname}/../events/**/*{.js,.ts}`
 		);
 		const schemaFiles: string[] = await globPromise(
-			`${__dirname}/../models/**/*{.js,.ts}`,
+			`${__dirname}/../models/**/*{.js,.ts}`
 		);
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
@@ -76,7 +76,10 @@ class Spencer extends Client {
 			color: 'RANDOM',
 			footer: {
 				text: `${message.author.tag} | 👦 Spencer`,
-				iconURL: message.author.displayAvatarURL({ dynamic: true, format: 'png' }),
+				iconURL: message.author.displayAvatarURL({
+					dynamic: true,
+					format: 'png',
+				}),
 			},
 		});
 	}

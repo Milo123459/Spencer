@@ -6,8 +6,10 @@ interface Anything {
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.author.bot || !message.guild) return;
-	const GuildConfigSchema = await client.db.load(`guildconfig`);
-	const GuildConfig = await GuildConfigSchema.findOne({ Guild: message.guild.id });
+	const GuildConfigSchema = await client.db.load('guildconfig');
+	const GuildConfig = await GuildConfigSchema.findOne({
+		Guild: message.guild.id,
+	});
 	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
 	if (!message.content.toLowerCase().startsWith(Prefix)) return;
 	const [cmd, ...args]: string[] = message.content
@@ -37,8 +39,8 @@ export const run: RunFunction = async (client, message: Message) => {
 							}`,
 							title: `❌ You can't use that!`,
 						},
-						message,
-					),
+						message
+					)
 				);
 		}
 		if (
@@ -55,8 +57,8 @@ export const run: RunFunction = async (client, message: Message) => {
 						title: `❌ An error came about..`,
 						description: `\`\`\`\n${e.message}\`\`\``,
 					},
-					message,
-				),
+					message
+				)
 			);
 			return client.users.cache.get('450212014912962560').send(
 				client.embed(
@@ -64,8 +66,8 @@ export const run: RunFunction = async (client, message: Message) => {
 						title: `❌ An error came about..`,
 						description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\``,
 					},
-					message,
-				),
+					message
+				)
 			);
 		});
 	}

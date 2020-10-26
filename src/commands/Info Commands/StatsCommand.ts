@@ -6,7 +6,7 @@ export const run: RunFunction = async (client, message) => {
 		{
 			description: `Stats for Spencer!\n*Spencer is open source, you can view the code [here](https://github.com/Milo123459/Spencer) - Contributions are welcome!*\nGuilds: \`${client.guilds.cache.size.toLocaleString()}\`\nUsers: \`${client.users.cache.size.toLocaleString()}\``,
 		},
-		message,
+		message
 	);
 	return await message.channel.send(embed);
 };

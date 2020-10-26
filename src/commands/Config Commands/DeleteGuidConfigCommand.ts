@@ -10,8 +10,8 @@ export const run: RunFunction = async (client, message) => {
 					? 'I deleted the config.'
 					: 'I did nothing as there was nothing to delete.',
 			},
-			message,
-		),
+			message
+		)
 	);
 };
 export const category: string = 'config';

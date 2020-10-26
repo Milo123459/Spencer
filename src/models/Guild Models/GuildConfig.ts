@@ -7,5 +7,5 @@ export const data = model(
 		Prefix: String,
 		WelcomeChannel: String,
 		LeaveChannel: String,
-	}),
+	})
 );
