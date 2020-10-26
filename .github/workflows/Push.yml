@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Swatinem/rust-cache@v1
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -14,12 +13,17 @@ jobs:
         with:
           command: install
           args: --git https://github.com/XAMPPRocky/tokei.git
-      - uses: Swatinem/rust-cache@v1
       - uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(context, context.sha);
             const child_process = require('child_process');
             const res = child_process.execSync('tokei').toString();
-            github.repos.createCommitComment({ owner: context.repo.owner, repo: context.repo.repo, sha: context.sha, body: `\`\`\`\n${res}\`\`\`` })
+            ;(async() => {
+              const d = await github.request('POST /repos/:owner/:repo/commits/:sha/comments', {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                sha: context.sha,
+                body: `\`\`\`\n${res}\`\`\``
+              })
+            })();
