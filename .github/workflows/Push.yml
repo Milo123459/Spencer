@@ -1,4 +1,6 @@
 name: Run Tokei
+on: 
+  push
 jobs:
   RunTokei:
     runs-on: ubuntu-latest
