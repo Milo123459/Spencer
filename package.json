@@ -67,8 +67,7 @@
 					"style",
 					"test",
 					"deps",
-					"docs",
-					"ci"
+					"docs"
 				]
 			]
 		}
