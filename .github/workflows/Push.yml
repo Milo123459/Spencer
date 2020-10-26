@@ -18,6 +18,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            console.log(context, context.sha);
             const child_process = require('child_process');
             const res = child_process.execSync('tokei').toString();
             github.repos.createCommitComment({ owner: context.repo.owner, repo: context.repo.repo, sha: context.sha, body: `\`\`\`\n${res}\`\`\`` })
