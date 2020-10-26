@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/Milo123459/Spencer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Milo123459/Spencer?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/Milo123459/Spencer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Milo123459/Spencer?targetFile=package.json) [![](https://tokei.rs/b1/github/Milo123459/Spencer?category=lines)](https://github.com/Milo123459/Spencer) [![](https://tokei.rs/b1/github/Milo123459/Spencer?category=code)](https://github.com/Milo123459/Spencer) [![](https://tokei.rs/b1/github/Milo123459/Spencer?category=comments)](https://github.com/Milo123459/Spencer) [![](https://tokei.rs/b1/github/Milo123459/Spencer?category=blanks)](https://github.com/Milo123459/Spencer) [![](https://tokei.rs/b1/github/Milo123459/Spencer?category=files)](https://github.com/Milo123459/Spencer)
 
 # Spencer
 
