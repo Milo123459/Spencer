@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/Milo123459/Spencer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Milo123459/Spencer?targetFile=package.json)
+
 # Spencer
 
 Spencer is my bot, not yours. Made by Salvage_Dev
