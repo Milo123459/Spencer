@@ -11,7 +11,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: install
-          args: --git https://github.com/XAMPPRocky/tokei.git
+          args: tokei
       - uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
