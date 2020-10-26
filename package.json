@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
-		"build": "tsc",
+		"build": "rm -rf dist && tsc",
 		"start": "yarn && yarn build && node .",
 		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer"
 	},
