@@ -55,7 +55,7 @@ class DatabaseModule {
 		const data = await this.findOne(search);
 		if (!data) {
 			const newData: object = { ...search };
-			newData[key] = value;
+			newData[key] = -value;
 			return await this.create(newData);
 		} else {
 			(data as Anything)[key] -= value;

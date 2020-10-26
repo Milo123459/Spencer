@@ -47,18 +47,21 @@ export const run: RunFunction = async (client, message: Message) => {
 			!client.owners.includes(message.author.id)
 		)
 			return;
-		if (client.cooldowns.has(`${message.author.id}${command.name}`))
+		if (client.cooldowns.has(`${message.author.id}${command.name}`)) {
+			const cooldownTime: string = client.utils.formatMS(
+				client.cooldowns.get(`${message.author.id}${command.name}`) - Date.now()
+			);
 			return message.channel.send(
 				client.embed(
 					{
-						description: `You can use this command again in \`${client.utils.formatMS(
-							client.cooldowns.get(`${message.author.id}${command.name}`) -
-								Date.now()
-						)}\``,
+						description: `You can use this command again in \`${
+							cooldownTime.split('').length == 0 ? '1 second' : cooldownTime
+						}\``,
 					},
 					message
 				)
 			);
+		}
 		command.run(client, message, args).catch((e: Error) => {
 			client.logger.error(e);
 			message.channel.send(
