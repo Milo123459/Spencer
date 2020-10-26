@@ -15,6 +15,7 @@ import mongoose from 'mongoose';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
+import { Config } from '../interfaces/Config';
 const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
@@ -28,6 +29,7 @@ class Spencer extends Client {
 	public utils: UtilsManager;
 	public prefix: string = 'sp!';
 	public owners: Array<string> = ['450212014912962560'];
+	public config: Config;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -36,10 +38,14 @@ class Spencer extends Client {
 			messageSweepInterval: 180,
 		});
 	}
-	public async start(token: string, mongoURI: string): Promise<void> {
-		this.login(token).catch((e) => this.logger.error(e));
+	public async start(config: Config): Promise<void> {
+		this.config = config;
+		this.login(config.token).catch((e) => this.logger.error(e));
 		mongoose
-			.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+			.connect(config.mongoURI, {
+				useNewUrlParser: true,
+				useUnifiedTopology: true,
+			})
 			.catch((e) => this.logger.error(e));
 		const commandFiles: string[] = await globPromise(
 			`${__dirname}/../commands/**/*{.js,.ts}`
