@@ -10,8 +10,6 @@
 		"start": "yarn && yarn build && node .",
 		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer"
 	},
-	"keywords": [],
-	"author": "",
 	"license": "MIT",
 	"dependencies": {
 		"bufferutil": "^4.0.1",
