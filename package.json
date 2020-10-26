@@ -1,7 +1,7 @@
 {
 	"name": "spencer",
 	"version": "1.0.0",
-	"description": "Spencer is a discord bot.",
+	"description": "Spencer is a discord bot developed by Salvage_Dev.",
 	"main": "dist/src/index.js",
 	"scripts": {
 		"test": "ts-node-dev --respawn --transpile-only --poll src/index.ts",
