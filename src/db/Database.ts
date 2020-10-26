@@ -1,3 +1,5 @@
+import { ReactionUserManager } from 'discord.js';
+import { Document } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
 class DatabaseModule {
@@ -28,6 +30,12 @@ class DatabaseModule {
 	public async find(data: object) {
 		const Data = await this.schema.data.find(data);
 		return Data;
+	}
+	public async delete(data: object) {
+		const Data = await this.findOne(data);
+		if (!Data) return false;
+		else await Data.deleteOne();
+		return true;
 	}
 }
 class DatabaseManager {
