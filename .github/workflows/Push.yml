@@ -14,7 +14,7 @@ jobs:
           path: |
             ~/cache
             ~/.cargo
-        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
       - uses: actions-rs/cargo@v1
         with:
           command: install
