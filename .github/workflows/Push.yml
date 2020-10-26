@@ -27,7 +27,7 @@ jobs:
                 sha: context.sha,
                 body: `**Tokei**:\n \`\`\`\n${tokei}\`\`\``
               });
-              await fs.writeFile(path.join(process.cwd(), '.tokei.md'), `**Tokei**:\n \`\`\`\n${tokei}\`\`\``, console.log);
+              await fs.writeFile(path.join(process.cwd(), '.tokei.md'), `**${context.payload.head_commit.message}** by **${context.payload.pusher.name}** (\`${context.payload.head_commit.id}\`)\n **Tokei**:\n \`\`\`\n${tokei}\`\`\``, console.log);
             })();
       - uses: EndBug/add-and-commit@v5
         with:
