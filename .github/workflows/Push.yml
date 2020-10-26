@@ -25,6 +25,6 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 sha: context.sha,
-                body: `**Tokei**: \`\`\`\n${tokei}\`\`\`**Tokei --files**: \`\`\`\n${tokeiFiles}\`\`\``
+                body: `**Tokei**:\n \`\`\`\n${tokei}\`\`\`**Tokei --files**:\n \`\`\`\n${tokeiFiles}\`\`\``
               })
             })();
