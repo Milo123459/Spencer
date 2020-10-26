@@ -12,5 +12,5 @@ Has a cool little DB system, allowing you to load schemas remotely.
 * Clone your forked repo
 * Make a branch by running `git checkout -b my-feature-name-here`
 * Add your code
-* Add and commit
-* Go to [this](https://github.com/Milo123459/Spencer) and create a pull request
+* Add and commit your code
+* Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
