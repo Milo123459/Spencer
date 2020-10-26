@@ -1,5 +1,3 @@
-import { ReactionUserManager } from 'discord.js';
-import { Document } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
 class DatabaseModule {

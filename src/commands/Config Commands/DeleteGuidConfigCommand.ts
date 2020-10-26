@@ -1,7 +1,4 @@
 import { RunFunction } from '../../interfaces/Command';
-interface Anything {
-	[key: string]: any;
-}
 export const name: string = 'deleteguildconfig';
 export const run: RunFunction = async (client, message) => {
 	const GuildConfigSchema = await client.db.load('guildconfig');
