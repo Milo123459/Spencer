@@ -17,8 +17,6 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const child_process = require('child_process');
-            const fs = require('fs');
-            const path = require('path');
             const tokei = child_process.execSync('tokei').toString();
             ;(async() => {
               const d = await github.request('POST /repos/:owner/:repo/commits/:sha/comments', {
@@ -27,11 +25,4 @@ jobs:
                 sha: context.sha,
                 body: `**Tokei**:\n \`\`\`\n${tokei}\`\`\``
               });
-              await fs.writeFile(path.join(process.cwd(), '.tokei.md'), `**${context.payload.head_commit.message}** by **${context.payload.pusher.name}** (\`${context.payload.head_commit.id}\`)\n **Tokei**:\n \`\`\`\n${tokei}\`\`\``, console.log);
             })();
-      - uses: EndBug/add-and-commit@v5
-        with:
-          message: "Update .tokei.md"
-          add: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
