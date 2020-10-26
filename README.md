@@ -6,7 +6,7 @@
 
 # Spencer
 
-Spencer is my bot, not yours. Made by Salvage_Dev
+Spencer is my bot, not yours. Made by **Salvage_Dev**
 
 # Some technical things
 
@@ -20,3 +20,4 @@ Has a cool little DB system, allowing you to load schemas remotely.
 - Add your code
 - Add and commit your code
 - Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
+- Get your PR reviewed
