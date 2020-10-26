@@ -1,17 +1,29 @@
 import { Command, RunFunction } from '../../interfaces/Command';
 import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import ms from 'ms';
+interface Anything {
+	[key: string]: any;
+}
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
+	const GuildConfigSchema = await client.db.load(`guildconfig`);
+	const GuildConfig = await GuildConfigSchema.findOne({ Guild: message.guild.id });
+	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
 	const fields: Array<EmbedFieldData> = [...client.categories].map(
 		(category: string) => {
 			return {
 				name: category[0].toUpperCase() + category.slice(1),
-				value: client.commands.map((cmd: Command) => `\`${cmd.name}\``).join(', '),
+				value: client.commands
+					.filter((cmd: Command) => cmd.category == category)
+					.map((cmd: Command) => `\`${cmd.name}\``)
+					.join(', '),
 			};
 		},
 	);
-	const commandEmbed: MessageEmbed = client.embed({ fields }, message);
+	const commandEmbed: MessageEmbed = client.embed(
+		{ fields, title: `Prefix: \`${Prefix}\`` },
+		message,
+	);
 	if (!args[0]) return message.channel.send(commandEmbed);
 	if (
 		args[0] &&
@@ -38,6 +50,7 @@ export const run: RunFunction = async (client, message, args) => {
 							}`,
 					)
 					.join('\n'),
+				title: `Prefix: \`${Prefix}\``,
 			},
 			message,
 		),

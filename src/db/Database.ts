@@ -21,6 +21,14 @@ class DatabaseModule {
 		await NewModel.save();
 		return NewModel;
 	}
+	public async findOne(data: object) {
+		const Data = await this.schema.data.findOne(data);
+		return Data;
+	}
+	public async find(data: object) {
+		const Data = await this.schema.data.find(data);
+		return Data;
+	}
 }
 class DatabaseManager {
 	private client: Spencer;

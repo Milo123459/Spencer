@@ -8,6 +8,7 @@ import {
 	MessageEmbedOptions,
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
+import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
@@ -24,6 +25,7 @@ class Spencer extends Client {
 	public schemas: Collection<string, object> = new Collection();
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
+	public utils: UtilsManager;
 	public prefix: string = 'sp!';
 	public owners: Array<string> = ['450212014912962560'];
 	public constructor() {
@@ -66,6 +68,7 @@ class Spencer extends Client {
 			this.schemas.set(sch.name, sch);
 		});
 		this.db = new DatabaseManager(this);
+		this.utils = new UtilsManager(this);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({

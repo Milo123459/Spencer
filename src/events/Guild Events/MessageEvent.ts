@@ -5,14 +5,13 @@ interface Anything {
 }
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
-	if (
-		message.author.bot ||
-		!message.guild ||
-		!message.content.toLowerCase().startsWith(client.prefix)
-	)
-		return;
+	if (message.author.bot || !message.guild) return;
+	const GuildConfigSchema = await client.db.load(`guildconfig`);
+	const GuildConfig = await GuildConfigSchema.findOne({ Guild: message.guild.id });
+	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
+	if (!message.content.toLowerCase().startsWith(Prefix)) return;
 	const [cmd, ...args]: string[] = message.content
-		.slice(client.prefix.length)
+		.slice(Prefix.length)
 		.trim()
 		.split(/ +/g);
 	const command: Anything =
