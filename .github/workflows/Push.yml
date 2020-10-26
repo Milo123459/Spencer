@@ -22,12 +22,6 @@ jobs:
         with:
           command: install
           args: tokei
-      - name: Run LS
-        run: ls ~/.cargo
-      - name: Run LS1
-        run: ls ~/.cargo/registry
-      - name: Run LS2
-        run: ls ~/.cargo/git
       - uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
