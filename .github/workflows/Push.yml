@@ -19,12 +19,11 @@ jobs:
           script: |
             const child_process = require('child_process');
             const tokei = child_process.execSync('tokei').toString();
-            const tokeiFiles = child_process.execSync('tokei --files').toString();
             ;(async() => {
               const d = await github.request('POST /repos/:owner/:repo/commits/:sha/comments', {
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 sha: context.sha,
-                body: `**Tokei**:\n \`\`\`\n${tokei}\`\`\`\n**Tokei --files**:\n \`\`\`\n${tokeiFiles}\`\`\``
+                body: `**Tokei**:\n \`\`\`\n${tokei}\`\`\``
               })
             })();
