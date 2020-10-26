@@ -1,9 +1,7 @@
 import { Command, RunFunction } from '../../interfaces/Command';
 import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import ms from 'ms';
-interface Anything {
-	[key: string]: any;
-}
+import { Anything } from '../../interfaces/Anything';
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
 	const GuildConfigSchema = await client.db.load(`guildconfig`);

@@ -1,7 +1,5 @@
 import { RunFunction } from '../../interfaces/Command';
-interface Anything {
-	[key: string]: any;
-}
+import { Anything } from '../../interfaces/Anything';
 export const name: string = 'prefix';
 export const run: RunFunction = async (client, message, args) => {
 	const GuildConfigSchema = await client.db.load(`guildconfig`);

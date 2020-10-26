@@ -9,7 +9,7 @@ export interface Command {
 	run: RunFunction;
 	aliases?: string[];
 	description?: string;
-	cooldown?: string | number;
+	cooldown?: number;
 	category: string;
 	userPermissions?: string | string[];
 	ownerOnly?: boolean;

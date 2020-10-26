@@ -1,8 +1,6 @@
 import { Message } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
-interface Anything {
-	[key: string]: any;
-}
+import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.author.bot || !message.guild) return;
@@ -49,7 +47,19 @@ export const run: RunFunction = async (client, message: Message) => {
 			!client.owners.includes(message.author.id)
 		)
 			return;
-		return command.run(client, message, args).catch((e: Error) => {
+		if (client.cooldowns.has(`${message.author.id}${command.name}`))
+			return message.channel.send(
+				client.embed(
+					{
+						description: `You can use this command again in \`${client.utils.formatMS(
+							client.cooldowns.get(`${message.author.id}${command.name}`) -
+								Date.now()
+						)}\``,
+					},
+					message
+				)
+			);
+		command.run(client, message, args).catch((e: Error) => {
 			client.logger.error(e);
 			message.channel.send(
 				client.embed(
@@ -70,5 +80,14 @@ export const run: RunFunction = async (client, message: Message) => {
 				)
 			);
 		});
+		if (command?.cooldown) {
+			client.cooldowns.set(
+				`${message.author.id}${command.name}`,
+				Date.now() + command?.cooldown
+			);
+			setTimeout(() => {
+				client.cooldowns.delete(`${message.author.id}${command.name}`);
+			}, command?.cooldown);
+		}
 	}
 };

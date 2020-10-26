@@ -1,5 +1,6 @@
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
+import { Anything } from '../interfaces/Anything';
 class DatabaseModule {
 	private schema: Schema;
 	public constructor(schema: Schema) {
@@ -35,6 +36,32 @@ class DatabaseModule {
 		// if no data, return false
 		else await Data.deleteOne(); // if exists delete
 		return true; // return true because the data exists & was deleted
+	}
+	public async increment(search: object, key: string, value: number) {
+		// increment a number by whatever
+		const data = await this.findOne(search);
+		if (!data) {
+			const newData: object = { ...search };
+			newData[key] = value;
+			return await this.create(newData);
+		} else {
+			(data as Anything)[key] += value;
+			await data.save();
+			return data;
+		}
+	}
+	public async decrement(search: object, key: string, value: number) {
+		// decrement a number by whatever
+		const data = await this.findOne(search);
+		if (!data) {
+			const newData: object = { ...search };
+			newData[key] = value;
+			return await this.create(newData);
+		} else {
+			(data as Anything)[key] -= value;
+			await data.save();
+			return data;
+		}
 	}
 }
 class DatabaseManager {

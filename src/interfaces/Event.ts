@@ -1,7 +1,7 @@
 import { Spencer } from '../client/Client';
 import { EventEmitter } from 'events';
 export interface RunFunction {
-	(client: Spencer, ...params: unknown[]): Promise<void>;
+	(client: Spencer, ...params: unknown[]): Promise<unknown>;
 }
 export interface Event {
 	name: string;
