@@ -2,7 +2,6 @@ import { promisify } from 'util';
 import { readFile, writeFile } from 'fs';
 import glob from 'glob';
 import consola from 'consola';
-import { Command } from '../interfaces/Command';
 const globPromise = promisify(glob);
 const readPromise = promisify(readFile);
 const writePromise = promisify(writeFile);
