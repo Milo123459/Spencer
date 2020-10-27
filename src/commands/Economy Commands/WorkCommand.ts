@@ -80,7 +80,7 @@ export const run: RunFunction = async (client, message) => {
 						await msg.edit(
 							client.embed(
 								{
-									description: `The fan's hate you. How could you not type \`left\`, \`right\` or \`middle\`? The captain gives you $${decreasedRate} for that.`,
+									description: `The fans hate you. How could you not type \`left\`, \`right\` or \`middle\`? The captain gives you $${decreasedRate} for that.`,
 								},
 								message
 							)
@@ -96,7 +96,7 @@ export const run: RunFunction = async (client, message) => {
 						await msg.edit(
 							client.embed(
 								{
-									description: `The fan's hate you. How could you not the see the goal keeper? He was standing still! The captain gives you $${decreasedRate} for that.`,
+									description: `The fans hate you. How could you not the see the goal keeper? He was standing still! The captain gives you $${decreasedRate} for that.`,
 								},
 								message
 							)
@@ -114,7 +114,7 @@ export const run: RunFunction = async (client, message) => {
 						await msg.edit(
 							client.embed(
 								{
-									description: `The fan's hate you. You got tackled! You get nothing for that.\n\n*You don't get anything because you didn't say anything.*`,
+									description: `The fans hate you. You got tackled! You get nothing for that.\n\n*You don't get anything because you didn't say anything.*`,
 								},
 								message
 							)
@@ -129,7 +129,7 @@ export const run: RunFunction = async (client, message) => {
 						await msg.edit(
 							client.embed(
 								{
-									description: `The fan's love you! You win the match! The captain gives you $${rate} because of it!`,
+									description: `The fans love you! You win the match! The captain gives you $${rate} because of it!`,
 								},
 								message
 							)
