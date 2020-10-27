@@ -80,7 +80,7 @@ const analyzeCommands = async () => {
 		FixedErrors += value.fixed.length;
 	}
 	consola.info(
-		`[CMD-ANALYZER] Found ${ErrorsOriginal} errors, fixed ${FixedErrors} of them.`
+		`[CMD-ANALYZER] Found ${ErrorsOriginal} errors, fixed ${FixedErrors} of them. `
 	);
 	if (FixedErrors < ErrorsOriginal) return process.exit(1);
 };
