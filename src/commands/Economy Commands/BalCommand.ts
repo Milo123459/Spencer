@@ -13,7 +13,7 @@ export const run: RunFunction = async (client, message, args) => {
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
-				} \`$${(UserCoins as Anything).Coins}\``,
+				} \`$${(UserCoins as Anything)?.Coins || 0}\``,
 			},
 			message
 		)
