@@ -4,7 +4,7 @@ export const name: string = 'stats';
 export const run: RunFunction = async (client, message) => {
 	const embed: MessageEmbed = client.embed(
 		{
-			description: `Stats for Spencer!\n*Spencer is open source, you can view the code [here](https://github.com/Milo123459/Spencer) - Contributions are welcome!*\nGuilds: \`${client.guilds.cache.size.toLocaleString()}\`\nUsers: \`${client.users.cache.size.toLocaleString()}\``,
+			description: `Stats for Spencer!\n*Spencer is open source, you can view the code [here](https://github.com/Milo123459/Spencer) - Contributions are welcome!*\nGuilds: \`${client.guilds.cache.size.toLocaleString()}\`\nUsers: \`${client.users.cache.size.toLocaleString()}\`\nChannels: \`${client.channels.cache.size.toLocaleString()}\``,
 		},
 		message
 	);
