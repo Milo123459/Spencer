@@ -51,6 +51,13 @@ export const run: RunFunction = async (client, message, args) => {
 					)
 					.join('\n'),
 				title: `Prefix: \`${Prefix}\``,
+				fields: [
+					{
+						name: 'Note!',
+						value: 'If usage, [] = optional, <> = required.',
+						inline: true,
+					},
+				],
 			},
 			message
 		)

@@ -13,4 +13,5 @@ export interface Command {
 	category: string;
 	userPermissions?: string | string[];
 	ownerOnly?: boolean;
+	usage?: string;
 }

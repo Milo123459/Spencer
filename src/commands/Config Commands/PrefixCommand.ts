@@ -31,3 +31,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const category: string = 'config';
 export const userPermissions: string = 'MANAGE_GUILD';
+export const usage: string = '[new-prefix]';
