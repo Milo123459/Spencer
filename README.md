@@ -21,3 +21,4 @@ Has a cool little DB system, allowing you to load schemas remotely.
 - Add and commit your code
 - Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
 - Get your PR reviewed
+- OPTIONAL: Use [ProBot](https://probot.github.io/apps/pull/) to keep your fork up to date with the repo!
