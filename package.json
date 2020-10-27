@@ -8,7 +8,8 @@
 		"lint": "prettier --write .",
 		"build": "rm -rf dist && tsc",
 		"start": "yarn && yarn build && node .",
-		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer"
+		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer",
+		"analyze": "ts-node src/analyzers/Analyze.ts"
 	},
 	"license": "MIT",
 	"dependencies": {
@@ -40,7 +41,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "snyk test && snyk protect && lint-staged",
+			"pre-commit": "snyk test && snyk protect && yarn analyze && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
