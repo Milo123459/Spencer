@@ -6,11 +6,10 @@ class UtilsManager {
 	public constructor(client: Spencer) {
 		this.client = client;
 	}
-	public ResolveMember(message: Message, arg: string): GuildMember | boolean {
+	public ResolveMember(message: Message, arg: string): GuildMember {
 		if (message.mentions.members.first())
 			return message.mentions.members.first();
 		if (!isNaN(parseInt(arg))) return message.guild.members.cache.get(arg);
-		return false;
 	}
 	public formatMS(ms: number): string {
 		const times: object = {
