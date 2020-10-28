@@ -6,7 +6,7 @@
 
 # Spencer
 
-Spencer is my bot, not yours. Made by **Salvage_Dev**
+Spencer is my bot, not yours. Made by **Salvage_Dev**. Has some cool technical systems built in.
 
 # Some technical things
 
