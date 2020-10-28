@@ -4,13 +4,12 @@
 	"description": "Spencer is a discord bot developed by Salvage_Dev.",
 	"main": "dist/src/index.js",
 	"scripts": {
-		"test": "snyk test && ts-node-dev --respawn --transpile-only --poll src/index.ts",
+		"test": "yarn analyze && snyk test && ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
 		"build": "rm -rf dist && tsc",
 		"start": "yarn && yarn build && node .",
 		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer",
-		"analyze": "ts-node src/analyzers/Analyze.ts",
-		"git": "yarn analyze && git-go"
+		"analyze": "ts-node src/analyzers/Analyze.ts"
 	},
 	"license": "MIT",
 	"dependencies": {
