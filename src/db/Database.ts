@@ -1,6 +1,9 @@
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
 import { Anything } from '../interfaces/Anything';
+import { SortFunction } from '../interfaces/SortFunction';
+import { Document } from 'mongoose';
+
 class DatabaseModule {
 	private schema: Schema;
 	public constructor(schema: Schema) {
@@ -62,6 +65,13 @@ class DatabaseModule {
 			await data.save();
 			return data;
 		}
+	}
+	public async leaderboard(sort: SortFunction) {
+		// create a leaderboard
+		const Data: Array<Document> = [...(await this.find({}))].sort(sort);
+		const HandeledData: Array<Document> =
+			Data.length > 9 ? Data.slice(0, 10) : Data;
+		return HandeledData;
 	}
 }
 class DatabaseManager {

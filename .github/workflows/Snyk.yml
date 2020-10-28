@@ -1,5 +1,5 @@
 name: Example workflow using Snyk
-on: 
+on:
   push:
   workflow_dispatch:
   schedule:
