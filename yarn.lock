@@ -1614,6 +1614,11 @@ get-uri@^2.0.0:
     ftp "~0.3.10"
     readable-stream "2"
 
+git-go@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/git-go/-/git-go-1.0.3.tgz#5265f76438bfcb94b40f903fe49dfcdf86e9ff07"
+  integrity sha1-UmX3ZDi/y5S0D5A/5J3834bp/wc=
+
 git-raw-commits@^2.0.0:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/git-raw-commits/-/git-raw-commits-2.0.7.tgz#02e9357727a9755efa8e14dd5e59b381c29068fb"

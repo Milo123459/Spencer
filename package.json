@@ -9,7 +9,8 @@
 		"build": "rm -rf dist && tsc",
 		"start": "yarn && yarn build && node .",
 		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer",
-		"analyze": "ts-node src/analyzers/Analyze.ts"
+		"analyze": "ts-node src/analyzers/Analyze.ts",
+		"git": "yarn analyze && git-go"
 	},
 	"license": "MIT",
 	"dependencies": {
@@ -31,6 +32,7 @@
 		"@types/mongoose": "^5.7.36",
 		"@types/ms": "^0.7.31",
 		"@types/node": "^14.14.2",
+		"git-go": "^1.0.3",
 		"husky": "^4.3.0",
 		"lint-staged": "^10.4.2",
 		"prettier": "^2.1.2",
@@ -42,8 +44,7 @@
 	"husky": {
 		"hooks": {
 			"pre-commit": "snyk protect && lint-staged",
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-			"pre-push": "yarn analyze"
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
 	"lint-staged": {
