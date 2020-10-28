@@ -1,5 +1,9 @@
 name: Example workflow using Snyk
-on: push
+on: 
+  push:
+  workflow_dispatch:
+  schedule:
+    cron: '0 0 * * *'
 jobs:
   security:
     runs-on: ubuntu-latest
