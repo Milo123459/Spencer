@@ -42,7 +42,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn analyze && git add . && snyk protect && lint-staged",
+			"pre-commit": "yarn analyze && snyk protect && git add . && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
