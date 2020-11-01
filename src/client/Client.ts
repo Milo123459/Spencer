@@ -27,7 +27,7 @@ class Spencer extends Client {
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
 	public utils: UtilsManager;
-	public prefix: string = 'sp!';
+	public prefix: string;
 	public owners: Array<string> = ['450212014912962560'];
 	public config: Config;
 	public constructor() {
@@ -40,6 +40,7 @@ class Spencer extends Client {
 	}
 	public async start(config: Config): Promise<void> {
 		this.config = config;
+		this.prefix = config.prefix;
 		this.login(config.token).catch((e) => this.logger.error(e));
 		mongoose
 			.connect(config.mongoURI, {
