@@ -2504,7 +2504,7 @@ merge-stream@^2.0.0:
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
   integrity sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==
 
-micromatch@^4.0.2:
+micromatch@4.0.2, micromatch@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.2.tgz#4fcb0999bf9fbc2fcbdd212f6d629b9a56c39259"
   integrity sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
@@ -3824,10 +3824,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.424.0:
-  version "1.424.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.424.0.tgz#cd3ba50effd7b01a0fd82605060e7029a05e4b2d"
-  integrity sha512-mL1uKYBTJND3EKMLaWDnS8n6ggJWwvur3Kz2tCj9cmF++G10FAHA8RyhBKc1jF41lSI0SZKMfh6MXTNvrzfx6g==
+snyk@^1.424.2:
+  version "1.424.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.424.2.tgz#f7cc052af21205f5ec210472c52c9c9610511c35"
+  integrity sha512-Urt6rJrPKgWYZ1h3ZyU7z7e7/VLDd9Tbf5hK41qKN6ZcuEdHMUe25rNodwodGLlq2x9fDtRlFODZdZnVsl3sKw==
   dependencies:
     "@snyk/cli-interface" "2.9.2"
     "@snyk/dep-graph" "1.19.4"
@@ -3844,6 +3844,7 @@ snyk@^1.424.0:
     graphlib "^2.1.8"
     inquirer "^7.3.3"
     lodash "^4.17.20"
+    micromatch "4.0.2"
     needle "2.5.0"
     open "^7.0.3"
     os-name "^3.0.0"
