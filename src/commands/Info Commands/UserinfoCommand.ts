@@ -9,26 +9,6 @@ export const run: RunFunction = async (client, message, args) => {
 				title: `${member.user.tag} (${member.user.id})`,
 				fields: [
 					client.utils.constructField(
-						`Joined at (DD/MM/YYYY)`,
-						`${client.utils.formatDate(
-							member.joinedAt,
-							`DD/MM/YYYY`
-						)} (${client.utils
-							.formatMS(Date.now() - member.joinedTimestamp)
-							.split(/,/gi)[1]
-							.trim()} ago)`
-					),
-					client.utils.constructField(
-						`Created at (DD/MM/YYYY)`,
-						`${client.utils.formatDate(
-							member.user.createdAt,
-							'DD/MM/YYYY'
-						)} (${client.utils
-							.formatMS(Date.now() - member.user.createdTimestamp)
-							.split(/,/gi)[1]
-							.trim()} ago)`
-					),
-					client.utils.constructField(
 						`Roles [${
 							member.roles.cache.filter(
 								(value: Role) => value.name != '@everyone'
