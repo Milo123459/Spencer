@@ -1,7 +1,6 @@
 import { Message } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
-import { Document } from 'mongoose';
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.author.bot || !message.guild) return;
