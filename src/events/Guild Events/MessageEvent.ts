@@ -6,20 +6,6 @@ export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.author.bot || !message.guild) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
-	const GuildAutoResponderSchema = await client.db.load('guildautoresponder');
-	const GuildAuto = await GuildAutoResponderSchema.find({
-		Guild: message.guild.id,
-	});
-	GuildAuto.map((value: Document) => {
-		if (
-			(value as Anything)?.Trigger &&
-			message.content.toLowerCase().startsWith((value as Anything)?.Trigger)
-		)
-			return message.channel.send(
-				(value as Anything)?.Content ||
-					"This trigger some how doesn't have content!"
-			);
-	});
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
 	});
