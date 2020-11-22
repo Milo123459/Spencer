@@ -36,6 +36,7 @@ class Spencer extends Client {
 			messageCacheLifetime: 180,
 			messageCacheMaxSize: 200,
 			messageSweepInterval: 180,
+			messageEditHistoryMaxSize: 200,
 		});
 	}
 	public async start(config: Config): Promise<void> {
