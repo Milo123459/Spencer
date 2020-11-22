@@ -42,7 +42,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn analyze && git add . && lint-staged",
+			"pre-commit": "yarn dlx @yarnpkg/doctor && yarn analyze && git add . && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
