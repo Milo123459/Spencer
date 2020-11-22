@@ -52,10 +52,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 									['bufferutil', 'npm:4.0.2'],
 									['consola', 'npm:2.15.0'],
 									['discord.js', 'npm:12.5.0'],
-									[
-										'erlpack',
-										'https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d',
-									],
 									['git-go', 'npm:1.0.3'],
 									['glob', 'npm:7.1.6'],
 									['husky', 'npm:4.3.0'],
@@ -1119,23 +1115,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 					],
 				],
 				[
-					'bindings',
-					[
-						[
-							'npm:1.5.0',
-							{
-								packageLocation:
-									'./.yarn/cache/bindings-npm-1.5.0-77ce1d213c-bd623dec58.zip/node_modules/bindings/',
-								packageDependencies: [
-									['bindings', 'npm:1.5.0'],
-									['file-uri-to-path', 'npm:1.0.0'],
-								],
-								linkType: 'HARD',
-							},
-						],
-					],
-				],
-				[
 					'bl',
 					[
 						[
@@ -2127,27 +2106,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 					],
 				],
 				[
-					'erlpack',
-					[
-						[
-							'https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d',
-							{
-								packageLocation:
-									'./.yarn/unplugged/erlpack-https-2595d388eb/node_modules/erlpack/',
-								packageDependencies: [
-									[
-										'erlpack',
-										'https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d',
-									],
-									['bindings', 'npm:1.5.0'],
-									['nan', 'npm:2.14.2'],
-								],
-								linkType: 'HARD',
-							},
-						],
-					],
-				],
-				[
 					'error-ex',
 					[
 						[
@@ -2287,20 +2245,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 									['figures', 'npm:3.2.0'],
 									['escape-string-regexp', 'npm:1.0.5'],
 								],
-								linkType: 'HARD',
-							},
-						],
-					],
-				],
-				[
-					'file-uri-to-path',
-					[
-						[
-							'npm:1.0.0',
-							{
-								packageLocation:
-									'./.yarn/cache/file-uri-to-path-npm-1.0.0-1043ac6206-5ddb9682f0.zip/node_modules/file-uri-to-path/',
-								packageDependencies: [['file-uri-to-path', 'npm:1.0.0']],
 								linkType: 'HARD',
 							},
 						],
@@ -5718,10 +5662,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 									['bufferutil', 'npm:4.0.2'],
 									['consola', 'npm:2.15.0'],
 									['discord.js', 'npm:12.5.0'],
-									[
-										'erlpack',
-										'https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d',
-									],
 									['git-go', 'npm:1.0.3'],
 									['glob', 'npm:7.1.6'],
 									['husky', 'npm:4.3.0'],

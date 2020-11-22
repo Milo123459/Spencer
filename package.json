@@ -17,7 +17,6 @@
 		"bufferutil": "^4.0.2",
 		"consola": "^2.15.0",
 		"discord.js": "^12.5.0",
-		"erlpack": "discord/erlpack",
 		"glob": "^7.1.6",
 		"mongoose": "^5.10.15",
 		"tslib": "^2.0.3",
