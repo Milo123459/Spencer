@@ -2240,7 +2240,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.2":
+"ms@npm:2.1.2, ms@npm:^2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 9b65fb709bc30c0c07289dcbdb61ca032acbb9ea5698b55fa62e2cebb04c5953f1876a1f3f7f4bc2e91d4bf4d86003f3e207c3bc6ee2f716f99827e62389cd0e
@@ -3166,6 +3166,7 @@ fsevents@~2.1.2:
     husky: ^4.3.0
     lint-staged: ^10.5.1
     mongoose: ^5.10.15
+    ms: ^2.1.2
     prettier: ^2.2.0
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0

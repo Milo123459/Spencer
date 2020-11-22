@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 									['husky', 'npm:4.3.0'],
 									['lint-staged', 'npm:10.5.1'],
 									['mongoose', 'npm:5.10.15'],
+									['ms', 'npm:2.1.2'],
 									['prettier', 'npm:2.2.0'],
 									[
 										'ts-node',
@@ -5667,6 +5668,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
 									['husky', 'npm:4.3.0'],
 									['lint-staged', 'npm:10.5.1'],
 									['mongoose', 'npm:5.10.15'],
+									['ms', 'npm:2.1.2'],
 									['prettier', 'npm:2.2.0'],
 									[
 										'ts-node',
