@@ -2,3 +2,9 @@ node_modules
 dist
 config.json
 .vscode
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

@@ -4,7 +4,7 @@
 	"description": "Spencer is a discord bot developed by Salvage_Dev.",
 	"main": "dist/src/index.js",
 	"scripts": {
-		"test": "yarn analyze && snyk test && ts-node-dev --respawn --transpile-only --poll src/index.ts",
+		"test": "yarn analyze && ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
 		"build": "rm -rf dist && tsc",
 		"start": "yarn && yarn build && node .",
@@ -36,14 +36,13 @@
 		"husky": "^4.3.0",
 		"lint-staged": "^10.5.1",
 		"prettier": "^2.2.0",
-		"snyk": "^1.428.2",
 		"ts-node": "^9.0.0",
 		"ts-node-dev": "^1.0.0",
 		"typescript": "^4.1.2"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn analyze && snyk protect && git add . && lint-staged",
+			"pre-commit": "yarn analyze && git add . && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
