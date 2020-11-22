@@ -7,8 +7,8 @@
 		"test": "yarn analyze && ts-node-dev --respawn --transpile-only --poll src/index.ts",
 		"lint": "prettier --write .",
 		"build": "rm -rf dist && tsc",
-		"start": "yarn && yarn build && node .",
-		"update": "n latest && git pull && yarn && pm2 reload Spencer --update-env && pm2 logs Spencer",
+		"start": "yarn build && node .",
+		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node src/analyzers/Analyze.ts"
 	},
 	"license": "MIT",
