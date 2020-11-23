@@ -47,7 +47,7 @@
 		}
 	},
 	"lint-staged": {
-		"*{.js,.ts,.json,.d.ts,.md}": "prettier --write"
+		"*{.js,.ts,.json,.d.ts,.md,.yml,.yaml}": "prettier --write"
 	},
 	"commitlint": {
 		"extends": [
