@@ -9,7 +9,8 @@
 		"build": "rm -rf dist && tsc",
 		"start": "yarn build && node .",
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
-		"analyze": "ts-node src/analyzers/Analyze.ts"
+		"analyze": "ts-node src/analyzers/Analyze.ts",
+		"doctor": "yarn dlx @yarnpkg/doctor"
 	},
 	"license": "MIT",
 	"dependencies": {
@@ -43,7 +44,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn dlx @yarnpkg/doctor && yarn analyze && git add . && lint-staged",
+			"pre-commit": "yarn doctor && yarn analyze && git add . && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
