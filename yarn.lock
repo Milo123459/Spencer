@@ -2228,9 +2228,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.10.15, mongoose@npm:^5.10.15":
-  version: 5.10.15
-  resolution: "mongoose@npm:5.10.15"
+"mongoose@npm:5.10.16, mongoose@npm:^5.10.16":
+  version: 5.10.16
+  resolution: "mongoose@npm:5.10.16"
   dependencies:
     bson: ^1.1.4
     kareem: 2.3.1
@@ -2243,7 +2243,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 85c9cd42229e7f0cad4bad47a4417fb943464049a343f63b92f4e7597c986d74d1abf98b8fa6c84ede154d9311ac03118b27c5d76bab0d221b11ac7bf7b3dbd9
+  checksum: 1fd2e70f14290f08518bf667ac504a9760a9b0a466f4e1d77ec402a550807a2f543c58ab94bc7ee548b97c57529c291c999ea84ce0653e40bed94c2a0ff8328c
   languageName: node
   linkType: hard
 
@@ -3219,7 +3219,7 @@ fsevents@~2.1.2:
     glob: ^7.1.6
     husky: ^4.3.0
     lint-staged: ^10.5.2
-    mongoose: ^5.10.15
+    mongoose: ^5.10.16
     ms: ^2.1.2
     p-progress: ^0.4.2
     prettier: ^2.2.0
