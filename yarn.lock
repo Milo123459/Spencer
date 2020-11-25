@@ -1093,13 +1093,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emittery@npm:^0.7.2":
-  version: 0.7.2
-  resolution: "emittery@npm:0.7.2"
-  checksum: 34acfef51922a1b73d75cb658bf43ecb279633b263ffa831fb87697abbbd3aa4241ef15d204eeaa6a3c62656bd7563de7145c416a2bb18c4805e54ce6d7cdac6
-  languageName: node
-  linkType: hard
-
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -2484,30 +2477,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"p-map@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "p-map@npm:3.0.0"
-  dependencies:
-    aggregate-error: ^3.0.0
-  checksum: f7ce4709f432323a11f7c808f96add4104774cb7ba88cc9a92b6b5b8ea8a7fa977d28c4e5619669f9cf1315e889769843c6a4772155b08dadbd20d504e4ce2a7
-  languageName: node
-  linkType: hard
-
 "p-map@npm:^4.0.0":
   version: 4.0.0
   resolution: "p-map@npm:4.0.0"
   dependencies:
     aggregate-error: ^3.0.0
   checksum: d51e630d72b7c38bc9e396710e7a068f0b813fe4db6f4a2d1ce2972e7fa11142c763c3aa39bcfd77c0133688c1ebfdd9b38fa3ac4c6ada20b62df26239c5c0e4
-  languageName: node
-  linkType: hard
-
-"p-progress@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "p-progress@npm:0.4.2"
-  dependencies:
-    p-map: ^3.0.0
-  checksum: cd0089e27ae918c073ecf077d52e952ac8295a33618ec98c70aa1c3cf38d7087e0758e4da4ff5b387ae29f3aa9b5d8a13e8e45ff1fe6d55e2b96b93e4e4a7040
   languageName: node
   linkType: hard
 
@@ -3222,7 +3197,6 @@ fsevents@~2.1.2:
     bufferutil: ^4.0.2
     consola: ^2.15.0
     discord.js: ^12.5.0
-    emittery: ^0.7.2
     erlpack: ^0.1.3
     git-go: ^1.0.3
     glob: ^7.1.6
@@ -3231,7 +3205,6 @@ fsevents@~2.1.2:
     lint-staged: ^10.5.2
     mongoose: ^5.10.16
     ms: ^2.1.2
-    p-progress: ^0.4.2
     prettier: ^2.2.0
     ts-node: ^9.0.0
     ts-node-dev: ^1.0.0

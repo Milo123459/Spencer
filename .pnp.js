@@ -48,7 +48,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.0"],
-            ["emittery", "npm:0.7.2"],
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
@@ -57,7 +56,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
-            ["p-progress", "npm:0.4.2"],
             ["prettier", "npm:2.2.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
@@ -1313,15 +1311,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ecc-jsbn", "npm:0.1.2"],
             ["jsbn", "npm:0.1.1"],
             ["safer-buffer", "npm:2.1.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["emittery", [
-        ["npm:0.7.2", {
-          "packageLocation": "./.yarn/cache/emittery-npm-0.7.2-4a6f20265e-34acfef519.zip/node_modules/emittery/",
-          "packageDependencies": [
-            ["emittery", "npm:0.7.2"]
           ],
           "linkType": "HARD",
         }]
@@ -2879,29 +2868,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["p-map", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/p-map-npm-3.0.0-e4f17c4167-f7ce4709f4.zip/node_modules/p-map/",
-          "packageDependencies": [
-            ["p-map", "npm:3.0.0"],
-            ["aggregate-error", "npm:3.1.0"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/p-map-npm-4.0.0-4677ae07c7-d51e630d72.zip/node_modules/p-map/",
           "packageDependencies": [
             ["p-map", "npm:4.0.0"],
             ["aggregate-error", "npm:3.1.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["p-progress", [
-        ["npm:0.4.2", {
-          "packageLocation": "./.yarn/cache/p-progress-npm-0.4.2-44c6026809-cd0089e27a.zip/node_modules/p-progress/",
-          "packageDependencies": [
-            ["p-progress", "npm:0.4.2"],
-            ["p-map", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3695,7 +3666,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.0"],
-            ["emittery", "npm:0.7.2"],
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
@@ -3704,7 +3674,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
-            ["p-progress", "npm:0.4.2"],
             ["prettier", "npm:2.2.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
