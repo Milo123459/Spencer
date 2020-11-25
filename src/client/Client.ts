@@ -60,7 +60,7 @@ class Spencer extends Client {
 		);
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
-			this.commands.set(cmd.name, cmd);
+			this.commands.set(cmd.name, { cooldown: 3000, ...cmd });
 			if (cmd.aliases) {
 				cmd.aliases.map((alias: string) => this.aliases.set(alias, cmd.name));
 			}
