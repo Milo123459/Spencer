@@ -40,3 +40,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'dehoist';
 export const category: string = 'moderation';
+export const userPermissions: string = 'MANAGE_MEMBERS';
