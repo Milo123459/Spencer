@@ -17,3 +17,4 @@ export const run: RunFunction = async (client, message) => {
 };
 export const name: string = 'stonks';
 export const category: string = 'fun';
+export const cooldown: number = 3000;
