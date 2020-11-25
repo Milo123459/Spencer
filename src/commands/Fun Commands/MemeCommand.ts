@@ -8,7 +8,7 @@ export const run: RunFunction = async (client, message) => {
 			.embed(
 				{
 					title: meme.title,
-					description: `Upvotes: ${meme.upvotes} | u/${meme.author}`,
+					description: `Upvotes: 👍 ${meme.upvotes} | u/**${meme.author}** in r/**meme**`,
 				},
 				message
 			)
