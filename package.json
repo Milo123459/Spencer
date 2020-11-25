@@ -21,7 +21,7 @@
 		"emittery": "^0.7.2",
 		"erlpack": "^0.1.3",
 		"glob": "^7.1.6",
-		"imageapi.js": "1.1.5",
+		"imageapi.js": "^1.1.5",
 		"mongoose": "^5.10.16",
 		"ms": "^2.1.2",
 		"p-progress": "^0.4.2",
