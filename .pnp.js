@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.1.4"],
+            ["imageapi.js", "npm:1.1.7"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
@@ -1847,10 +1847,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["imageapi.js", [
-        ["npm:1.1.4", {
-          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.1.4-3a6e564308-3d4aaa79c3.zip/node_modules/imageapi.js/",
+        ["npm:1.1.7", {
+          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.1.7-4d8faf7fc8-1245d38de8.zip/node_modules/imageapi.js/",
           "packageDependencies": [
-            ["imageapi.js", "npm:1.1.4"],
+            ["imageapi.js", "npm:1.1.7"],
             ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
@@ -3211,7 +3211,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["readable-stream", "npm:3.6.0"],
             ["inherits", "npm:2.0.4"],
-            ["string_decoder", "npm:1.1.1"],
+            ["string_decoder", "npm:1.3.0"],
             ["util-deprecate", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -3670,7 +3670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.1.4"],
+            ["imageapi.js", "npm:1.1.7"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
@@ -3750,6 +3750,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["string_decoder", "npm:1.1.1"],
             ["safe-buffer", "npm:5.1.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.3.0", {
+          "packageLocation": "./.yarn/cache/string_decoder-npm-1.3.0-2422117fd0-0a09afb610.zip/node_modules/string_decoder/",
+          "packageDependencies": [
+            ["string_decoder", "npm:1.3.0"],
+            ["safe-buffer", "npm:5.2.1"]
           ],
           "linkType": "HARD",
         }]
