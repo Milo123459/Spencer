@@ -20,7 +20,7 @@
 		"discord.js": "^12.5.1",
 		"erlpack": "^0.1.3",
 		"glob": "^7.1.6",
-		"imageapi.js": "^1.1.8",
+		"imageapi.js": "^1.1.9",
 		"mongoose": "^5.10.16",
 		"ms": "^2.1.2",
 		"tslib": "^2.0.3",

@@ -1573,12 +1573,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"imageapi.js@npm:^1.1.8":
-  version: 1.1.8
-  resolution: "imageapi.js@npm:1.1.8"
+"imageapi.js@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "imageapi.js@npm:1.1.9"
   dependencies:
     node-fetch: ^2.6.1
-  checksum: b6fb0123bc18ae6ea3d159e2ddc46cd2713bf565e456404a58c0aa2ea42fc56572545ecaf22a504df87afe4ef81c8aeb18ac817448ff0c6352110c75a2d13f61
+  checksum: a091f84b5bbca3637a01f3ee0ae4ec879ec125de7f05f8e15d4fa69547b3017abfc7ab25ad386d05e4c516f9d2855bce397b2e789fa6e326c5ed3d2f2019f408
   languageName: node
   linkType: hard
 
@@ -3201,7 +3201,7 @@ fsevents@~2.1.2:
     git-go: ^1.0.3
     glob: ^7.1.6
     husky: ^4.3.0
-    imageapi.js: ^1.1.8
+    imageapi.js: ^1.1.9
     lint-staged: ^10.5.2
     mongoose: ^5.10.16
     ms: ^2.1.2
