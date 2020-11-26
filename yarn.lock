@@ -303,7 +303,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.14.9":
+"@types/node@npm:*, @types/node@npm:^14.14.10":
   version: 14.14.10
   resolution: "@types/node@npm:14.14.10"
   checksum: b793aa15e8c08df50d0f77dc0fe7a93bc2e09bfa5a424841d4dba045d6ae8503b7ffe89b773ffe197c9b637c898bb22e78442e21ff4b33414d35160d9c3f8a9b
@@ -1573,7 +1573,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"imageapi.js@npm:latest":
+"imageapi.js@npm:^1.1.7":
   version: 1.1.7
   resolution: "imageapi.js@npm:1.1.7"
   dependencies:
@@ -3192,7 +3192,7 @@ fsevents@~2.1.2:
     "@types/glob": ^7.1.3
     "@types/mongoose": ^5.10.1
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.9
+    "@types/node": ^14.14.10
     bluebird: ^3.7.2
     bufferutil: ^4.0.2
     consola: ^2.15.0
@@ -3201,7 +3201,7 @@ fsevents@~2.1.2:
     git-go: ^1.0.3
     glob: ^7.1.6
     husky: ^4.3.0
-    imageapi.js: latest
+    imageapi.js: ^1.1.7
     lint-staged: ^10.5.2
     mongoose: ^5.10.16
     ms: ^2.1.2
