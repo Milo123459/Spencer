@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - name: Remove yarn.lock
+        run: rm yarn.lock
       - name: Build
         run: yarn up '*'
       - name: Commit
