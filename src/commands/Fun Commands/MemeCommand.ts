@@ -1,4 +1,5 @@
 import { RunFunction } from '../../interfaces/Command';
+import { Util } from 'discord.js';
 import * as ImageAPI from 'imageapi.js';
 
 export const run: RunFunction = async (client, message) => {
@@ -8,7 +9,11 @@ export const run: RunFunction = async (client, message) => {
 			.embed(
 				{
 					title: meme.title,
-					description: `Upvotes: 👍 ${meme.upvotes} | u/**${meme.author}** in r/**meme**`,
+					description: `👍 ${meme.upvotes} 👎 ${meme.downvotes} (${
+						meme.upvoteRatio
+					}% people enjoyed this meme) | u/**${Util.escapeMarkdown(
+						meme.author
+					)}** in r/**meme**`,
 				},
 				message
 			)

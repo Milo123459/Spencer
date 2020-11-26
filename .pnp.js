@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.1.7"],
+            ["imageapi.js", "npm:1.1.8"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
@@ -1847,10 +1847,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["imageapi.js", [
-        ["npm:1.1.7", {
-          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.1.7-4d8faf7fc8-1245d38de8.zip/node_modules/imageapi.js/",
+        ["npm:1.1.8", {
+          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.1.8-0d2736250a-b6fb0123bc.zip/node_modules/imageapi.js/",
           "packageDependencies": [
-            ["imageapi.js", "npm:1.1.7"],
+            ["imageapi.js", "npm:1.1.8"],
             ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
@@ -3670,7 +3670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
             ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.1.7"],
+            ["imageapi.js", "npm:1.1.8"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.16"],
             ["ms", "npm:2.1.2"],
