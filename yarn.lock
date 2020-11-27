@@ -1573,12 +1573,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"imageapi.js@npm:^1.1.9":
-  version: 1.1.9
-  resolution: "imageapi.js@npm:1.1.9"
+"imageapi.js@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "imageapi.js@npm:1.2.0"
   dependencies:
     node-fetch: ^2.6.1
-  checksum: a091f84b5bbca3637a01f3ee0ae4ec879ec125de7f05f8e15d4fa69547b3017abfc7ab25ad386d05e4c516f9d2855bce397b2e789fa6e326c5ed3d2f2019f408
+  checksum: 77c5eb989972a627b0e278897d94d1f22158c498e552fc023fb9bf2d7d8de9c73d02c5cdf2d21f28314bb528bea50b46bec3aef22125920f9703c8ce93ea91e9
   languageName: node
   linkType: hard
 
@@ -2230,9 +2230,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.10.16, mongoose@npm:^5.10.16":
-  version: 5.10.16
-  resolution: "mongoose@npm:5.10.16"
+"mongoose@npm:5.10.17, mongoose@npm:^5.10.17":
+  version: 5.10.17
+  resolution: "mongoose@npm:5.10.17"
   dependencies:
     bson: ^1.1.4
     kareem: 2.3.1
@@ -2245,7 +2245,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 1fd2e70f14290f08518bf667ac504a9760a9b0a466f4e1d77ec402a550807a2f543c58ab94bc7ee548b97c57529c291c999ea84ce0653e40bed94c2a0ff8328c
+  checksum: 7e6951a7d11008f06e5e7da768d76de82885dfcb77d4710575c4b5c68324683eef524b165b103859c932fa73a080e0b650504efa815c7f2e73ff3e6845011cb2
   languageName: node
   linkType: hard
 
@@ -3201,9 +3201,9 @@ fsevents@~2.1.2:
     git-go: ^1.0.3
     glob: ^7.1.6
     husky: ^4.3.0
-    imageapi.js: ^1.1.9
+    imageapi.js: ^1.2.0
     lint-staged: ^10.5.2
-    mongoose: ^5.10.16
+    mongoose: ^5.10.17
     ms: ^2.1.2
     prettier: ^2.2.0
     ts-node: ^9.0.0
