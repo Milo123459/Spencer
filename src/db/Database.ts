@@ -78,7 +78,7 @@ class DatabaseManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {
 		this.client = client;
-		this.client.logger.info(`Database have been constructed`);
+		this.client.logger.info(`Database has been constructed`);
 	}
 	public async load(schema: string) {
 		const Model = this.client.schemas.get(schema) as Schema;
