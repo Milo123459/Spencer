@@ -2,12 +2,12 @@ name: Dependabot
 
 on:
   push:
-    branches: [dependabot/npm_and_yarn/**]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+    # if: github.actor == 'dependabot[bot]'
 
     steps:
       - uses: actions/checkout@v2
@@ -18,9 +18,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
-      - name: Remove yarn.lock
-        run: rm yarn.lock
-      - name: Build
-        run: yarn up '*'
-      - name: Commit
-        run: git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Dependabot fix 🚀"
+      # - name: Remove yarn.lock
+      #   run:
+      - name: WORK
+        run: github.branch
+      # - name: Build
+      #   run: yarn up '*'
+      # - name: Commit
+      #   run: git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Dependabot fix 🚀"
