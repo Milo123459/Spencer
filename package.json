@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"lint": "prettier --write .",
-		"build": "rm -rf dist && tsc",
-		"start": "yarn build && node .",
+		"build": "tsc",
+		"start": "rm -rf dist && yarn build && node .",
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"doctor": "yarn dlx @yarnpkg/doctor"
