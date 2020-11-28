@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.17"],
             ["ms", "npm:2.1.2"],
-            ["prettier", "npm:2.2.0"],
+            ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
             ["tslib", "npm:2.0.3"],
@@ -3047,10 +3047,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prettier", [
-        ["npm:2.2.0", {
-          "packageLocation": "./.yarn/cache/prettier-npm-2.2.0-9fa8f01d1a-fe7e2ac725.zip/node_modules/prettier/",
+        ["npm:2.2.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.2.1-e0670992f8-92c6c9f4b8.zip/node_modules/prettier/",
           "packageDependencies": [
-            ["prettier", "npm:2.2.0"]
+            ["prettier", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3674,7 +3674,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.10.17"],
             ["ms", "npm:2.1.2"],
-            ["prettier", "npm:2.2.0"],
+            ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
             ["tslib", "npm:2.0.3"],
