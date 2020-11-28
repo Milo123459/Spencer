@@ -20,3 +20,5 @@ jobs:
           node-version: '12'
       - name: Bump
         run: yarn bumpClean
+      - name: Add/Commit
+        run: git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Dependabot Fix"
