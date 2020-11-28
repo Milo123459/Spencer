@@ -5,6 +5,7 @@ class UtilsManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {
 		this.client = client;
+		this.client.logger.info('Utils have been constructed');
 	}
 	public ResolveMember(message: Message, arg: string): GuildMember {
 		if (message.mentions.members.first())
