@@ -7,7 +7,7 @@
 		"test": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"lint": "prettier --write .",
 		"build": "tsc",
-		"start": "rm -rf dist && yarn build && node .",
+		"start": "del-cli ./dist && yarn build && node .",
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"doctor": "yarn dlx @yarnpkg/doctor"
@@ -33,6 +33,7 @@
 		"@types/mongoose": "^5.10.1",
 		"@types/ms": "^0.7.31",
 		"@types/node": "^14.14.10",
+		"del-cli": "^3.0.1",
 		"git-go": "^1.0.3",
 		"husky": "^4.3.0",
 		"lint-staged": "^10.5.2",
