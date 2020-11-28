@@ -1915,10 +1915,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["is-core-module", [
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/cache/is-core-module-npm-2.1.0-8bf3cc89e9-6e9d45be21.zip/node_modules/is-core-module/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/is-core-module-npm-2.2.0-497065e3b0-2344744de9.zip/node_modules/is-core-module/",
           "packageDependencies": [
-            ["is-core-module", "npm:2.1.0"],
+            ["is-core-module", "npm:2.2.0"],
             ["has", "npm:1.0.3"]
           ],
           "linkType": "HARD",
@@ -2203,7 +2203,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dedent", "npm:0.7.0"],
             ["enquirer", "npm:2.3.6"],
             ["execa", "npm:4.1.0"],
-            ["listr2", "virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.2"],
+            ["listr2", "virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.3"],
             ["log-symbols", "npm:4.0.0"],
             ["micromatch", "npm:4.0.2"],
             ["normalize-path", "npm:3.0.0"],
@@ -2215,10 +2215,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["listr2", [
-        ["virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.2", {
-          "packageLocation": "./.yarn/$$virtual/listr2-virtual-bf28378cd9/0/cache/listr2-npm-3.2.2-277a88f06e-e4cccac610.zip/node_modules/listr2/",
+        ["virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.3", {
+          "packageLocation": "./.yarn/$$virtual/listr2-virtual-11ef37b999/0/cache/listr2-npm-3.2.3-3357d6df40-83f7659bd9.zip/node_modules/listr2/",
           "packageDependencies": [
-            ["listr2", "virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.2"],
+            ["listr2", "virtual:32fefebd0bb795ba3de29cc354984cf6cbc7a7a11ea607dd6233a1aef04e50c70070f939156cbd8fca974daeaceceb361ae84657ffefd945d90cc474f253a5e4#npm:3.2.3"],
             ["@types/enquirer", null],
             ["chalk", "npm:4.1.0"],
             ["cli-truncate", "npm:2.1.0"],
@@ -3193,7 +3193,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["readable-stream", "npm:3.6.0"],
             ["inherits", "npm:2.0.4"],
-            ["string_decoder", "npm:1.3.0"],
+            ["string_decoder", "npm:1.1.1"],
             ["util-deprecate", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -3320,7 +3320,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/resolve-patch-46f4fba2f6-188d5167e8.zip/node_modules/resolve/",
           "packageDependencies": [
             ["resolve", "patch:resolve@npm%3A1.19.0#builtin<compat/resolve>::version=1.19.0&hash=3388aa"],
-            ["is-core-module", "npm:2.1.0"],
+            ["is-core-module", "npm:2.2.0"],
             ["path-parse", "npm:1.0.6"]
           ],
           "linkType": "HARD",
@@ -3730,14 +3730,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["string_decoder", "npm:1.1.1"],
             ["safe-buffer", "npm:5.1.2"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:1.3.0", {
-          "packageLocation": "./.yarn/cache/string_decoder-npm-1.3.0-2422117fd0-0a09afb610.zip/node_modules/string_decoder/",
-          "packageDependencies": [
-            ["string_decoder", "npm:1.3.0"],
-            ["safe-buffer", "npm:5.2.1"]
           ],
           "linkType": "HARD",
         }]
