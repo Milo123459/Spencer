@@ -1,6 +1,5 @@
 import { Message, GuildMember, EmbedFieldData } from 'discord.js';
 import { Spencer } from '../client/Client';
-import bluebird from 'bluebird';
 
 class UtilsManager {
 	private client: Spencer;

@@ -39,12 +39,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@types/bluebird", "npm:3.5.33"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.1"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
-            ["bluebird", "npm:3.7.2"],
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
@@ -322,15 +320,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["asynckit", "npm:0.4.0"],
             ["combined-stream", "npm:1.0.8"],
             ["mime-types", "npm:2.1.27"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/bluebird", [
-        ["npm:3.5.33", {
-          "packageLocation": "./.yarn/cache/@types-bluebird-npm-3.5.33-c479c59631-45f7adeec6.zip/node_modules/@types/bluebird/",
-          "packageDependencies": [
-            ["@types/bluebird", "npm:3.5.33"]
           ],
           "linkType": "HARD",
         }]
@@ -742,13 +731,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/bluebird-npm-3.5.1-f0d1499f67-11347ec6d5.zip/node_modules/bluebird/",
           "packageDependencies": [
             ["bluebird", "npm:3.5.1"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:3.7.2", {
-          "packageLocation": "./.yarn/cache/bluebird-npm-3.7.2-6a54136ee3-4f2288662f.zip/node_modules/bluebird/",
-          "packageDependencies": [
-            ["bluebird", "npm:3.7.2"]
           ],
           "linkType": "HARD",
         }]
@@ -3657,12 +3639,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["spencer", "workspace:."],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@types/bluebird", "npm:3.5.33"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.1"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
-            ["bluebird", "npm:3.7.2"],
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["discord.js", "npm:12.5.1"],
