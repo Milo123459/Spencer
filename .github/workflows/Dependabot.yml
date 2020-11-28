@@ -1,0 +1,22 @@
+name: Dependabot
+
+on:
+  push:
+    branches: [dependabot/npm_and_yarn/**]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          persist-credentials: false # minimize exposure
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Bump
+        run: yarn bumpClean
