@@ -18,7 +18,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - name: Remove yarn.lock
+        run: rm yarn.lock
       - name: Bump
-        run: yarn bumpClean
+        run: yarn bump
       - name: Add/Commit
         run: git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Dependabot Fix"
