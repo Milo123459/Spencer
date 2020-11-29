@@ -2521,7 +2521,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"imageapi.js@npm:1.2.0":
+"imageapi.js@npm:^1.2.0":
   version: 1.2.0
   resolution: "imageapi.js@npm:1.2.0"
   dependencies:
@@ -4484,9 +4484,9 @@ fsevents@~2.1.2:
   linkType: hard
 
 "spdx-license-ids@npm:^3.0.0":
-  version: 3.0.6
-  resolution: "spdx-license-ids@npm:3.0.6"
-  checksum: 90f9f7db7f049e5b2b315d45858368ba0451036f5e3536acad5c9771d7506543be0e1ee641441d813c7cddf9d06337a14ceae21e18e2622bbf3dbcc9d396c193
+  version: 3.0.7
+  resolution: "spdx-license-ids@npm:3.0.7"
+  checksum: 21e38ec5dd970643f78d37700b6c6ebd42d68c0e4618db914a56cabd2fe4cc1608404ce6abc7535d5165c6555560e821553d06edf6af6ae439617883cf932c0e
   languageName: node
   linkType: hard
 
@@ -4509,7 +4509,7 @@ fsevents@~2.1.2:
     git-go: ^1.0.3
     glob: ^7.1.6
     husky: ^4.3.0
-    imageapi.js: 1.2.0
+    imageapi.js: ^1.2.0
     lint-staged: ^10.5.2
     mongoose: ^5.10.17
     ms: ^2.1.2

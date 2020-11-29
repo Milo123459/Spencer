@@ -5162,7 +5162,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["spdx-correct", "npm:3.1.1"],
             ["spdx-expression-parse", "npm:3.0.1"],
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.7"]
           ],
           "linkType": "HARD",
         }]
@@ -5182,16 +5182,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["spdx-expression-parse", "npm:3.0.1"],
             ["spdx-exceptions", "npm:2.3.0"],
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.7"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["spdx-license-ids", [
-        ["npm:3.0.6", {
-          "packageLocation": "./.yarn/cache/spdx-license-ids-npm-3.0.6-05f79482d5-90f9f7db7f.zip/node_modules/spdx-license-ids/",
+        ["npm:3.0.7", {
+          "packageLocation": "./.yarn/cache/spdx-license-ids-npm-3.0.7-f2c686cec2-21e38ec5dd.zip/node_modules/spdx-license-ids/",
           "packageDependencies": [
-            ["spdx-license-ids", "npm:3.0.6"]
+            ["spdx-license-ids", "npm:3.0.7"]
           ],
           "linkType": "HARD",
         }]
