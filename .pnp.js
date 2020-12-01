@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.1"],
             ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.2"],
-            ["mongoose", "npm:5.11.0"],
+            ["mongoose", "npm:5.11.1"],
             ["ms", "npm:2.1.2"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
@@ -4049,10 +4049,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:3.6.3", {
-          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-4ff7af2971/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
+        ["virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:3.6.3", {
+          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-49885f7a33/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
           "packageDependencies": [
-            ["mongodb", "virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:3.6.3"],
+            ["mongodb", "virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:3.6.3"],
             ["aws4", null],
             ["bl", "npm:2.2.1"],
             ["bson", "npm:1.1.5"],
@@ -4078,15 +4078,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mongoose", [
-        ["npm:5.11.0", {
-          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.0-69896c9612-a2d2f7f889.zip/node_modules/mongoose/",
+        ["npm:5.11.1", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.1-9a2c9e5b18-03090768ff.zip/node_modules/mongoose/",
           "packageDependencies": [
-            ["mongoose", "npm:5.11.0"],
+            ["mongoose", "npm:5.11.1"],
             ["@types/mongodb", "npm:3.5.34"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.1"],
-            ["mongodb", "virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:3.6.3"],
-            ["mongoose-legacy-pluralize", "virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:1.0.2"],
+            ["mongodb", "virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:3.6.3"],
+            ["mongoose-legacy-pluralize", "virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:1.0.2"],
             ["mpath", "npm:0.8.0"],
             ["mquery", "npm:3.2.2"],
             ["ms", "npm:2.1.2"],
@@ -4106,12 +4106,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:1.0.2", {
-          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-baecd9166e/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
+        ["virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:1.0.2", {
+          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-b388f7755f/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
           "packageDependencies": [
-            ["mongoose-legacy-pluralize", "virtual:69896c9612e57796f1586217b934f9a36ac932b9fd9d2f8671ba2dc341aa08e048dc9375cf19088f84fa45b6996cc701ab8daeeb61312dd9ab03d66f6798e1f1#npm:1.0.2"],
+            ["mongoose-legacy-pluralize", "virtual:9a2c9e5b18a42d9b9e9afaa01568199fc030f3e2db5dbc5ca989ccdf07168fe7dd2eb9675cc50b4286e6ff6c1f4bc9b81cd749fcea2c9629f8ceb750480022bd#npm:1.0.2"],
             ["@types/mongoose", null],
-            ["mongoose", "npm:5.11.0"]
+            ["mongoose", "npm:5.11.1"]
           ],
           "packagePeers": [
             "@types/mongoose",
@@ -5401,7 +5401,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.1"],
             ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.2"],
-            ["mongoose", "npm:5.11.0"],
+            ["mongoose", "npm:5.11.1"],
             ["ms", "npm:2.1.2"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.0.0"],
