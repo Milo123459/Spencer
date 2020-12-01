@@ -10,9 +10,7 @@
 		"start": "del-cli ./dist && yarn build && node .",
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
-		"doctor": "doctor",
-		"delLock": "del-cli ./yarn.lock",
-		"bumpClean": "yarn delLock && yarn bump"
+		"doctor": "doctor"
 	},
 	"license": "MIT",
 	"dependencies": {
