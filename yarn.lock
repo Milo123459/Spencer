@@ -356,7 +356,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mongodb@npm:*":
+"@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
   version: 3.5.34
   resolution: "@types/mongodb@npm:3.5.34"
   dependencies:
@@ -391,9 +391,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^13.7.0":
-  version: 13.13.33
-  resolution: "@types/node@npm:13.13.33"
-  checksum: 3e24e3a5b2c8b4181e01aac2ecc8423c8c87656de294a6564bc598f93c761ac115357f5f78747ff0071e6f939e4fb4eb01958f4ec1af6d59fa896d7914d0bf8d
+  version: 13.13.34
+  resolution: "@types/node@npm:13.13.34"
+  checksum: 5b14affd17e2809e6f2018cae44db653096af0915e83b4de121a38652a708f814d3422ede3ad2f1ea566af7781e2df0071a7df78bb45539e1ceb05ddb486f075
   languageName: node
   linkType: hard
 
@@ -3351,29 +3351,30 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.10.19, mongoose@npm:^5.10.19":
-  version: 5.10.19
-  resolution: "mongoose@npm:5.10.19"
+"mongoose@npm:5.11.0, mongoose@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "mongoose@npm:5.11.0"
   dependencies:
+    "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.1
     mongodb: 3.6.3
     mongoose-legacy-pluralize: 1.0.2
-    mpath: 0.7.0
+    mpath: 0.8.0
     mquery: 3.2.2
     ms: 2.1.2
     regexp-clone: 1.0.0
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 7a469433036adfb97406fc7a9f1f8135ede947b00d1a01e7064dfc86520ec58e1b1b91291bbe98c1722846d82c0a221dc1edc166fbb07d0ba029f900e952db6c
+  checksum: a2d2f7f889b72dcee9e98eb72c251859cb7c0ed7a5e3b6ed01e088a130074c7f9560abefd571bc2407908c50cfe1e514d8c0f0d06a9f4589c0eb19af0b23d9e5
   languageName: node
   linkType: hard
 
-"mpath@npm:0.7.0":
-  version: 0.7.0
-  resolution: "mpath@npm:0.7.0"
-  checksum: 76e271ff01a637452b1b8bb36825e74020e23d6fa1792455dc2992931b3fdfffcd637dcbe4c02a6bbb9e264f3920be4c5dcf42041f37176b00d5c8175604c4c1
+"mpath@npm:0.8.0":
+  version: 0.8.0
+  resolution: "mpath@npm:0.8.0"
+  checksum: 42d11142b18ee16499f9c86f7fa3540bb10ee2f237de47a3b26e2a60c7fa68094ac6be0dd148a8111e61ffde2368fcc91040257b13d1c832e13e4f932b83094f
   languageName: node
   linkType: hard
 
@@ -4523,7 +4524,7 @@ fsevents@~2.1.2:
     husky: ^4.3.0
     imageapi.js: ^1.2.0
     lint-staged: ^10.5.2
-    mongoose: ^5.10.19
+    mongoose: ^5.11.0
     ms: ^2.1.2
     prettier: ^2.2.1
     ts-node: ^9.0.0
@@ -5225,9 +5226,9 @@ typescript@^4.1.2:
   linkType: hard
 
 "y18n@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "y18n@npm:4.0.0"
-  checksum: 5b7434c95d31ffa2b9b97df98e2d786446a0ff21c30e0265088caa4818a3335559a425763e55b6d9370d9fcecb75a36ae5bb901184676bd255f96ee3c743f667
+  version: 4.0.1
+  resolution: "y18n@npm:4.0.1"
+  checksum: e589620d8d668d696e74730a83731a36a8d782c50379386b142e5b8287388a6ebaf28528e84201c68c206629faed71362c79b201b398eb0c69aa1737635678dd
   languageName: node
   linkType: hard
 
