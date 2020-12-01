@@ -51,8 +51,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.2.0"],
+            ["husky", "npm:4.3.1"],
+            ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.11.0"],
             ["ms", "npm:2.1.2"],
@@ -3109,10 +3109,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.3.0", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.0-b6c2d49d0e/node_modules/husky/",
+        ["npm:4.3.1", {
+          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.1-f645516e98/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.3.0"],
+            ["husky", "npm:4.3.1"],
             ["chalk", "npm:4.1.0"],
             ["ci-info", "npm:2.0.0"],
             ["compare-versions", "npm:3.6.0"],
@@ -3146,10 +3146,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["imageapi.js", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.2.0-b609206cf0-77c5eb9899.zip/node_modules/imageapi.js/",
+        ["npm:1.2.1", {
+          "packageLocation": "./.yarn/cache/imageapi.js-npm-1.2.1-d687a51f6b-a3aec4d20c.zip/node_modules/imageapi.js/",
           "packageDependencies": [
-            ["imageapi.js", "npm:1.2.0"],
+            ["imageapi.js", "npm:1.2.1"],
             ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
@@ -5398,8 +5398,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.0"],
-            ["imageapi.js", "npm:1.2.0"],
+            ["husky", "npm:4.3.1"],
+            ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.2"],
             ["mongoose", "npm:5.11.0"],
             ["ms", "npm:2.1.2"],

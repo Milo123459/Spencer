@@ -2501,8 +2501,8 @@ fsevents@~2.1.2:
   linkType: hard
 
 "husky@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "husky@npm:4.3.0"
+  version: 4.3.1
+  resolution: "husky@npm:4.3.1"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
@@ -2517,7 +2517,7 @@ fsevents@~2.1.2:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: c212d9732de84cbd7c25d907b874f7844503f85e28c0512518cddbac9854c54f1c569e81c5b70387f1e3c27d35c2b43256c811cf06fdad066565c5fc178f33f7
+  checksum: f05e412061d2bd898ff3c2e1f72260f9a2886feeae6bf2fb533df34cc9010cf66c8179a21b5a9ff95a78f2ff1b7820e0a259b6301f9520d1066090df8ca0870f
   languageName: node
   linkType: hard
 
@@ -2535,12 +2535,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"imageapi.js@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "imageapi.js@npm:1.2.0"
+"imageapi.js@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "imageapi.js@npm:1.2.1"
   dependencies:
     node-fetch: ^2.6.1
-  checksum: 77c5eb989972a627b0e278897d94d1f22158c498e552fc023fb9bf2d7d8de9c73d02c5cdf2d21f28314bb528bea50b46bec3aef22125920f9703c8ce93ea91e9
+  checksum: a3aec4d20ca600dfbe4c5044204c0b444de19bf44fd4abf80e72e7e51b4a6e1a71d3d897525577aa0b46e9cdbaf5db5dfaf87f2de18ade37121f0884d744e719
   languageName: node
   linkType: hard
 
@@ -4522,7 +4522,7 @@ fsevents@~2.1.2:
     git-go: ^1.0.3
     glob: ^7.1.6
     husky: ^4.3.0
-    imageapi.js: ^1.2.0
+    imageapi.js: ^1.2.1
     lint-staged: ^10.5.2
     mongoose: ^5.11.0
     ms: ^2.1.2
