@@ -26,3 +26,13 @@ Has a cool little DB system, allowing you to load schemas remotely.
 # Development Status
 
 **Spencer** is still under active development, have an idea? Make an issue.
+
+Psst! This project was made with create-ts-pro
+
+Use it like so:
+
+```
+mkdir my_cool_project
+cd my_cool_project
+yarn create ts-pro
+```
