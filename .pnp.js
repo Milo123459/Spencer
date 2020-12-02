@@ -614,7 +614,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ci-info", "npm:2.0.0"],
             ["clipanion", "npm:2.6.2"],
             ["fromentries", "npm:1.3.2"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -655,7 +655,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["p-limit", "npm:2.3.0"],
             ["pluralize", "npm:7.0.0"],
             ["pretty-bytes", "npm:5.4.1"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["stream-to-promise", "npm:2.2.0"],
             ["tar-stream", "npm:2.1.4"],
             ["treeify", "npm:1.1.0"],
@@ -807,7 +807,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enquirer", "npm:2.3.6"],
             ["lodash", "npm:4.17.20"],
             ["micromatch", "npm:4.0.2"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -861,7 +861,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/core", "npm:2.4.0"],
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["git-url-parse", "npm:11.1.2"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tslib", "npm:1.14.1"]
           ],
           "packagePeers": [
@@ -1031,7 +1031,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["@yarnpkg/plugin-pack", "virtual:c3d513dc7c208b22329b57908a3011672164fcb7140841f92a14de18f71a3efb57b2358a9022110dc534fc0ceb986b360f8d850ee0890030ab7e609ec2b994bd#npm:2.2.3"],
             ["enquirer", "npm:2.3.6"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["ssri", "npm:6.0.1"],
             ["tslib", "npm:1.14.1"]
           ],
@@ -1067,7 +1067,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/plugin-pack", "virtual:c3d513dc7c208b22329b57908a3011672164fcb7140841f92a14de18f71a3efb57b2358a9022110dc534fc0ceb986b360f8d850ee0890030ab7e609ec2b994bd#npm:2.2.3"],
             ["clipanion", "npm:2.6.2"],
             ["enquirer", "npm:2.3.6"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -1167,7 +1167,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnp", "npm:2.3.2"],
             ["clipanion", "npm:2.6.2"],
             ["micromatch", "npm:4.0.2"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tslib", "npm:1.14.1"]
           ],
           "packagePeers": [
@@ -4190,7 +4190,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npmlog", "npm:4.1.2"],
             ["request", "npm:2.88.2"],
             ["rimraf", "npm:3.0.2"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["tar", "npm:6.0.5"],
             ["which", "npm:2.0.2"]
           ],
@@ -4245,7 +4245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["normalize-package-data", "npm:3.0.0"],
             ["hosted-git-info", "npm:3.0.7"],
             ["resolve", "patch:resolve@npm%3A1.19.0#builtin<compat/resolve>::version=1.19.0&hash=3388aa"],
-            ["semver", "npm:7.3.2"],
+            ["semver", "npm:7.3.4"],
             ["validate-npm-package-license", "npm:3.0.4"]
           ],
           "linkType": "HARD",
@@ -5192,6 +5192,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/semver-npm-7.3.2-161b023bbb-bceb46d396.zip/node_modules/semver/",
           "packageDependencies": [
             ["semver", "npm:7.3.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:7.3.4", {
+          "packageLocation": "./.yarn/cache/semver-npm-7.3.4-4c3baf0ead-f2c7f9aeb9.zip/node_modules/semver/",
+          "packageDependencies": [
+            ["semver", "npm:7.3.4"],
+            ["lru-cache", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
