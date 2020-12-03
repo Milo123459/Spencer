@@ -1619,6 +1619,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"create-require@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "create-require@npm:1.1.1"
+  checksum: babd307893abfb26d77ae11cb9d6b6cfa6d18c9cee435cf70b5a3fb44aa8d90c9ec26ea89cbb16e0a94b8d34f5fcaee164b90ed526cdd3158955673ab9652d01
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:7.0.3, cross-spawn@npm:^7.0.0":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -3351,9 +3358,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.1, mongoose@npm:^5.11.1":
-  version: 5.11.1
-  resolution: "mongoose@npm:5.11.1"
+"mongoose@npm:5.11.2, mongoose@npm:^5.11.2":
+  version: 5.11.2
+  resolution: "mongoose@npm:5.11.2"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3367,7 +3374,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 03090768ff88337dffe1162266a1747d6909cb6340630767c0f536e2548b62e980bbb78895353f69640b0b1be8c9ba51749cb295ca0d951d52df4430bc888bf1
+  checksum: 2ac995815ffc99e95ae810d577837054a81b299a9c82d49e97397c9d4f57fdd0d49f2fd10f3c6d85ac17be7bf755e6098ac71704f16d65d6ad286c324053a414
   languageName: node
   linkType: hard
 
@@ -4535,10 +4542,10 @@ fsevents@~2.1.2:
     husky: ^4.3.0
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.2
-    mongoose: ^5.11.1
+    mongoose: ^5.11.2
     ms: ^2.1.2
     prettier: ^2.2.1
-    ts-node: ^9.0.0
+    ts-node: ^9.1.0
     ts-node-dev: ^1.0.0
     tslib: ^2.0.3
     typescript: ^4.1.2
@@ -4958,6 +4965,27 @@ fsevents@~2.1.2:
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
   checksum: 49d2ab087fc4b93f0a292e426ea6d242a80d1a4809ac008758bb0170aea1a85cd4182792c1d70889285fe5328cd8bd1ffb1e5108d1c4f31c39dbe9151ea4cabe
+  languageName: node
+  linkType: hard
+
+"ts-node@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "ts-node@npm:9.1.0"
+  dependencies:
+    arg: ^4.1.0
+    create-require: ^1.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    source-map-support: ^0.5.17
+    yn: 3.1.1
+  peerDependencies:
+    typescript: ">=2.7"
+  bin:
+    ts-node: dist/bin.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: 4735671aabf8c5f3165683b481884f5080cb2d911771c8da368f8565d5f8d769ee6f504d2d1357429ceea076f9eb9ea6714c13a46d74b3d21c5c119a6e4c27fc
   languageName: node
   linkType: hard
 

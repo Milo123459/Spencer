@@ -20,7 +20,7 @@
 		"erlpack": "^0.1.3",
 		"glob": "^7.1.6",
 		"imageapi.js": "^1.2.1",
-		"mongoose": "^5.11.1",
+		"mongoose": "^5.11.2",
 		"ms": "^2.1.2",
 		"tslib": "^2.0.3",
 		"utf-8-validate": "^5.0.3",
@@ -39,7 +39,7 @@
 		"husky": "^4.3.0",
 		"lint-staged": "^10.5.2",
 		"prettier": "^2.2.1",
-		"ts-node": "^9.0.0",
+		"ts-node": "^9.1.0",
 		"ts-node-dev": "^1.0.0",
 		"typescript": "^4.1.2"
 	},
