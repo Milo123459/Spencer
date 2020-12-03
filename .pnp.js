@@ -467,10 +467,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mongodb", [
-        ["npm:3.5.34", {
-          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.5.34-0cc8c5dfff-a843f2e025.zip/node_modules/@types/mongodb/",
+        ["npm:3.6.0", {
+          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.6.0-eb1b4d7950-eb7c31c63e.zip/node_modules/@types/mongodb/",
           "packageDependencies": [
-            ["@types/mongodb", "npm:3.5.34"],
+            ["@types/mongodb", "npm:3.6.0"],
             ["@types/bson", "npm:4.0.3"],
             ["@types/node", "npm:14.14.10"]
           ],
@@ -482,7 +482,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.10.1-959789d96e-2517d1e9b6.zip/node_modules/@types/mongoose/",
           "packageDependencies": [
             ["@types/mongoose", "npm:5.10.1"],
-            ["@types/mongodb", "npm:3.5.34"],
+            ["@types/mongodb", "npm:3.6.0"],
             ["@types/node", "npm:14.14.10"]
           ],
           "linkType": "HARD",
@@ -2351,7 +2351,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@discordjs/form-data", "npm:3.0.1"],
             ["abort-controller", "npm:3.0.0"],
             ["node-fetch", "npm:2.6.1"],
-            ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.2"],
+            ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.3"],
             ["setimmediate", "npm:1.0.5"],
             ["tweetnacl", "npm:1.0.3"],
             ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.0"]
@@ -4091,7 +4091,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mongoose-npm-5.11.2-6a0701845a-2ac995815f.zip/node_modules/mongoose/",
           "packageDependencies": [
             ["mongoose", "npm:5.11.2"],
-            ["@types/mongodb", "npm:3.5.34"],
+            ["@types/mongodb", "npm:3.6.0"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.1"],
             ["mongodb", "virtual:6a0701845a12ab6143f5408ba2b0c006c7920a097744d51c440f46b021f2f4187f096c91ed367ce8b9630819248ee80c7f096de79c38b686c5d0d7700f59546a#npm:3.6.3"],
@@ -4678,17 +4678,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prism-media", [
-        ["npm:1.2.2", {
-          "packageLocation": "./.yarn/cache/prism-media-npm-1.2.2-351b2c8ce0-fa992731ff.zip/node_modules/prism-media/",
+        ["npm:1.2.3", {
+          "packageLocation": "./.yarn/cache/prism-media-npm-1.2.3-1827a84d31-337cfb80db.zip/node_modules/prism-media/",
           "packageDependencies": [
-            ["prism-media", "npm:1.2.2"]
+            ["prism-media", "npm:1.2.3"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.2", {
-          "packageLocation": "./.yarn/$$virtual/prism-media-virtual-e01f303a5e/0/cache/prism-media-npm-1.2.2-351b2c8ce0-fa992731ff.zip/node_modules/prism-media/",
+        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.3", {
+          "packageLocation": "./.yarn/$$virtual/prism-media-virtual-13a3255bbf/0/cache/prism-media-npm-1.2.3-1827a84d31-337cfb80db.zip/node_modules/prism-media/",
           "packageDependencies": [
-            ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.2"],
+            ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.3"],
             ["@discordjs/opus", null],
             ["@types/discordjs__opus", null],
             ["@types/ffmpeg-static", null],
@@ -5825,13 +5825,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-node", [
-        ["npm:9.0.0", {
-          "packageLocation": "./.yarn/cache/ts-node-npm-9.0.0-7f58a021c2-49d2ab087f.zip/node_modules/ts-node/",
-          "packageDependencies": [
-            ["ts-node", "npm:9.0.0"]
-          ],
-          "linkType": "SOFT",
-        }],
         ["npm:9.1.0", {
           "packageLocation": "./.yarn/cache/ts-node-npm-9.1.0-a67f8fc398-4735671aab.zip/node_modules/ts-node/",
           "packageDependencies": [
@@ -5846,24 +5839,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/typescript", null],
             ["arg", "npm:4.1.3"],
             ["create-require", "npm:1.1.1"],
-            ["diff", "npm:4.0.2"],
-            ["make-error", "npm:1.3.6"],
-            ["source-map-support", "npm:0.5.19"],
-            ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"],
-            ["yn", "npm:3.1.1"]
-          ],
-          "packagePeers": [
-            "@types/typescript",
-            "typescript"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.0.0", {
-          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-1802721150/0/cache/ts-node-npm-9.0.0-7f58a021c2-49d2ab087f.zip/node_modules/ts-node/",
-          "packageDependencies": [
-            ["ts-node", "virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.0.0"],
-            ["@types/typescript", null],
-            ["arg", "npm:4.1.3"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
             ["source-map-support", "npm:0.5.19"],
@@ -5901,7 +5876,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:2.7.1"],
             ["source-map-support", "npm:0.5.19"],
             ["tree-kill", "npm:1.2.2"],
-            ["ts-node", "virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.0.0"],
+            ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.0"],
             ["tsconfig", "npm:7.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"]
           ],

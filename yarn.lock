@@ -357,12 +357,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.5.34
-  resolution: "@types/mongodb@npm:3.5.34"
+  version: 3.6.0
+  resolution: "@types/mongodb@npm:3.6.0"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: a843f2e025e96128b693c5f483b322ea0e4d31ddf094c63d1974137d57244762bb06f6b2d48e5245f216cee16b2f11f33718deccfc3b7bd64d40d1a32b244c5a
+  checksum: eb7c31c63e7f23c861606e6d23d8201aa711b343732ae10789fc955bedc9982ca22dcf00f683a520c020a016e99af6a43aab1786d9888835a096b0cf31c23446
   languageName: node
   linkType: hard
 
@@ -3876,13 +3876,13 @@ fsevents@~2.1.2:
   linkType: hard
 
 "prism-media@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "prism-media@npm:1.2.2"
+  version: 1.2.3
+  resolution: "prism-media@npm:1.2.3"
   peerDependencies:
-    "@discordjs/opus": ^0.1.0
-    ffmpeg-static: ^2.4.0 || ^3.0.0
-    node-opus: ^0.3.1
-    opusscript: ^0.0.6
+    "@discordjs/opus": ^0.3.3
+    ffmpeg-static: ^4.2.7 || ^3.0.0 || ^2.4.0
+    node-opus: ^0.3.3
+    opusscript: ^0.0.7
   peerDependenciesMeta:
     "@discordjs/opus":
       optional: true
@@ -3892,7 +3892,7 @@ fsevents@~2.1.2:
       optional: true
     opusscript:
       optional: true
-  checksum: fa992731ff55d1b798329801d7b4e020bef870196d4cbd23d11425eefdd64b98ba2303a8071a4a0acd37822c7a0af96b39c325e0c65b99756cd27610b5491001
+  checksum: 337cfb80dba36ffb96989b3b6832cf1e46b0706da73ebb3d3de6a6d1429302e318961ee5cc048ea3e997c23c543e950d08a20a89cadc84ec37b2b0a856946397
   languageName: node
   linkType: hard
 
@@ -4948,27 +4948,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "ts-node@npm:9.0.0"
-  dependencies:
-    arg: ^4.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    source-map-support: ^0.5.17
-    yn: 3.1.1
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 49d2ab087fc4b93f0a292e426ea6d242a80d1a4809ac008758bb0170aea1a85cd4182792c1d70889285fe5328cd8bd1ffb1e5108d1c4f31c39dbe9151ea4cabe
-  languageName: node
-  linkType: hard
-
-"ts-node@npm:^9.1.0":
+"ts-node@npm:^9.0.0, ts-node@npm:^9.1.0":
   version: 9.1.0
   resolution: "ts-node@npm:9.1.0"
   dependencies:
