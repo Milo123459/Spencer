@@ -13,7 +13,9 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	await message.react('🚀');
-	const response: string = await cleverbot(args.join(' '));
+	const response: string = await cleverbot(args.join(' '), [
+		`👋 Hi, my name is ${message.author.username}`,
+	]);
 	await message.channel.send(client.embed({ description: response }, message));
 	await message.reactions.cache.get('🚀')?.remove();
 };
