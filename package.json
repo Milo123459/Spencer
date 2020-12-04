@@ -4,7 +4,7 @@
 	"description": "Spencer is a discord bot developed by Salvage_Dev.",
 	"main": "dist/src/index.js",
 	"scripts": {
-		"test": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"dev": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"lint": "prettier --write .",
 		"build": "tsc",
 		"start": "del-cli ./dist && yarn build && node .",

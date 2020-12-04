@@ -1,4 +1,4 @@
-import { Message, GuildMember, EmbedFieldData } from 'discord.js';
+import { Message, GuildMember, EmbedFieldData, GuildChannel } from 'discord.js';
 import { Spencer } from '../client/Client';
 
 class UtilsManager {
@@ -11,6 +11,11 @@ class UtilsManager {
 		if (message.mentions.members.first())
 			return message.mentions.members.first();
 		if (!isNaN(parseInt(arg))) return message.guild.members.cache.get(arg);
+	}
+	public ResolveChannel(message: Message, arg: string): GuildChannel {
+		if (message.mentions.channels.first())
+			return message.mentions.channels.first();
+		if (!isNaN(parseInt(arg))) return message.guild.channels.cache.get(arg);
 	}
 	public formatMS(ms: number): string {
 		const times: object = {

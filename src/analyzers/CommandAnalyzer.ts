@@ -45,12 +45,9 @@ const analyzeCommands = async () => {
 			const fileName: string = splitted[splitted.length - 1];
 			await writePromise(
 				value.file,
-				`${content}\nexport const name: string = '${
-					fileName
-						.split(/.ts/gi)[0]
-						.toLowerCase()
-						.split(/command/gi)[0]
-				}';`
+				`${content}\nexport const name: string = '${fileName
+					.split(/command/gi)[0]
+					.toLowerCase()}';`
 			);
 			fixed.push('name');
 		}
