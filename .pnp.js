@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
+            ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
@@ -1227,6 +1228,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "npm:2.4.0"]
           ],
           "linkType": "SOFT",
+        }],
+        ["virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0", {
+          "packageLocation": "./.yarn/$$virtual/@yarnpkg-pnpify-virtual-7902af95e1/0/cache/@yarnpkg-pnpify-npm-2.4.0-f9312c18ed-89bbbe7f62.zip/node_modules/@yarnpkg/pnpify/",
+          "packageDependencies": [
+            ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
+            ["@types/eslint", null],
+            ["@types/typescript", null],
+            ["@yarnpkg/core", "npm:2.4.0"],
+            ["@yarnpkg/fslib", "npm:2.4.0"],
+            ["@yarnpkg/parsers", "npm:2.3.0"],
+            ["chalk", "npm:3.0.0"],
+            ["clipanion", "npm:2.6.2"],
+            ["comment-json", "npm:2.4.2"],
+            ["eslint", null],
+            ["lodash", "npm:4.17.20"],
+            ["tslib", "npm:1.14.1"],
+            ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"]
+          ],
+          "packagePeers": [
+            "@types/eslint",
+            "@types/typescript",
+            "eslint",
+            "typescript"
+          ],
+          "linkType": "HARD",
         }],
         ["virtual:fb11dcd30ca32d34f5ad19ae9625b1916178d44acb684d474432a029b63641279008c77ee42126b5f86f05246e536479c9ab4f292b5657d5a842747eb8e8e02b#npm:2.4.0", {
           "packageLocation": "./.yarn/$$virtual/@yarnpkg-pnpify-virtual-28e1d97c9d/0/cache/@yarnpkg-pnpify-npm-2.4.0-f9312c18ed-89bbbe7f62.zip/node_modules/@yarnpkg/pnpify/",
@@ -5408,6 +5434,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
+            ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
             ["bufferutil", "npm:4.0.2"],
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
