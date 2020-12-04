@@ -32,3 +32,5 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'setsuggestion';
 export const category: string = 'config';
+export const aliases: string[] = ['ss', 'ssc', 'suggestionchannel'];
+export const userPermissions: string = 'MANAGE_GUILD';
