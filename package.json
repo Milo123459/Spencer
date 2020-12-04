@@ -21,7 +21,7 @@
 		"erlpack": "^0.1.3",
 		"glob": "^7.1.6",
 		"imageapi.js": "^1.2.1",
-		"mongoose": "^5.11.3",
+		"mongoose": "^5.11.4",
 		"ms": "^2.1.2",
 		"tslib": "^2.0.3",
 		"utf-8-validate": "^5.0.3",
