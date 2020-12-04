@@ -22,6 +22,10 @@ export const run: RunFunction = async (client, message, args) => {
     Premium? ${apiResponse.payload.user.details?.premium || false}
     Verified? ${apiResponse.payload.user.details?.verified || false}
     Likes: ${apiResponse.payload.user.details?.likes || 0}
+    Location: ${
+			apiResponse.payload.user.details?.location ||
+			'Somewhere in the world (Unkown)'
+		}
     `,
 			},
 			message
