@@ -18,15 +18,16 @@ export const run: RunFunction = async (client, message, args) => {
     Go to **[${member.displayName}](https://dsc.bio/${
 					apiResponse.payload.user.details.slug
 				})**
+    Description: ${apiResponse.payload.user.details?.description || 'Unknown'}
     Staff? ${apiResponse.payload.user.details?.staff || false}
     Premium? ${apiResponse.payload.user.details?.premium || false}
     Verified? ${apiResponse.payload.user.details?.verified || false}
     Likes: ${apiResponse.payload.user.details?.likes || 0}
     Location: ${
-			apiResponse.payload.user.details?.location || 'Somewhere (Unkown)'
+			apiResponse.payload.user.details?.location || 'Somewhere (Unknown)'
 		}
     Birthday: ${
-			apiResponse.payload.user.details?.birthday || 'Some time (Unkown)'
+			apiResponse.payload.user.details?.birthday || 'Some time (Unknown)'
 		}
     `,
 			},
