@@ -12,7 +12,7 @@ export const run: RunFunction = async (client, message) => {
 			Channels: \`${client.channels.cache.size.toLocaleString()}\`
 			Uptime: \`${client.utils.formatMS(client.uptime)}\`
 			Discord API version: \`${client.options.http?.version || 'Unkown'}\`
-			Running OS: \`${client.options.ws?.properties?.$os || 'Unkown'}\`
+			Running OS: \`${process.platform || 'Unkown'}\`
 			WebSocket Ping: \`${client.ws.ping}\``,
 		},
 		message
