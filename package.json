@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
 		"lint": "prettier --write .",
-		"build": "tsc",
+		"build": "tsc --diagnostics",
 		"start": "del-cli ./dist && yarn build && node .",
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
