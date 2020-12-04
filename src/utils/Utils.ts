@@ -10,11 +10,7 @@ class UtilsManager {
 	public ResolveMember(message: Message, arg: string): GuildMember {
 		if (message.mentions.members.first())
 			return message.mentions.members.first();
-		if (!isNaN(parseInt(arg.split(/ +/g)[0])))
-			return message.guild.members.cache.get(arg?.split(/ +/g)[0] || arg);
-		return message.guild.members.cache.find((value: GuildMember) =>
-			value.displayName.toLowerCase().includes(arg.toLowerCase())
-		);
+		if (!isNaN(parseInt(arg))) return message.guild.members.cache.get(arg);
 	}
 	public ResolveChannel(message: Message, arg: string): GuildChannel {
 		if (message.mentions.channels.first())
