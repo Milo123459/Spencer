@@ -15,11 +15,13 @@ export const run: RunFunction = async (client, message, args) => {
 		client.embed(
 			{
 				description: `
-    Go to **[${member.displayName}](https://dsc.bio/${apiResponse.payload.user.details.slug})**
-    Staff? ${apiResponse.payload.user.details.staff}
-    Premium? ${apiResponse.payload.user.details.premium}
-    Verified? ${apiResponse.payload.user.details.verified}
-    Likes: ${apiResponse.payload.user.details.likes}
+    Go to **[${member.displayName}](https://dsc.bio/${
+					apiResponse.payload.user.details.slug
+				})**
+    Staff? ${apiResponse.payload.user.details?.staff || false}
+    Premium? ${apiResponse.payload.user.details?.premium || false}
+    Verified? ${apiResponse.payload.user.details?.verified || false}
+    Likes: ${apiResponse.payload.user.details?.likes || 0}
     `,
 			},
 			message
