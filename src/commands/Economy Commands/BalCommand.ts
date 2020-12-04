@@ -4,7 +4,8 @@ export const name: string = 'bal';
 export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const User: string =
-		client.utils.ResolveMember(message, args[0])?.id || message.author.id;
+		client.utils.ResolveMember(message, args.join(' '))?.id ||
+		message.author.id;
 	const UserCoins = await EconomySchema.findOne({ User });
 	await message.channel.send(
 		client.embed(

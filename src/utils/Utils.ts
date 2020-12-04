@@ -11,7 +11,7 @@ class UtilsManager {
 		if (message.mentions.members.first())
 			return message.mentions.members.first();
 		if (!isNaN(parseInt(arg.split(/ +/g)[0])))
-			return message.guild.members.cache.get(arg.split(/ +/g)[0]);
+			return message.guild.members.cache.get(arg?.split(/ +/g)[0] || arg);
 		return message.guild.members.cache.find((value: GuildMember) =>
 			value.displayName.toLowerCase().includes(arg.toLowerCase())
 		);
