@@ -2,7 +2,8 @@ import { Role } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 export const name: string = 'userinfo';
 export const run: RunFunction = async (client, message, args) => {
-	const member = client.utils.ResolveMember(message, args[0]) || message.member;
+	const member =
+		client.utils.ResolveMember(message, args.join(' ')) || message.member;
 	await message.channel.send(
 		client.embed(
 			{
