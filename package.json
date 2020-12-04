@@ -13,7 +13,7 @@
 		"doctor": "doctor",
 		"full-update": "yarn bump && yarn pnpify --sdk"
 	},
-	"license": "MIT",
+	"license": "Creative Commons",
 	"dependencies": {
 		"bufferutil": "^4.0.2",
 		"cleverbot-free": "^1.0.5",
