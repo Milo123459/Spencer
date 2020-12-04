@@ -12,10 +12,10 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-	await message.channel.startTyping();
+	await message.react('🚀');
 	const response: string = await cleverbot(args.join(' '));
 	await message.channel.send(client.embed({ description: response }, message));
-	message.channel.stopTyping();
+	await message.reactions.cache.get('🚀')?.remove();
 };
 export const name: string = 'cleverbot';
 export const category: string = 'fun';
