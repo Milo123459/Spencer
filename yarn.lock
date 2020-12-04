@@ -366,13 +366,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mongoose@npm:^5.10.1":
-  version: 5.10.1
-  resolution: "@types/mongoose@npm:5.10.1"
+"@types/mongoose@npm:^5.10.2":
+  version: 5.10.2
+  resolution: "@types/mongoose@npm:5.10.2"
   dependencies:
     "@types/mongodb": "*"
     "@types/node": "*"
-  checksum: 2517d1e9b6563ffc94a34b44627404cd679458d33f8639b6b58acef4ee31036844fe4926e2e69813c8fd4d00edec89df65993c76a20f43db04303cddfaa2d1e6
+  checksum: 6fbf7dc7901093204cf08c6ffa1ab4e33c77a10a75ce5dc9bcc9346e9a9b914bc9ffe2de0b585548f6faef8883ca55189778aa78a1a1e31b4e114bd761aadcd9
   languageName: node
   linkType: hard
 
@@ -3358,9 +3358,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.2, mongoose@npm:^5.11.2":
-  version: 5.11.2
-  resolution: "mongoose@npm:5.11.2"
+"mongoose@npm:5.11.3, mongoose@npm:^5.11.3":
+  version: 5.11.3
+  resolution: "mongoose@npm:5.11.3"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3374,7 +3374,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 2ac995815ffc99e95ae810d577837054a81b299a9c82d49e97397c9d4f57fdd0d49f2fd10f3c6d85ac17be7bf755e6098ac71704f16d65d6ad286c324053a414
+  checksum: 4079c30275dfe14904da978173e0720e78d6db4c09cb27277be7150da054513a941134142770c7fcb5e7f2594a9aa6fbf67503b699bed68ff43045a1a46fdc83
   languageName: node
   linkType: hard
 
@@ -4528,7 +4528,7 @@ fsevents@~2.1.2:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-angular": ^11.0.0
     "@types/glob": ^7.1.3
-    "@types/mongoose": ^5.10.1
+    "@types/mongoose": ^5.10.2
     "@types/ms": ^0.7.31
     "@types/node": ^14.14.10
     "@yarnpkg/doctor": ^2.1.3
@@ -4542,7 +4542,7 @@ fsevents@~2.1.2:
     husky: ^4.3.0
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.2
-    mongoose: ^5.11.2
+    mongoose: ^5.11.3
     ms: ^2.1.2
     prettier: ^2.2.1
     ts-node: ^9.1.0
