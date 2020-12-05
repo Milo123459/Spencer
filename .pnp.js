@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.1"],
+            ["husky", "npm:4.3.4"],
             ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.3"],
             ["mongoose", "npm:5.11.4"],
@@ -3233,10 +3233,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.3.1", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.1-f645516e98/node_modules/husky/",
+        ["npm:4.3.4", {
+          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.4-ee4794fd6a/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.3.1"],
+            ["husky", "npm:4.3.4"],
             ["chalk", "npm:4.1.0"],
             ["ci-info", "npm:2.0.0"],
             ["compare-versions", "npm:3.6.0"],
@@ -5579,7 +5579,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["erlpack", "npm:0.1.3"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.1"],
+            ["husky", "npm:4.3.4"],
             ["imageapi.js", "npm:1.2.1"],
             ["lint-staged", "npm:10.5.3"],
             ["mongoose", "npm:5.11.4"],
