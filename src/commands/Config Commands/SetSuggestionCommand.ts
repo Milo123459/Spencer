@@ -16,6 +16,24 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
+	if (!channel.isText())
+		return message.channel.send(
+			client.embed({ description: 'Please specify a text channel!' }, message)
+		);
+	if (
+		!channel
+			.permissionsFor(message.guild.me)
+			.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
+	)
+		return await message.channel.send(
+			client.embed(
+				{
+					description:
+						"I can't speak in that channel :( / I can't add reactions there!",
+				},
+				message
+			)
+		);
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	await GuildConfigSchema.update(
 		{ Guild: message.guild.id },
