@@ -15,7 +15,7 @@ export const run: RunFunction = async (client, message, args) => {
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
 	});
-	if (!(GuildConfig as Anything).SuggestionChannel)
+	if (!GuildConfig || !(GuildConfig as Anything).SuggestionChannel)
 		return await message.channel.send(
 			client.embed(
 				{
