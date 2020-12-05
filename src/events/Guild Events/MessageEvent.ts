@@ -36,6 +36,7 @@ export const run: RunFunction = async (client, message: Message) => {
 																value[0].toUpperCase() +
 																value.slice(1).toLowerCase()
 														)
+														.join(' ')
 												: command.userPermissions[0]
 														.replace(/_/gi, ' ')
 														.split(/ +/g)
@@ -44,6 +45,7 @@ export const run: RunFunction = async (client, message: Message) => {
 																value[0].toUpperCase() +
 																value.slice(1).toLowerCase()
 														)
+														.join(' ')
 									  }\``
 									: `all of these permissions: ${command.userPermissions
 											.map(
@@ -57,7 +59,7 @@ export const run: RunFunction = async (client, message: Message) => {
 																value[0].toUpperCase() +
 																value.slice(1).toLowerCase()
 														)
-														.join(', ')}\``
+														.join(' ')}\``
 											)
 											.join(', ')}`
 							}`,
