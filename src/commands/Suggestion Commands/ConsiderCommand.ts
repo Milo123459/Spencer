@@ -9,6 +9,13 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	const SuggestionSchema = await client.db.load('suggestion');
 	const GuildConfigSchema = await client.db.load('guildconfig');
+	try {
+		await SuggestionSchema.findOne({ Guild: message.guild.id, _id: args[0] });
+	} catch {
+		return await message.channel.send(
+			client.embed({ description: "That suggestion doesn't exist!" }, message)
+		);
+	}
 	const Suggestion = await SuggestionSchema.findOne({
 		Guild: message.guild.id,
 		_id: args[0],
