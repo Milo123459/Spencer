@@ -29,7 +29,21 @@ export const run: RunFunction = async (client, message: Message) => {
 									? `\`${
 											typeof command.userPermissions == 'string'
 												? command.userPermissions
+														.replace(/_/gi, ' ')
+														.split(/ +/g)
+														.map(
+															(value: string) =>
+																value[0].toUpperCase() +
+																value.slice(1).toLowerCase()
+														)
 												: command.userPermissions[0]
+														.replace(/_/gi, ' ')
+														.split(/ +/g)
+														.map(
+															(value: string) =>
+																value[0].toUpperCase() +
+																value.slice(1).toLowerCase()
+														)
 									  }\``
 									: `all of these permissions: ${command.userPermissions
 											.map(
