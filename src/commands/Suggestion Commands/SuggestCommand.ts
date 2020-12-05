@@ -30,8 +30,9 @@ export const run: RunFunction = async (client, message, args) => {
 	);
 	if (
 		!channel
-			.permissionsFor(message.guild.me)
-			.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
+			?.permissionsFor(message.guild.me)
+			?.has(['SEND_MESSAGES', 'ADD_REACTIONS']) ||
+		true
 	)
 		return await message.channel.send(
 			client.embed(
