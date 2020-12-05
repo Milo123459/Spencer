@@ -32,7 +32,19 @@ export const run: RunFunction = async (client, message: Message) => {
 												: command.userPermissions[0]
 									  }\``
 									: `all of these permissions: ${command.userPermissions
-											.map((value: string) => `\`${value}\``)
+											.map(
+												(value: string) =>
+													`\`${value
+														.toLowerCase()
+														.replace(/_/gi, ' ')
+														.split(/ +/g)
+														.map(
+															(value: string) =>
+																value[0].toUpperCase() +
+																value.slice(1).toLowerCase()
+														)
+														.join(', ')}\``
+											)
 											.join(', ')}`
 							}`,
 							title: `❌ You can't use that!`,
