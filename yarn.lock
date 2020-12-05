@@ -357,12 +357,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.0
-  resolution: "@types/mongodb@npm:3.6.0"
+  version: 3.6.1
+  resolution: "@types/mongodb@npm:3.6.1"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: eb7c31c63e7f23c861606e6d23d8201aa711b343732ae10789fc955bedc9982ca22dcf00f683a520c020a016e99af6a43aab1786d9888835a096b0cf31c23446
+  checksum: 5f4dc9bc18a244a0ef4e45e24026e87d2030be8d327c907025e7f04f0451fe5ca0ac432fde3291514149dec7fb92b2e36135312d9ea710ba71938bac5bf69444
   languageName: node
   linkType: hard
 
@@ -5360,8 +5360,8 @@ typescript@^4.1.2:
   linkType: hard
 
 "ws@npm:^7.3.1":
-  version: 7.4.0
-  resolution: "ws@npm:7.4.0"
+  version: 7.4.1
+  resolution: "ws@npm:7.4.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -5370,7 +5370,7 @@ typescript@^4.1.2:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 67c0f3b86d89c20e337b0bd712e0a2752068eadc0cf13c024d0532c18d073381ced485fb114a636998327a82c34d83720f4ceb7632395c0cb9580ce221177fd8
+  checksum: 32b4f83bfeeca2b98d31c2d11c87a11c6e83f9285937e4a8267eb0ccaba479952a70c8b2ba39d0304236043c37a9bdf45cf2e5a1c28f19a77838e4e0b7f37593
   languageName: node
   linkType: hard
 

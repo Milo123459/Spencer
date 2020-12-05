@@ -471,10 +471,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mongodb", [
-        ["npm:3.6.0", {
-          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.6.0-eb1b4d7950-eb7c31c63e.zip/node_modules/@types/mongodb/",
+        ["npm:3.6.1", {
+          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.6.1-4528d9d17e-5f4dc9bc18.zip/node_modules/@types/mongodb/",
           "packageDependencies": [
-            ["@types/mongodb", "npm:3.6.0"],
+            ["@types/mongodb", "npm:3.6.1"],
             ["@types/bson", "npm:4.0.3"],
             ["@types/node", "npm:14.14.10"]
           ],
@@ -486,7 +486,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.10.2-76a175f109-6fbf7dc790.zip/node_modules/@types/mongoose/",
           "packageDependencies": [
             ["@types/mongoose", "npm:5.10.2"],
-            ["@types/mongodb", "npm:3.6.0"],
+            ["@types/mongodb", "npm:3.6.1"],
             ["@types/node", "npm:14.14.10"]
           ],
           "linkType": "HARD",
@@ -2441,7 +2441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.3"],
             ["setimmediate", "npm:1.0.5"],
             ["tweetnacl", "npm:1.0.3"],
-            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.0"]
+            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -4245,7 +4245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mongoose-npm-5.11.4-da5fb3bbc5-1dd6127fe6.zip/node_modules/mongoose/",
           "packageDependencies": [
             ["mongoose", "npm:5.11.4"],
-            ["@types/mongodb", "npm:3.6.0"],
+            ["@types/mongodb", "npm:3.6.1"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.1"],
             ["mongodb", "virtual:da5fb3bbc5243fe652ca6bd4097c9984004449efc3e9394970fee2404681077aa3da148f7d376835d621206a86180a26a759376587db50f20f365274b15c78f3#npm:3.6.3"],
@@ -6329,17 +6329,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ws", [
-        ["npm:7.4.0", {
-          "packageLocation": "./.yarn/cache/ws-npm-7.4.0-289a5172d8-67c0f3b86d.zip/node_modules/ws/",
+        ["npm:7.4.1", {
+          "packageLocation": "./.yarn/cache/ws-npm-7.4.1-dd43fad225-32b4f83bfe.zip/node_modules/ws/",
           "packageDependencies": [
-            ["ws", "npm:7.4.0"]
+            ["ws", "npm:7.4.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.0", {
-          "packageLocation": "./.yarn/$$virtual/ws-virtual-9eff87dc88/0/cache/ws-npm-7.4.0-289a5172d8-67c0f3b86d.zip/node_modules/ws/",
+        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1", {
+          "packageLocation": "./.yarn/$$virtual/ws-virtual-7e7c842673/0/cache/ws-npm-7.4.1-dd43fad225-32b4f83bfe.zip/node_modules/ws/",
           "packageDependencies": [
-            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.0"],
+            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1"],
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["bufferutil", null],
