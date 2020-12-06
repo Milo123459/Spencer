@@ -50,8 +50,7 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	}
 	const msg: Message = await (channel as TextChannel).messages.fetch(
-		(Suggestion as Anything).MessageID,
-		false
+		(Suggestion as Anything).MessageID
 	);
 	const UpdatedSuggestion = await SuggestionSchema.update(
 		{ _id: args[0] },

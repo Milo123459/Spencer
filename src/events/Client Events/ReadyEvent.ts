@@ -32,8 +32,7 @@ export const run: RunFunction = async (client) => {
 			if (!channel) return await suggestion.delete();
 			try {
 				await (channel as TextChannel)?.messages?.fetch(
-					(suggestion as Anything)?.MessageID,
-					false
+					(suggestion as Anything)?.MessageID
 				);
 			} catch {
 				return await suggestion.delete();
