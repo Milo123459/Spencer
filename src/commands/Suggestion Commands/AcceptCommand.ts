@@ -64,7 +64,11 @@ export const run: RunFunction = async (client, message, args) => {
 					name: 'State',
 					value: `${(UpdatedSuggestion as Anything).State} by **${
 						message.author.username
-					}**`,
+					}**${
+						args.slice(1).length
+							? ` with reason ${args.slice(1).join(' ')}`
+							: ''
+					}`,
 				},
 			],
 		})
