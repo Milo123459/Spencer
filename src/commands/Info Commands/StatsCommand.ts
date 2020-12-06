@@ -6,7 +6,6 @@ export const run: RunFunction = async (client, message) => {
 		{
 			description: `
 			Stats for Spencer!
-			*Spencer is open source, you can view the code [here](https://github.com/Milo123459/Spencer) - Contributions are welcome!*
 			Guilds: \`${client.guilds.cache.size.toLocaleString()}\`
 			Users: \`${client.users.cache.size.toLocaleString()}\`
 			Channels: \`${client.channels.cache.size.toLocaleString()}\`
