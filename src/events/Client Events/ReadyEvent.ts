@@ -15,7 +15,7 @@ export const run: RunFunction = async (client) => {
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
-	cron.schedule('* * 0 0 0', async () => {
+	cron.schedule('0 0 * * *', async () => {
 		client.logger.info('Purging deleted suggestions..');
 		const SuggestionSchema = await client.db.load('suggestion');
 		const GuildConfigSchema = await client.db.load('guildconfig');
