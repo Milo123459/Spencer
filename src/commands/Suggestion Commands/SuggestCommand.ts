@@ -28,8 +28,14 @@ export const run: RunFunction = async (client, message, args) => {
 	const channel: GuildChannel = message.guild.channels.cache.get(
 		(GuildConfig as Anything).SuggestionChannel
 	);
+	if (!channel)
+		return message.channel.send(
+			client.embed(
+				{ description: "Hey... That channel doesn't exist?" },
+				message
+			)
+		);
 	if (
-		!channel ||
 		!channel
 			?.permissionsFor(message.guild.me)
 			?.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
