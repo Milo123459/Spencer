@@ -68,7 +68,9 @@ export const run: RunFunction = async (client, message, args) => {
 	);
 	await msg.react('👍');
 	await msg.react('👎');
-	await message.react('🚀');
+	try {
+		await message.react('🚀');
+	} catch {}
 	await SuggestionSchema.update({ _id: Suggestion._id }, { MessageID: msg.id });
 };
 export const name: string = 'suggest';

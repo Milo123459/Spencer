@@ -63,7 +63,9 @@ export const run: RunFunction = async (client, message, args) => {
 			fields: [{ name: 'State', value: (UpdatedSuggestion as Anything).State }],
 		})
 	);
-	await message.react('🚀');
+	try {
+		await message.react('🚀');
+	} catch {}
 };
 
 export const userPermissions: string = 'MANAGE_GUILD';
