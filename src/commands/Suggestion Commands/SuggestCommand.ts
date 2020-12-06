@@ -29,10 +29,10 @@ export const run: RunFunction = async (client, message, args) => {
 		(GuildConfig as Anything).SuggestionChannel
 	);
 	if (
+		!channel ||
 		!channel
 			?.permissionsFor(message.guild.me)
-			?.has(['SEND_MESSAGES', 'ADD_REACTIONS']) ||
-		true
+			?.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
 	)
 		return await message.channel.send(
 			client.embed(
