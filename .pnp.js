@@ -133,7 +133,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/load", "npm:11.0.0"],
             ["@commitlint/read", "npm:11.0.0"],
             ["chalk", "npm:4.1.0"],
-            ["core-js", "npm:3.8.0"],
+            ["core-js", "npm:3.8.1"],
             ["get-stdin", "npm:8.0.0"],
             ["lodash", "npm:4.17.20"],
             ["resolve-from", "npm:5.0.0"],
@@ -2156,10 +2156,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["core-js", [
-        ["npm:3.8.0", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-3.8.0-eea5a054e7/node_modules/core-js/",
+        ["npm:3.8.1", {
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.8.1-2d84e9c57f/node_modules/core-js/",
           "packageDependencies": [
-            ["core-js", "npm:3.8.0"]
+            ["core-js", "npm:3.8.1"]
           ],
           "linkType": "HARD",
         }]
