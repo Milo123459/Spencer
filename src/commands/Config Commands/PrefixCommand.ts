@@ -19,7 +19,7 @@ export const run: RunFunction = async (client, message, args) => {
 	if (args[0].length > 4)
 		return await message.channel.send(
 			client.embed(
-				{ description: "The prefix length can't be more then 4!" },
+				{ description: "The prefix length can't be more then 4 characters!" },
 				message
 			)
 		);
