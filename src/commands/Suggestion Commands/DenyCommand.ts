@@ -59,7 +59,14 @@ export const run: RunFunction = async (client, message, args) => {
 	await msg.edit(
 		new MessageEmbed({
 			...msg.embeds[0],
-			fields: [{ name: 'State', value: (UpdatedSuggestion as Anything).State }],
+			fields: [
+				{
+					name: 'State',
+					value: `${(UpdatedSuggestion as Anything).State} by **${
+						message.author.username
+					}**`,
+				},
+			],
 		})
 	);
 	try {
