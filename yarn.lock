@@ -383,7 +383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-cron@npm:^2":
+"@types/node-cron@npm:^2.0.3":
   version: 2.0.3
   resolution: "@types/node-cron@npm:2.0.3"
   dependencies:
@@ -4671,7 +4671,7 @@ fsevents@~2.1.2:
     "@types/mongoose": ^5.10.2
     "@types/ms": ^0.7.31
     "@types/node": ^14.14.10
-    "@types/node-cron": ^2
+    "@types/node-cron": ^2.0.3
     "@types/node-fetch": ^2.5.7
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
