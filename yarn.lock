@@ -3465,9 +3465,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.4, mongoose@npm:^5.11.4":
-  version: 5.11.4
-  resolution: "mongoose@npm:5.11.4"
+"mongoose@npm:5.11.5, mongoose@npm:^5.11.5":
+  version: 5.11.5
+  resolution: "mongoose@npm:5.11.5"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3481,7 +3481,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 1dd6127fe6fc26b7069de917ada652bb4456654357ddcc59325b891a914ed1cc1450d22df14af59e0d8ca0624e0b404f02dbebbc645ca1bce80c7f1d754f5fe8
+  checksum: 6a0305a6a9104b269c073cb28cea2a867dc66ed74564e6945ef32a70cb001e5baa0b13fcaad5ba55299dd3cb96e65c668e6de07fa562c03d4e888392ba7e62e0
   languageName: node
   linkType: hard
 
@@ -4659,11 +4659,11 @@ fsevents@~2.1.2:
     husky: ^4.3.5
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
-    mongoose: ^5.11.4
+    mongoose: ^5.11.5
     ms: ^2.1.2
     node-fetch: ^2.6.1
     prettier: ^2.2.1
-    ts-node: ^9.1.0
+    ts-node: ^9.1.1
     ts-node-dev: ^1.0.0
     tslib: ^2.0.3
     typescript: ^4.1.2
@@ -5085,7 +5085,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9.0.0, ts-node@npm:^9.1.0":
+"ts-node@npm:^9.0.0":
   version: 9.1.0
   resolution: "ts-node@npm:9.1.0"
   dependencies:
@@ -5103,6 +5103,27 @@ fsevents@~2.1.2:
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
   checksum: 4735671aabf8c5f3165683b481884f5080cb2d911771c8da368f8565d5f8d769ee6f504d2d1357429ceea076f9eb9ea6714c13a46d74b3d21c5c119a6e4c27fc
+  languageName: node
+  linkType: hard
+
+"ts-node@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "ts-node@npm:9.1.1"
+  dependencies:
+    arg: ^4.1.0
+    create-require: ^1.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    source-map-support: ^0.5.17
+    yn: 3.1.1
+  peerDependencies:
+    typescript: ">=2.7"
+  bin:
+    ts-node: dist/bin.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: a90db4a342872cd0e7a80babdfcb15d2f7c06e700d735003098f7cc79db575c3380580c58a19ae0d0eaab553af083651d4237060c92170e6f8ac4e64693113ea
   languageName: node
   linkType: hard
 
