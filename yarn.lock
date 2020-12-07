@@ -2580,9 +2580,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.0":
-  version: 4.3.4
-  resolution: "husky@npm:4.3.4"
+"husky@npm:^4.3.5":
+  version: 4.3.5
+  resolution: "husky@npm:4.3.5"
   dependencies:
     chalk: ^4.0.0
     ci-info: ^2.0.0
@@ -2597,7 +2597,7 @@ fsevents@~2.1.2:
   bin:
     husky-run: bin/run.js
     husky-upgrade: lib/upgrader/bin.js
-  checksum: d5a60af3f1667c68ee976257f27e48e84db82776905bc37c574146397b3578766a1b6a9a3bb2c8483eaca8d22fcc1359144d248d5f028018d9d88d18e118fb35
+  checksum: d15ccb44da39432bb5db1cd0c81eb169be25863bd4ff998c9ecf0c4e769e7d3fb547ed5044ae8b77050303841264bbe48aedf066afb1ee394bcbea4469e2d684
   languageName: node
   linkType: hard
 
@@ -4656,7 +4656,7 @@ fsevents@~2.1.2:
     erlpack: ^0.1.3
     git-go: ^1.0.3
     glob: ^7.1.6
-    husky: ^4.3.0
+    husky: ^4.3.5
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
     mongoose: ^5.11.4
