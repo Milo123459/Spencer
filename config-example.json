@@ -1,6 +1,0 @@
-{
-    "token": "TOKEN",
-    "mongoURI": "mongoURI",
-    "prefix": "!",
-    "owners": ["123456789123456789"]
-}
