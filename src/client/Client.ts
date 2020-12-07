@@ -6,16 +6,21 @@ import {
 	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
+	GuildChannel,
+	TextChannel,
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
 import { promisify } from 'util';
-import mongoose from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
+import { Anything } from '../interfaces/Anything';
+import cron from 'node-cron';
+import pMap from 'p-map';
 const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
@@ -77,6 +82,31 @@ class Spencer extends Client {
 		});
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
+		cron.schedule('0 0 * * *', async () => {
+			this.logger.info('Purging deleted suggestions..');
+			const SuggestionSchema = await this.db.load('suggestion');
+			const GuildConfigSchema = await this.db.load('guildconfig');
+			const Suggestions = await SuggestionSchema.find({});
+			await pMap(Suggestions, async (suggestion: Document) => {
+				const GuildConfig = await GuildConfigSchema.findOne({
+					Guild: (suggestion as Anything).Guild,
+				});
+				if (!(GuildConfig as Anything)?.SuggestionChannel || !GuildConfig)
+					return await suggestion.delete();
+				const channel: GuildChannel = this.guilds.cache
+					.get((suggestion as Anything).Guild)
+					?.channels?.cache?.get((GuildConfig as Anything).SuggestionChannel);
+				if (!channel) return await suggestion.delete();
+				try {
+					await (channel as TextChannel)?.messages?.fetch(
+						(suggestion as Anything)?.MessageID
+					);
+				} catch {
+					return await suggestion.delete();
+				}
+			});
+			this.logger.info('Purged suggestions');
+		});
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
