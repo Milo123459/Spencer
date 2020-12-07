@@ -10,8 +10,8 @@ export const run: RunFunction = async (client, message) => {
 			Users: \`${client.users.cache.size.toLocaleString()}\`
 			Channels: \`${client.channels.cache.size.toLocaleString()}\`
 			Uptime: \`${client.utils.formatMS(client.uptime)}\`
-			Discord API version: \`${client.options.http?.version || 'Unkown'}\`
-			Running OS: \`${process.platform || 'Unkown'}\`
+			Discord API version: \`${client.options.http?.version || 'Unknown'}\`
+			Running OS: \`${process.platform || 'Unknown'}\`
 			WebSocket Ping: \`${client.ws.ping}\``,
 		},
 		message
