@@ -1,6 +1,5 @@
 import { Message, GuildMember, EmbedFieldData, GuildChannel } from 'discord.js';
 import { Spencer } from '../client/Client';
-
 class UtilsManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {

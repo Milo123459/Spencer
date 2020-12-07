@@ -43,7 +43,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.2"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
-            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
@@ -60,9 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.3"],
             ["mongoose", "npm:5.11.4"],
             ["ms", "npm:2.1.2"],
-            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
-            ["p-map", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
@@ -520,16 +517,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@types/node-cron", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/@types-node-cron-npm-2.0.3-5019ac0479-3542f5e758.zip/node_modules/@types/node-cron/",
-          "packageDependencies": [
-            ["@types/node-cron", "npm:2.0.3"],
-            ["@types/tz-offset", "npm:0.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@types/node-fetch", [
         ["npm:2.5.7", {
           "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.5.7-fd8c51e56f-101f6e8474.zip/node_modules/@types/node-fetch/",
@@ -601,15 +588,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-treeify-npm-1.0.0-b5e04e9cd3-f7b82d91a4.zip/node_modules/@types/treeify/",
           "packageDependencies": [
             ["@types/treeify", "npm:1.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/tz-offset", [
-        ["npm:0.0.0", {
-          "packageLocation": "./.yarn/cache/@types-tz-offset-npm-0.0.0-382f91759c-bf36bc5840.zip/node_modules/@types/tz-offset/",
-          "packageDependencies": [
-            ["@types/tz-offset", "npm:0.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4354,17 +4332,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["node-cron", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/unplugged/node-cron-npm-2.0.3-1a42e4b789/node_modules/node-cron/",
-          "packageDependencies": [
-            ["node-cron", "npm:2.0.3"],
-            ["opencollective-postinstall", "npm:2.0.3"],
-            ["tz-offset", "npm:0.0.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["node-fetch", [
         ["npm:2.6.1", {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
@@ -5601,7 +5568,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.2"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.10"],
-            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
@@ -5618,9 +5584,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.3"],
             ["mongoose", "npm:5.11.4"],
             ["ms", "npm:2.1.2"],
-            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
-            ["p-map", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.0"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.0.0"],
@@ -6223,15 +6187,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typescript-patch-c1223b1b1d-001ab09bb8.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["tz-offset", [
-        ["npm:0.0.1", {
-          "packageLocation": "./.yarn/cache/tz-offset-npm-0.0.1-90d858a725-e6dc8d6b1d.zip/node_modules/tz-offset/",
-          "packageDependencies": [
-            ["tz-offset", "npm:0.0.1"]
           ],
           "linkType": "HARD",
         }]
