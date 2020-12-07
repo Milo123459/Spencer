@@ -2596,7 +2596,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.4":
+"husky@npm:^4.3.0":
   version: 4.3.4
   resolution: "husky@npm:4.3.4"
   dependencies:
@@ -4683,7 +4683,7 @@ fsevents@~2.1.2:
     erlpack: ^0.1.3
     git-go: ^1.0.3
     glob: ^7.1.6
-    husky: ^4.3.4
+    husky: ^4.3.0
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
     mongoose: ^5.11.4
