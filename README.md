@@ -8,6 +8,10 @@
 
 Spencer is my bot, not yours. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
 
+You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot)
+
+You can join the support server [here](https://discord.gg/22TtDpJcNE)
+
 # Some technical things
 
 Has a cool little DB system, allowing you to load schemas remotely.
