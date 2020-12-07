@@ -25,7 +25,9 @@ export const run: RunFunction = async (client, message, args) => {
 			{
 				description: `
     You > **${Util.escapeMarkdown(args.join(' '))}**
-    Me > **${choices[Math.floor(Math.random() * choices.length)]}**
+    Me > **${
+			choices[Math.floor(Math.random() * choices.length)]
+		}**\n\n⚠ Caution! IQ is less then 5! ⚠
     `,
 			},
 			message
