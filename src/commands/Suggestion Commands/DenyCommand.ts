@@ -74,6 +74,9 @@ export const run: RunFunction = async (client, message, args) => {
 		})
 	);
 	try {
+		await msg.reactions.removeAll();
+	} catch {}
+	try {
 		await message.react('🚀');
 	} catch {}
 };
