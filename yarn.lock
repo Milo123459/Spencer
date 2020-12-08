@@ -357,12 +357,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.1
-  resolution: "@types/mongodb@npm:3.6.1"
+  version: 3.6.2
+  resolution: "@types/mongodb@npm:3.6.2"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: 5f4dc9bc18a244a0ef4e45e24026e87d2030be8d327c907025e7f04f0451fe5ca0ac432fde3291514149dec7fb92b2e36135312d9ea710ba71938bac5bf69444
+  checksum: 86483c51a9a1f36ca89521fb59f4635b818ec3029306913eed634cbcaa46d3c73162fc61f4d1943ad1be064c6f79fd04d92a591885d0cbd16633c2068cd8cdbf
   languageName: node
   linkType: hard
 
@@ -2890,14 +2890,14 @@ fsevents@~2.1.2:
   linkType: hard
 
 "js-yaml@npm:^3.10.0":
-  version: 3.14.0
-  resolution: "js-yaml@npm:3.14.0"
+  version: 3.14.1
+  resolution: "js-yaml@npm:3.14.1"
   dependencies:
     argparse: ^1.0.7
     esprima: ^4.0.0
   bin:
     js-yaml: bin/js-yaml.js
-  checksum: 2eb95464e5263aedc20ae2d9280f0e29b00adab15ece080ec42473d7055efaab24b904108644d115f687efe05a5bde02972b883aafa93607c4c108f667a56fa7
+  checksum: 46b61f889796a20d16b0b64580a01b6a02b2e45c1a2744906346da54d07e14cde764e887ab6d1512d8b2541c63711bd4b75859c28eb99605baf59fa173fc38c2
   languageName: node
   linkType: hard
 
@@ -5085,28 +5085,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9.0.0":
-  version: 9.1.0
-  resolution: "ts-node@npm:9.1.0"
-  dependencies:
-    arg: ^4.1.0
-    create-require: ^1.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    source-map-support: ^0.5.17
-    yn: 3.1.1
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 4735671aabf8c5f3165683b481884f5080cb2d911771c8da368f8565d5f8d769ee6f504d2d1357429ceea076f9eb9ea6714c13a46d74b3d21c5c119a6e4c27fc
-  languageName: node
-  linkType: hard
-
-"ts-node@npm:^9.1.1":
+"ts-node@npm:^9.0.0, ts-node@npm:^9.1.1":
   version: 9.1.1
   resolution: "ts-node@npm:9.1.1"
   dependencies:

@@ -471,10 +471,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mongodb", [
-        ["npm:3.6.1", {
-          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.6.1-4528d9d17e-5f4dc9bc18.zip/node_modules/@types/mongodb/",
+        ["npm:3.6.2", {
+          "packageLocation": "./.yarn/cache/@types-mongodb-npm-3.6.2-ae34956dc2-86483c51a9.zip/node_modules/@types/mongodb/",
           "packageDependencies": [
-            ["@types/mongodb", "npm:3.6.1"],
+            ["@types/mongodb", "npm:3.6.2"],
             ["@types/bson", "npm:4.0.3"],
             ["@types/node", "npm:14.14.10"]
           ],
@@ -486,7 +486,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.10.2-76a175f109-6fbf7dc790.zip/node_modules/@types/mongoose/",
           "packageDependencies": [
             ["@types/mongoose", "npm:5.10.2"],
-            ["@types/mongodb", "npm:3.6.1"],
+            ["@types/mongodb", "npm:3.6.2"],
             ["@types/node", "npm:14.14.10"]
           ],
           "linkType": "HARD",
@@ -736,7 +736,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@yarnpkg-parsers-npm-2.3.0-0fc08d0fb0-3c221fe5e2.zip/node_modules/@yarnpkg/parsers/",
           "packageDependencies": [
             ["@yarnpkg/parsers", "npm:2.3.0"],
-            ["js-yaml", "npm:3.14.0"],
+            ["js-yaml", "npm:3.14.1"],
             ["tslib", "npm:1.14.1"]
           ],
           "linkType": "HARD",
@@ -3598,10 +3598,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["js-yaml", [
-        ["npm:3.14.0", {
-          "packageLocation": "./.yarn/cache/js-yaml-npm-3.14.0-7ecf74b3d2-2eb95464e5.zip/node_modules/js-yaml/",
+        ["npm:3.14.1", {
+          "packageLocation": "./.yarn/cache/js-yaml-npm-3.14.1-b968c6095e-46b61f8897.zip/node_modules/js-yaml/",
           "packageDependencies": [
-            ["js-yaml", "npm:3.14.0"],
+            ["js-yaml", "npm:3.14.1"],
             ["argparse", "npm:1.0.10"],
             ["esprima", "npm:4.0.1"]
           ],
@@ -4245,7 +4245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mongoose-npm-5.11.5-10251ce921-6a0305a6a9.zip/node_modules/mongoose/",
           "packageDependencies": [
             ["mongoose", "npm:5.11.5"],
-            ["@types/mongodb", "npm:3.6.1"],
+            ["@types/mongodb", "npm:3.6.2"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.1"],
             ["mongodb", "virtual:10251ce921ba121eb26c5e325b1d0ba22b7b91de1d97941ceef691caecef016cbef1d653e4f8de0c3abd75f0af861681806b28c37b3097d102fb8f454b7fb92e#npm:3.6.3"],
@@ -6010,13 +6010,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-node", [
-        ["npm:9.1.0", {
-          "packageLocation": "./.yarn/cache/ts-node-npm-9.1.0-a67f8fc398-4735671aab.zip/node_modules/ts-node/",
-          "packageDependencies": [
-            ["ts-node", "npm:9.1.0"]
-          ],
-          "linkType": "SOFT",
-        }],
         ["npm:9.1.1", {
           "packageLocation": "./.yarn/cache/ts-node-npm-9.1.1-4ad31da228-a90db4a342.zip/node_modules/ts-node/",
           "packageDependencies": [
@@ -6028,25 +6021,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/ts-node-virtual-f46cb045d4/0/cache/ts-node-npm-9.1.1-4ad31da228-a90db4a342.zip/node_modules/ts-node/",
           "packageDependencies": [
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
-            ["@types/typescript", null],
-            ["arg", "npm:4.1.3"],
-            ["create-require", "npm:1.1.1"],
-            ["diff", "npm:4.0.2"],
-            ["make-error", "npm:1.3.6"],
-            ["source-map-support", "npm:0.5.19"],
-            ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"],
-            ["yn", "npm:3.1.1"]
-          ],
-          "packagePeers": [
-            "@types/typescript",
-            "typescript"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.1.0", {
-          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-005e17341f/0/cache/ts-node-npm-9.1.0-a67f8fc398-4735671aab.zip/node_modules/ts-node/",
-          "packageDependencies": [
-            ["ts-node", "virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.1.0"],
             ["@types/typescript", null],
             ["arg", "npm:4.1.3"],
             ["create-require", "npm:1.1.1"],
@@ -6087,7 +6061,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:2.7.1"],
             ["source-map-support", "npm:0.5.19"],
             ["tree-kill", "npm:1.2.2"],
-            ["ts-node", "virtual:61268b51cca202adc3e5cbbdb85c1e4c3d61c6d5ee975ffcdcc6a184b3bb02f6624ac84cddce9f102cdcd2a5818e0b0c960e6f49b0d7b0da1d410c54fc1d4096#npm:9.1.0"],
+            ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["tsconfig", "npm:7.0.0"],
             ["typescript", "patch:typescript@npm%3A4.1.2#builtin<compat/typescript>::version=4.1.2&hash=cc6730"]
           ],
