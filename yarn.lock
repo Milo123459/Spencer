@@ -393,7 +393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.14.10":
+"@types/node@npm:*":
   version: 14.14.10
   resolution: "@types/node@npm:14.14.10"
   checksum: b793aa15e8c08df50d0f77dc0fe7a93bc2e09bfa5a424841d4dba045d6ae8503b7ffe89b773ffe197c9b637c898bb22e78442e21ff4b33414d35160d9c3f8a9b
@@ -404,6 +404,13 @@ __metadata:
   version: 13.13.34
   resolution: "@types/node@npm:13.13.34"
   checksum: 5b14affd17e2809e6f2018cae44db653096af0915e83b4de121a38652a708f814d3422ede3ad2f1ea566af7781e2df0071a7df78bb45539e1ceb05ddb486f075
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.11":
+  version: 14.14.11
+  resolution: "@types/node@npm:14.14.11"
+  checksum: aa09069a4914819692278da742c11f629ce61ff40682e13afbc4421d0647107bffb6bcb8929d1cf8da22821779164078ae86a382f61324c9df7e1af8eaed567b
   languageName: node
   linkType: hard
 
@@ -3512,10 +3519,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.2, ms@npm:^2.1.2":
+"ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 9b65fb709bc30c0c07289dcbdb61ca032acbb9ea5698b55fa62e2cebb04c5953f1876a1f3f7f4bc2e91d4bf4d86003f3e207c3bc6ee2f716f99827e62389cd0e
+  languageName: node
+  linkType: hard
+
+"ms@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "ms@npm:2.1.3"
+  checksum: 6e721e648a544154d5de4c114b32f573d8027ca8ec505cf6c1105e505986d6ac46934a1256735aa0eece8eb2f5b2a1230503b2dddd3b100f9f016fd8a4f15f33
   languageName: node
   linkType: hard
 
@@ -4644,7 +4658,7 @@ fsevents@~2.1.2:
     "@types/glob": ^7.1.3
     "@types/mongoose": ^5.10.2
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.10
+    "@types/node": ^14.14.11
     "@types/node-fetch": ^2.5.7
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
@@ -4660,7 +4674,7 @@ fsevents@~2.1.2:
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
     mongoose: ^5.11.5
-    ms: ^2.1.2
+    ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     ts-node: ^9.1.1
