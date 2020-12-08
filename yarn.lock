@@ -357,12 +357,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.2
-  resolution: "@types/mongodb@npm:3.6.2"
+  version: 3.6.3
+  resolution: "@types/mongodb@npm:3.6.3"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: 86483c51a9a1f36ca89521fb59f4635b818ec3029306913eed634cbcaa46d3c73162fc61f4d1943ad1be064c6f79fd04d92a591885d0cbd16633c2068cd8cdbf
+  checksum: 2ccf239c496ad5a36ff014211a073a28878ddeda7f8a73c7e2f75a9587c295dec60fff57b6036b789c9e37d74923ddfb66e1d2f70c659b3f61c9382d2bff6b38
   languageName: node
   linkType: hard
 
@@ -393,24 +393,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 14.14.10
-  resolution: "@types/node@npm:14.14.10"
-  checksum: b793aa15e8c08df50d0f77dc0fe7a93bc2e09bfa5a424841d4dba045d6ae8503b7ffe89b773ffe197c9b637c898bb22e78442e21ff4b33414d35160d9c3f8a9b
+"@types/node@npm:*, @types/node@npm:^14.14.11":
+  version: 14.14.11
+  resolution: "@types/node@npm:14.14.11"
+  checksum: aa09069a4914819692278da742c11f629ce61ff40682e13afbc4421d0647107bffb6bcb8929d1cf8da22821779164078ae86a382f61324c9df7e1af8eaed567b
   languageName: node
   linkType: hard
 
 "@types/node@npm:^13.7.0":
-  version: 13.13.34
-  resolution: "@types/node@npm:13.13.34"
-  checksum: 5b14affd17e2809e6f2018cae44db653096af0915e83b4de121a38652a708f814d3422ede3ad2f1ea566af7781e2df0071a7df78bb45539e1ceb05ddb486f075
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.14.11":
-  version: 14.14.11
-  resolution: "@types/node@npm:14.14.11"
-  checksum: aa09069a4914819692278da742c11f629ce61ff40682e13afbc4421d0647107bffb6bcb8929d1cf8da22821779164078ae86a382f61324c9df7e1af8eaed567b
+  version: 13.13.35
+  resolution: "@types/node@npm:13.13.35"
+  checksum: 17d4b55ab319a78ef5e314f7b24d967990c0a257d39ae756e39ac5f96e8e403591f177daf9297bcd0a763a764d430813d4f21e4290e7b1ed62155a7039ba5019
   languageName: node
   linkType: hard
 
@@ -1280,9 +1273,9 @@ __metadata:
   linkType: hard
 
 "cacheable-lookup@npm:^5.0.3":
-  version: 5.0.3
-  resolution: "cacheable-lookup@npm:5.0.3"
-  checksum: a51e3ddb824865b87895a915fc41be6e2097b62932e5441c357711bb87ec23b0a738a7b7a5cefd9043dacd4ed31ca56b62528ec60ba020e360f07175b6ca5bfe
+  version: 5.0.4
+  resolution: "cacheable-lookup@npm:5.0.4"
+  checksum: cb5849f5841e37f007aeaea2516ecf2cb0a9730667694d131331a04413f6c3bf2587391d55003cc2b95ef59085b5f50ac9887a0b7c673fc0c8102bcc69b6d73d
   languageName: node
   linkType: hard
 
