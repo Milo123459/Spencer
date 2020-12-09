@@ -2988,10 +2988,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"kareem@npm:2.3.1":
-  version: 2.3.1
-  resolution: "kareem@npm:2.3.1"
-  checksum: 6fc69a89f857aedccc16c1efaea1d6d72d7f47893797109443d31d354c7c70369c7d967fa1ad57c1b180670b828958dd4de513629695d2a1223d7c3f04898391
+"kareem@npm:2.3.2":
+  version: 2.3.2
+  resolution: "kareem@npm:2.3.2"
+  checksum: de7225607b86280e5c39c00d564e1cb4daee9f0a75076fa0c096af75069681ca9a97ea39d8d48ce58ff8dd4d3a738942b1b43101aa95982c4599284ec36e02b4
   languageName: node
   linkType: hard
 
@@ -3465,13 +3465,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.5, mongoose@npm:^5.11.5":
-  version: 5.11.5
-  resolution: "mongoose@npm:5.11.5"
+"mongoose@npm:5.11.6, mongoose@npm:^5.11.6":
+  version: 5.11.6
+  resolution: "mongoose@npm:5.11.6"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
-    kareem: 2.3.1
+    kareem: 2.3.2
     mongodb: 3.6.3
     mongoose-legacy-pluralize: 1.0.2
     mpath: 0.8.0
@@ -3481,7 +3481,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 6a0305a6a9104b269c073cb28cea2a867dc66ed74564e6945ef32a70cb001e5baa0b13fcaad5ba55299dd3cb96e65c668e6de07fa562c03d4e888392ba7e62e0
+  checksum: bea274b2970e990391c8f484f61138e0d2fae7313b4cca3a345ffceee7330b8afe7b95dc200db8ff555fc7e240d749292a19160ddc5e8208daf578f85a765f02
   languageName: node
   linkType: hard
 
@@ -4666,7 +4666,7 @@ fsevents@~2.1.2:
     husky: ^4.3.5
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
-    mongoose: ^5.11.5
+    mongoose: ^5.11.6
     ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
