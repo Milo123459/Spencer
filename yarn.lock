@@ -4671,7 +4671,7 @@ fsevents@~2.1.2:
     node-fetch: ^2.6.1
     prettier: ^2.2.1
     ts-node: ^9.1.1
-    ts-node-dev: ^1.0.0
+    ts-node-dev: ^1.1.1
     tslib: ^2.0.3
     typescript: ^4.1.2
     utf-8-validate: ^5.0.3
@@ -5064,9 +5064,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node-dev@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "ts-node-dev@npm:1.0.0"
+"ts-node-dev@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "ts-node-dev@npm:1.1.1"
   dependencies:
     chokidar: ^3.4.0
     dateformat: ~1.0.4-1.2.3
@@ -5088,7 +5088,7 @@ fsevents@~2.1.2:
   bin:
     ts-node-dev: lib/bin.js
     tsnd: lib/bin.js
-  checksum: 3e1064a0426907cf38f9e2dc0518a934a11c6822ed7b54e75f40f897d157f11dd542f2b145abc7c844f5d4daadb098b8abb87108ef924e9b759a0ed8e444fb33
+  checksum: 8730d5debaa2557ee38a2be3d22fc7f59c905806b4047c939580bef5f1bd56ee7025f7dc3accbba2e64ac4e954475acb5f4785d83d1031cfe6bd97a304b3af51
   languageName: node
   linkType: hard
 
