@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.2"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.11"],
+            ["@types/node", "npm:14.14.12"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
@@ -513,6 +513,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.11-34adc2d908-aa09069a49.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.14.11"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:14.14.12", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.12-ed91cd16f0-def4a93f6b.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:14.14.12"]
           ],
           "linkType": "HARD",
         }]
@@ -5574,7 +5581,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.2"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.11"],
+            ["@types/node", "npm:14.14.12"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
