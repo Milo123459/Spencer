@@ -11,7 +11,8 @@
 		"update": "n latest && git pull && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"doctor": "doctor",
-		"sdk": "yarn pnpify --sdk"
+		"sdk": "yarn pnpify --sdk",
+		"gbump": "yarn bump && yarn sdk && git-go 'chore(Deps): bump deps'"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
