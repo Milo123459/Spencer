@@ -5,6 +5,5 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-  "terminal.integrated.localEchoLatencyThreshold": 30
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }
