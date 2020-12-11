@@ -3472,43 +3472,43 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.6, mongoose@npm:^5.11.6":
-  version: 5.11.6
-  resolution: "mongoose@npm:5.11.6"
+"mongoose@npm:5.11.7, mongoose@npm:^5.11.7":
+  version: 5.11.7
+  resolution: "mongoose@npm:5.11.7"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.2
     mongodb: 3.6.3
     mongoose-legacy-pluralize: 1.0.2
-    mpath: 0.8.0
-    mquery: 3.2.2
+    mpath: 0.8.1
+    mquery: 3.2.3
     ms: 2.1.2
     regexp-clone: 1.0.0
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: bea274b2970e990391c8f484f61138e0d2fae7313b4cca3a345ffceee7330b8afe7b95dc200db8ff555fc7e240d749292a19160ddc5e8208daf578f85a765f02
+  checksum: ec326576ed4a9b767b0399a62ee160102a0cd86bbb2e4fcea168742961f65034a4a03387f0452861bbe8ff32311b05c28ce9bc727d5a7b0248dc58132697df3d
   languageName: node
   linkType: hard
 
-"mpath@npm:0.8.0":
-  version: 0.8.0
-  resolution: "mpath@npm:0.8.0"
-  checksum: 42d11142b18ee16499f9c86f7fa3540bb10ee2f237de47a3b26e2a60c7fa68094ac6be0dd148a8111e61ffde2368fcc91040257b13d1c832e13e4f932b83094f
+"mpath@npm:0.8.1":
+  version: 0.8.1
+  resolution: "mpath@npm:0.8.1"
+  checksum: b2f1bafaaaadfd4306de79d6eb0ba8115063f65415539173c088f820550ab6b00c0a9f29a261aba6c64e63de23c745d379ac36764400e86f77330f3d09758065
   languageName: node
   linkType: hard
 
-"mquery@npm:3.2.2":
-  version: 3.2.2
-  resolution: "mquery@npm:3.2.2"
+"mquery@npm:3.2.3":
+  version: 3.2.3
+  resolution: "mquery@npm:3.2.3"
   dependencies:
     bluebird: 3.5.1
     debug: 3.1.0
     regexp-clone: ^1.0.0
     safe-buffer: 5.1.2
     sliced: 1.0.1
-  checksum: 80b422ec102e1045999b3f818964db69a56ddf394a64ef7dac3bf164e4824d179717844d00cf414827fb39c61334a88fd3c1b1cab91b624cf6a78db302bd63c4
+  checksum: 4eecfd75bfd1f0094e24aa5905df70e96e630f002a3fbee5b0443cd56e21720930a8f38f8afff6a7d4318fcb3d04317d632bca2f7a06c3facd3913365bc32420
   languageName: node
   linkType: hard
 
@@ -4673,7 +4673,7 @@ fsevents@~2.1.2:
     husky: ^4.3.5
     imageapi.js: ^1.2.1
     lint-staged: ^10.5.3
-    mongoose: ^5.11.6
+    mongoose: ^5.11.7
     ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
