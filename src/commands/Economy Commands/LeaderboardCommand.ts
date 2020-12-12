@@ -19,7 +19,7 @@ export const run: RunFunction = async (client, message) => {
 						`${index + 1} - ${Util.escapeMarkdown(
 							client.users.cache.get((value as Anything).User)?.tag ||
 								'Unknown user'
-						)} - \`${(value as Anything).Coins.toLocaleString()} coins.\``
+						)} - \`${(value as Anything).Coins?.toLocaleString() || 0} coins.\``
 				).join(
 					'\n'
 				)}\n\nYou - ${Leaderboard.map((value: Document, index: number) =>
