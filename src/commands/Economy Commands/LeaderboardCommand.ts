@@ -6,7 +6,7 @@ import { Util } from 'discord.js';
 export const run: RunFunction = async (client, message) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const Leaderboard = await EconomySchema.leaderboard(
-		(a: Anything, b: Anything) => b?.Coins || 0 - a?.Coins || 0
+		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
 	await message.channel.send(
 		client.embed(
