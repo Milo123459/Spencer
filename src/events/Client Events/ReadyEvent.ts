@@ -3,8 +3,7 @@ import { Document } from 'mongoose';
 import { Anything } from '../../interfaces/Anything';
 import { User } from 'discord.js';
 import express from 'express';
-import sdk from '@top-gg/sdk';
-import { appendFile } from 'fs';
+import * as sdk from '@top-gg/sdk';
 
 export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
