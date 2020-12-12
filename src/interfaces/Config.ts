@@ -3,4 +3,6 @@ export interface Config {
 	mongoURI: string;
 	prefix: string;
 	owners: Array<string>;
+	webAuth: string;
+	webPort: number;
 }

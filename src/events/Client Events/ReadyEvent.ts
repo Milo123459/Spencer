@@ -2,6 +2,9 @@ import { RunFunction } from '../../interfaces/Event';
 import { Document } from 'mongoose';
 import { Anything } from '../../interfaces/Anything';
 import { User } from 'discord.js';
+import express from 'express';
+import sdk from '@top-gg/sdk';
+import { appendFile } from 'fs';
 
 export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
@@ -23,4 +26,19 @@ export const run: RunFunction = async (client) => {
 			}
 		});
 	}, 1000 * 60);
+	const server = express();
+	const webhook = new sdk.Webhook(client.config.webAuth);
+	const EconomySchema = await client.db.load('usereconomy');
+	server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
+	server.post('/webhooks/dbl', webhook.middleware(), async (req, res) => {
+		await EconomySchema.increment(
+			{ User: req.vote.user },
+			'Coins',
+			req.vote.isWeekend ? 5000 : 2500
+		);
+		return res.json({ msg: 'Success, 🚀' });
+	});
+	server.listen(client.config.webPort, () =>
+		client.logger.info(`Server listening on port ${client.config.webPort}`)
+	);
 };
