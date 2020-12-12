@@ -24,7 +24,7 @@
 		"erlpack": "^0.1.3",
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
-		"imageapi.js": "^1.2.1",
+		"imageapi.js": "^1.2.2",
 		"mongoose": "^5.11.7",
 		"ms": "^2.1.3",
 		"node-fetch": "^2.6.1",
