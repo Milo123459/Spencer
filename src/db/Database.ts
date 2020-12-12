@@ -69,9 +69,10 @@ class DatabaseModule {
 	public async leaderboard(sort: SortFunction) {
 		// create a leaderboard
 		const Data: Array<Document> = [...(await this.find({}))].sort(sort);
-		const HandeledData: Array<Document> =
-			Data.length > 9 ? Data.slice(0, 10) : Data;
-		return HandeledData;
+		return {
+			sliced: Data.length > 9 ? Data.slice(0, 10) : Data,
+			regular: Data,
+		};
 	}
 }
 class DatabaseManager {
