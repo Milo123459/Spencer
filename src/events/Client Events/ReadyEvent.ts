@@ -35,7 +35,7 @@ export const run: RunFunction = async (client) => {
 			await EconomySchema.increment(
 				{ User: req.vote.user },
 				'Coins',
-				req.vote.isWeekend ? 5000 : 2500
+				req.vote.isWeekend ? 1000 : 2000
 			);
 			return res.json({ msg: 'Success, 🚀' });
 		});
