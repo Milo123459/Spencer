@@ -25,21 +25,29 @@ export const run: RunFunction = async (client) => {
 			}
 		});
 	}, 1000 * 60);
-	const server = express();
-	const webhook = new sdk.Webhook(client.config.webAuth);
-	const EconomySchema = await client.db.load('usereconomy');
-	server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
-	server.post('/webhooks/dbl', webhook.middleware(), async (req, res) => {
-		await EconomySchema.increment(
-			{ User: req.vote.user },
-			'Coins',
-			req.vote.isWeekend ? 5000 : 2500
+	if (client.config.webAuth) {
+		const server = express();
+		const webhook = new sdk.Webhook(client.config.webAuth);
+		const api = new sdk.Api(client.config.topGGToken);
+		const EconomySchema = await client.db.load('usereconomy');
+		server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
+		server.post('/webhooks/dbl', webhook.middleware(), async (req, res) => {
+			await EconomySchema.increment(
+				{ User: req.vote.user },
+				'Coins',
+				req.vote.isWeekend ? 5000 : 2500
+			);
+			return res.json({ msg: 'Success, 🚀' });
+		});
+		server.listen(client.config.webPort, () =>
+			client.logger.success(
+				`Webhook server listening on port ${client.config.webPort}`
+			)
 		);
-		return res.json({ msg: 'Success, 🚀' });
-	});
-	server.listen(client.config.webPort, () =>
-		client.logger.success(
-			`Webhook server listening on port ${client.config.webPort}`
-		)
-	);
+		setInterval(() => {
+			api.postStats({
+				serverCount: client.guilds.cache.size,
+			});
+		}, 1800000);
+	}
 };
