@@ -8,6 +8,12 @@ export const run: RunFunction = async (client, message) => {
 	const Leaderboard = await EconomySchema.leaderboard(
 		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
+	const UserProfile = await EconomySchema.findOne({ User: message.author.id });
+	if (!UserProfile)
+		await EconomySchema.update({ User: message.author.id }, { Coins: 0 });
+	const massive: Array<Document> = [...(await EconomySchema.find({}))].sort(
+		(a: Anything, b: Anything) => b.Coins - a.Coins
+	);
 	await message.channel.send(
 		client.embed(
 			{
@@ -17,7 +23,13 @@ export const run: RunFunction = async (client, message) => {
 							client.users.cache.get((value as Anything).User)?.tag ||
 								'Unknown user'
 						)} - \`${(value as Anything).Coins?.toLocaleString() || 0} coins.\``
-				).join('\n')}`,
+				).join('\n')}\n\nYou - ${
+					massive
+						.map((value: Document, index: number) =>
+							(value as Anything).User == message.author.id ? index + 1 : 0
+						)
+						.filter((value: number) => value != 0)[0]
+				} - \`${UserProfile ? (UserProfile as Anything).Coins : 0} coins.\``,
 			},
 			message
 		)
