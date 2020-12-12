@@ -102,7 +102,7 @@ export const run: RunFunction = async (client, message: Message) => {
 						message
 					)
 				)
-				.catch();
+				.catch(() => client.logger.error("Can't send error message"));
 			if (e.message.toLowerCase().includes('missing permissions')) return;
 			return client.users.cache.get('450212014912962560').send(
 				client.embed(
