@@ -4,6 +4,8 @@
 
 [![Open issues](https://img.shields.io/github/issues-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/issues) [![Closed issues](https://img.shields.io/github/issues-closed-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/issues) [![Open PRs](https://img.shields.io/github/issues-pr-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/pulls) [![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/pulls)
 
+[![Discord Bots](https://top.gg/api/widget/765156777607823380.svg)](https://top.gg/bot/765156777607823380) [![Discord Bots](https://top.gg/api/widget/status/765156777607823380.svg?noavatar=true)](https://top.gg/bot/765156777607823380) [![Discord Bots](https://top.gg/api/widget/servers/765156777607823380.svg?noavatar=true)](https://top.gg/bot/765156777607823380)
+
 # Spencer
 
 Spencer is my bot, not yours. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
