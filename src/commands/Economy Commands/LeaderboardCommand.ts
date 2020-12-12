@@ -24,9 +24,9 @@ export const run: RunFunction = async (client, message) => {
 					'\n'
 				)}\n\nYou - ${Leaderboard.map((value: Document, index: number) =>
 					(value as Anything).User == message.author.id ? index + 1 : 0
-				).filter(
-					(value: number) => value != 0
-				)} - \`${(you as Anything).Coins.toLocaleString()} coins.\``,
+				).filter((value: number) => value != 0)} - \`${
+					(you as Anything)?.Coins.toLocaleString() || 0
+				} coins.\``,
 			},
 			message
 		)
