@@ -6,12 +6,13 @@ export const run: RunFunction = async (client, message) => {
 			{
 				description: `
     You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot) 
-    You can join the support server [here](https://discord.gg/22TtDpJcNE)`.trim(),
+	You can join the support server [here](https://discord.gg/22TtDpJcNE)
+	You can vote for ${client.user.username} on top.gg [here](https://top.gg/bot/${client.user.id}/vote), on weekdays you get 2500 coins, on weekends you get 5000!`.trim(),
 			},
 			message
 		)
 	);
 };
-export const aliases: string[] = ['invite', 'supportserver'];
+export const aliases: string[] = ['invite', 'supportserver', 'vote', 'topgg'];
 export const name: string = 'links';
 export const category: string = 'info';
