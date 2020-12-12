@@ -30,7 +30,6 @@ export const run: RunFunction = async (client) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
 	server.post('/webhooks/dbl', webhook.middleware(), async (req, res) => {
-		console.log(req.vote);
 		await EconomySchema.increment(
 			{ User: req.vote.user },
 			'Coins',
@@ -39,6 +38,8 @@ export const run: RunFunction = async (client) => {
 		return res.json({ msg: 'Success, 🚀' });
 	});
 	server.listen(client.config.webPort, () =>
-		client.logger.info(`Server listening on port ${client.config.webPort}`)
+		client.logger.success(
+			`Webhook server listening on port ${client.config.webPort}`
+		)
 	);
 };
