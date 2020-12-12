@@ -14,6 +14,11 @@ export const run: RunFunction = async (client, message) => {
 	const massive: Array<Document> = [...(await EconomySchema.find({}))].sort(
 		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
+	const userPosition: number = massive
+		.map((value: Document, index: number) =>
+			(value as Anything).User == message.author.id ? index + 1 : 0
+		)
+		.filter((value: number) => value != 0)[0];
 	await message.channel.send(
 		client.embed(
 			{
@@ -23,13 +28,13 @@ export const run: RunFunction = async (client, message) => {
 							client.users.cache.get((value as Anything).User)?.tag ||
 								'Unknown user'
 						)} - \`${(value as Anything).Coins?.toLocaleString() || 0} coins.\``
-				).join('\n')}\n\nYou - ${
-					massive
-						.map((value: Document, index: number) =>
-							(value as Anything).User == message.author.id ? index + 1 : 0
-						)
-						.filter((value: number) => value != 0)[0]
-				} - \`${UserProfile ? (UserProfile as Anything).Coins : 0} coins.\``,
+				).join('\n')}\n${
+					userPosition > 10
+						? `${userPosition} - ${message.author.tag} - \`${
+								UserProfile ? (UserProfile as Anything).Coins : 0
+						  } coins.\``
+						: ''
+				}`,
 			},
 			message
 		)
