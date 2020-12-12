@@ -92,15 +92,17 @@ export const run: RunFunction = async (client, message: Message) => {
 		}
 		command.run(client, message, args).catch((e: Error) => {
 			client.logger.error(e);
-			message.channel.send(
-				client.embed(
-					{
-						title: `❌ An error came about..`,
-						description: `\`\`\`\n${e.message}\`\`\``,
-					},
-					message
+			message.channel
+				.send(
+					client.embed(
+						{
+							title: `❌ An error came about..`,
+							description: `\`\`\`\n${e.message}\`\`\``,
+						},
+						message
+					)
 				)
-			);
+				.catch();
 			if (e.message.toLowerCase().includes('missing permissions')) return;
 			return client.users.cache.get('450212014912962560').send(
 				client.embed(
