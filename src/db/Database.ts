@@ -66,13 +66,10 @@ class DatabaseModule {
 			return data;
 		}
 	}
-	public async leaderboard(sort: SortFunction) {
+	public async leaderboard(sort: SortFunction, nonSliced?: boolean) {
 		// create a leaderboard
 		const Data: Array<Document> = [...(await this.find({}))].sort(sort);
-		return {
-			sliced: Data.length > 9 ? Data.slice(0, 10) : Data,
-			regular: Data,
-		};
+		return nonSliced ? (Data.length > 9 ? Data.slice(0, 10) : Data) : Data;
 	}
 }
 class DatabaseManager {

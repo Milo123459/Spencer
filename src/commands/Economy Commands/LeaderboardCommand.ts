@@ -8,29 +8,27 @@ export const run: RunFunction = async (client, message) => {
 	const Leaderboard = await EconomySchema.leaderboard(
 		(a: Anything, b: Anything) => b?.Coins || 0 - a?.Coins || 0
 	);
-	const you: Document = Leaderboard.regular.filter(
+	const you: Document = (
+		await EconomySchema.leaderboard(
+			(a: Anything, b: Anything) => b?.Coins || 0 - a?.Coins || 0,
+			true
+		)
+	).filter(
 		(value: Document) => (value as Anything).User == message.author.id
 	)[0];
 	await message.channel.send(
 		client.embed(
 			{
-				description: `${Leaderboard.sliced
-					.map(
-						(value: Document, index: number) =>
-							`${index + 1} - ${Util.escapeMarkdown(
-								client.users.cache.get((value as Anything).User)?.tag ||
-									'Unknown user'
-							)} - \`${
-								(value as Anything).Coins?.toLocaleString() || 0
-							} coins.\``
-					)
-					.join('\n')}\n\nYou - ${
-					Leaderboard.regular
-						.map((value: Document, index: number) =>
-							(value as Anything).User == message.author.id ? index + 1 : 0
-						)
-						.filter((value: number) => value != 0)[0] ||
-					Leaderboard.regular.length + 1
+				description: `${Leaderboard.map(
+					(value: Document, index: number) =>
+						`${index + 1} - ${Util.escapeMarkdown(
+							client.users.cache.get((value as Anything).User)?.tag ||
+								'Unknown user'
+						)} - \`${(value as Anything).Coins?.toLocaleString() || 0} coins.\``
+				).join('\n')}\n\nYou - ${
+					Leaderboard.map((value: Document, index: number) =>
+						(value as Anything).User == message.author.id ? index + 1 : 0
+					).filter((value: number) => value != 0)[0] || Leaderboard.length + 1
 				} - \`${(you as Anything)?.Coins.toLocaleString() || 0} coins.\``,
 			},
 			message
