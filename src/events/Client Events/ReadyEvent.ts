@@ -44,6 +44,9 @@ export const run: RunFunction = async (client) => {
 				`Webhook server listening on port ${client.config.webPort}`
 			)
 		);
+		api.postStats({
+			serverCount: client.guilds.cache.size,
+		});
 		setInterval(() => {
 			api.postStats({
 				serverCount: client.guilds.cache.size,
