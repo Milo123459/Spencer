@@ -9,8 +9,9 @@ export const run: RunFunction = async (client, message, args) => {
 		Guild: message.guild.id,
 	});
 	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
-	const fields: Array<EmbedFieldData> = [...client.categories].map(
-		(category: string) => {
+	const fields: Array<EmbedFieldData> = [...client.categories]
+		.filter((value: string) => value != 'owner')
+		.map((category: string) => {
 			return {
 				name: category[0].toUpperCase() + category.slice(1),
 				value: client.commands
@@ -18,8 +19,7 @@ export const run: RunFunction = async (client, message, args) => {
 					.map((cmd: Command) => `\`${cmd.name}\``)
 					.join(', '),
 			};
-		}
-	);
+		});
 	const commandEmbed: MessageEmbed = client.embed(
 		{ fields, title: `Prefix: \`${Prefix}\`` },
 		message
@@ -32,8 +32,12 @@ export const run: RunFunction = async (client, message, args) => {
 	)
 		return message.channel.send(commandEmbed);
 	const command =
-		client.commands.get(args[0].toLowerCase()) ||
-		client.commands.get(client.aliases.get(args[0].toLowerCase()));
+		client.commands
+			.filter((value: Command) => value.category != 'owner')
+			.get(args[0].toLowerCase()) ||
+		client.commands
+			.filter((value: Command) => value.category != 'owner')
+			.get(client.aliases.get(args[0].toLowerCase()));
 	message.channel.send(
 		client.embed(
 			{
