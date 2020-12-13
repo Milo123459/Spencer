@@ -27,8 +27,12 @@ export const run: RunFunction = async (client, message, args) => {
 	if (!args[0]) return message.channel.send(commandEmbed);
 	if (
 		args[0] &&
-		!client.commands.has(args[0].toLowerCase()) &&
-		!client.commands.has(client.aliases.get(args[0].toLowerCase()))
+		!client.commands
+			.filter((value: Command) => value.category != 'owner')
+			.has(args[0].toLowerCase()) &&
+		!client.commands
+			.filter((value: Command) => value.category != 'owner')
+			.has(client.aliases.get(args[0].toLowerCase()))
 	)
 		return message.channel.send(commandEmbed);
 	const command =
