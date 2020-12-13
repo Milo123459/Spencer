@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@top-gg/sdk", "npm:3.0.3"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mongoose", "npm:5.10.2"],
+            ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.13"],
             ["@types/node-fetch", "npm:2.5.7"],
@@ -552,10 +552,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mongoose", [
-        ["npm:5.10.2", {
-          "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.10.2-76a175f109-6fbf7dc790.zip/node_modules/@types/mongoose/",
+        ["npm:5.10.3", {
+          "packageLocation": "./.yarn/cache/@types-mongoose-npm-5.10.3-1ec21e1219-d7f09d6bd9.zip/node_modules/@types/mongoose/",
           "packageDependencies": [
-            ["@types/mongoose", "npm:5.10.2"],
+            ["@types/mongoose", "npm:5.10.3"],
             ["@types/mongodb", "npm:3.6.3"],
             ["@types/node", "npm:14.14.13"]
           ],
@@ -6120,7 +6120,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@top-gg/sdk", "npm:3.0.3"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mongoose", "npm:5.10.2"],
+            ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.13"],
             ["@types/node-fetch", "npm:2.5.7"],
