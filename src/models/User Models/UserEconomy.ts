@@ -5,5 +5,6 @@ export const data = model(
 	new Schema({
 		User: String,
 		Coins: Number,
+		VoteReminder: Boolean,
 	})
 );

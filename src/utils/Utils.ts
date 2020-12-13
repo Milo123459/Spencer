@@ -65,5 +65,10 @@ class UtilsManager {
 		});
 		return joinPosition;
 	}
+	proper(key: string, value: any): object {
+		const obj = {};
+		obj[key] = value;
+		return obj;
+	}
 }
 export { UtilsManager };

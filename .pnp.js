@@ -69,6 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.0.3"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.3"],
+            ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
           "linkType": "SOFT",
@@ -6146,6 +6147,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.0.3"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.3"],
+            ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
           "linkType": "SOFT",
@@ -7044,6 +7046,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yn-npm-3.1.1-8ad4259784-bff63b8056.zip/node_modules/yn/",
           "packageDependencies": [
             ["yn", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/yn-npm-4.0.0-b7e4211760-342a92cb3a.zip/node_modules/yn/",
+          "packageDependencies": [
+            ["yn", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
