@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { Message, TextChannel } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
@@ -103,8 +103,11 @@ export const run: RunFunction = async (client, message: Message) => {
 					)
 				)
 				.catch(() => client.logger.error("Can't send error message"));
-			if (e.message.toLowerCase().includes('missing permissions')) return;
-			return client.users.cache.get('450212014912962560').send(
+			if (e?.message?.toLowerCase()?.includes('missing permissions') || false)
+				return;
+			return (client.channels.cache.get(
+				'787685747649019925'
+			) as TextChannel).send(
 				client.embed(
 					{
 						title: `❌ An error came about..`,
