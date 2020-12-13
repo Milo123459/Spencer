@@ -71,6 +71,7 @@ export const run: RunFunction = async (client, message, args) => {
 					}`,
 				},
 			],
+			color: 'GREEN',
 		})
 	);
 	try {
