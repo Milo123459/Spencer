@@ -45,7 +45,8 @@ export const run: RunFunction = async (client) => {
 				await ReminderSchema.create({
 					User: req.vote.user,
 					Time: Date.now() + ms('12h'),
-					Message: 'Vote reminder, you can now vote on top.gg!',
+					Message:
+						'🚀 Vote reminder, you can now vote on top.gg! ⭐ Here is the link: https://top.gg/https://top.gg/bot/765156777607823380/vote',
 				});
 			}
 			return res.json({ msg: 'Success, 🚀' });
