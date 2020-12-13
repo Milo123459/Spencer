@@ -12,8 +12,8 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	let time: number;
 	time = ms(args[0]);
-	if (isNaN(time)) time = parseInt(ms(time));
-	if (isNaN(time))
+	if (!time) time = parseInt(ms(time || 0));
+	if (!time || isNaN(time))
 		return message.channel.send(
 			client.embed(
 				{
