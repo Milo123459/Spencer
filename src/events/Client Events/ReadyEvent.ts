@@ -4,6 +4,7 @@ import { Anything } from '../../interfaces/Anything';
 import { User } from 'discord.js';
 import express from 'express';
 import * as sdk from '@top-gg/sdk';
+import ms from 'ms';
 
 export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
@@ -37,6 +38,16 @@ export const run: RunFunction = async (client) => {
 				'Coins',
 				req.vote.isWeekend ? 1000 : 2000
 			);
+			const Profile = await EconomySchema.findOne({ User: req.vote.user });
+			const voteReminder = (Profile as Anything)?.VoteReminder || false;
+			if (!!voteReminder) {
+				const ReminderSchema = await client.db.load('reminder');
+				await ReminderSchema.create({
+					User: req.vote.user,
+					Time: Date.now() + ms('12h'),
+					Message: 'Vote reminder, you can now vote on top.gg!',
+				});
+			}
 			return res.json({ msg: 'Success, 🚀' });
 		});
 		server.listen(client.config.webPort, () =>
