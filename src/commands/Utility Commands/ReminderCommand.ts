@@ -13,6 +13,16 @@ export const run: RunFunction = async (client, message, args) => {
 	let time: number;
 	time = ms(args[0]);
 	if (isNaN(time)) time = parseInt(ms(time));
+	if (isNaN(time))
+		return message.channel.send(
+			client.embed(
+				{
+					description:
+						"That number didn't go through correctly, try again with a valid time! The correct usage is <time> <...message>",
+				},
+				message
+			)
+		);
 	if (!time)
 		return message.channel.send(
 			client.embed(
