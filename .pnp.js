@@ -2189,10 +2189,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["commander", [
-        ["npm:6.2.0", {
-          "packageLocation": "./.yarn/cache/commander-npm-6.2.0-5c82761f33-c78501cd98.zip/node_modules/commander/",
+        ["npm:6.2.1", {
+          "packageLocation": "./.yarn/cache/commander-npm-6.2.1-d5b635f237-47856aae6f.zip/node_modules/commander/",
           "packageDependencies": [
-            ["commander", "npm:6.2.0"]
+            ["commander", "npm:6.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -4135,7 +4135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:10.5.3"],
             ["chalk", "npm:4.1.0"],
             ["cli-truncate", "npm:2.1.0"],
-            ["commander", "npm:6.2.0"],
+            ["commander", "npm:6.2.1"],
             ["cosmiconfig", "npm:7.0.0"],
             ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
             ["dedent", "npm:0.7.0"],
