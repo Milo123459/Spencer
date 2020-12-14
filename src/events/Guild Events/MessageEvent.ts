@@ -84,7 +84,7 @@ export const run: RunFunction = async (client, message: Message) => {
 					{
 						description: `You can use this command again in \`${
 							cooldownTime.split('').length == 0 ? '1 second' : cooldownTime
-						}\`\nDid you know, people who donate to Spencer have their cooldown time halfed! Exciting times!`,
+						}\`\nDid you know, people who donate to Spencer have their cooldown time halfed! Exciting times! *Please note: For donation perks to work, you have to join Spencer support!*`,
 					},
 					message
 				)
