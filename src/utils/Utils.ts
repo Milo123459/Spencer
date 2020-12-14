@@ -65,10 +65,29 @@ class UtilsManager {
 		});
 		return joinPosition;
 	}
-	proper(key: string, value: any): object {
+	public proper(key: string, value: any): object {
 		const obj = {};
 		obj[key] = value;
 		return obj;
+	}
+	public checkMultipleRoles(
+		guild: string,
+		user: string,
+		roles: string | string[]
+	): boolean {
+		const member: GuildMember = this.client.guilds.cache
+			.get(guild)
+			.members.cache.get(user);
+		if (!member) return false;
+		const res: boolean[] = [];
+		if (typeof roles == 'string') {
+			res.push(member.roles.cache.has(roles));
+		} else {
+			roles.map((value: string) => {
+				res.push(member.roles.cache.has(value));
+			});
+		}
+		return !!res.filter((value: boolean) => !!value).length;
 	}
 }
 export { UtilsManager };
