@@ -464,7 +464,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/express", "npm:4.17.9"],
             ["@types/body-parser", "npm:1.19.0"],
-            ["@types/express-serve-static-core", "npm:4.17.15"],
+            ["@types/express-serve-static-core", "npm:4.17.16"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/serve-static", "npm:1.13.8"]
           ],
@@ -472,10 +472,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express-serve-static-core", [
-        ["npm:4.17.15", {
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.15-cdb655a32f-3238adcdd1.zip/node_modules/@types/express-serve-static-core/",
+        ["npm:4.17.16", {
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.16-ddc359da29-5ef34862a7.zip/node_modules/@types/express-serve-static-core/",
           "packageDependencies": [
-            ["@types/express-serve-static-core", "npm:4.17.15"],
+            ["@types/express-serve-static-core", "npm:4.17.16"],
             ["@types/node", "npm:14.14.13"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/range-parser", "npm:1.2.3"]
