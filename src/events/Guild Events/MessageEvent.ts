@@ -137,8 +137,8 @@ export const run: RunFunction = async (client, message: Message) => {
 					message.author.id,
 					['787656384808353803', '787656420258086922', '787656471679991829']
 				)
-					? Date.now() + command?.cooldown / 2
-					: Date.now() + command?.cooldown
+					? command?.cooldown / 2
+					: command?.cooldown
 			);
 		}
 	}
