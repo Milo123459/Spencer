@@ -3810,9 +3810,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.7, mongoose@npm:^5.11.7":
-  version: 5.11.7
-  resolution: "mongoose@npm:5.11.7"
+"mongoose@npm:5.11.8, mongoose@npm:^5.11.8":
+  version: 5.11.8
+  resolution: "mongoose@npm:5.11.8"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3826,7 +3826,7 @@ fsevents@~2.1.2:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: ec326576ed4a9b767b0399a62ee160102a0cd86bbb2e4fcea168742961f65034a4a03387f0452861bbe8ff32311b05c28ce9bc727d5a7b0248dc58132697df3d
+  checksum: 67b920d534124e6b56189e676751f6c8dfea80f602c94e3113fc35df639827e3c6196c70a4b28f63bad410b3f09ed205e4ede4a4e4b786fe9fef4e92f54411fe
   languageName: node
   linkType: hard
 
@@ -5139,7 +5139,7 @@ fsevents@~2.1.2:
     husky: ^4.3.6
     imageapi.js: ^1.2.4
     lint-staged: ^10.5.3
-    mongoose: ^5.11.7
+    mongoose: ^5.11.8
     ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
