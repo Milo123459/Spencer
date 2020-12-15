@@ -46,6 +46,9 @@ class Spencer extends Client {
 		this.statcord = new Statcord.Client({
 			key: config.statcordKey,
 			client: this,
+			postCpuStatistics: false,
+			postMemStatistics: false,
+			postNetworkStatistics: false,
 		});
 		this.config = config;
 		this.prefix = config.prefix;
