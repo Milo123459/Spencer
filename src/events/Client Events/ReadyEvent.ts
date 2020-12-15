@@ -65,4 +65,5 @@ export const run: RunFunction = async (client) => {
 			});
 		}, 1800000);
 	}
+	await client.statcord.autopost();
 };
