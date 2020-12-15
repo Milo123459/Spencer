@@ -90,7 +90,6 @@ export const run: RunFunction = async (client, message: Message) => {
 				)
 			);
 		}
-		client.statcord.postCommand(command.name, message.author.id);
 		command.run(client, message, args).catch((e: Error) => {
 			client.logger.error(e);
 			message.channel

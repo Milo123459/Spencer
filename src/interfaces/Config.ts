@@ -6,5 +6,4 @@ export interface Config {
 	webAuth?: string;
 	webPort?: number;
 	topGGToken?: string;
-	statcordKey: string;
 }

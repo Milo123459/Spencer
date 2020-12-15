@@ -16,7 +16,6 @@ import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
-import * as Statcord from 'statcord.js';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -32,7 +31,6 @@ class Spencer extends Client {
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
-	public statcord: Statcord.Client;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -43,13 +41,6 @@ class Spencer extends Client {
 		});
 	}
 	public async start(config: Config): Promise<void> {
-		this.statcord = new Statcord.Client({
-			key: config.statcordKey,
-			client: this,
-			postCpuStatistics: false,
-			postMemStatistics: false,
-			postNetworkStatistics: false,
-		});
 		this.config = config;
 		this.prefix = config.prefix;
 		this.owners = config.owners;
