@@ -124,7 +124,8 @@ class UtilsManager {
 	): Promise<number> {
 		const EconomySchema = await this.client.db.load('usereconomy');
 		const UserData = await EconomySchema.findOne({ User });
-		if (amount == 'max') return (UserData as Anything)?.[load] || 0;
+		if (amount == 'max' || amount == 'all')
+			return (UserData as Anything)?.[load] || 0;
 		if (isNaN(parseInt(amount))) return 0;
 		else if (parseInt(amount) > (UserData as Anything)?.[load] || 0) return 0;
 		else return parseInt(amount);
