@@ -15,13 +15,20 @@ export const run: RunFunction = async (client, message, args) => {
 						: `${message.guild.members.cache.get(User).displayName} has`
 				} \`$${(UserCoins as Anything)?.Coins || 0}\` in ${
 					User == message.author.id ? 'your' : 'their'
-				} wallet\n${
+				} wallet.\n${
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
 				} \`$${(UserCoins as Anything)?.DepositedCoins || 0}\` in ${
 					User == message.author.id ? 'your' : 'their'
-				} bank`,
+				} bank.\n${
+					User == message.author.id
+						? 'You have'
+						: `${message.guild.members.cache.get(User).displayName} has`
+				} \`$${
+					((UserCoins as Anything)?.DepositedCoins || 0) +
+					((UserCoins as Anything)?.Coins || 0)
+				}\` in total.`,
 			},
 			message
 		)
