@@ -3,14 +3,17 @@ import { Anything } from '../../interfaces/Anything';
 import { Document } from 'mongoose';
 import { Util } from 'discord.js';
 
-export const run: RunFunction = async (client, message) => {
+export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const Leaderboard = await EconomySchema.leaderboard(
 		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
 	const UserProfile = await EconomySchema.findOne({ User: message.author.id });
 	if (!UserProfile)
-		await EconomySchema.update({ User: message.author.id }, { Coins: 0 });
+		await EconomySchema.update(
+			{ User: message.author.id },
+			{ DepositedCoins: 0, Coins: 0 }
+		);
 	const massive: Array<Document> = [...(await EconomySchema.find({}))].sort(
 		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
@@ -19,7 +22,7 @@ export const run: RunFunction = async (client, message) => {
 			(value as Anything).User == message.author.id ? index + 1 : 0
 		)
 		.filter((value: number) => value != 0)[0];
-	await message.channel.send(
+	return await message.channel.send(
 		client.embed(
 			{
 				description: `${Leaderboard.map(
@@ -34,7 +37,7 @@ export const run: RunFunction = async (client, message) => {
 								UserProfile ? (UserProfile as Anything).Coins : 0
 						  } coins.\``
 						: ''
-				}`,
+				}\nNote, the money is in how much they have in their wallet!`,
 			},
 			message
 		)
