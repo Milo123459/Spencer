@@ -48,7 +48,9 @@ class DatabaseModule {
 			newData[key] = value;
 			return await this.create(newData);
 		} else {
-			(data as Anything)[key] += value;
+			(data as Anything)[key]
+				? ((data as Anything)[key] += value)
+				: ((data as Anything)[key] = value);
 			await data.save();
 			return data;
 		}

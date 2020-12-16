@@ -5,9 +5,9 @@ import {
 	GuildChannel,
 	User,
 	MessageReaction,
-	MessageCollector,
 } from 'discord.js';
 import { Spencer } from '../client/Client';
+import { Anything } from '../interfaces/Anything';
 class UtilsManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {
@@ -116,6 +116,18 @@ class UtilsManager {
 				reject(reason)
 			);
 		});
+	}
+	public async calculateMoney(
+		User: string,
+		amount: string,
+		load: string
+	): Promise<number> {
+		const EconomySchema = await this.client.db.load('usereconomy');
+		const UserData = await EconomySchema.findOne({ User });
+		if (amount == 'max') return (UserData as Anything)?.[load] || 0;
+		if (isNaN(parseInt(amount))) return 0;
+		else if (parseInt(amount) > (UserData as Anything)?.[load] || 0) return 0;
+		else return parseInt(amount);
 	}
 }
 export { UtilsManager };
