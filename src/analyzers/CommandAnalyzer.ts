@@ -50,7 +50,7 @@ const analyzeCommands = async () => {
 			const fileName: string = splitted[splitted.length - 1];
 			await writePromise(
 				value.file,
-				`${content}\nexport const name: string = '${fileName
+				`${content.trim()}\nexport const name: string = '${fileName
 					.split(/command/gi)[0]
 					.toLowerCase()}';`
 			);
@@ -63,7 +63,7 @@ const analyzeCommands = async () => {
 			const category: string = splitted[splitted.length - 2];
 			await writePromise(
 				value.file,
-				`${content}\nexport const category: string = '${category
+				`${content.trim()}\nexport const category: string = '${category
 					.split(/ +/g)[0]
 					.toLowerCase()}';`
 			);
@@ -73,8 +73,8 @@ const analyzeCommands = async () => {
 			const buffer: Buffer = await readPromise(value.file);
 			const content: string = buffer.toString();
 			await writePromise(
-				value.file.trim(),
-				`${content}\nexport const description: string = 'A cool command'`
+				value.file,
+				`${content.trim()}\nexport const description: string = 'A cool command'`
 			);
 			fixed.push('description');
 		}
