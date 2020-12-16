@@ -22,3 +22,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const aliases: string[] = ['balance', 'money', 'cash'];
 export const usage: string = '[@user | userid]';
 export const category: string = 'economy';
+
+export const description: string = 'A cool command';

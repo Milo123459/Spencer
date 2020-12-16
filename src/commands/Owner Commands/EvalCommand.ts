@@ -35,3 +35,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const ownerOnly: boolean = true;
 export const name: string = 'eval';
 export const category: string = 'owner';
+
+export const description: string = 'A cool command';

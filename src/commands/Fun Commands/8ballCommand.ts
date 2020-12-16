@@ -36,3 +36,5 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = '8ball';
 export const category: string = 'fun';
+
+export const description: string = 'A cool command';

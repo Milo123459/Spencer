@@ -16,3 +16,5 @@ export const run: RunFunction = async (client, message) => {
 export const aliases: string[] = ['invite', 'supportserver', 'vote', 'topgg'];
 export const name: string = 'links';
 export const category: string = 'info';
+
+export const description: string = 'A cool command';

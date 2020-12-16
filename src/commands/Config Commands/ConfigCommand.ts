@@ -134,3 +134,5 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'config';
 export const category: string = 'config';
+
+export const description: string = 'A cool command';

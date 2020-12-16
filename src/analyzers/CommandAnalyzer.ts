@@ -30,7 +30,12 @@ const analyzeCommands = async () => {
 	for (const value of commands) {
 		const buffer: Buffer = await readPromise(value);
 		const fileContent = buffer.toString();
-		const analyzed = check(fileContent, ['name', 'run', 'category']);
+		const analyzed = check(fileContent, [
+			'name',
+			'run',
+			'category',
+			'description',
+		]);
 		AnalyzedCommands.push({ file: value, analyzed });
 	}
 	for (const value of AnalyzedCommands.filter(
@@ -63,6 +68,15 @@ const analyzeCommands = async () => {
 					.toLowerCase()}';`
 			);
 			fixed.push('category');
+		}
+		if (value.analyzed.includes('description')) {
+			const buffer: Buffer = await readPromise(value.file);
+			const content: string = buffer.toString();
+			await writePromise(
+				value.file,
+				`${content}\nexport const description: string = 'A cool command'`
+			);
+			fixed.push('description');
 		}
 		if (value.analyzed.includes('run')) unAble.push('run');
 		FixedCommands.push({ file: value.file, fixed, unAble });

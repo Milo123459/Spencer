@@ -17,3 +17,5 @@ export const run: RunFunction = async (client, message) => {
 export const category: string = 'config';
 export const userPermissions: string = 'MANAGE_GUILD';
 export const aliases: string[] = ['delguildconfig', 'delgc'];
+
+export const description: string = 'A cool command';

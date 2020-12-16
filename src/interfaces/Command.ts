@@ -8,7 +8,7 @@ export interface Command {
 	name: string;
 	run: RunFunction;
 	aliases?: string[];
-	description?: string;
+	description: string;
 	cooldown?: number;
 	category: string;
 	userPermissions?: string | string[];
