@@ -5,7 +5,7 @@ export const run: RunFunction = async (client, message) => {
 		client.embed(
 			{
 				description: `
-    You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot) 
+    You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot%20applications.commands) 
 	You can join the support server [here](https://discord.gg/22TtDpJcNE)
 	You can vote for ${client.user.username} on top.gg [here](https://top.gg/bot/${client.user.id}/vote), on weekdays you get 1000 coins, on weekends you get 2000!\nYou can donate to Spencer [here](https://donatebot.io/checkout/784470505607528448) - if you join Spencer Support you can even get special roles!`.trim(),
 			},
