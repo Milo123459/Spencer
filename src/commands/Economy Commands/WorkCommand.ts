@@ -1,13 +1,25 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Message, MessageCollector, Collection } from 'discord.js';
+import { Anything } from '../../interfaces/Anything';
+
 export const name: string = 'work';
 export const run: RunFunction = async (client, message) => {
+	const EconomySchema = await client.db.load('usereconomy');
+	const User = await EconomySchema.findOne({ User: message.author.id });
+	if (!(User as Anything)?.Job)
+		return await message.channel.send(
+			client.embed(
+				{
+					description:
+						"Wait a minute, you haven't got a job, and you are trying to work? Talk about stupid. Set a jub using `sp!setjob`.",
+				},
+				message
+			)
+		);
 	// decide a job
-	const Jobs: string[] = ['Footballer', 'Programmer', 'YouTuber'];
-	const Job: string = Jobs[Math.floor(Math.random() * Jobs.length)];
+	const Job: string = (User as Anything).Job;
 	// function to add money to user
 	const giveMoney = async (User: string, Coins: number) => {
-		const EconomySchema = await client.db.load('usereconomy');
 		return await EconomySchema.increment({ User }, 'Coins', Coins);
 	};
 	if (Job == 'Footballer') {

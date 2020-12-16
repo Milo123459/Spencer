@@ -6,5 +6,6 @@ export const data = model(
 		User: String,
 		Coins: Number,
 		VoteReminder: Boolean,
+		Job: String,
 	})
 );

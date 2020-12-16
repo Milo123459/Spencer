@@ -1,4 +1,12 @@
-import { Message, GuildMember, EmbedFieldData, GuildChannel } from 'discord.js';
+import {
+	Message,
+	GuildMember,
+	EmbedFieldData,
+	GuildChannel,
+	User,
+	MessageReaction,
+	MessageCollector,
+} from 'discord.js';
 import { Spencer } from '../client/Client';
 class UtilsManager {
 	private client: Spencer;
@@ -88,6 +96,26 @@ class UtilsManager {
 			});
 		}
 		return !!res.filter((value: boolean) => !!value).length;
+	}
+	public async awaitReactions(
+		queryUser: string,
+		message: Message,
+		reactions: string[]
+	): Promise<string> {
+		reactions.map(async (value: string) => await message.react(value));
+		return new Promise(async (resolve, reject) => {
+			const reactionCollector = message.createReactionCollector(
+				(reaction: MessageReaction, user: User) =>
+					reactions.includes(reaction.emoji.name) && user.id == queryUser,
+				{ time: 30000 }
+			);
+			reactionCollector.on('collect', (reaction: MessageReaction) =>
+				resolve(reaction.emoji.name)
+			);
+			reactionCollector.on('end', (collected, reason: string) =>
+				reject(reason)
+			);
+		});
 	}
 }
 export { UtilsManager };
