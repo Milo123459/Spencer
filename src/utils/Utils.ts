@@ -130,5 +130,8 @@ class UtilsManager {
 		else if (parseInt(amount) > (UserData as Anything)?.[load] || 0) return 0;
 		else return parseInt(amount);
 	}
+	public randomElement(arr: any[]): any {
+		return arr[Math.floor(Math.random() * arr.length)];
+	}
 }
 export { UtilsManager };
