@@ -11,7 +11,7 @@ export const run: RunFunction = async (client, message) => {
 			client.embed(
 				{
 					description:
-						"Wait a minute, you haven't got a job, and you are trying to work? Talk about stupid. Set a jub using `sp!setjob`.",
+						"Wait a minute, you haven't got a job, and you are trying to work? Talk about stupid. Set a job using `sp!setjob`.",
 				},
 				message
 			)
