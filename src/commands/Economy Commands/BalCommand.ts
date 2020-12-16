@@ -27,7 +27,14 @@ export const run: RunFunction = async (client, message, args) => {
 		)
 	);
 };
-export const aliases: string[] = ['balance', 'money', 'cash', 'howmuchdollar'];
+export const aliases: string[] = [
+	'balance',
+	'money',
+	'cash',
+	'howmuchdollar',
+	'wallet',
+	'bank',
+];
 export const usage: string = '[@user | userid]';
 export const category: string = 'economy';
 
