@@ -73,7 +73,7 @@ const analyzeCommands = async () => {
 			const buffer: Buffer = await readPromise(value.file);
 			const content: string = buffer.toString();
 			await writePromise(
-				value.file,
+				value.file.trim(),
 				`${content}\nexport const description: string = 'A cool command'`
 			);
 			fixed.push('description');
