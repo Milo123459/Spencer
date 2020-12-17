@@ -6,8 +6,7 @@ import { Util } from 'discord.js';
 export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const Leaderboard = await EconomySchema.leaderboard(
-		(a: Anything, b: Anything) =>
-			b.Coins + (b?.DepositedCoins || 0) - a.Coins + (a?.DepositedCoins || 0)
+		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
 	const UserProfile = await EconomySchema.findOne({ User: message.author.id });
 	if (!UserProfile)
@@ -16,8 +15,7 @@ export const run: RunFunction = async (client, message, args) => {
 			{ DepositedCoins: 0, Coins: 0 }
 		);
 	const massive: Array<Document> = [...(await EconomySchema.find({}))].sort(
-		(a: Anything, b: Anything) =>
-			b.Coins + (b?.DepositedCoins || 0) - a.Coins + (a?.DepositedCoins || 0)
+		(a: Anything, b: Anything) => b.Coins - a.Coins
 	);
 	const userPosition: number = massive
 		.map((value: Document, index: number) =>
@@ -39,7 +37,7 @@ export const run: RunFunction = async (client, message, args) => {
 								UserProfile ? (UserProfile as Anything).Coins : 0
 						  } coins.\``
 						: ''
-				}\nNote, the money is in how much they total! Wallet + bank`,
+				}\nNote, the money is in how much they have in their wallet!`,
 			},
 			message
 		)
