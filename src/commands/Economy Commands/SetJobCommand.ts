@@ -2,6 +2,7 @@ import { Message } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 import { Job } from '../../interfaces/Job';
 import { Jobs } from '../../static/Jobs';
+import { Anything } from '../../interfaces/Anything';
 
 export const run: RunFunction = async (client, message) => {
 	const EconomyShcmea = await client.db.load('usereconomy');
@@ -48,3 +49,4 @@ export const run: RunFunction = async (client, message) => {
 };
 export const name: string = 'setjob';
 export const category: string = 'economy';
+export const aliases: string[] = ['jobs', 'job'];
