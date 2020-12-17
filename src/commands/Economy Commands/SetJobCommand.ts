@@ -25,6 +25,17 @@ export const run: RunFunction = async (client, message) => {
 			name: 'Movie director',
 			description: "You make movies, just, don't look at the reviews.",
 		},
+		{
+			reaction: '🚀',
+			name: 'Rocket scientist',
+			description: "It's not rocket science to be a rocket scientist.",
+		},
+		{
+			reaction: '🚗',
+			name: 'Uber driver',
+			description:
+				"I'm going to charge you waiting time because I couldn't find your house",
+		},
 	];
 
 	const msg: Message = await message.channel.send(
@@ -53,9 +64,9 @@ export const run: RunFunction = async (client, message) => {
 		await msg.edit(
 			client.embed(
 				{
-					description: `Woohoo! You\'re now a ${
-						options.find((value: Option) => value.reaction == reaction).name
-					}`,
+					description: `Woohoo! You\'re now a **${options
+						.find((value: Option) => value.reaction == reaction)
+						.name.toLowerCase()}**`,
 				},
 				message
 			)
