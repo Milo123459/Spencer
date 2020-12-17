@@ -5,6 +5,7 @@ interface Option {
 	reaction: string;
 	name: string;
 	description: string;
+	n?: boolean;
 }
 
 export const run: RunFunction = async (client, message) => {
@@ -35,6 +36,7 @@ export const run: RunFunction = async (client, message) => {
 			name: 'Uber driver',
 			description:
 				"I'm going to charge you waiting time because I couldn't find your house",
+			n: true,
 		},
 	];
 
@@ -64,7 +66,11 @@ export const run: RunFunction = async (client, message) => {
 		await msg.edit(
 			client.embed(
 				{
-					description: `Woohoo! You\'re now a **${options
+					description: `Woohoo! You\'re now a${
+						options.find((value: Option) => value.reaction == reaction)?.n
+							? 'n'
+							: ''
+					} **${options
 						.find((value: Option) => value.reaction == reaction)
 						.name.toLowerCase()}**`,
 				},
