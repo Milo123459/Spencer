@@ -35,7 +35,7 @@ export const run: RunFunction = async (client, message) => {
 			reaction: '🚗',
 			name: 'Uber driver',
 			description:
-				"I'm going to charge you waiting time because I couldn't find your house",
+				"I'm going to charge you waiting time because I couldn't find your house.",
 			n: true,
 		},
 	];
@@ -46,7 +46,7 @@ export const run: RunFunction = async (client, message) => {
 				description: `Please pick a job by reacting below.\n${options
 					.map(
 						(value: Option) =>
-							`${value.reaction} - ${value.name}: ${value.description}`
+							`${value.reaction} **${value.name}**: ${value.description}`
 					)
 					.join('\n')}`,
 			},
