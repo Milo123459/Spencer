@@ -44,5 +44,3 @@ export const aliases: string[] = [
 ];
 export const usage: string = '[@user | userid]';
 export const category: string = 'economy';
-
-export const description: string = 'A cool command';

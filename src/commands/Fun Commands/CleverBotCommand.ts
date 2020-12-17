@@ -21,5 +21,3 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'cleverbot';
 export const category: string = 'fun';
-
-export const description: string = 'A cool command';

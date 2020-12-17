@@ -19,5 +19,3 @@ export const run: RunFunction = async (client, message) => {
 	return await message.channel.send(embed);
 };
 export const category: string = 'info';
-
-export const description: string = 'A cool command';

@@ -37,5 +37,3 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'bio';
 export const category: string = 'info';
-
-export const description: string = 'A cool command';
