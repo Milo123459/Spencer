@@ -12,6 +12,13 @@ export const run: RunFunction = async (client, message, args) => {
 		return await message.channel.send(
 			client.embed({ description: "I couldn't find that user!" }, message)
 		);
+	if (member.id == message.author.id)
+		return await message.channel.send(
+			client.embed(
+				{ description: 'You tried to rob your self, god, how dumb are you?' },
+				message
+			)
+		);
 	const EconomySchema = await client.db.load('usereconomy');
 	const RobberProfile = await EconomySchema.findOne({
 		User: message.author.id,
