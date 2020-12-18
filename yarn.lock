@@ -288,13 +288,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@top-gg/sdk@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@top-gg/sdk@npm:3.0.3"
+"@top-gg/sdk@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@top-gg/sdk@npm:3.0.4"
   dependencies:
     node-fetch: ^2.6.1
     raw-body: ^2.4.1
-  checksum: 088ea04d973420723e01d19f9888f8c0c1608709996d8b05f9915922adac8a4034e91d4789a0fe80dfe0f0389fc9c47d3062e7056d17cb4fa9b85ea30f7e21fb
+  checksum: f39786ef7bd6c122d8ad92c1e993b1a4d5c617284d95a1d3a69cec7096f238bb353c6f1b999e3d1ed7d5784368185ec4392da9acb7b2b9ceb83b002dffa3b33e
   languageName: node
   linkType: hard
 
@@ -2547,13 +2547,13 @@ fsevents@~2.1.2:
   linkType: hard
 
 "get-intrinsic@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "get-intrinsic@npm:1.0.1"
+  version: 1.0.2
+  resolution: "get-intrinsic@npm:1.0.2"
   dependencies:
     function-bind: ^1.1.1
     has: ^1.0.3
     has-symbols: ^1.0.1
-  checksum: c38bc558f1eca73bde2d9e22c7798b06c4b93650f39b2053a875a23a6c00fbafb0919ad20fe0d3a3e16916a8a59450502f91e75a918d264456c8ded070fe93c4
+  checksum: 1916051d494f7265bf1072bf0243052d79be1d38fa2fa4561695ee7162a2c29f208fbc4ad3c82c340eb1ca5c788ec11791a5e345ff7d35f789438b237c941271
   languageName: node
   linkType: hard
 
@@ -5118,7 +5118,7 @@ fsevents@~2.1.2:
   dependencies:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-angular": ^11.0.0
-    "@top-gg/sdk": ^3.0.3
+    "@top-gg/sdk": ^3.0.4
     "@types/express": ^4.17.9
     "@types/glob": ^7.1.3
     "@types/mongoose": ^5.10.3
