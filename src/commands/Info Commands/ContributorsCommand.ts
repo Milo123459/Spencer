@@ -1,5 +1,5 @@
 import { RunFunction } from '../../interfaces/Command';
-import { GithubUser } from '../../interfaces/GithubContributorUser';
+import { GithubContributorUser } from '../../interfaces/GithubContributorUser';
 import fetch from 'node-fetch';
 
 export const run: RunFunction = async (client, message) => {
@@ -8,12 +8,12 @@ export const run: RunFunction = async (client, message) => {
 		.then((res) => {
 			const fieldArray = [];
 
-			res.map((user: GithubUser) => {
+			res.map((user: GithubContributorUser) => {
 				if (user.login.toLowerCase().includes('bot')) return;
 				fieldArray.push({
 					name: user.login,
 					value: `${user.contributions} commits!`,
-					inline: false,
+					inline: true,
 				});
 			});
 			const embed = client.embed(
