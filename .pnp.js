@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.3"],
@@ -395,10 +395,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@top-gg/sdk", [
-        ["npm:3.0.4", {
-          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.4-06cf75d579-f39786ef7b.zip/node_modules/@top-gg/sdk/",
+        ["npm:3.0.5", {
+          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.5-190a363779-111a603354.zip/node_modules/@top-gg/sdk/",
           "packageDependencies": [
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["node-fetch", "npm:2.6.1"],
             ["raw-body", "npm:2.4.1"]
           ],
@@ -6117,7 +6117,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["spencer", "workspace:."],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.3"],
