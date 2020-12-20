@@ -30,51 +30,39 @@ export const run: RunFunction = async (client, message, args) => {
 					{
 						title: `Info on ${res.login}`,
 						fields: [
-							{ name: `Name`, value: `${res.name}`, inline: false },
-							{
-								name: 'Email',
-								value: `${res.email ? res.email : 'None Provided'}`,
-							},
+							{ name: `Name`, value: `${res.name}` },
 							{ name: 'Bio', value: `${res.bio ? res.bio : 'None Provided'}` },
 							{
 								name: 'Company',
 								value: `${res.company ? res.company : 'None Provided'}`,
-								inline: false,
 							},
 							{
 								name: 'Location',
 								value: `${res.location ? res.location : 'None Provided'}`,
-								inline: false,
 							},
 							{
 								name: 'Hireable',
 								value: `${res.hireable ? 'Yes' : 'No'}`,
-								inline: false,
 							},
 							{
 								name: 'Followers',
 								value: `${res.followers ? res.followers : 0}`,
-								inline: false,
 							},
 							{
 								name: 'Following',
 								value: `${res.following ? res.following : 0}`,
-								inline: false,
 							},
 							{
 								name: 'Public Repository Count',
 								value: `${res.public_repos ? res.public_repos : 0}`,
-								inline: false,
 							},
 							{
 								name: 'Public Gists Count',
 								value: `${res.public_gists ? res.public_gists : 0}`,
-								inline: false,
 							},
 							{
 								name: 'Account Creation Date',
 								value: res.created_at,
-								inline: false,
 							},
 							{
 								name: 'Account Last Updated',
