@@ -5,8 +5,6 @@ export const data = model(
 	new Schema({
 		Guild: String,
 		Prefix: String,
-		WelcomeChannel: String,
-		LeaveChannel: String,
 		SuggestionChannel: String,
 	})
 );

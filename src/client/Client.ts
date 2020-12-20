@@ -16,6 +16,7 @@ import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
+
 const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
@@ -82,7 +83,7 @@ class Spencer extends Client {
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
 			...data,
-			color: 'RANDOM',
+			color: this.utils.randomElement(['RED', 'GREEN', 'BLUE']),
 			footer: {
 				text: `${message.author.tag} | 👦 Spencer`,
 				iconURL: message.author.displayAvatarURL({

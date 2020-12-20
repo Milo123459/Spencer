@@ -13,12 +13,34 @@ export const run: RunFunction = async (client, message, args) => {
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
-				} \`$${(UserCoins as Anything)?.Coins || 0}\``,
+				} \`$${(UserCoins as Anything)?.Coins || 0}\` in ${
+					User == message.author.id ? 'your' : 'their'
+				} wallet.\n${
+					User == message.author.id
+						? 'You have'
+						: `${message.guild.members.cache.get(User).displayName} has`
+				} \`$${(UserCoins as Anything)?.DepositedCoins || 0}\` in ${
+					User == message.author.id ? 'your' : 'their'
+				} bank.\n${
+					User == message.author.id
+						? 'You have'
+						: `${message.guild.members.cache.get(User).displayName} has`
+				} \`$${
+					((UserCoins as Anything)?.DepositedCoins || 0) +
+					((UserCoins as Anything)?.Coins || 0)
+				}\` in total.`,
 			},
 			message
 		)
 	);
 };
-export const aliases: string[] = ['balance', 'money', 'cash'];
+export const aliases: string[] = [
+	'balance',
+	'money',
+	'cash',
+	'howmuchdollar',
+	'wallet',
+	'bank',
+];
 export const usage: string = '[@user | userid]';
 export const category: string = 'economy';

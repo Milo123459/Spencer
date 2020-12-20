@@ -1,13 +1,25 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Message, MessageCollector, Collection } from 'discord.js';
+import { Anything } from '../../interfaces/Anything';
+
 export const name: string = 'work';
 export const run: RunFunction = async (client, message) => {
+	const EconomySchema = await client.db.load('usereconomy');
+	const User = await EconomySchema.findOne({ User: message.author.id });
+	if (!(User as Anything)?.Job)
+		return await message.channel.send(
+			client.embed(
+				{
+					description:
+						"Wait a minute, you haven't got a job, and you are trying to work? Talk about stupid. Set a job using `sp!setjob`.",
+				},
+				message
+			)
+		);
 	// decide a job
-	const Jobs: string[] = ['Footballer', 'Programmer', 'YouTuber'];
-	const Job: string = Jobs[Math.floor(Math.random() * Jobs.length)];
+	const Job: string = (User as Anything).Job;
 	// function to add money to user
 	const giveMoney = async (User: string, Coins: number) => {
-		const EconomySchema = await client.db.load('usereconomy');
 		return await EconomySchema.increment({ User }, 'Coins', Coins);
 	};
 	if (Job == 'Footballer') {
@@ -19,15 +31,18 @@ export const run: RunFunction = async (client, message) => {
 			/*line 4*/ new Array(3).fill(':black_large_square:'),
 		];
 		// valid inputs
-		const ValidInputs: string[] = ['left', 'middle', 'right'];
+		const validInputs: string[] = ['left', 'middle', 'right', 'l', 'm', 'r'];
 		// convert input to number
 		const inputToNmuber = (input: string) => {
 			switch (input) {
 				case 'left':
+				case 'l':
 					return 0;
 				case 'middle':
+				case 'm':
 					return 1;
 				case 'right':
+				case 'r':
 					return 2;
 			}
 		};
@@ -41,7 +56,7 @@ export const run: RunFunction = async (client, message) => {
 			`${Game.map((value: string[]) => value.join('')).join('\n')}`,
 			client.embed(
 				{
-					description: `*You're in a football match, about to score... But where do you go? **left**, **right** or **middle**.*`,
+					description: `*You're in a football match, about to score... But where do you go? **left** (l), **right** (r) or **middle** (m).*`,
 				},
 				message
 			)
@@ -55,7 +70,7 @@ export const run: RunFunction = async (client, message) => {
 			const Input: string = msg.content.toLowerCase();
 			const inputPosition: number = inputToNmuber(Input);
 			// if it is not left, middle or right return
-			if (!ValidInputs.includes(Input.toLowerCase()))
+			if (!validInputs.includes(Input.toLowerCase()))
 				messageCollector.stop('invalid_input');
 			// if it is valid, check if the goal keeper is there
 			// if the goal keeper is where the ball is going
@@ -107,7 +122,9 @@ export const run: RunFunction = async (client, message) => {
 						await message.delete();
 						await giveMoney(message.author.id, decreasedRate);
 						// delete original message
-						return await message.delete();
+						try {
+							return await message.delete();
+						} catch {}
 					case 'time':
 						// dont give them anything
 						await msg.edit('');
@@ -122,7 +139,9 @@ export const run: RunFunction = async (client, message) => {
 						// destroy array
 						Game.length = 0;
 						// delete original message
-						return await message.delete();
+						try {
+							return await message.delete();
+						} catch {}
 					case 'scored':
 						// send a nice message
 						await msg.edit('');
@@ -138,7 +157,9 @@ export const run: RunFunction = async (client, message) => {
 						Game.length = 0;
 						await giveMoney(message.author.id, rate);
 						// delete original message
-						return await message.delete({ timeout: 3000 });
+						try {
+							return await message.delete({ timeout: 3000 });
+						} catch {}
 				}
 			}
 		);

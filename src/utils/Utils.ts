@@ -1,5 +1,13 @@
-import { Message, GuildMember, EmbedFieldData, GuildChannel } from 'discord.js';
+import {
+	Message,
+	GuildMember,
+	EmbedFieldData,
+	GuildChannel,
+	User,
+	MessageReaction,
+} from 'discord.js';
 import { Spencer } from '../client/Client';
+import { Anything } from '../interfaces/Anything';
 class UtilsManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {
@@ -64,6 +72,66 @@ class UtilsManager {
 			if (value.id == user.id) joinPosition = index + 1;
 		});
 		return joinPosition;
+	}
+	public proper(key: string, value: any): object {
+		const obj = {};
+		obj[key] = value;
+		return obj;
+	}
+	public checkMultipleRoles(
+		guild: string,
+		user: string,
+		roles: string | string[]
+	): boolean {
+		const member: GuildMember = this.client.guilds.cache
+			.get(guild)
+			.members.cache.get(user);
+		if (!member) return false;
+		const res: boolean[] = [];
+		if (typeof roles == 'string') {
+			res.push(member.roles.cache.has(roles));
+		} else {
+			roles.map((value: string) => {
+				res.push(member.roles.cache.has(value));
+			});
+		}
+		return !!res.filter((value: boolean) => !!value).length;
+	}
+	public async awaitReactions(
+		queryUser: string,
+		message: Message,
+		reactions: string[]
+	): Promise<string> {
+		reactions.map(async (value: string) => await message.react(value));
+		return new Promise(async (resolve, reject) => {
+			const reactionCollector = message.createReactionCollector(
+				(reaction: MessageReaction, user: User) =>
+					reactions.includes(reaction.emoji.name) && user.id == queryUser,
+				{ time: 30000 }
+			);
+			reactionCollector.on('collect', (reaction: MessageReaction) =>
+				resolve(reaction.emoji.name)
+			);
+			reactionCollector.on('end', (collected, reason: string) =>
+				reject(reason)
+			);
+		});
+	}
+	public async calculateMoney(
+		User: string,
+		amount: string,
+		load: string
+	): Promise<number> {
+		const EconomySchema = await this.client.db.load('usereconomy');
+		const UserData = await EconomySchema.findOne({ User });
+		if (amount == 'max' || amount == 'all')
+			return (UserData as Anything)?.[load] || 0;
+		if (isNaN(parseInt(amount))) return 0;
+		else if (parseInt(amount) > (UserData as Anything)?.[load] || 0) return 0;
+		else return parseInt(amount);
+	}
+	public randomElement(arr: any[]): any {
+		return arr[Math.floor(Math.random() * arr.length)];
 	}
 }
 export { UtilsManager };

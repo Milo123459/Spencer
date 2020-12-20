@@ -5,5 +5,8 @@ export const data = model(
 	new Schema({
 		User: String,
 		Coins: Number,
+		VoteReminder: Boolean,
+		Job: String,
+		DepositedCoins: Number,
 	})
 );

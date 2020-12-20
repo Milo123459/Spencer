@@ -4,9 +4,11 @@
 
 [![Open issues](https://img.shields.io/github/issues-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/issues) [![Closed issues](https://img.shields.io/github/issues-closed-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/issues) [![Open PRs](https://img.shields.io/github/issues-pr-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/pulls) [![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/Milo123459/Spencer)](https://github.com/Milo123459/Spencer/pulls)
 
+[![Discord Bots](https://top.gg/api/widget/765156777607823380.svg)](https://top.gg/bot/765156777607823380)
+
 # Spencer
 
-Spencer is my bot, not yours. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
+Spencer is a discord bot. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
 
 You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot)
 
@@ -25,7 +27,7 @@ Has a cool little DB system, allowing you to load schemas remotely.
 - Add and commit your code
 - Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
 - Get your PR reviewed
-- **OPTIONAL**: Use [PullBot](https://probot.github.io/apps/pull/) to keep your fork **up to date** with the repo!
+- **OPTIONAL**: Use [Pull](https://probot.github.io/apps/pull/) to keep your fork **up to date** with the repo!
 
 # Development Status
 

@@ -66,13 +66,17 @@ export const run: RunFunction = async (client, message, args) => {
 						message.author.username
 					}**${
 						args.slice(1).length
-							? ` with reason ${args.slice(1).join(' ')}`
+							? ` with reason **${args.slice(1).join(' ')}**`
 							: ''
 					}`,
 				},
 			],
+			color: 'GREEN',
 		})
 	);
+	try {
+		await msg.reactions.removeAll();
+	} catch {}
 	try {
 		await message.react('🚀');
 	} catch {}
