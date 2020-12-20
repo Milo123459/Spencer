@@ -78,7 +78,7 @@ export const run: RunFunction = async (client, message, args) => {
 							},
 							{
 								name: 'Account Last Updated',
-								value: `${res.created_at ? res.created_at : 'Never Updated'}`,
+								value: `${res.updated_at ? res.updated_at : 'Never Updated'}`,
 								inline: true,
 							},
 						],
