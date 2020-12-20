@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.3"],
@@ -395,10 +395,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@top-gg/sdk", [
-        ["npm:3.0.4", {
-          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.4-06cf75d579-f39786ef7b.zip/node_modules/@top-gg/sdk/",
+        ["npm:3.0.5", {
+          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.5-190a363779-111a603354.zip/node_modules/@top-gg/sdk/",
           "packageDependencies": [
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["node-fetch", "npm:2.6.1"],
             ["raw-body", "npm:2.4.1"]
           ],
@@ -728,7 +728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ci-info", "npm:2.0.0"],
             ["clipanion", "npm:2.6.2"],
             ["fromentries", "npm:1.3.2"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -769,7 +769,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["p-limit", "npm:2.3.0"],
             ["pluralize", "npm:7.0.0"],
             ["pretty-bytes", "npm:5.4.1"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["stream-to-promise", "npm:2.2.0"],
             ["tar-stream", "npm:2.1.4"],
             ["treeify", "npm:1.1.0"],
@@ -921,7 +921,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["enquirer", "npm:2.3.6"],
             ["lodash", "npm:4.17.20"],
             ["micromatch", "npm:4.0.2"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -975,7 +975,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/core", "npm:2.4.0"],
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["git-url-parse", "npm:11.1.2"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tslib", "npm:1.14.1"]
           ],
           "packagePeers": [
@@ -1145,7 +1145,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["@yarnpkg/plugin-pack", "virtual:c3d513dc7c208b22329b57908a3011672164fcb7140841f92a14de18f71a3efb57b2358a9022110dc534fc0ceb986b360f8d850ee0890030ab7e609ec2b994bd#npm:2.2.3"],
             ["enquirer", "npm:2.3.6"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["ssri", "npm:6.0.1"],
             ["tslib", "npm:1.14.1"]
           ],
@@ -1181,7 +1181,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/plugin-pack", "virtual:c3d513dc7c208b22329b57908a3011672164fcb7140841f92a14de18f71a3efb57b2358a9022110dc534fc0ceb986b360f8d850ee0890030ab7e609ec2b994bd#npm:2.2.3"],
             ["clipanion", "npm:2.6.2"],
             ["enquirer", "npm:2.3.6"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tslib", "npm:1.14.1"],
             ["yup", "npm:0.27.0"]
           ],
@@ -1281,7 +1281,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnp", "npm:2.3.2"],
             ["clipanion", "npm:2.6.2"],
             ["micromatch", "npm:4.0.2"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tslib", "npm:1.14.1"]
           ],
           "packagePeers": [
@@ -1785,7 +1785,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["bl", "npm:2.2.1"],
             ["readable-stream", "npm:2.3.7"],
-            ["safe-buffer", "npm:5.2.1"]
+            ["safe-buffer", "npm:5.1.2"]
           ],
           "linkType": "HARD",
         }],
@@ -2456,17 +2456,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["npm:4.3.2", {
-          "packageLocation": "./.yarn/cache/debug-npm-4.3.2-f0148b6afe-5543570879.zip/node_modules/debug/",
+        ["npm:4.3.1", {
+          "packageLocation": "./.yarn/cache/debug-npm-4.3.1-22e08d605e-0d41ba5177.zip/node_modules/debug/",
           "packageDependencies": [
-            ["debug", "npm:4.3.2"]
+            ["debug", "npm:4.3.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2", {
-          "packageLocation": "./.yarn/$$virtual/debug-virtual-a4d7f39c73/0/cache/debug-npm-4.3.2-f0148b6afe-5543570879.zip/node_modules/debug/",
+        ["virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.1", {
+          "packageLocation": "./.yarn/$$virtual/debug-virtual-548779cad3/0/cache/debug-npm-4.3.1-22e08d605e-0d41ba5177.zip/node_modules/debug/",
           "packageDependencies": [
-            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
+            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.1"],
             ["ms", "npm:2.1.2"],
             ["supports-color", null]
           ],
@@ -4137,7 +4137,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-truncate", "npm:2.1.0"],
             ["commander", "npm:6.2.1"],
             ["cosmiconfig", "npm:7.0.0"],
-            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
+            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.1"],
             ["dedent", "npm:0.7.0"],
             ["enquirer", "npm:2.3.6"],
             ["execa", "npm:4.1.0"],
@@ -4632,7 +4632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongodb-client-encryption", null],
             ["mongodb-extjson", null],
             ["require_optional", "npm:1.0.1"],
-            ["safe-buffer", "npm:5.2.1"],
+            ["safe-buffer", "npm:5.1.2"],
             ["saslprep", "npm:1.0.3"],
             ["snappy", null]
           ],
@@ -4783,7 +4783,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npmlog", "npm:4.1.2"],
             ["request", "npm:2.88.2"],
             ["rimraf", "npm:3.0.2"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["tar", "npm:6.0.5"],
             ["which", "npm:2.0.2"]
           ],
@@ -4838,7 +4838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["normalize-package-data", "npm:3.0.0"],
             ["hosted-git-info", "npm:3.0.7"],
             ["resolve", "patch:resolve@npm%3A1.19.0#builtin<compat/resolve>::version=1.19.0&hash=3388aa"],
-            ["semver", "npm:7.3.4"],
+            ["semver", "npm:7.3.2"],
             ["validate-npm-package-license", "npm:3.0.4"]
           ],
           "linkType": "HARD",
@@ -5566,7 +5566,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["readable-stream", "npm:3.6.0"],
             ["inherits", "npm:2.0.4"],
-            ["string_decoder", "npm:1.3.0"],
+            ["string_decoder", "npm:1.1.1"],
             ["util-deprecate", "npm:1.0.2"]
           ],
           "linkType": "HARD",
@@ -5660,7 +5660,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["oauth-sign", "npm:0.9.0"],
             ["performance-now", "npm:2.1.0"],
             ["qs", "npm:6.5.2"],
-            ["safe-buffer", "npm:5.2.1"],
+            ["safe-buffer", "npm:5.1.2"],
             ["tough-cookie", "npm:2.5.0"],
             ["tunnel-agent", "npm:0.6.0"],
             ["uuid", "npm:3.4.0"]
@@ -5873,14 +5873,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.2"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:7.3.4", {
-          "packageLocation": "./.yarn/cache/semver-npm-7.3.4-4c3baf0ead-f2c7f9aeb9.zip/node_modules/semver/",
-          "packageDependencies": [
-            ["semver", "npm:7.3.4"],
-            ["lru-cache", "npm:6.0.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["semver-compare", [
@@ -5913,7 +5905,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["escape-html", "npm:1.0.3"],
             ["etag", "npm:1.8.1"],
             ["fresh", "npm:0.5.2"],
-            ["http-errors", "npm:1.7.3"],
+            ["http-errors", "npm:1.7.2"],
             ["mime", "npm:1.6.0"],
             ["ms", "npm:2.1.1"],
             ["on-finished", "npm:2.3.0"],
@@ -6117,7 +6109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["spencer", "workspace:."],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.4"],
+            ["@top-gg/sdk", "npm:3.0.5"],
             ["@types/express", "npm:4.17.9"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mongoose", "npm:5.10.3"],
@@ -6288,14 +6280,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["safe-buffer", "npm:5.1.2"]
           ],
           "linkType": "HARD",
-        }],
-        ["npm:1.3.0", {
-          "packageLocation": "./.yarn/cache/string_decoder-npm-1.3.0-2422117fd0-0a09afb610.zip/node_modules/string_decoder/",
-          "packageDependencies": [
-            ["string_decoder", "npm:1.3.0"],
-            ["safe-buffer", "npm:5.2.1"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["stringify-object", [
@@ -6396,7 +6380,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["superagent", "npm:5.3.1"],
             ["component-emitter", "npm:1.3.0"],
             ["cookiejar", "npm:2.1.2"],
-            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.2"],
+            ["debug", "virtual:68858091257fa421b2873376f1ef8e32dc639e734e9fc895fe416c446a6e656d7ab4873574765b754e0639f345f9f394254972b9f5ce71a48bc643f09c966e28#npm:4.3.1"],
             ["fast-safe-stringify", "npm:2.0.7"],
             ["form-data", "npm:3.0.0"],
             ["formidable", "npm:1.2.2"],
@@ -6404,7 +6388,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mime", "npm:2.4.7"],
             ["qs", "npm:6.9.4"],
             ["readable-stream", "npm:3.6.0"],
-            ["semver", "npm:7.3.4"]
+            ["semver", "npm:7.3.2"]
           ],
           "linkType": "HARD",
         }]
