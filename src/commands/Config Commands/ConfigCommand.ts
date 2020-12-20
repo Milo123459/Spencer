@@ -22,7 +22,7 @@ export const run: RunFunction = async (client, message, args) => {
 			key: 'VoteReminder',
 			search: { User: message.author.id },
 			validate: (message: Message, args: string[]) => {
-				const value: boolean = yn(args[0], { default: false });
+				const value: boolean = yn(args[0]);
 				return {
 					value,
 					fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
@@ -75,6 +75,21 @@ export const run: RunFunction = async (client, message, args) => {
 			},
 			parseToDB: (message: Message, args: string[]) =>
 				client.utils.ResolveChannel(message, args[0]).id,
+		},
+		{
+			schema: 'guildconfig',
+			key: 'AutoDeleteActions',
+			search: { Guild: message.guild.id },
+			validate: (message: Message, args: string[]) => {
+				const value: boolean =
+					message.member.permissions.has('MANAGE_GUILD') && yn(args[0]);
+				return {
+					value,
+					fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off' & make sure you have MANAGE_GUILD`,
+					success: value != undefined,
+				};
+			},
+			parseToDB: (message: Message, args: string[]) => yn(args[0]),
 		},
 	];
 	if (!args[0])

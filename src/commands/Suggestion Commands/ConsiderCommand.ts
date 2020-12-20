@@ -77,6 +77,13 @@ export const run: RunFunction = async (client, message, args) => {
 	try {
 		await message.react('🚀');
 	} catch {}
+	if ((GuildConfig as Anything)?.AutoDeleteActions) {
+		setTimeout(async () => {
+			try {
+				await message.delete();
+			} catch {}
+		}, 5000);
+	}
 };
 
 export const userPermissions: string = 'MANAGE_GUILD';

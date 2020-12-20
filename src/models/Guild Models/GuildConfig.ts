@@ -6,5 +6,6 @@ export const data = model(
 		Guild: String,
 		Prefix: String,
 		SuggestionChannel: String,
+		AutoDeleteActions: Boolean,
 	})
 );
