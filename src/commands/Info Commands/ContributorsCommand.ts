@@ -1,5 +1,5 @@
 import { RunFunction } from '../../interfaces/Command';
-import { GithubUser } from '../../interfaces/GithubUser';
+import { GithubUser } from '../../interfaces/GithubContributorUser';
 import fetch from 'node-fetch';
 
 export const run: RunFunction = async (client, message) => {
