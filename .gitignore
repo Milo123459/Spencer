@@ -1,6 +1,7 @@
 dist
 config.json
 .yarn/*
+.yarn
 !.yarn/cache
 !.yarn/releases
 !.yarn/plugins
