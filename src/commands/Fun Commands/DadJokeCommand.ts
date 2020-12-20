@@ -8,9 +8,9 @@ export const run: RunFunction = async (client, message) => {
 		},
 	})
 		.then((res) => res.json())
-		.then((res) => {
+		.then((res: { joke: string }) => {
 			message.channel.send(
-				client.embed({ title: 'Dad Joke!', description: res.joke }, message)
+				client.embed({ title: 'Dad Joke', description: res.joke }, message)
 			);
 		});
 };

@@ -1,14 +1,14 @@
 import { RunFunction } from '../../interfaces/Command';
+import { GithubUser } from '../../interfaces/GithubUser';
 import fetch from 'node-fetch';
 
 export const run: RunFunction = async (client, message) => {
 	fetch('https://api.github.com/repos/milo123459/Spencer/contributors')
 		.then((res) => res.json())
 		.then((res) => {
-			let embed = client.embed({ title: 'Contributors!' }, message);
 			const fieldArray = [];
 
-			res.map((user) => {
+			res.map((user: GithubUser) => {
 				if (user.login.toLowerCase().includes('bot')) return;
 				fieldArray.push({
 					name: user.login,
@@ -16,8 +16,8 @@ export const run: RunFunction = async (client, message) => {
 					inline: false,
 				});
 			});
-			embed = client.embed(
-				{ title: 'Contributors!', fields: fieldArray },
+			const embed = client.embed(
+				{ title: 'Contributors', fields: fieldArray },
 				message
 			);
 			return message.channel.send(embed);
