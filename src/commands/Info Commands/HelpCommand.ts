@@ -25,7 +25,14 @@ export const run: RunFunction = async (client, message, args) => {
 			};
 		});
 	const commandEmbed: MessageEmbed = client.embed(
-		{ fields, title: `Prefix: \`${Prefix}\`` },
+		{
+			fields,
+			title: `Prefix: \`${Prefix}\``,
+			description: `**${client.user.username}** currently has **${
+				client.commands.filter((value: Command) => value.category != 'owner')
+					.size
+			}** public commands available!`,
+		},
 		message
 	);
 	if (!args[0]) return message.channel.send(commandEmbed);
