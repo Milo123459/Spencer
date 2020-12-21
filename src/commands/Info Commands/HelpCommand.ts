@@ -50,15 +50,16 @@ export const run: RunFunction = async (client, message, args) => {
 			{
 				description: Object.entries(command)
 					.filter((data) => typeof data[1] != 'function')
-					.map(
-						(data) =>
-							`**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
-								data[1].map
-									? data[1].map((d: unknown) => `\`${d}\``).join(', ')
-									: typeof data[1] == 'number'
-									? `\`${ms(data[1], { long: true })}\``
-									: `\`${data[1]}\``
-							}`
+					.map((data) =>
+						data[0] == 'usage'
+							? `${Prefix}${(command as Anything).name} ${data[1]}`
+							: `**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
+									data[1].map
+										? data[1].map((d: unknown) => `\`${d}\``).join(', ')
+										: typeof data[1] == 'number'
+										? `\`${ms(data[1], { long: true })}\``
+										: `\`${data[1]}\``
+							  }`
 					)
 					.join('\n'),
 				title: `Prefix: \`${Prefix}\``,
