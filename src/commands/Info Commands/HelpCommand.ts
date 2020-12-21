@@ -52,7 +52,9 @@ export const run: RunFunction = async (client, message, args) => {
 					.filter((data) => typeof data[1] != 'function')
 					.map((data) =>
 						data[0] == 'usage'
-							? `${Prefix}${(command as Anything).name} ${data[1]}`
+							? `**Usage**: \`${Prefix}${(command as Anything).name} ${
+									data[1]
+							  }\``
 							: `**${data[0][0].toUpperCase() + data[0].slice(1)}**: ${
 									data[1].map
 										? data[1].map((d: unknown) => `\`${d}\``).join(', ')
