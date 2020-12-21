@@ -275,7 +275,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@commitlint-resolve-extends-npm-11.0.0-7e11857102-fe978e4fce.zip/node_modules/@commitlint/resolve-extends/",
           "packageDependencies": [
             ["@commitlint/resolve-extends", "npm:11.0.0"],
-            ["import-fresh", "npm:3.2.2"],
+            ["import-fresh", "npm:3.3.0"],
             ["lodash", "npm:4.17.20"],
             ["resolve-from", "npm:5.0.0"],
             ["resolve-global", "npm:1.0.0"]
@@ -371,7 +371,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@nodelib/fs.walk", "npm:1.2.4"],
             ["@nodelib/fs.scandir", "npm:2.1.3"],
-            ["fastq", "npm:1.9.0"]
+            ["fastq", "npm:1.10.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2373,7 +2373,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cosmiconfig", "npm:7.0.0"],
             ["@types/parse-json", "npm:4.0.0"],
-            ["import-fresh", "npm:3.2.2"],
+            ["import-fresh", "npm:3.3.0"],
             ["parse-json", "npm:5.1.0"],
             ["path-type", "npm:4.0.0"],
             ["yaml", "npm:1.10.0"]
@@ -2964,10 +2964,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fastq", [
-        ["npm:1.9.0", {
-          "packageLocation": "./.yarn/cache/fastq-npm-1.9.0-11e58b198d-e9b46ea899.zip/node_modules/fastq/",
+        ["npm:1.10.0", {
+          "packageLocation": "./.yarn/cache/fastq-npm-1.10.0-f4846e7dd0-706546e7fb.zip/node_modules/fastq/",
           "packageDependencies": [
-            ["fastq", "npm:1.9.0"],
+            ["fastq", "npm:1.10.0"],
             ["reusify", "npm:1.0.4"]
           ],
           "linkType": "HARD",
@@ -3656,10 +3656,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["import-fresh", [
-        ["npm:3.2.2", {
-          "packageLocation": "./.yarn/cache/import-fresh-npm-3.2.2-509b4e1291-839a4050e9.zip/node_modules/import-fresh/",
+        ["npm:3.3.0", {
+          "packageLocation": "./.yarn/cache/import-fresh-npm-3.3.0-3e34265ca9-3ff624f001.zip/node_modules/import-fresh/",
           "packageDependencies": [
-            ["import-fresh", "npm:3.2.2"],
+            ["import-fresh", "npm:3.3.0"],
             ["parent-module", "npm:1.0.1"],
             ["resolve-from", "npm:4.0.0"]
           ],
