@@ -92,3 +92,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const userPermissions: string = 'MANAGE_GUILD';
 export const name: string = 'deny';
 export const category: string = 'suggestion';
+export const usage: string = '<suggestion_id> [...reason]';

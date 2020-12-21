@@ -42,5 +42,5 @@ export const aliases: string[] = [
 	'wallet',
 	'bank',
 ];
-export const usage: string = '[@user | userid]';
+export const usage: string = '[user]';
 export const category: string = 'economy';

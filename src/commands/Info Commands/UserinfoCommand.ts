@@ -39,4 +39,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const category: string = 'info';
 export const aliases: string[] = ['whois'];
-export const usage: string = '[@user | id]';
+export const usage: string = '[user]';

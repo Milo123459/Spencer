@@ -28,3 +28,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const aliases: string[] = ['with'];
 export const name: string = 'withdraw';
 export const category: string = 'economy';
+export const usage: string = '<amount>';
