@@ -13,7 +13,10 @@ export const run: RunFunction = async (client, message, args) => {
 		.filter((value: string) => value != 'owner')
 		.map((category: string) => {
 			return {
-				name: category[0].toUpperCase() + category.slice(1),
+				name: `${category[0].toUpperCase() + category.slice(1)} [${
+					client.commands.filter((cmd: Command) => cmd.category == category)
+						.size
+				}]`,
 				value: client.commands
 					.filter((cmd: Command) => cmd.category == category)
 					.map((cmd: Command) => `\`${cmd.name}\``)
