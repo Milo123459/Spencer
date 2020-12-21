@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
+            ["alpha-sort", "npm:3.1.0"],
             ["bufferutil", "npm:4.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],
@@ -1482,6 +1483,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-json-stable-stringify", "npm:2.1.0"],
             ["json-schema-traverse", "npm:0.4.1"],
             ["uri-js", "npm:4.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["alpha-sort", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/alpha-sort-npm-3.1.0-aaf0680c02-ddbd7c92a4.zip/node_modules/alpha-sort/",
+          "packageDependencies": [
+            ["alpha-sort", "npm:3.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -6126,6 +6136,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node-fetch", "npm:2.5.7"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
+            ["alpha-sort", "npm:3.1.0"],
             ["bufferutil", "npm:4.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],

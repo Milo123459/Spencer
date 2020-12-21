@@ -17,6 +17,7 @@
 	"license": "Creative Commons",
 	"dependencies": {
 		"@top-gg/sdk": "^3.0.5",
+		"alpha-sort": "^3.1.0",
 		"bufferutil": "^4.0.2",
 		"cleverbot-free": "^1.0.5",
 		"consola": "^2.15.0",

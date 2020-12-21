@@ -1047,6 +1047,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"alpha-sort@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "alpha-sort@npm:3.1.0"
+  checksum: ddbd7c92a4b99cb1e98c254d4e5c25318c49911b4dd45c21f99dfe65b6d01c1a4dd84b032aa7cef1897422b8ef04a013bf3f8fe0302f4ef2776ebb4124826c4a
+  languageName: node
+  linkType: hard
+
 "ansi-colors@npm:^4.1.1":
   version: 4.1.1
   resolution: "ansi-colors@npm:4.1.1"
@@ -5127,6 +5134,7 @@ fsevents@~2.1.2:
     "@types/node-fetch": ^2.5.7
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
+    alpha-sort: ^3.1.0
     bufferutil: ^4.0.2
     cleverbot-free: ^1.0.5
     consola: ^2.15.0
