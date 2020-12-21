@@ -65,6 +65,8 @@ export const run: RunFunction = async (client, message, args) => {
 
 					✅ = Continue
 					❌ = Cancel
+
+					*You have 1 minute.*
 					`.trim(),
 				},
 				message
