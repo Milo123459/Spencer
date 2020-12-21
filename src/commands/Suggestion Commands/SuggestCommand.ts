@@ -58,7 +58,14 @@ export const run: RunFunction = async (client, message, args) => {
 		m = await message.channel.send(
 			client.embed(
 				{
-					description: `Please make sure you\'re suggestion hasn\'t already been suggested! (check here: <#${channel.id}>)  React with ✅ meaning that it hasn\'t already been suggested, and ❌ if it already has. You have 1 minute.`,
+					description: `
+					**Please make sure you're suggestion hasn't already been suggested**
+
+					Please check in ${channel}.
+
+					✅ = Continue
+					❌ = Cancel
+					`.trim(),
 				},
 				message
 			)
