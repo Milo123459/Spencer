@@ -53,6 +53,27 @@ export const run: RunFunction = async (client, message, args) => {
 		Content: args.join(' '),
 		User: message.author.id,
 	});
+	let m: Message;
+	try {
+		m = await message.channel.send(
+			client.embed(
+				{
+					description: `Please make sure you\'re suggestion hasn\'t already been suggested! (check here: <#${channel.id}>)  React with ✅ meaning that it hasn\'t already been suggested, and ❌ if it already has. You have 1 minute.`,
+				},
+				message
+			)
+		);
+		const should = await client.utils.awaitReactions(
+			message.author.id,
+			m,
+			['✅', '❌'],
+			60 * 1000
+		);
+		await m.delete();
+		if (should == '❌') return;
+	} catch {
+		await m.delete();
+	}
 	const msg: Message = await (channel as TextChannel).send(
 		client
 			.embed(

@@ -100,14 +100,15 @@ class UtilsManager {
 	public async awaitReactions(
 		queryUser: string,
 		message: Message,
-		reactions: string[]
+		reactions: string[],
+		time?: number
 	): Promise<string> {
 		reactions.map(async (value: string) => await message.react(value));
 		return new Promise(async (resolve, reject) => {
 			const reactionCollector = message.createReactionCollector(
 				(reaction: MessageReaction, user: User) =>
 					reactions.includes(reaction.emoji.name) && user.id == queryUser,
-				{ time: 30000 }
+				{ time: time ?? 30000 }
 			);
 			reactionCollector.on('collect', (reaction: MessageReaction) =>
 				resolve(reaction.emoji.name)
