@@ -30,7 +30,11 @@ export const run: RunFunction = async (client, message, args) => {
 					{
 						title: `Info on ${res.login}`,
 						fields: [
-							{ name: `Name`, value: `${res.name}`, inline: true },
+							{
+								name: `Name`,
+								value: `${res.name ? res.name : 'None Provided'}`,
+								inline: true,
+							},
 							{
 								name: 'Bio',
 								value: `${res.bio ? res.bio : 'None Provided'}`,
