@@ -1,7 +1,6 @@
 import { Anything } from '../../interfaces/Anything';
 import { RunFunction } from '../../interfaces/Command';
-import { GuildChannel, TextChannel } from 'discord.js';
-import { EMSGSIZE } from 'constants';
+import { GuildChannel, TextChannel, Message } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
@@ -49,6 +48,37 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
+	let m: Message;
+	try {
+		m = await message.channel.send(
+			client.embed(
+				{
+					description: `
+                        **Are you sure you want to report** **${
+													client.utils.ResolveMember(message, args[0])
+														.displayName
+												}**?
+    
+                        ✅ = Continue
+                        ❌ = Cancel
+    
+                        *You have 1 minute.*
+                        `.trim(),
+				},
+				message
+			)
+		);
+		const should = await client.utils.awaitReactions(
+			message.author.id,
+			m,
+			['✅', '❌'],
+			60 * 1000
+		);
+		await m.delete();
+		if (should == '❌') return;
+	} catch {
+		await m.delete();
+	}
 	if (!channel?.permissionsFor(message.guild.me)?.has('SEND_MESSAGES'))
 		return await message.channel.send(
 			client.embed(
