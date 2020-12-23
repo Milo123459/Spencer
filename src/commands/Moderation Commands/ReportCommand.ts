@@ -77,7 +77,6 @@ export const run: RunFunction = async (client, message, args) => {
 					{
 						name: 'Reason',
 						value: args.slice(1).join(' '),
-						inline: true,
 					},
 				],
 				timestamp: Date.now(),
