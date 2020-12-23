@@ -77,4 +77,31 @@ export const subcommands: Array<SubCommand> = [
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
 	},
+	{
+		schema: 'guildconfig',
+		key: 'ReportChannel',
+		search: (client, message) => new Object({ Guild: message.guild.id }),
+		validate: (client, message, args) => {
+			let value: boolean;
+			const channel: GuildChannel | undefined = client.utils.ResolveChannel(
+				message,
+				args[0]
+			);
+			if (!channel) value = undefined;
+			else {
+				value =
+					message.member.permissions.has('MANAGE_GUILD') &&
+					channel.isText() &&
+					channel.permissionsFor(message.guild.me).has('SEND_MESSAGES');
+			}
+			return {
+				value,
+				fix:
+					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES',
+				success: !!value,
+			};
+		},
+		parseToDB: (client, message, args) =>
+			client.utils.ResolveChannel(message, args[0]).id,
+	},
 ];

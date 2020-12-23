@@ -12,3 +12,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'clap';
 export const category: string = 'fun';
 export const aliases: string[] = ['clapify'];
+export const usage: string = '<text>';
