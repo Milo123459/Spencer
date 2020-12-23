@@ -781,7 +781,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mkdirp", "npm:0.5.5"],
             ["p-limit", "npm:2.3.0"],
             ["pluralize", "npm:7.0.0"],
-            ["pretty-bytes", "npm:5.4.1"],
+            ["pretty-bytes", "npm:5.5.0"],
             ["semver", "npm:7.3.4"],
             ["stream-to-promise", "npm:2.2.0"],
             ["tar-stream", "npm:2.1.4"],
@@ -3164,10 +3164,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fraction.js", [
-        ["npm:4.0.12", {
-          "packageLocation": "./.yarn/cache/fraction.js-npm-4.0.12-bd8d4b9ec6-8cb75f0508.zip/node_modules/fraction.js/",
+        ["npm:4.0.13", {
+          "packageLocation": "./.yarn/cache/fraction.js-npm-4.0.13-01647fa6a5-1e9ec132b0.zip/node_modules/fraction.js/",
           "packageDependencies": [
-            ["fraction.js", "npm:4.0.12"]
+            ["fraction.js", "npm:4.0.13"]
           ],
           "linkType": "HARD",
         }]
@@ -4416,7 +4416,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["complex.js", "npm:2.0.11"],
             ["decimal.js", "npm:10.2.1"],
             ["escape-latex", "npm:1.2.0"],
-            ["fraction.js", "npm:4.0.12"],
+            ["fraction.js", "npm:4.0.13"],
             ["javascript-natural-sort", "npm:0.7.1"],
             ["seedrandom", "npm:3.0.5"],
             ["tiny-emitter", "npm:2.1.0"],
@@ -5365,10 +5365,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pretty-bytes", [
-        ["npm:5.4.1", {
-          "packageLocation": "./.yarn/cache/pretty-bytes-npm-5.4.1-c867dc5fbd-da79e856b6.zip/node_modules/pretty-bytes/",
+        ["npm:5.5.0", {
+          "packageLocation": "./.yarn/cache/pretty-bytes-npm-5.5.0-cebbfcff87-1add1ac652.zip/node_modules/pretty-bytes/",
           "packageDependencies": [
-            ["pretty-bytes", "npm:5.4.1"]
+            ["pretty-bytes", "npm:5.5.0"]
           ],
           "linkType": "HARD",
         }]

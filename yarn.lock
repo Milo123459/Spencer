@@ -2487,9 +2487,9 @@ __metadata:
   linkType: hard
 
 "fraction.js@npm:^4.0.12":
-  version: 4.0.12
-  resolution: "fraction.js@npm:4.0.12"
-  checksum: 8cb75f050813859fc2e82e5d3c87c6cf03ee253887a45f1c88ef697727dd2b18c5df59ecf1d23b5c82f21f9a41d9430a6ecb0e3e0aa62f8e2caf54deee463402
+  version: 4.0.13
+  resolution: "fraction.js@npm:4.0.13"
+  checksum: 1e9ec132b09f17f3e41aa53508197901277f11896f6adc0b51a4b38511e6236813a471488c319221f4fadf7c854be9566a4924215623b460364591d80e1791c3
   languageName: node
   linkType: hard
 
@@ -4434,9 +4434,9 @@ fsevents@~2.1.2:
   linkType: hard
 
 "pretty-bytes@npm:^5.1.0":
-  version: 5.4.1
-  resolution: "pretty-bytes@npm:5.4.1"
-  checksum: da79e856b6fbdf2b3325837e5727a0b03be5c5a4854c17a60235aab6714c97060903913639c47559376e21a9dbf5ad7d958da1d512fdf568ee5c18d02cf2bd54
+  version: 5.5.0
+  resolution: "pretty-bytes@npm:5.5.0"
+  checksum: 1add1ac6526b71eed7ddff575d4f91e6c077e84563bb6d1caf59b5b834e15a4f9e6da8853a0cc14eed63f1c6bf9fb8553ece117f845ad2014bb534742d29ffa9
   languageName: node
   linkType: hard
 
