@@ -6,6 +6,8 @@ export const subcommands: Array<SubCommand> = [
 	{
 		schema: 'usereconomy',
 		key: 'VoteReminder',
+		description:
+			'Toggles if you want to be DMed when you can next vote on top.gg',
 		search: (client, message) => new Object({ User: message.author.id }),
 		validate: (message, args) => {
 			const value: boolean = yn(args[0]);
@@ -20,6 +22,7 @@ export const subcommands: Array<SubCommand> = [
 	{
 		schema: 'guildconfig',
 		key: 'Prefix',
+		description: 'Change the prefix of the bot',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value =
@@ -36,6 +39,8 @@ export const subcommands: Array<SubCommand> = [
 	{
 		schema: 'guildconfig',
 		key: 'SuggestionChannel',
+		description:
+			'Setup the suggestion channel, allowing people to suggest things',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			let value: boolean;
@@ -65,6 +70,8 @@ export const subcommands: Array<SubCommand> = [
 	{
 		schema: 'guildconfig',
 		key: 'AutoDeleteActions',
+		description:
+			'Toggles if you want to delete sp!accept,consider,deny commands',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =
@@ -80,6 +87,8 @@ export const subcommands: Array<SubCommand> = [
 	{
 		schema: 'guildconfig',
 		key: 'ReportChannel',
+		description:
+			'Set up the channel allowing people to report people in your guild',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			let value: boolean;

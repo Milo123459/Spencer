@@ -10,6 +10,7 @@ export interface SubCommand {
 	schema: string;
 	search: (client: Spencer, message: Message) => object;
 	key: string;
+	description: string;
 	validate: (
 		client: Spencer,
 		message: Message,
