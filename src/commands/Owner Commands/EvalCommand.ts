@@ -8,7 +8,7 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	const result: any = new Promise((resolve) => resolve(eval(args.join(' '))));
 	try {
-		let response = await result;
+		let response = await await result;
 		if (typeof response != 'string') {
 			response = inspect(result);
 		}
