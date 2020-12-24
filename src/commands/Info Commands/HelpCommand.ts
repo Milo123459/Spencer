@@ -89,3 +89,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const category: string = 'info';
 export const aliases: string[] = ['h', 'commands'];
 export const usage: string = '[cmd or alias]';
+export const description: string = 'Get help';

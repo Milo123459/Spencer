@@ -50,3 +50,4 @@ export const run: RunFunction = async (client, message) => {
 export const name: string = 'setjob';
 export const category: string = 'economy';
 export const aliases: string[] = ['jobs', 'job'];
+export const description: string = 'Set a job';

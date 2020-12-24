@@ -32,3 +32,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'purge';
 export const category: string = 'moderation';
 export const userPermissions: string = 'MANAGE_MESSAGES';
+export const description: string = 'Bulk delete a specific amount of messages';

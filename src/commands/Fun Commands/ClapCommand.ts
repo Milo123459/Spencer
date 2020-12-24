@@ -6,10 +6,11 @@ export const run: RunFunction = async (client, message, args) => {
 			client.embed({ description: 'Please provide a message!' }, message)
 		);
 	await message.channel.send(
-		client.embed({ description: args.join(' 👏 ') }, message)
+		client.embed({ description: `👏 ${args.join(' 👏 ')} 👏` }, message)
 	);
 };
 export const name: string = 'clap';
 export const category: string = 'fun';
 export const aliases: string[] = ['clapify'];
 export const usage: string = '<text>';
+export const description: string = 'Clapify text';

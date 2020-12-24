@@ -40,3 +40,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const category: string = 'info';
 export const aliases: string[] = ['whois'];
 export const usage: string = '[user]';
+export const description: string = 'Get information on a user';

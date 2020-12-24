@@ -29,3 +29,4 @@ export const aliases: string[] = ['with'];
 export const name: string = 'withdraw';
 export const category: string = 'economy';
 export const usage: string = '<amount>';
+export const description: string = 'Withdraw some money from the bank';

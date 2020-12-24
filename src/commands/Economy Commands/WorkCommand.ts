@@ -176,3 +176,4 @@ export const run: RunFunction = async (client, message) => {
 };
 export const category: string = 'economy';
 export const cooldown: number = 30000; // 30 seconds
+export const description: string = 'Work for money';

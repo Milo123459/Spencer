@@ -17,3 +17,4 @@ export const run: RunFunction = async (client, message) => {
 };
 export const name: string = 'ping';
 export const category: string = 'info';
+export const description: string = 'Get the ping of the bot';

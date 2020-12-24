@@ -27,4 +27,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const aliases: string[] = ['maths', 'calculate'];
 export const usage: string = '<equasion>';
 export const name: string = 'math';
-export const category: string = 'fun';
+export const category: string = 'utility';
+export const description: string = 'A cool command';

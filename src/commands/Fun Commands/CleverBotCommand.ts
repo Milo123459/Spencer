@@ -22,3 +22,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'cleverbot';
 export const category: string = 'fun';
 export const usage: string = '<...message>';
+export const description: string = 'Speak to a stupid robot';

@@ -119,3 +119,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const usage: string = '<user> <...reason>';
 export const name: string = 'report';
 export const category: string = 'moderation';
+export const description: string = 'Report someone';

@@ -13,3 +13,4 @@ export const run: RunFunction = async (client, message) => {
 export const aliases: string[] = ['membercount'];
 export const name: string = 'members';
 export const category: string = 'info';
+export const description: string = 'Display how many members you have';

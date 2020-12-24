@@ -17,3 +17,5 @@ export const run: RunFunction = async (client, message) => {
 export const category: string = 'config';
 export const userPermissions: string = 'MANAGE_GUILD';
 export const aliases: string[] = ['deluserdata'];
+export const description: string =
+	'Delete data stored with you, ie, your usereconomy profile';

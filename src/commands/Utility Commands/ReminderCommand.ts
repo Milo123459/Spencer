@@ -58,3 +58,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'reminder';
 export const category: string = 'utility';
+export const description: string = 'Set a reminder';

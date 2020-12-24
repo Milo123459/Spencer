@@ -36,3 +36,4 @@ export const ownerOnly: boolean = true;
 export const name: string = 'eval';
 export const category: string = 'owner';
 export const usage: string = '<...code>';
+export const description: string = 'Eval code';

@@ -44,3 +44,4 @@ export const aliases: string[] = [
 ];
 export const usage: string = '[user]';
 export const category: string = 'economy';
+export const description: string = 'Get someones balance';

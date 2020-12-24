@@ -106,3 +106,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'suggest';
 export const category: string = 'suggestion';
 export const usage: string = '<...suggestion>';
+export const description: string = 'Suggest something';

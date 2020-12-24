@@ -96,3 +96,4 @@ export const aliases: string[] = ['gh-user', 'ghuser', 'github-user'];
 export const name: string = 'githubuser';
 export const category: string = 'info';
 export const usage: string = '<github_user_name>';
+export const description: string = 'Get info on a GitHub user';

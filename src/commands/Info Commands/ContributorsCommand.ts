@@ -26,3 +26,4 @@ export const run: RunFunction = async (client, message) => {
 export const aliases: string[] = ['helpers', 'contributions'];
 export const name: string = 'contributors';
 export const category: string = 'info';
+export const description: string = 'Display the contributors of Spencer';

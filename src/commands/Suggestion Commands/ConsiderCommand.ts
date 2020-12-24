@@ -90,3 +90,4 @@ export const userPermissions: string = 'MANAGE_GUILD';
 export const name: string = 'consider';
 export const category: string = 'suggestion';
 export const usage: string = '<suggestion_id> [...reason]';
+export const description: string = 'Consider a suggestion';
