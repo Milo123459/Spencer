@@ -6,8 +6,8 @@ export const run: RunFunction = async (client, message, args) => {
 		return await message.channel.send(
 			client.embed({ description: 'Please provide some code' }, message)
 		);
-	const result: any = new Promise((resolve) => resolve(eval(args.join(' '))));
 	try {
+		const result = await eval(args.join(' '));
 		let response = await await result;
 		if (typeof response != 'string') {
 			response = inspect(result);
