@@ -134,5 +134,14 @@ class UtilsManager {
 	public randomElement(arr: any[]): any {
 		return arr[Math.floor(Math.random() * arr.length)];
 	}
+	public biggerSmaller(num: number, bigger: number, smaller: number): boolean {
+		return num > bigger && num < smaller;
+	}
+	public pingStatus(ws: number, edit: number): { ws: boolean; edit: boolean } {
+		return {
+			ws: this.biggerSmaller(ws, 0, 25),
+			edit: this.biggerSmaller(edit, 0, 100),
+		};
+	}
 }
 export { UtilsManager };
