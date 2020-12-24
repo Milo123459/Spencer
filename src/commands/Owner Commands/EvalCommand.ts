@@ -22,13 +22,13 @@ export const run: RunFunction = async (client, message, args) => {
 			return await message.channel.send(
 				client.embed({ description: 'Content too long' }, message)
 			);
-		await message.channel.send(response, { code: true });
+		await message.channel.send(response, { code: 'js' });
 	} catch (e) {
 		return await message.channel.send(
 			e.message
 				.replace(client.token, 'token')
 				.replace(client.config.mongoURI, 'mongouri'),
-			{ code: true }
+			{ code: 'js' }
 		);
 	}
 };
