@@ -4,7 +4,7 @@ import { GuildChannel, TextChannel, Message } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -18,7 +18,7 @@ export const run: RunFunction = async (client, message, args) => {
 		Guild: message.guild.id,
 	});
 	if (!GuildConfig || !(GuildConfig as Anything)?.ReportChannel)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -28,11 +28,11 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	if (!client.utils.ResolveMember(message, args[0]))
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: 'Please mention someone!' }, message)
 		);
 	if (!args.slice(1).length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{ description: 'Please specify a reason for the report!' },
 				message
@@ -80,7 +80,7 @@ export const run: RunFunction = async (client, message, args) => {
 		await m.delete();
 	}
 	if (!channel?.permissionsFor(message.guild.me)?.has('SEND_MESSAGES'))
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description: `I can't send messages in ${channel}!`,
@@ -114,7 +114,7 @@ export const run: RunFunction = async (client, message, args) => {
 			message
 		)
 	);
-	return await message.react('🚀');
+	return message.react('🚀');
 };
 export const usage: string = '<user> <...reason>';
 export const name: string = 'report';

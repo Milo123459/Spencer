@@ -11,7 +11,7 @@ export const run: RunFunction = async (client, message, args) => {
 		return message.channel.send(
 			client.embed({ description: apiResponse.message }, message)
 		);
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: `

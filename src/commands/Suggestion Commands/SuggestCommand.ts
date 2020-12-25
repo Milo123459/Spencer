@@ -16,7 +16,7 @@ export const run: RunFunction = async (client, message, args) => {
 		Guild: message.guild.id,
 	});
 	if (!GuildConfig || !(GuildConfig as Anything).SuggestionChannel)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -40,7 +40,7 @@ export const run: RunFunction = async (client, message, args) => {
 			?.permissionsFor(message.guild.me)
 			?.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
 	)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description: `I either can't send messages in ${channel} or I can't add reactions`,

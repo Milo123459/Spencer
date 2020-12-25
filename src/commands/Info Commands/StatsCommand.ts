@@ -16,7 +16,7 @@ export const run: RunFunction = async (client, message) => {
 		},
 		message
 	);
-	return await message.channel.send(embed);
+	return message.channel.send(embed);
 };
 export const category: string = 'info';
 export const description: string = "View the bot's stats";

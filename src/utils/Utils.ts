@@ -103,7 +103,7 @@ class UtilsManager {
 		reactions: string[],
 		time?: number
 	): Promise<string> {
-		reactions.map(async (value: string) => await message.react(value));
+		reactions.map(async (value: string) => message.react(value));
 		return new Promise(async (resolve, reject) => {
 			const reactionCollector = message.createReactionCollector(
 				(reaction: MessageReaction, user: User) =>

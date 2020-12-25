@@ -20,7 +20,7 @@ export const run: RunFunction = async (client, message, args) => {
 		'Maybe',
 		"I don't care for it",
 	];
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: `

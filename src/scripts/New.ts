@@ -109,7 +109,7 @@ const globPromise = promisify(glob);
 				: ''
 		}
         `.trim();
-		return await fs.writeFile(
+		return fs.writeFile(
 			path,
 			prettier.format(source, { parser: 'babel' })
 		);
@@ -131,7 +131,7 @@ const globPromise = promisify(glob);
 			'${(otherStuff.name as string).toLowerCase()}', new Schema({})
 		)
 		`.trim();
-		return await fs.writeFile(
+		return fs.writeFile(
 			path,
 			prettier.format(source, { parser: 'babel' })
 		);

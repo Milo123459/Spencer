@@ -3,7 +3,7 @@ import { evaluate } from 'mathjs';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: 'Please provide an equasion!' }, message)
 		);
 	try {
@@ -15,7 +15,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	} catch {
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{ description: "I'm no genius, but that didn't make sense!" },
 				message

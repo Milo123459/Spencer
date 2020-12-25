@@ -4,16 +4,16 @@ import { Anything } from '../../interfaces/Anything';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: 'Please provide someone to rob...' }, message)
 		);
 	const member: GuildMember = client.utils.ResolveMember(message, args[0]);
 	if (!member)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "I couldn't find that user!" }, message)
 		);
 	if (member.id == message.author.id)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{ description: 'You tried to rob your self, god, how dumb are you?' },
 				message
@@ -25,15 +25,15 @@ export const run: RunFunction = async (client, message, args) => {
 	});
 	const TargetProfile = await EconomySchema.findOne({ User: member.id });
 	if (!RobberProfile)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "You're profile doesn't exist..." }, message)
 		);
 	if (!TargetProfile)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "Their profile doesn't exist..." }, message)
 		);
 	if (500 > (RobberProfile as Anything)?.Coins)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -43,7 +43,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	if (500 > (TargetProfile as Anything)?.Coins)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -63,7 +63,7 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-		return await EconomySchema.decrement(
+		return EconomySchema.decrement(
 			{ User: message.author.id },
 			'Coins',
 			500
@@ -73,7 +73,7 @@ export const run: RunFunction = async (client, message, args) => {
 			Math.floor(Math.random() * ((TargetProfile as Anything)?.Coins || 1)) / 2;
 		await EconomySchema.decrement({ User: member.id }, 'Coins', Amount);
 		await EconomySchema.increment({ User: message.author.id }, 'Coins', Amount);
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description: `Damn bro you stole **${Amount}** coins from **${member.displayName}**`,

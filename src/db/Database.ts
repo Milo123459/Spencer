@@ -11,7 +11,7 @@ class DatabaseModule {
 	}
 	public async update(find: object, update: object) {
 		const existingData = await this.schema.data.findOne(find);
-		if (!existingData) return await this.create({ ...find, ...update });
+		if (!existingData) return this.create({ ...find, ...update });
 		else if (existingData) {
 			Object.entries(update).map((value) => {
 				existingData[value[0]] = value[1];
@@ -46,7 +46,7 @@ class DatabaseModule {
 		if (!data) {
 			const newData: object = { ...search };
 			newData[key] = value;
-			return await this.create(newData);
+			return this.create(newData);
 		} else {
 			(data as Anything)[key]
 				? ((data as Anything)[key] += value)
@@ -61,7 +61,7 @@ class DatabaseModule {
 		if (!data) {
 			const newData: object = { ...search };
 			newData[key] = -value;
-			return await this.create(newData);
+			return this.create(newData);
 		} else {
 			(data as Anything)[key] -= value;
 			await data.save();

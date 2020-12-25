@@ -4,7 +4,7 @@ import { GuildChannel, Message, TextChannel, MessageEmbed } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: 'Please provide a suggestion ID!' }, message)
 		);
 	const SuggestionSchema = await client.db.load('suggestion');
@@ -12,7 +12,7 @@ export const run: RunFunction = async (client, message, args) => {
 	try {
 		await SuggestionSchema.findOne({ Guild: message.guild.id, _id: args[0] });
 	} catch {
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "That suggestion doesn't exist!" }, message)
 		);
 	}
@@ -34,12 +34,12 @@ export const run: RunFunction = async (client, message, args) => {
 		(GuildConfig as Anything).SuggestionChannel
 	);
 	if (!Suggestion)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "That suggestion doesn't exist!" }, message)
 		);
 	if (!channel) {
 		await Suggestion.delete();
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:

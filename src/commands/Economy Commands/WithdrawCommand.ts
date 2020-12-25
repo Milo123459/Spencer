@@ -17,7 +17,7 @@ export const run: RunFunction = async (client, message, args) => {
 		'DepositedCoins',
 		amount
 	);
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{ description: `Withdrew \`$${amount}\` into your wallet!` },
 			message

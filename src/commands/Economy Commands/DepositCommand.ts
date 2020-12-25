@@ -17,7 +17,7 @@ export const run: RunFunction = async (client, message, args) => {
 		amount
 	);
 	await EconomySchema.decrement({ User: message.author.id }, 'Coins', amount);
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{ description: `Deposited \`$${amount}\` into your bank!` },
 			message
