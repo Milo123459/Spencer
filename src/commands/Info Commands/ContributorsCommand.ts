@@ -9,7 +9,8 @@ export const run: RunFunction = async (client, message) => {
 			const fieldArray = [];
 
 			res.map((user: GithubContributorUser) => {
-				if (user.login.toLowerCase().includes('bot')) return;
+				if (user.login.toLowerCase().includes('bot') && user.type == 'Bot')
+					return;
 				fieldArray.push({
 					name: user.login,
 					value: `${user.contributions} commits!`,
