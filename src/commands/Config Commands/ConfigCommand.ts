@@ -33,10 +33,19 @@ export const run: RunFunction = async (client, message, args) => {
 	if (!args.slice(1).length)
 		return await message.channel.send(
 			client.embed(
-				{ description: 'Please specify a value to put into the config!' },
+				{
+					description:
+						'Please specify a value to put into the config! (or delete to stop it from running)',
+				},
 				message
 			)
 		);
+	if (args[1].toLowerCase() == 'delete') {
+		await (await client.db.load(subcommand.schema)).update(
+			subcommand.search(client, message),
+			client.utils.proper(subcommand.key, undefined)
+		);
+	}
 	const validated = subcommand.validate(client, message, args.slice(1));
 	if (!!!validated.success)
 		return await message.channel.send(
@@ -63,3 +72,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'config';
 export const category: string = 'config';
 export const description: string = 'Configure the bot how you like it';
+export const usage: string = '<key> <config_value | delete>';
