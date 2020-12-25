@@ -2335,7 +2335,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["JSONStream", "npm:1.3.5"],
             ["is-text-path", "npm:1.0.1"],
             ["lodash", "npm:4.17.20"],
-            ["meow", "npm:8.0.0"],
+            ["meow", "npm:8.1.0"],
             ["split2", "npm:2.2.0"],
             ["through2", "npm:4.0.2"],
             ["trim-off-newlines", "npm:1.0.1"]
@@ -3349,7 +3349,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-raw-commits", "npm:2.0.8"],
             ["dargs", "npm:7.0.0"],
             ["lodash.template", "npm:4.5.0"],
-            ["meow", "npm:8.0.0"],
+            ["meow", "npm:8.1.0"],
             ["split2", "npm:2.2.0"],
             ["through2", "npm:4.0.2"]
           ],
@@ -4491,10 +4491,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.0.0", {
-          "packageLocation": "./.yarn/cache/meow-npm-8.0.0-c991624515-536b8cdff3.zip/node_modules/meow/",
+        ["npm:8.1.0", {
+          "packageLocation": "./.yarn/cache/meow-npm-8.1.0-fddcd55b28-74dfb3e9f2.zip/node_modules/meow/",
           "packageDependencies": [
-            ["meow", "npm:8.0.0"],
+            ["meow", "npm:8.1.0"],
             ["@types/minimist", "npm:1.2.1"],
             ["camelcase-keys", "npm:6.2.2"],
             ["decamelize-keys", "npm:1.1.0"],
