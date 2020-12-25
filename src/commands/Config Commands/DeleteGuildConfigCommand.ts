@@ -3,7 +3,7 @@ export const name: string = 'deleteguildconfig';
 export const run: RunFunction = async (client, message) => {
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const Delete = await GuildConfigSchema.delete({ Guild: message.guild.id });
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: Delete

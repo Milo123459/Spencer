@@ -3,7 +3,7 @@ import { inspect } from 'util';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: 'Please provide some code' }, message)
 		);
 	try {
@@ -24,7 +24,7 @@ export const run: RunFunction = async (client, message, args) => {
 			);
 		await message.channel.send(response, { code: 'js' });
 	} catch (e) {
-		return await message.channel.send(
+		return message.channel.send(
 			e.message
 				.replace(client.token, 'token')
 				.replace(client.config.mongoURI, 'mongouri'),

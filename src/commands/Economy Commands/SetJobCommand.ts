@@ -44,7 +44,7 @@ export const run: RunFunction = async (client, message) => {
 		await msg.edit(
 			client.embed({ description: `Nice one, you didn\'t respond.` }, message)
 		);
-		return await msg.reactions.removeAll();
+		return msg.reactions.removeAll();
 	}
 };
 export const name: string = 'setjob';

@@ -3,7 +3,7 @@ export const name: string = 'deleteuserdata';
 export const run: RunFunction = async (client, message) => {
 	const GuildConfigSchema = await client.db.load('usereconomy');
 	const Delete = await GuildConfigSchema.delete({ User: message.author.id });
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: Delete

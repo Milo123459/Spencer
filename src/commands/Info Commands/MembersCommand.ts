@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, message) => {
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: `**${message.guild.name}** has got **${message.guild.memberCount}** members! (Well, cached members!)`,

@@ -3,7 +3,7 @@ import { SubCommand } from '../../interfaces/ConfigCommand';
 import { subcommands } from '../../static/Configs';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args[0])
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description: `
@@ -27,11 +27,11 @@ export const run: RunFunction = async (client, message, args) => {
 		(value: SubCommand) => value.key.toLowerCase() == args[0].toLowerCase()
 	);
 	if (!subcommand)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: "That config can't be found!" }, message)
 		);
 	if (!args.slice(1).length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -45,13 +45,13 @@ export const run: RunFunction = async (client, message, args) => {
 			subcommand.search(client, message),
 			client.utils.proper(subcommand.key, undefined)
 		);
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: `Deleted ${subcommand.key}!` }, message)
 		);
 	}
 	const validated = subcommand.validate(client, message, args.slice(1));
 	if (!!!validated.success)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed({ description: validated.fix }, message)
 		);
 	await (await client.db.load(subcommand.schema)).update(
@@ -61,7 +61,7 @@ export const run: RunFunction = async (client, message, args) => {
 			subcommand.parseToDB(client, message, args.slice(1))
 		)
 	);
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: `Successfully set ${

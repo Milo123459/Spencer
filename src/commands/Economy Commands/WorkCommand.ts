@@ -7,7 +7,7 @@ export const run: RunFunction = async (client, message) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const User = await EconomySchema.findOne({ User: message.author.id });
 	if (!(User as Anything)?.Job)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -20,7 +20,7 @@ export const run: RunFunction = async (client, message) => {
 	const Job: string = (User as Anything).Job;
 	// function to add money to user
 	const giveMoney = async (User: string, Coins: number) => {
-		return await EconomySchema.increment({ User }, 'Coins', Coins);
+		return EconomySchema.increment({ User }, 'Coins', Coins);
 	};
 	if (Job == 'Footballer') {
 		// create a game
@@ -79,7 +79,7 @@ export const run: RunFunction = async (client, message) => {
 			// they aren't there so they win
 			if (Game[1][inputPosition] != '🕵️‍♂️') messageCollector.stop('scored');
 			// delete the message
-			return await msg.delete({ timeout: 1000 });
+			return msg.delete({ timeout: 1000 });
 		});
 		// decreased rate if they fail
 		const decreasedRate: number = Math.floor(Math.random() * 100);
@@ -104,7 +104,7 @@ export const run: RunFunction = async (client, message) => {
 						Game.length = 0;
 						await giveMoney(message.author.id, decreasedRate);
 						// delete original message
-						return await message.delete();
+						return message.delete();
 					case 'goal_keeper_saved':
 						// send a angry message
 						await msg.edit('');
@@ -171,7 +171,7 @@ export const run: RunFunction = async (client, message) => {
 				message
 			)
 		);
-		return await giveMoney(message.author.id, rate);
+		return giveMoney(message.author.id, rate);
 	}
 };
 export const category: string = 'economy';

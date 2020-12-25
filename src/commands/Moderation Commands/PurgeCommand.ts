@@ -3,7 +3,7 @@ import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:
@@ -17,7 +17,7 @@ export const run: RunFunction = async (client, message, args) => {
 		parseInt(args[0]) < 0 ||
 		parseInt(args[0]) > 100
 	)
-		return await message.channel.send(
+		return message.channel.send(
 			client.embed(
 				{
 					description:

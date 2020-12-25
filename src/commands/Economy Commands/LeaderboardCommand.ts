@@ -22,7 +22,7 @@ export const run: RunFunction = async (client, message, args) => {
 			(value as Anything).User == message.author.id ? index + 1 : 0
 		)
 		.filter((value: number) => value != 0)[0];
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed(
 			{
 				description: `${Leaderboard.map(
