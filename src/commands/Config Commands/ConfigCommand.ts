@@ -45,6 +45,9 @@ export const run: RunFunction = async (client, message, args) => {
 			subcommand.search(client, message),
 			client.utils.proper(subcommand.key, undefined)
 		);
+		return await message.channel.send(
+			client.embed({ description: `Deleted ${subcommand.key}!` }, message)
+		);
 	}
 	const validated = subcommand.validate(client, message, args.slice(1));
 	if (!!!validated.success)
