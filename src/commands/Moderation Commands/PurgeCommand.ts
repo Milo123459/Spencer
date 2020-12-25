@@ -13,9 +13,9 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	if (
-		isNaN(parseInt(args[0])) ||
-		parseInt(args[0]) < 0 ||
-		parseInt(args[0]) > 100
+		isNaN(parseInt(args[0], 10)) ||
+		parseInt(args[0], 10) < 0 ||
+		parseInt(args[0], 10) > 100
 	)
 		return message.channel.send(
 			client.embed(
@@ -27,7 +27,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	await message.delete();
-	await (message.channel as TextChannel).bulkDelete(parseInt(args[0]));
+	await (message.channel as TextChannel).bulkDelete(parseInt(args[0], 10));
 };
 export const name: string = 'purge';
 export const category: string = 'moderation';

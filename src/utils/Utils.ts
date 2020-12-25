@@ -17,12 +17,12 @@ class UtilsManager {
 	public ResolveMember(message: Message, arg: string): GuildMember {
 		if (message.mentions.members.first())
 			return message.mentions.members.first();
-		if (!isNaN(parseInt(arg))) return message.guild.members.cache.get(arg);
+		if (!isNaN(parseInt(arg, 10))) return message.guild.members.cache.get(arg);
 	}
 	public ResolveChannel(message: Message, arg: string): GuildChannel {
 		if (message.mentions.channels.first())
 			return message.mentions.channels.first();
-		if (!isNaN(parseInt(arg))) return message.guild.channels.cache.get(arg);
+		if (!isNaN(parseInt(arg, 10))) return message.guild.channels.cache.get(arg);
 	}
 	public formatMS(ms: number): string {
 		const times: object = {
@@ -127,9 +127,10 @@ class UtilsManager {
 		const UserData = await EconomySchema.findOne({ User });
 		if (amount == 'max' || amount == 'all')
 			return (UserData as Anything)?.[load] || 0;
-		if (isNaN(parseInt(amount))) return 0;
-		else if (parseInt(amount) > (UserData as Anything)?.[load] || 0) return 0;
-		else return parseInt(amount);
+		if (isNaN(parseInt(amount, 10))) return 0;
+		else if (parseInt(amount, 10) > (UserData as Anything)?.[load] || 0)
+			return 0;
+		else return parseInt(amount, 10);
 	}
 	public randomElement(arr: any[]): any {
 		return arr[Math.floor(Math.random() * arr.length)];
