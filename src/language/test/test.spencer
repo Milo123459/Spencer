@@ -1,0 +1,11 @@
+# this is a comment
+# {} allows you to access variables
+# example command to say hi
+# (variable_name): value to create variables
+
+(embed): !embed {
+    description 'Hey, how are ya?'
+    fields [ { name 'hi!' value 'hi!!!!!!!!!!1' } { name: 'Your name is {member:name}' } ]
+}
+
+!send(embed)

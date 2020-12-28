@@ -13,7 +13,8 @@
 		"doctor": "doctor",
 		"sdk": "yarn pnpify --sdk",
 		"gbump": "yarn bump && yarn sdk && git-go 'chore(Deps): bump deps'",
-		"new": "ts-node ./src/scripts/New.ts"
+		"new": "ts-node ./src/scripts/New.ts",
+		"test:language": "ts-node ./src/language/test.ts"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
