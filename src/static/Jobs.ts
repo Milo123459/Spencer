@@ -4,7 +4,7 @@ export const Jobs: Array<Job> = [
 	{
 		reaction: '⚽',
 		name: 'Footballer',
-		description: `Work as a footabller. Fun right?`,
+		description: `Work as a footballer. Fun right?`,
 	},
 	{
 		reaction: '💻',
