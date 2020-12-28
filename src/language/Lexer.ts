@@ -31,7 +31,7 @@ export const lexer = (contents: string) => {
     }
 */
 
-/* 
+/*
 EXAMPLE CODE
 # this is a comment
 # {} allows you to access variables
