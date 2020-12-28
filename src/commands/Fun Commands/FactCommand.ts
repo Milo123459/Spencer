@@ -5,7 +5,7 @@ export const run: RunFunction = async (client, message) => {
 	const response: { fact: string } = await fetch(
 		'https://no-api-key.com/api/v1/facts'
 	).then((res) => res.json());
-	return await message.channel.send(
+	return message.channel.send(
 		client.embed({ description: response.fact }, message)
 	);
 };
