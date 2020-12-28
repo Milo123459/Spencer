@@ -32,7 +32,7 @@ class Spencer extends Client {
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
-	public vacefron: VACEFronJS;
+	public vacefron: VACEFronJS = new VACEFronJS();
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -47,7 +47,6 @@ class Spencer extends Client {
 		this.config = config;
 		this.prefix = config.prefix;
 		this.owners = config.owners;
-		this.vacefron = new VACEFronJS();
 		this.login(config.token).catch((e) => this.logger.error(e));
 		mongoose
 			.connect(config.mongoURI, {
