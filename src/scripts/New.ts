@@ -96,7 +96,11 @@ const globPromise = promisify(glob);
 				}) => {
             // do some funky code
 		};
-		export const name: string = '${(otherStuff.name as string).toLowerCase()}';
+		export const name: string = '${
+			(what.type as string) == 'command'
+				? (otherStuff.name as string).toLowerCase()
+				: (otherStuff.name as string)
+		}';
 		${
 			(what.type as string) == 'command'
 				? `export const category: string = '${splitted[
@@ -109,10 +113,7 @@ const globPromise = promisify(glob);
 				: ''
 		}
         `.trim();
-		return fs.writeFile(
-			path,
-			prettier.format(source, { parser: 'babel' })
-		);
+		return fs.writeFile(path, prettier.format(source, { parser: 'babel' }));
 	} else {
 		const splitted: string[] = otherStuff.category.split('/');
 		const path: string = `${
@@ -131,9 +132,6 @@ const globPromise = promisify(glob);
 			'${(otherStuff.name as string).toLowerCase()}', new Schema({})
 		)
 		`.trim();
-		return fs.writeFile(
-			path,
-			prettier.format(source, { parser: 'babel' })
-		);
+		return fs.writeFile(path, prettier.format(source, { parser: 'babel' }));
 	}
 })();

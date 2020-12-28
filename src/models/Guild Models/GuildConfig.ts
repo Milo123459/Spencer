@@ -7,6 +7,7 @@ export const data = model(
 		Prefix: String,
 		SuggestionChannel: String,
 		AutoDeleteActions: Boolean,
+		MessageLogsChannel: String,
 		ReportChannel: String,
 	})
 );

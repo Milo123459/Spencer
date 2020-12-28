@@ -3,6 +3,7 @@ import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
+	if (message.partial) await message.fetch();
 	if (message.author.bot || !message.guild) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const GuildConfig = await GuildConfigSchema.findOne({

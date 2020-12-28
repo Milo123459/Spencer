@@ -38,6 +38,7 @@ class Spencer extends Client {
 			messageCacheMaxSize: 200,
 			messageSweepInterval: 180,
 			messageEditHistoryMaxSize: 200,
+			partials: ['MESSAGE', 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
 		});
 	}
 	public async start(config: Config): Promise<void> {
