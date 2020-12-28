@@ -7,7 +7,7 @@ export const run: RunFunction = async (client, message, args) => {
 			'I need some text to generate this meme! `emergencymeeting <text>`'
 		);
 	const buffer = await client.vacefron.emergencyMeeting(args.join(' '));
-	const attachment = new MessageAttachment(buffer, 'emergencymeeting.png');
+	const attachment = new MessageAttachment(buffer);
 
 	return message.channel.send(attachment);
 };
