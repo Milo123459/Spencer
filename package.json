@@ -29,7 +29,7 @@
 		"glob": "^7.1.6",
 		"imageapi.js": "^1.3.0",
 		"mathjs": "^8.1.0",
-		"mongoose": "^5.11.8",
+		"mongoose": "^5.11.9",
 		"ms": "^2.1.3",
 		"node-fetch": "^2.6.1",
 		"prompts": "^2.4.0",

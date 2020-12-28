@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imageapi.js", "npm:1.3.0"],
             ["lint-staged", "npm:10.5.3"],
             ["mathjs", "npm:8.1.0"],
-            ["mongoose", "npm:5.11.8"],
+            ["mongoose", "npm:5.11.9"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.2.1"],
@@ -4734,10 +4734,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:3.6.3", {
-          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-03d7e0f94a/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
+        ["virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:3.6.3", {
+          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-e636a9729a/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
           "packageDependencies": [
-            ["mongodb", "virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:3.6.3"],
+            ["mongodb", "virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:3.6.3"],
             ["aws4", null],
             ["bl", "npm:2.2.1"],
             ["bson", "npm:1.1.5"],
@@ -4763,15 +4763,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mongoose", [
-        ["npm:5.11.8", {
-          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.8-55c147c787-67b920d534.zip/node_modules/mongoose/",
+        ["npm:5.11.9", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.9-1b5791a8d2-c5c637091d.zip/node_modules/mongoose/",
           "packageDependencies": [
-            ["mongoose", "npm:5.11.8"],
+            ["mongoose", "npm:5.11.9"],
             ["@types/mongodb", "npm:3.6.3"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.2"],
-            ["mongodb", "virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:3.6.3"],
-            ["mongoose-legacy-pluralize", "virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:1.0.2"],
+            ["mongodb", "virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:3.6.3"],
+            ["mongoose-legacy-pluralize", "virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:1.0.2"],
             ["mpath", "npm:0.8.1"],
             ["mquery", "npm:3.2.3"],
             ["ms", "npm:2.1.2"],
@@ -4791,12 +4791,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:1.0.2", {
-          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-50a03a179f/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
+        ["virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:1.0.2", {
+          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-771ff2b058/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
           "packageDependencies": [
-            ["mongoose-legacy-pluralize", "virtual:55c147c787feffeda1f279f32d77b2e48d8568b5e33ecc3fb6839e07d8718c503704963efa9aaa486e41b1f46b15cc4130cf9529972e9c8a95f6d27136f47ced#npm:1.0.2"],
+            ["mongoose-legacy-pluralize", "virtual:1b5791a8d25d2cc3eae5eb35341ba7a3311e6324ab85a4ce155b1dc5a6cc08118c2713abd7364481b54f02a057fbf9dd2eba5beb17f5213bb69e7268a7b514b3#npm:1.0.2"],
             ["@types/mongoose", null],
-            ["mongoose", "npm:5.11.8"]
+            ["mongoose", "npm:5.11.9"]
           ],
           "packagePeers": [
             "@types/mongoose",
@@ -6287,7 +6287,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imageapi.js", "npm:1.3.0"],
             ["lint-staged", "npm:10.5.3"],
             ["mathjs", "npm:8.1.0"],
-            ["mongoose", "npm:5.11.8"],
+            ["mongoose", "npm:5.11.9"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["prettier", "npm:2.2.1"],
