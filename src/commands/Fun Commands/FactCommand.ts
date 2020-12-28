@@ -2,12 +2,11 @@ import { RunFunction } from '../../interfaces/Command';
 import fetch from 'node-fetch';
 
 export const run: RunFunction = async (client, message) => {
-	const response: any = await fetch(
+	const response: { fact: string } = await fetch(
 		'https://no-api-key.com/api/v1/facts'
 	).then((res) => res.json());
-
-	await message.channel.send(
-		client.embed({ title: 'Random Fact!', description: response.fact }, message)
+	return await message.channel.send(
+		client.embed({ description: response.fact }, message)
 	);
 };
 
