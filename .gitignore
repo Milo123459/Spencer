@@ -1,4 +1,5 @@
 dist
+.idea
 config.json
 .yarn/*
 !.yarn/cache

@@ -16,6 +16,7 @@ import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
+import { VACEFronJS } from 'vacefron';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -31,6 +32,7 @@ class Spencer extends Client {
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
+	public vacefron: VACEFronJS;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -45,6 +47,7 @@ class Spencer extends Client {
 		this.config = config;
 		this.prefix = config.prefix;
 		this.owners = config.owners;
+		this.vacefron = new VACEFronJS();
 		this.login(config.token).catch((e) => this.logger.error(e));
 		mongoose
 			.connect(config.mongoURI, {
