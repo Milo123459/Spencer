@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 import nodeFetch from 'node-fetch';
 import { RunFunction } from '../../interfaces/Command';
-import paginationEmbed from 'discord.js-pagination';
+import paginationEmbed from '../../utils/Pagination';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
