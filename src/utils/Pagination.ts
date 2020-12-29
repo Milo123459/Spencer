@@ -5,7 +5,7 @@ const paginationEmbed = async (
 	pages: MessageEmbed[],
 	emojiList: string[] = ['⏪', '⏩'],
 	timeout: number = 120000
-) => {
+): Promise<Message> => {
 	if (!msg && !msg.channel) throw new Error('Channel is inaccessible.');
 	if (!pages) throw new Error('Pages are not given.');
 	if (emojiList.length !== 2) throw new Error('Need two emojis.');
