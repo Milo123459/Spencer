@@ -2080,13 +2080,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js-pagination@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "discord.js-pagination@npm:1.0.3"
-  checksum: da5863c89b89cb35bdd50fb26d422b04e9662890c5fc5d90a2402a1d788ebcdff12004e43e33edf60f322f814a13f1d4920f8bd9bb38aa8f05f6e4e1c28f9e11
-  languageName: node
-  linkType: hard
-
 "discord.js@npm:^12.5.1":
   version: 12.5.1
   resolution: "discord.js@npm:12.5.1"
@@ -5257,7 +5250,6 @@ fsevents@~2.1.2:
     consola: ^2.15.0
     del-cli: ^3.0.1
     discord.js: ^12.5.1
-    discord.js-pagination: ^1.0.3
     erlpack: ^0.1.3
     express: ^4.17.1
     git-go: ^1.0.3
