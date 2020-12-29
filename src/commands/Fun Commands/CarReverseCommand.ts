@@ -15,5 +15,6 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'carreverse';
 export const category: string = 'fun';
 export const aliases: string[] = ['cr'];
+export const usage: string = '<text>';
 export const description: string =
 	'Generate a car reverse meme. (Example: https://i.imgur.com/hDLKcVt.png)';
