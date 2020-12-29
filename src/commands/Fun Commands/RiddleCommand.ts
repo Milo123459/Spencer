@@ -7,9 +7,13 @@ export const run: RunFunction = async (client, message, args) => {
 	).then((res) => res.json());
 
 	return message.channel.send(
-		client
-			.embed({ title: 'Riddle!' }, message)
-			.addField(response.question, `||${response.answer}||`)
+		client.embed(
+			{
+				title: 'Riddle!',
+				fields: [{ name: response.question, value: `||${response.answer}||` }],
+			},
+			message
+		)
 	);
 };
 

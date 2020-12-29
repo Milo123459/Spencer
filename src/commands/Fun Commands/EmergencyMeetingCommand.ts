@@ -16,5 +16,4 @@ export const name: string = 'emergencymeeting';
 export const category: string = 'fun';
 export const usage: string = '<...text>';
 export const aliases: string[] = ['em'];
-export const description: string =
-	'Generate a emergency meeting meme (Example: https://vacefron.nl/api/emergencymeeting?text=Your%20text%20here)';
+export const description: string = 'Generate a emergency meeting meme!';
