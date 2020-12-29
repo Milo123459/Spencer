@@ -5,7 +5,13 @@ import { RunFunction } from '../../interfaces/Command';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'I need some text to generate this meme! `changemymind <text>`'
+			client.embed(
+				{
+					description:
+						'I need some text to generate this meme! `changemymind <text>`',
+				},
+				message
+			)
 		);
 
 	nodeFetch(`https://vacefron.nl/api/changemymind?text=${args.join(' ')}`).then(

@@ -1,20 +1,25 @@
 import { MessageAttachment } from 'discord.js';
-import nodeFetch from 'node-fetch';
+import fetch from 'node-fetch';
 import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args[0] || !args[1] || !message.content.includes(','))
 		return message.channel.send(
-			'I need some text to generate this meme! `npc <gray guy text>,<white guy text>` *Make sure to include the comma between the texts!*'
+			client.embed(
+				{
+					description:
+						'I need some text to generate this meme! `npc <gray guy text>,<white guy text>` *Make sure to include the comma between the texts!*',
+				},
+				message
+			)
 		);
 	args = args.join(' ').split(',');
-
-	nodeFetch(
-		`https://vacefron.nl/api/npc?text1=${args[0]}&text2=${args[1]}`
-	).then(async (response) => {
-		const buffer = await response.buffer();
-		return message.channel.send(new MessageAttachment(buffer));
-	});
+	fetch(`https://vacefron.nl/api/npc?text1=${args[0]}&text2=${args[1]}`).then(
+		async (response) => {
+			const buffer = await response.buffer();
+			return message.channel.send(new MessageAttachment(buffer));
+		}
+	);
 };
 
 export const name: string = 'npc';

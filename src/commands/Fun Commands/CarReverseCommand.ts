@@ -4,7 +4,13 @@ import { RunFunction } from '../../interfaces/Command';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'I need some text to generate this meme! `carreverse <text>`'
+			client.embed(
+				{
+					description:
+						'I need some text to generate this meme! `carreverse <text>`',
+				},
+				message
+			)
 		);
 	const buffer = await client.vacefron.carReverse(args.join(' '));
 	const attachment = new MessageAttachment(buffer);
