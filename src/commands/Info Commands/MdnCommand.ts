@@ -1,8 +1,8 @@
-import { MessageEmbed } from 'discord.js';
-import nodeFetch from 'node-fetch';
 import { RunFunction } from '../../interfaces/Command';
 import paginationEmbed from '../../utils/Pagination';
-
+import { MDNResult, Document } from '../../interfaces/MDNResult';
+import { MessageEmbed } from 'discord.js';
+import fetch from 'node-fetch';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
@@ -14,37 +14,33 @@ export const run: RunFunction = async (client, message, args) => {
 
 	const pages: MessageEmbed[] = [];
 
-	nodeFetch(
-		`https://developer.mozilla.org/api/v1/search/en-US?q=${args.join(
-			' '
+	const result: MDNResult = await fetch(
+		`https://developer.mozilla.org/api/v1/search/en-US?q=${encodeURIComponent(
+			args.join(' ')
 		)}&locale=en-US&highlight=false`
-	)
-		.then((body) => body.json())
-		.then(async (result) => {
-			result.documents.forEach((document) => {
-				if (!document.slug.toLowerCase().includes('javascript')) {
-					return;
-				}
+	).then((body) => body.json());
 
-				pages.push(
-					client.embed(
-						{
-							title: document.title,
-							description: document.excerpt.replace(/<\/?[^>]+(>|$)/g, ''),
-						},
-						message
-					)
-				);
-			});
+	result.documents.map((document: Document) => {
+		if (!document.slug.toLowerCase().includes('javascript')) return;
 
-			if (!pages.length) {
-				return message.channel.send(
-					client.embed({ title: 'No results!' }, message)
-				);
-			}
+		return pages.push(
+			client.embed(
+				{
+					title: document.title,
+					description: document.excerpt.replace(/<\/?[^>]+(>|$)/g, ''),
+				},
+				message
+			)
+		);
+	});
 
-			paginationEmbed(message, pages, ['⏪', '⏩'], 30000);
-		});
+	if (!pages.length) {
+		return message.channel.send(
+			client.embed({ title: 'No results!' }, message)
+		);
+	}
+
+	return paginationEmbed(message, pages, ['⏪', '⏩'], 30000);
 };
 
 export const name: string = 'mdn';
