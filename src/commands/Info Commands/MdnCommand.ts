@@ -6,7 +6,7 @@ import paginationEmbed from 'discord.js-pagination';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'Invalid usage, provide a search term! `jsdoc <search input>`'
+			'Invalid usage, provide a search term! `mdn <search input>`'
 		);
 
 	const pages = [];
@@ -42,7 +42,7 @@ export const run: RunFunction = async (client, message, args) => {
 		});
 };
 
-export const name: string = 'jsdoc';
+export const name: string = 'mdn';
 export const category: string = 'info';
 export const usage: string = '<...search input>';
 export const description: string = 'Search for something on the MDN JS Docs';
