@@ -21,7 +21,7 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	}
 
-	let roleDeletion = message.guild.roles.cache.find(
+	const roleDeletion = message.guild.roles.cache.find(
 		(role) => role.name == args[1]
 	);
 
