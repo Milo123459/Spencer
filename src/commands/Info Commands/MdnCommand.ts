@@ -27,11 +27,13 @@ export const run: RunFunction = async (client, message, args) => {
 				}
 
 				pages.push(
-					new MessageEmbed()
-						.setTitle(document.title)
-						.setAuthor(document.slug)
-						.setDescription(document.excerpt.replace(/<\/?[^>]+(>|$)/g, ''))
-						.setColor('#2F3136')
+					client.embed(
+						{
+							title: document.title,
+							description: document.excerpt.replace(/<\/?[^>]+(>|$)/g, ''),
+						},
+						message
+					)
 				);
 			});
 
