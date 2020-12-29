@@ -806,7 +806,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-bytes", "npm:5.5.0"],
             ["semver", "npm:7.3.4"],
             ["stream-to-promise", "npm:2.2.0"],
-            ["tar-stream", "npm:2.1.4"],
+            ["tar-stream", "npm:2.2.0"],
             ["treeify", "npm:1.1.0"],
             ["tslib", "npm:1.14.1"],
             ["tunnel", "npm:0.0.6"]
@@ -1252,7 +1252,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["clipanion", "npm:2.6.2"],
             ["micromatch", "npm:4.0.2"],
-            ["tar-stream", "npm:2.1.4"],
+            ["tar-stream", "npm:2.2.0"],
             ["tslib", "npm:1.14.1"]
           ],
           "packagePeers": [
@@ -2724,7 +2724,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prism-media", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:1.2.3"],
             ["setimmediate", "npm:1.0.5"],
             ["tweetnacl", "npm:1.0.3"],
-            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1"]
+            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.2"]
           ],
           "linkType": "HARD",
         }]
@@ -6603,10 +6603,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["tar-stream", [
-        ["npm:2.1.4", {
-          "packageLocation": "./.yarn/cache/tar-stream-npm-2.1.4-5f7040c9c5-d0414b07c2.zip/node_modules/tar-stream/",
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/tar-stream-npm-2.2.0-884c79b510-7eec0a7fc8.zip/node_modules/tar-stream/",
           "packageDependencies": [
-            ["tar-stream", "npm:2.1.4"],
+            ["tar-stream", "npm:2.2.0"],
             ["bl", "npm:4.0.3"],
             ["end-of-stream", "npm:1.4.4"],
             ["fs-constants", "npm:1.0.0"],
@@ -7124,17 +7124,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ws", [
-        ["npm:7.4.1", {
-          "packageLocation": "./.yarn/cache/ws-npm-7.4.1-dd43fad225-32b4f83bfe.zip/node_modules/ws/",
+        ["npm:7.4.2", {
+          "packageLocation": "./.yarn/cache/ws-npm-7.4.2-4485e6ad6c-832efdf144.zip/node_modules/ws/",
           "packageDependencies": [
-            ["ws", "npm:7.4.1"]
+            ["ws", "npm:7.4.2"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1", {
-          "packageLocation": "./.yarn/$$virtual/ws-virtual-7e7c842673/0/cache/ws-npm-7.4.1-dd43fad225-32b4f83bfe.zip/node_modules/ws/",
+        ["virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.2", {
+          "packageLocation": "./.yarn/$$virtual/ws-virtual-783831d0d2/0/cache/ws-npm-7.4.2-4485e6ad6c-832efdf144.zip/node_modules/ws/",
           "packageDependencies": [
-            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1"],
+            ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.2"],
             ["@types/bufferutil", null],
             ["@types/utf-8-validate", null],
             ["bufferutil", null],
