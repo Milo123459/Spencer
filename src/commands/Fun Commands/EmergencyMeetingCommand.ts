@@ -4,7 +4,13 @@ import { RunFunction } from '../../interfaces/Command';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'I need some text to generate this meme! `emergencymeeting <text>`'
+			client.embed(
+				{
+					description:
+						'I need some text to generate this meme! `emergencymeeting <text>`',
+				},
+				message
+			)
 		);
 	const buffer = await client.vacefron.emergencyMeeting(args.join(' '));
 	const attachment = new MessageAttachment(buffer);
