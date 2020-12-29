@@ -34,7 +34,7 @@ const paginationEmbed = async (
 				break;
 		}
 
-		curPage.edit(pages[page].setFooter(`Page ${page + 1} / ${pages.length}`));
+		curPage.edit(pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`));
 	});
 
 	reactionCollector.on('end', () => {
