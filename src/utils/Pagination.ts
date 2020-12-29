@@ -12,7 +12,7 @@ const paginationEmbed = async (
 
 	let page = 0;
 	const curPage = await msg.channel.send(
-		pages[page].setFooter(`Page ${page + 1} / ${pages.length}`)
+		pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)
 	);
 	for (const emoji of emojiList) await curPage.react(emoji);
 
