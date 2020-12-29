@@ -6,7 +6,10 @@ import paginationEmbed from 'discord.js-pagination';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'Invalid usage, provide a search term! `mdn <search input>`'
+			client.embed(
+				{ title: 'Invalid usage, provide a search term! `mdn <search input>`' },
+				message
+			)
 		);
 
 	const pages = [];
