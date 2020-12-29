@@ -2,7 +2,7 @@ import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, message, args) => {
 	const choices: string[] = ['Heads', 'Tails'];
-	let chosenChoice = choices[Math.floor(Math.random() * choices.length)];
+	const chosenChoice = choices[Math.floor(Math.random() * choices.length)];
 
 	message.channel.send(
 		client.embed(
