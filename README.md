@@ -20,6 +20,8 @@ Has a cool little DB system, allowing you to load schemas remotely.
 
 # Contributing
 
+- Read [contributing guide lines](/CONTRIBUTING.md)
+
 - Fork this repo
 - Clone your forked repo
 - Make a branch by running `yarn nb awesome-feature-name-here`
