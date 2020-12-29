@@ -118,29 +118,29 @@ export const run: RunFunction = async (client, message: Message) => {
 				)
 			);
 		});
-		// if (command?.cooldown) {
-		// 	client.cooldowns.set(
-		// 		`${message.author.id}${command.name}`,
-		// 		client.utils.checkMultipleRoles(
-		// 			'784470505607528448',
-		// 			message.author.id,
-		// 			['787656384808353803', '787656420258086922', '787656471679991829']
-		// 		)
-		// 			? Date.now() + command?.cooldown / 2
-		// 			: Date.now() + command?.cooldown
-		// 	);
-		// 	setTimeout(
-		// 		() => {
-		// 			client.cooldowns.delete(`${message.author.id}${command.name}`);
-		// 		},
-		// 		client.utils.checkMultipleRoles(
-		// 			'784470505607528448',
-		// 			message.author.id,
-		// 			['787656384808353803', '787656420258086922', '787656471679991829']
-		// 		)
-		// 			? command?.cooldown / 2
-		// 			: command?.cooldown
-		// 	);
-		// }
+		if (command?.cooldown) {
+			client.cooldowns.set(
+				`${message.author.id}${command.name}`,
+				client.utils.checkMultipleRoles(
+					'784470505607528448',
+					message.author.id,
+					['787656384808353803', '787656420258086922', '787656471679991829']
+				)
+					? Date.now() + command?.cooldown / 2
+					: Date.now() + command?.cooldown
+			);
+			setTimeout(
+				() => {
+					client.cooldowns.delete(`${message.author.id}${command.name}`);
+				},
+				client.utils.checkMultipleRoles(
+					'784470505607528448',
+					message.author.id,
+					['787656384808353803', '787656420258086922', '787656471679991829']
+				)
+					? command?.cooldown / 2
+					: command?.cooldown
+			);
+		}
 	}
 };
