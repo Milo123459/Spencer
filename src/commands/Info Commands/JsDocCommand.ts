@@ -44,4 +44,5 @@ export const run: RunFunction = async (client, message, args) => {
 
 export const name: string = 'jsdoc';
 export const category: string = 'info';
+export const usage: string = '<...search input>';
 export const description: string = 'Search for something on the MDN JS Docs';
