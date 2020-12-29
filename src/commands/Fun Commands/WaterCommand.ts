@@ -4,17 +4,16 @@ import { RunFunction } from '../../interfaces/Command';
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
 		return message.channel.send(
-			'I need some text to generate this meme! `emergencymeeting <text>`'
+			'I need some text to generate this meme! `water <text>`'
 		);
-	const buffer = await client.vacefron.emergencyMeeting(args.join(' '));
+	const buffer = await client.vacefron.water(args.join(' '));
 	const attachment = new MessageAttachment(buffer);
 
 	return message.channel.send(attachment);
 };
 
-export const name: string = 'emergencymeeting';
+export const name: string = 'water';
 export const category: string = 'fun';
 export const usage: string = '<...text>';
-export const aliases: string[] = ['em'];
 export const description: string =
-	'Generate a emergency meeting meme (Example: https://i.imgur.com/UMVJrfv.png)';
+	'Generate a water meme. (Example: https://i.imgur.com/x2p25U6.png)';
