@@ -47,3 +47,5 @@ Please make a PR to change anything! Spelling mistakes, code flaws, performance 
 # **⌚ Final thing**
 
 If you want to change something in this file, please make an issue, we can review if it should make its way into this file. Thanks!
+
+_PS: Thanks to [BeatZoid](https://github.com/beatzoid) and [Moonlight](https://github.com/gautam-paranjape)_
