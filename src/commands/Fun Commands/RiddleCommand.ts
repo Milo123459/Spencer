@@ -15,4 +15,4 @@ export const run: RunFunction = async (client, message, args) => {
 
 export const name: string = 'riddle';
 export const category: string = 'fun';
-export const description: string = 'Fetch a random fact and answer from an API.';
+export const description: string = 'Get a random riddle and answer!';
