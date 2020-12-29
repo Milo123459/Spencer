@@ -12,7 +12,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 
-	const pages = [];
+	const pages: MessageEmbed[] = [];
 
 	nodeFetch(
 		`https://developer.mozilla.org/api/v1/search/en-US?q=${args.join(
