@@ -14,7 +14,8 @@
 		"sdk": "yarn pnpify --sdk",
 		"gbump": "yarn bump && yarn sdk && git-go 'chore(Deps): bump deps'",
 		"new": "ts-node ./src/scripts/New.ts",
-		"test:language": "ts-node ./src/language/test.ts"
+		"test:language": "ts-node ./src/language/test.ts",
+		"nb": "git checkout master && git pull && git checkout -b"
 	},
 	"license": "Creative Commons",
 	"dependencies": {

@@ -22,7 +22,7 @@ Has a cool little DB system, allowing you to load schemas remotely.
 
 - Fork this repo
 - Clone your forked repo
-- Make a branch by running `git checkout -b my-feature-name-here`
+- Make a branch by running `yarn nb awesome-feature-name-here`
 - Add your code
 - Add and commit your code
 - Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
