@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message) => {
 	const randomRoll = Math.floor(Math.random() * 6) + 1;
 	message.channel.send(
 		client.embed(
