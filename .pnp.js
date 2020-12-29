@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["discord.js-pagination", "npm:1.0.3"],
             ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
@@ -2725,6 +2726,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["setimmediate", "npm:1.0.5"],
             ["tweetnacl", "npm:1.0.3"],
             ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["discord.js-pagination", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/discord.js-pagination-npm-1.0.3-43a2eabeca-da5863c89b.zip/node_modules/discord.js-pagination/",
+          "packageDependencies": [
+            ["discord.js-pagination", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -6279,6 +6289,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["discord.js-pagination", "npm:1.0.3"],
             ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
