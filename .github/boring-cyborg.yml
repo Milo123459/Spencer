@@ -1,0 +1,21 @@
+labelPRBasedOnFilePath:
+  commands:
+    - src/commands/**/*
+  events:
+    - src/events/**/*
+  models:
+    - src/models/**/*
+  language:
+    - src/language/**/*
+  scripts:
+    - src/scripts/**/*
+  utils:
+    - src/utils/**/*
+  client:
+    - src/clients/**/*
+  db:
+    - src/db/**/*
+  interfaces:
+    - src/interfaces/**/*
+  static:
+    - src/static/**/*
