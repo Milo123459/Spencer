@@ -19,6 +19,6 @@ export const run: RunFunction = async (client, message, args) => {
 
 export const name: string = 'npc';
 export const category: string = 'fun';
-export const usage: string = '<gray guy text>,<white guy text>';
+export const usage: string = '<...gray guy text>,<...white guy text>';
 export const description: string =
 	'Generate a npc meme. (Example: https://i.imgur.com/dUQMPZ9.png)';

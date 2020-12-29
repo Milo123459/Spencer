@@ -14,6 +14,6 @@ export const run: RunFunction = async (client, message, args) => {
 
 export const name: string = 'water';
 export const category: string = 'fun';
-export const usage: string = '<text>';
+export const usage: string = '<...text>';
 export const description: string =
 	'Generate a water meme. (Example: https://i.imgur.com/x2p25U6.png)';
