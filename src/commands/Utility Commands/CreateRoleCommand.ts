@@ -22,11 +22,11 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	}
 
-	let roleName: any = message.content
+	const roleName: any = message.content
 		.split(`${client.prefix}createrole`)
 		.join('');
 
-	let roleColor;
+	const roleColor;
 
 	if (!roleName) {
 		return message.channel.send(
