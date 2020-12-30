@@ -18,9 +18,13 @@ export const run: RunFunction = async (client, message: Message) => {
 		await channel.send(
 			client.embed(
 				{
-					description: `Message deleted by ${message.author.tag} (${
+					description: `
+                    Message deleted by ${message.author.tag} (${
 						message.author
-					}) in ${message.channel}.\n\n${Util.escapeMarkdown(message.content)}`,
+					}) in ${message.channel}.
+                    **Content**
+                    
+                    ${Util.escapeMarkdown(message.content)}`,
 				},
 				message
 			)

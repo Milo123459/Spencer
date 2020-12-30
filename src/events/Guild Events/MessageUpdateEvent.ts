@@ -28,9 +28,11 @@ export const run: RunFunction = async (
         Message edited by ${oldMessage.author.tag} (${newMessage.author}) in ${
 						oldMessage.channel
 					}.
-        Old content
+        **Old content**
+
         ${Util.escapeMarkdown(oldMessage.content)}
-        New content
+        **New content**
+
         ${Util.escapeMarkdown(newMessage.content)}`.trim(),
 				},
 				oldMessage
