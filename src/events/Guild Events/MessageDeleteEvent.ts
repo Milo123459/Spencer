@@ -23,7 +23,6 @@ export const run: RunFunction = async (client, message: Message) => {
 						message.author
 					}) in ${message.channel}.
                     **Content**
-                    
                     ${Util.escapeMarkdown(message.content)}`,
 				},
 				message

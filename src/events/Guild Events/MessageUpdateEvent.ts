@@ -29,10 +29,8 @@ export const run: RunFunction = async (
 						oldMessage.channel
 					}.
         **Old content**
-
         ${Util.escapeMarkdown(oldMessage.content)}
         **New content**
-
         ${Util.escapeMarkdown(newMessage.content)}`.trim(),
 				},
 				oldMessage
