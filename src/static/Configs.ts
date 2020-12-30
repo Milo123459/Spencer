@@ -9,7 +9,7 @@ export const subcommands: Array<SubCommand> = [
 		description:
 			'Toggles if you want to be DMed when you can next vote on top.gg',
 		search: (client, message) => new Object({ User: message.author.id }),
-		validate: (message, args) => {
+		validate: (client, message, args) => {
 			const value: boolean = yn(args[0]);
 			return {
 				value,
@@ -141,5 +141,26 @@ export const subcommands: Array<SubCommand> = [
 		},
 		parseToDB: (client, message, args) =>
 			client.utils.ResolveChannel(message, args[0]).id,
+	},
+	{
+		schema: 'guildconfig',
+		key: 'AntiRaid',
+		description:
+			"Setup the anti-raid level. Make sure my role is higher then the user that'd be banned/kicked.",
+		search: (client, message) => new Object({ Guild: message.guild.id }),
+		validate: (client, message, args) => {
+			let value: boolean =
+				args.length &&
+				['low', 'high'].includes(args[0].toLowerCase()) &&
+				message.member.permissions.has('ADMINISTRATOR') &&
+				message.guild.me.permissions.has('BAN_MEMBERS');
+			return {
+				value,
+				fix:
+					'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
+				success: !!value,
+			};
+		},
+		parseToDB: (client, message, args) => args[0].toLowerCase(),
 	},
 ];

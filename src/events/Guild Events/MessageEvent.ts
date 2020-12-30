@@ -1,14 +1,89 @@
-import { Message, TextChannel } from 'discord.js';
+import { GuildMember, Message, TextChannel } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.partial) await message.fetch();
-	if (message.author.bot || !message.guild) return;
+	if (!message.guild) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
 	});
+	if ((GuildConfig as Anything)?.AntiRaid) {
+		if (!message.member.permissions.has('ADMINISTRATOR')) {
+			const RaidUserSchema = await client.db.load('raiduser');
+			if (message.mentions.members.size >= 4) {
+				await RaidUserSchema.increment(
+					{ Guild: message.guild.id, User: message.author.id },
+					'Actions',
+					1
+				);
+				if ((GuildConfig as Anything).AntiRaid == 'low') {
+					await message.reply("Please don't mass ping people.");
+					if (
+						((await RaidUserSchema.findOne({
+							User: message.author.id,
+							Guild: message.guild.id,
+						})) as Anything).Actions >= 3
+					) {
+						try {
+							await message.member.ban({ reason: 'Too many infractions.' });
+							await RaidUserSchema.delete({
+								Guild: message.guild.id,
+								User: message.author.id,
+							});
+							return await message.channel.send(
+								client.embed(
+									{ description: `${message.author.tag} just got banned.` },
+									message
+								)
+							);
+						} catch {
+							return await message.channel.send(
+								client.embed(
+									{
+										description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
+									},
+									message
+								)
+							);
+						}
+					}
+				} else if ((GuildConfig as Anything).AntiRaid == 'high') {
+					if (
+						((await RaidUserSchema.findOne({
+							User: message.author.id,
+							Guild: message.guild.id,
+						})) as Anything).Actions >= 1
+					) {
+						try {
+							await message.member.ban({ reason: 'Too many infractions.' });
+							await RaidUserSchema.delete({
+								Guild: message.guild.id,
+								User: message.author.id,
+							});
+							return await message.channel.send(
+								client.embed(
+									{ description: `${message.author.tag} just got banned.` },
+									message
+								)
+							);
+						} catch {
+							return await message.channel.send(
+								client.embed(
+									{
+										description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
+									},
+									message
+								)
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+	if (message.author.bot) return;
 	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
 	if (!message.content.toLowerCase().startsWith(Prefix)) return;
 	const [cmd, ...args]: string[] = message.content

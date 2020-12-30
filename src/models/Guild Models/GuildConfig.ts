@@ -9,5 +9,6 @@ export const data = model(
 		AutoDeleteActions: Boolean,
 		MessageLogsChannel: String,
 		ReportChannel: String,
+		AntiRaid: String,
 	})
 );
