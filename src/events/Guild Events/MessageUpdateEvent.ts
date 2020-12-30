@@ -25,11 +25,13 @@ export const run: RunFunction = async (
 			client.embed(
 				{
 					description: `
-        Message edited by ${oldMessage.author.tag} in ${oldMessage.channel}.
+        Message edited by ${oldMessage.author.tag} (${newMessage.author}) in ${
+						oldMessage.channel
+					}.
         Old content
-        \`${Util.escapeMarkdown(oldMessage.content)}\`
+        ${Util.escapeMarkdown(oldMessage.content)}
         New content
-        \`${Util.escapeMarkdown(newMessage.content)}\``.trim(),
+        ${Util.escapeMarkdown(newMessage.content)}`.trim(),
 				},
 				oldMessage
 			)
