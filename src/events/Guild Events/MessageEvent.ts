@@ -4,6 +4,7 @@ import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.partial) await message.fetch();
+	if (message.member.partial) await message.member.fetch();
 	if (!message.guild) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const GuildConfig = await GuildConfigSchema.findOne({
