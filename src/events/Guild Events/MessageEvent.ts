@@ -11,74 +11,75 @@ export const run: RunFunction = async (client, message: Message) => {
 		Guild: message.guild.id,
 	});
 	if ((GuildConfig as Anything)?.AntiRaid) {
-		if (!message.member.permissions.has('ADMINISTRATOR')) {
-			const RaidUserSchema = await client.db.load('raiduser');
-			if (message.mentions.members.size >= 4) {
-				await RaidUserSchema.increment(
-					{ Guild: message.guild.id, User: message.author.id },
-					'Actions',
-					1
-				);
-				if ((GuildConfig as Anything).AntiRaid == 'low') {
-					await message.reply("Please don't mass ping people.");
-					if (
-						((await RaidUserSchema.findOne({
-							User: message.author.id,
+		const RaidUserSchema = await client.db.load('raiduser');
+		if (
+			message.mentions.members.size >= 4 &&
+			!message.member.permissions.has('ADMINISTRATOR')
+		) {
+			await RaidUserSchema.increment(
+				{ Guild: message.guild.id, User: message.author.id },
+				'Actions',
+				1
+			);
+			if ((GuildConfig as Anything).AntiRaid == 'low') {
+				await message.reply("Please don't mass ping people.");
+				if (
+					((await RaidUserSchema.findOne({
+						User: message.author.id,
+						Guild: message.guild.id,
+					})) as Anything).Actions >= 3
+				) {
+					try {
+						await message.member.ban({ reason: 'Too many infractions.' });
+						await RaidUserSchema.delete({
 							Guild: message.guild.id,
-						})) as Anything).Actions >= 3
-					) {
-						try {
-							await message.member.ban({ reason: 'Too many infractions.' });
-							await RaidUserSchema.delete({
-								Guild: message.guild.id,
-								User: message.author.id,
-							});
-							return await message.channel.send(
-								client.embed(
-									{ description: `${message.author.tag} just got banned.` },
-									message
-								)
-							);
-						} catch {
-							return await message.channel.send(
-								client.embed(
-									{
-										description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
-									},
-									message
-								)
-							);
-						}
+							User: message.author.id,
+						});
+						return await message.channel.send(
+							client.embed(
+								{ description: `${message.author.tag} just got banned.` },
+								message
+							)
+						);
+					} catch {
+						return await message.channel.send(
+							client.embed(
+								{
+									description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
+								},
+								message
+							)
+						);
 					}
-				} else if ((GuildConfig as Anything).AntiRaid == 'high') {
-					if (
-						((await RaidUserSchema.findOne({
-							User: message.author.id,
+				}
+			} else if ((GuildConfig as Anything).AntiRaid == 'high') {
+				if (
+					((await RaidUserSchema.findOne({
+						User: message.author.id,
+						Guild: message.guild.id,
+					})) as Anything).Actions >= 1
+				) {
+					try {
+						await message.member.ban({ reason: 'Too many infractions.' });
+						await RaidUserSchema.delete({
 							Guild: message.guild.id,
-						})) as Anything).Actions >= 1
-					) {
-						try {
-							await message.member.ban({ reason: 'Too many infractions.' });
-							await RaidUserSchema.delete({
-								Guild: message.guild.id,
-								User: message.author.id,
-							});
-							return await message.channel.send(
-								client.embed(
-									{ description: `${message.author.tag} just got banned.` },
-									message
-								)
-							);
-						} catch {
-							return await message.channel.send(
-								client.embed(
-									{
-										description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
-									},
-									message
-								)
-							);
-						}
+							User: message.author.id,
+						});
+						return await message.channel.send(
+							client.embed(
+								{ description: `${message.author.tag} just got banned.` },
+								message
+							)
+						);
+					} catch {
+						return await message.channel.send(
+							client.embed(
+								{
+									description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
+								},
+								message
+							)
+						);
 					}
 				}
 			}
