@@ -39,5 +39,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'urlshorten';
 export const category: string = 'utility';
 export const description: string = 'Shorten a long URL into a tinyurl';
-export const cooldown: number = 6000;
+export const cooldown: number = 10000;
 export const aliases: string[] = ['shortenurl', 'urlshortener'];
