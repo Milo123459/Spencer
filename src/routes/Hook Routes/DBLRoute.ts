@@ -19,6 +19,7 @@ export const run: RunFunction = async (client, req, res) => {
 			Time: Date.now() + ms('12h'),
 		});
 	}
+	return res.json({ msg: '🚀' });
 };
 export const method: Method = 'post';
 export const path: string = '/webhooks/dbl';
