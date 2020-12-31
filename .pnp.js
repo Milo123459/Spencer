@@ -45,13 +45,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.9"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.16"],
+            ["@types/node", "npm:14.14.17"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
-            ["alpha-sort", "npm:3.1.0"],
+            ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],
@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.6"],
             ["imageapi.js", "npm:1.3.0"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:8.1.0"],
+            ["mathjs", "npm:8.1.1"],
             ["mongoose", "npm:5.11.9"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
@@ -600,6 +600,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.16-b866b68544-220a7496ec.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.14.16"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:14.14.17", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.17-a630dac402-2bb32c683d.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:14.14.17"]
           ],
           "linkType": "HARD",
         }]
@@ -1522,10 +1529,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["alpha-sort", [
-        ["npm:3.1.0", {
-          "packageLocation": "./.yarn/cache/alpha-sort-npm-3.1.0-aaf0680c02-ddbd7c92a4.zip/node_modules/alpha-sort/",
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/alpha-sort-npm-4.0.0-97e4d19a31-771ddd6ef1.zip/node_modules/alpha-sort/",
           "packageDependencies": [
-            ["alpha-sort", "npm:3.1.0"]
+            ["alpha-sort", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4440,10 +4447,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mathjs", [
-        ["npm:8.1.0", {
-          "packageLocation": "./.yarn/cache/mathjs-npm-8.1.0-42aa4e07bf-a487d18816.zip/node_modules/mathjs/",
+        ["npm:8.1.1", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-8.1.1-765c490991-2386d02e97.zip/node_modules/mathjs/",
           "packageDependencies": [
-            ["mathjs", "npm:8.1.0"],
+            ["mathjs", "npm:8.1.1"],
             ["complex.js", "npm:2.0.11"],
             ["decimal.js", "npm:10.2.1"],
             ["escape-latex", "npm:1.2.0"],
@@ -6267,13 +6274,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.9"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.16"],
+            ["@types/node", "npm:14.14.17"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
             ["@yarnpkg/doctor", "npm:2.1.3"],
             ["@yarnpkg/pnpify", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:2.4.0"],
-            ["alpha-sort", "npm:3.1.0"],
+            ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.2"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],
@@ -6286,7 +6293,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.6"],
             ["imageapi.js", "npm:1.3.0"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:8.1.0"],
+            ["mathjs", "npm:8.1.1"],
             ["mongoose", "npm:5.11.9"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
