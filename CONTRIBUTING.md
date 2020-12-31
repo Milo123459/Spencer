@@ -1,8 +1,8 @@
-# **Hi 👋**
+# Hi 👋
 
 This file goes over a few things you should keep in mind when contributing.
 
-# **⚡ Setup**
+# ⚡ Setup
 
 In order to contribute you need to fork the repo.
 
@@ -21,9 +21,9 @@ Some things to keep in mind:
 
 CD into your repo and run `yarn nb my-feature-name` - whenever making a new branch, use `yarn nb`!
 
-If you are making a command, event or DB model you can try out `yarn new`, this set's up everything for you. If this doesn't work, have no fear! Try observing other commands/events/models and going with that.
+If you are making a command, event, api route or DB model you can try out `yarn new`, this set's up everything for you. If this doesn't work, have no fear! Try observing other commands/events/models and going with that.
 
-# **👍 PR standards**
+# 👍 PR standards
 
 We expect PRs to follow a few guidelines, for example:
 
@@ -35,16 +35,17 @@ This is an example, but it should shine some light on how we accept PRs.
 
 We also expect you to be active in the PRs, if we add a review, or request changes, we expect you to be able to get it done.
 
-# **👏 Recommendations**
+# 👏 Recommendations
 
 - [Pull](https://github.com/wei/pull) - automatically keep your fork up to date!
 - [GH CLI](https://github.com/cli/cli) - An easy way to make PRs and much more!
+- [Visual Studio Code](https://code.visualstudio.com) - Code editing redefined.
 
-# **🚀 Want to change something?**
+# 🚀 Want to change something?
 
 Please make a PR to change anything! Spelling mistakes, code flaws, performance issues, as long as it's valid, follows our guidelines, you'll most likely be accepted. Happy hacking! 😉
 
-# **⌚ Final thing**
+# ⌚ Final thing
 
 If you want to change something in this file, please make an issue, we can review if it should make its way into this file. Thanks!
 

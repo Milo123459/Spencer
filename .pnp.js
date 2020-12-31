@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["dot-prop", "npm:6.0.1"],
             ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
@@ -2741,6 +2742,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/dot-prop-npm-5.3.0-7bf6ee1eb8-76e6693d88.zip/node_modules/dot-prop/",
           "packageDependencies": [
             ["dot-prop", "npm:5.3.0"],
+            ["is-obj", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/dot-prop-npm-6.0.1-de66211710-06793b8680.zip/node_modules/dot-prop/",
+          "packageDependencies": [
+            ["dot-prop", "npm:6.0.1"],
             ["is-obj", "npm:2.0.0"]
           ],
           "linkType": "HARD",
@@ -6286,6 +6295,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["dot-prop", "npm:6.0.1"],
             ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
