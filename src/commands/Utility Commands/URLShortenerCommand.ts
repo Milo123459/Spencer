@@ -21,8 +21,6 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	}
 
-	message.delete();
-
 	return message.channel.send(
 		client.embed(
 			{
