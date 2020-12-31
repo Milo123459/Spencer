@@ -33,6 +33,7 @@ export const run: RunFunction = async (
         ${Util.escapeMarkdown(oldMessage.content)}
         **New content**
         ${Util.escapeMarkdown(newMessage.content)}`.trim(),
+					color: 'BLUE',
 				},
 				oldMessage
 			)

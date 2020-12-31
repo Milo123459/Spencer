@@ -24,6 +24,7 @@ export const run: RunFunction = async (client, message: Message) => {
 					}) in ${message.channel}.
                     **Content**
                     ${Util.escapeMarkdown(message.content)}`,
+					color: 'RED',
 				},
 				message
 			)
