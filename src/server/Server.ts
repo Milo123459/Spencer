@@ -1,4 +1,4 @@
-import express, { Application } from 'express';
+import express, { Application, NextFunction, Request, Response } from 'express';
 import { Middleware, Route } from '../interfaces/Route';
 import http from 'http';
 import { Spencer } from '../client/Client';
@@ -12,7 +12,7 @@ class Server {
 	}
 	public serve(): http.Server {
 		const preDefinedMidllewares: Array<{ name: string; value: Middleware }> = [
-			{ name: 'dbl', value: this.client.dblWebhook.middleware() },
+			{ name: 'dbl', value: this.client.dblWebhook.middleware },
 		];
 		this.client.routes.map((value: Route) => {
 			const middlewares: Array<Middleware> = [];
@@ -24,7 +24,10 @@ class Server {
 				});
 			this.server[value.method](
 				value.path,
-				...middlewares.map((value: Middleware) => (value as Function)()),
+				...middlewares.map((value: Middleware) => {
+					return (req: Request, res: Response, next: NextFunction) =>
+						value(req, res, next);
+				}),
 				(req, res, next) => value.run(this.client, req, res, next)
 			);
 		});
