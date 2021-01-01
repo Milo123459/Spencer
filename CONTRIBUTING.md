@@ -21,7 +21,7 @@ Some things to keep in mind:
 
 CD into your repo and run `yarn nb my-feature-name` - whenever making a new branch, use `yarn nb`!
 
-If you are making a command, event, api route or DB model you can try out `yarn new`, this set's up everything for you. If this doesn't work, have no fear! Try observing other commands/events/models and going with that.
+If you are making a command, event or DB model you can try out `yarn new`, this set's up everything for you. If this doesn't work, have no fear! Try observing other commands/events/models and going with that.
 
 # 👍 PR standards
 

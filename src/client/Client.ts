@@ -9,14 +9,11 @@ import {
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
-import { Server } from '../server/Server';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
-import { Webhook, Api } from '@top-gg/sdk';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
-import { Route } from '../interfaces/Route';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
 import { VACEFronJS } from 'vacefron';
@@ -29,17 +26,13 @@ class Spencer extends Client {
 	public cooldowns: Collection<string, number> = new Collection();
 	public events: Collection<string, Event> = new Collection();
 	public schemas: Collection<string, Schema> = new Collection();
-	public routes: Collection<string, Route> = new Collection();
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
 	public utils: UtilsManager;
-	public server: Server;
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
 	public vacefron: VACEFronJS = new VACEFronJS();
-	public dblWebhook: Webhook;
-	public dblApi: Api;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -70,9 +63,6 @@ class Spencer extends Client {
 		const schemaFiles: string[] = await globPromise(
 			`${__dirname}/../models/**/*{.js,.ts}`
 		);
-		const routeFiles: string[] = await globPromise(
-			`${__dirname}/../routes/**/*{.js,.ts}`
-		);
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
 			this.commands.set(cmd.name, { cooldown: 3000, ...cmd });
@@ -90,15 +80,8 @@ class Spencer extends Client {
 			const sch = (await import(schemaFile)) as Schema;
 			this.schemas.set(sch.name, sch);
 		});
-		routeFiles.map(async (routeFile: string) => {
-			const route = (await import(routeFile)) as Route;
-			this.routes.set(route.path, route);
-		});
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
-		this.server = new Server(this);
-		if (this.config.webAuth) this.dblWebhook = new Webhook(this.config.webAuth);
-		if (this.config.topGGToken) this.dblApi = new Api(this.config.topGGToken);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({

@@ -23,10 +23,6 @@ const globPromise = promisify(glob);
 			type: 'model',
 			path: `${__dirname}/../models/`,
 		},
-		{
-			type: 'route',
-			path: `${__dirname}/../routes/`,
-		},
 	];
 	const what = await prompts({
 		name: 'type',
@@ -36,7 +32,6 @@ const globPromise = promisify(glob);
 			{ title: 'Command', value: 'command' },
 			{ title: 'Event', value: 'event' },
 			{ title: 'DB Module', value: 'model' },
-			{ title: 'API Route', value: 'route' },
 		],
 	});
 	(
@@ -54,7 +49,7 @@ const globPromise = promisify(glob);
 			choices: [...categorySet]
 				.filter((value: string) => {
 					const splitted: string[] = value.split('/');
-					return !['Commands', 'Events', 'Models', 'Routes'].includes(
+					return !['Commands', 'Events', 'Models'].includes(
 						splitted[splitted.length - 1][0].toUpperCase() +
 							splitted[splitted.length - 1].toLowerCase().slice(1)
 					);
@@ -139,40 +134,6 @@ const globPromise = promisify(glob);
 		export const data = model(
 			'${(otherStuff.name as string).toLowerCase()}', new Schema({})
 		)
-		`.trim();
-		return fs.writeFile(path, prettier.format(source, { parser: 'babel' }));
-	} else if ((what.type as string) == 'route') {
-		const splitted: string[] = otherStuff.category.split('/');
-		const path: string = `${
-			paths.find((value) => value.type == what.type).path
-		}${
-			splitted[splitted.length - 1][0].toUpperCase() +
-			splitted[splitted.length - 1].slice(1).toLowerCase()
-		} Routes/${
-			(otherStuff.name as string)[0].toUpperCase() +
-			(otherStuff.name as string).slice(1)
-		}Route.ts`;
-		const routeSpecificStuff = await prompts([
-			{ name: 'path', type: 'text', message: 'What should the path be?' },
-			{
-				message: 'What should the method be?',
-				name: 'method',
-				type: 'select',
-				choices: ['get', 'put', 'delete', 'post'].map((value: string) => {
-					return {
-						title: value[0].toUpperCase() + value.slice(1).toLowerCase(),
-						value: value.toLowerCase(),
-					};
-				}),
-			},
-		]);
-		const source: string = `
-        import { RunFunction, Method } from '../../interfaces/Route';
-        export const run: RunFunction = async(client, req, res) => {
-            // send rockets!
-        };
-        export const method: Method = '${(routeSpecificStuff.method as string).toLowerCase()}';
-        export const path: string = '${(routeSpecificStuff.path as string).toLowerCase()}';
 		`.trim();
 		return fs.writeFile(path, prettier.format(source, { parser: 'babel' }));
 	}
