@@ -19,19 +19,19 @@ export const run: RunFunction = async (client, message, args) => {
 		return message.channel.send(
 			client.embed({ description: 'You can only shorten URLs!' }, message)
 		);
+	} else {
+		return message.channel.send(
+			client.embed(
+				{
+					fields: [
+						{ name: 'Long URL', value: args[0] },
+						{ name: 'Shortened URL', value: shorten(args[0]) },
+					],
+				},
+				message
+			)
+		);
 	}
-
-	return message.channel.send(
-		client.embed(
-			{
-				fields: [
-					{ name: 'Long URL', value: args[0] },
-					{ name: 'Shortened URL', value: shorten(args[0]) },
-				],
-			},
-			message
-		)
-	);
 };
 
 export const name: string = 'urlshorten';
