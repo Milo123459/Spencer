@@ -1,36 +1,54 @@
-const NUMBERS = /[0-9]/;
+const nums = '0123456789';
+// Just a basic lexer, will improve later.
 export const lexer = (contents: string) => {
-	let tokens = contents.split(/\s/);
-	let current = 0;
+	type lexed = Array<{ token: string; value: string | number }>;
+	let tokens: string[] = contents.split(/\s/);
+	let current: number = 0;
+	let lexedOutput: lexed = [];
+	let buffer: string[] = [];
 	while (current < tokens.length) {
-		let char = tokens[current];
+		let token: string = tokens[current];
+
+		if (!nums.includes(token) && buffer.length > 0) {
+			lexedOutput.push({
+				token: 'int',
+				value: +buffer.join(''),
+			});
+		}
+
+		if (token === '+') {
+			lexedOutput.push({
+				token: 'add',
+				value: '+',
+			});
+		} else if (token === '-') {
+			lexedOutput.push({
+				token: 'sub',
+				value: '-',
+			});
+		} else if (token === '/') {
+			lexedOutput.push({
+				token: 'div',
+				value: '/',
+			});
+		} else if (token === '*') {
+			lexedOutput.push({
+				token: 'mul',
+				value: '*',
+			});
+		} else if (nums.includes(token)) {
+			buffer.push(token);
+		}
 	}
+	if (buffer.length > 0) {
+		lexedOutput.push({
+			token: 'int',
+			value: +buffer.join(''),
+		});
+		buffer.splice(0, buffer.length);
+	}
+	return lexedOutput;
 };
-/*
- if (char === '"') {
-      // Keep a `value` variable for building up our string token.
-      let value = '';
-
-      // We'll skip the opening double quote in our token.
-      char = input[++current];
-
-      // Then we'll iterate through each character until we reach another
-      // double quote.
-      while (char !== '"') {
-        value += char;
-        char = input[++current];
-      }
-
-      // Skip the closing double quote.
-      char = input[++current];
-
-      // And add our `string` token to the `tokens` array.
-      tokens.push({ type: 'string', value });
-
-      continue;
-    }
-*/
-
 /*
 EXAMPLE CODE
 # this is a comment
