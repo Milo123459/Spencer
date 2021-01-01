@@ -97,8 +97,8 @@ class Spencer extends Client {
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
 		this.server = new Server(this);
-		this.dblWebhook = new Webhook(this.config.webAuth);
-		this.dblApi = new Api(this.config.topGGToken);
+		if (this.config.webAuth) this.dblWebhook = new Webhook(this.config.webAuth);
+		if (this.config.topGGToken) this.dblApi = new Api(this.config.topGGToken);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({

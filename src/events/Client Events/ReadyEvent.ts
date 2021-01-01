@@ -27,11 +27,11 @@ export const run: RunFunction = async (client) => {
 			}
 		});
 	}, 1000 * 60);
-	client.dblApi.postStats({
+	client.dblApi?.postStats({
 		serverCount: client.guilds.cache.size,
 	});
 	setInterval(() => {
-		client.dblApi.postStats({
+		client?.dblApi.postStats({
 			serverCount: client.guilds.cache.size,
 		});
 	}, 1800000);

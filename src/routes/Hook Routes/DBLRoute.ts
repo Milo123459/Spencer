@@ -23,4 +23,4 @@ export const run: RunFunction = async (client, req, res) => {
 };
 export const method: Method = 'post';
 export const path: string = '/webhooks/dbl';
-export const middlewares: string[] = ['dblWebhook.middleware'];
+export const middlewares: string[] = ['dbl'];
