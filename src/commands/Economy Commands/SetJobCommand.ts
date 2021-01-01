@@ -5,7 +5,7 @@ import { Jobs } from '../../static/Jobs';
 import { Anything } from '../../interfaces/Anything';
 
 export const run: RunFunction = async (client, message) => {
-	const EconomyShcmea = await client.db.load('usereconomy');
+	const EconomySchema = await client.db.load('usereconomy');
 	const msg: Message = await message.channel.send(
 		client.embed(
 			{
@@ -23,7 +23,7 @@ export const run: RunFunction = async (client, message) => {
 			msg,
 			Jobs.map((opt: Job) => opt.reaction)
 		);
-		await EconomyShcmea.update(
+		await EconomySchema.update(
 			{ User: message.author.id },
 			{ Job: Jobs.find((value: Job) => value.reaction == reaction).name }
 		);
