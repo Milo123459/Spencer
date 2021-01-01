@@ -1,4 +1,5 @@
-import { TextChannel } from 'discord.js';
+import { Message, TextChannel, Collection } from 'discord.js';
+import ms from 'ms';
 import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, message, args) => {
@@ -27,7 +28,15 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	await message.delete();
-	await (message.channel as TextChannel).bulkDelete(parseInt(args[0], 10));
+	const messages: Collection<
+		string,
+		Message
+	> = await message.channel.messages.fetch({ limit: parseInt(args[0], 10) });
+	await (message.channel as TextChannel).bulkDelete(
+		messages.filter(
+			(value: Message) => Date.now() - value.createdTimestamp < ms('14d')
+		)
+	);
 };
 export const name: string = 'purge';
 export const category: string = 'moderation';
