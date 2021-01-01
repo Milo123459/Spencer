@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.9"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.17"],
+            ["@types/node", "npm:14.14.19"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -603,10 +603,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:14.14.17", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.17-a630dac402-2bb32c683d.zip/node_modules/@types/node/",
+        ["npm:14.14.19", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.19-28dd633b29-218ff4a939.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:14.14.17"]
+            ["@types/node", "npm:14.14.19"]
           ],
           "linkType": "HARD",
         }]
@@ -6274,7 +6274,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.9"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.17"],
+            ["@types/node", "npm:14.14.19"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],

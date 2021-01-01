@@ -15,7 +15,8 @@
 		"gbump": "yarn bump && yarn sdk && git-go 'chore(Deps): bump deps'",
 		"new": "ts-node ./src/scripts/New.ts",
 		"test:language": "ts-node ./src/language/test.ts",
-		"nb": "git checkout master && git pull && git checkout -b"
+		"nb": "git checkout master && git pull && git checkout -b",
+		"git": "ts-node ./src/scripts/Git.ts"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
@@ -48,7 +49,7 @@
 		"@types/mathjs": "^6.0.9",
 		"@types/mongoose": "^5.10.3",
 		"@types/ms": "^0.7.31",
-		"@types/node": "^14.14.17",
+		"@types/node": "^14.14.19",
 		"@types/node-fetch": "^2.5.7",
 		"@types/prettier": "^2.1.6",
 		"@types/prompts": "^2.0.9",
