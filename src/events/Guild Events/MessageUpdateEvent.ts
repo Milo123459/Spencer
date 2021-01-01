@@ -13,6 +13,7 @@ export const run: RunFunction = async (
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: oldMessage.guild.id,
 	});
+	if ((oldMessage.content = newMessage.content)) return;
 	if (!GuildConfig) return;
 	if ((GuildConfig as Anything)?.MessageLogsChannel) {
 		const channel: TextChannel = client.channels.cache.get(
@@ -32,6 +33,7 @@ export const run: RunFunction = async (
         ${Util.escapeMarkdown(oldMessage.content)}
         **New content**
         ${Util.escapeMarkdown(newMessage.content)}`.trim(),
+					color: 'BLUE',
 				},
 				oldMessage
 			)

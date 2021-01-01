@@ -21,11 +21,11 @@ import { VACEFronJS } from 'vacefron';
 const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
-	public commands: Collection<string, object> = new Collection();
+	public commands: Collection<string, Command> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();
-	public events: Collection<string, object> = new Collection();
-	public schemas: Collection<string, object> = new Collection();
+	public events: Collection<string, Event> = new Collection();
+	public schemas: Collection<string, Schema> = new Collection();
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
 	public utils: UtilsManager;
@@ -86,7 +86,7 @@ class Spencer extends Client {
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
 			...data,
-			color: this.utils.randomElement(['RED', 'GREEN', 'BLUE']),
+			color: 'RANDOM',
 			footer: {
 				text: `${message.author.tag} | 👦 Spencer`,
 				iconURL: message.author.displayAvatarURL({

@@ -1,6 +1,5 @@
-import { MessageAttachment } from 'discord.js';
-import fetch from 'node-fetch';
 import { RunFunction } from '../../interfaces/Command';
+import { MessageAttachment } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args[0] || !args[1] || !message.content.includes(','))
@@ -14,12 +13,10 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	args = args.join(' ').split(',');
-	fetch(`https://vacefron.nl/api/npc?text1=${args[0]}&text2=${args[1]}`).then(
-		async (response) => {
-			const buffer = await response.buffer();
-			return message.channel.send(new MessageAttachment(buffer));
-		}
-	);
+	const buffer = await client.vacefron.npc(args[0], args[1]);
+	const attachment = new MessageAttachment(buffer);
+
+	return message.channel.send(attachment);
 };
 
 export const name: string = 'npc';

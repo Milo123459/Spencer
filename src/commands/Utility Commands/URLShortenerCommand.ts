@@ -32,6 +32,7 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	}
+
 };
 
 export const name: string = 'urlshorten';

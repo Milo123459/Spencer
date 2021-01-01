@@ -461,7 +461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.16":
+"@types/node@npm:*, @types/node@npm:^14.11.10":
   version: 14.14.16
   resolution: "@types/node@npm:14.14.16"
   checksum: 220a7496ec73861ad7fb4ae762618bb46ac9d5d5f92f3a2fcebfd1a81a509ff558eface7bcd1d632598a8a28f856a74b324e7165918e8334a59c221cb06d15e3
@@ -472,6 +472,13 @@ __metadata:
   version: 13.13.38
   resolution: "@types/node@npm:13.13.38"
   checksum: b373d9285c7c6c867144d83df00095b201b9d6ea9211694c9b5df25bcd0f78f70e46da22aed3e31f7cc3ea4a326fb59c15326a051805e1cac5ae5df6dee56008
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.17":
+  version: 14.14.17
+  resolution: "@types/node@npm:14.14.17"
+  checksum: 2bb32c683d8446128cf3240b4af6cc884c6ee006a845d1901becadc46255d1263bf265abde5ccb37a09d9a318fc3964d07afc941d52544f2d7f249dbb28d9420
   languageName: node
   linkType: hard
 
@@ -1070,10 +1077,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alpha-sort@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "alpha-sort@npm:3.1.0"
-  checksum: ddbd7c92a4b99cb1e98c254d4e5c25318c49911b4dd45c21f99dfe65b6d01c1a4dd84b032aa7cef1897422b8ef04a013bf3f8fe0302f4ef2776ebb4124826c4a
+"alpha-sort@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "alpha-sort@npm:4.0.0"
+  checksum: 771ddd6ef102e61bd6b599f24ecab51054a03424b79c9d85132cb0144b1cc4893e4ad969648ac542a91fac4f5d3b09255cee8d1504aed5fd76e3344539ebab7d
   languageName: node
   linkType: hard
 
@@ -2500,7 +2507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.0.12":
+"fraction.js@npm:^4.0.13":
   version: 4.0.13
   resolution: "fraction.js@npm:4.0.13"
   checksum: 1e9ec132b09f17f3e41aa53508197901277f11896f6adc0b51a4b38511e6236813a471488c319221f4fadf7c854be9566a4924215623b460364591d80e1791c3
@@ -3596,21 +3603,21 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mathjs@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "mathjs@npm:8.1.0"
+"mathjs@npm:^8.1.1":
+  version: 8.1.1
+  resolution: "mathjs@npm:8.1.1"
   dependencies:
     complex.js: ^2.0.11
     decimal.js: ^10.2.1
     escape-latex: ^1.2.0
-    fraction.js: ^4.0.12
+    fraction.js: ^4.0.13
     javascript-natural-sort: ^0.7.1
     seedrandom: ^3.0.5
     tiny-emitter: ^2.1.0
     typed-function: ^2.0.0
   bin:
     mathjs: bin/cli.js
-  checksum: a487d18816608bae97dea199bf6a95ff01d61bd54898c07e2c045c5113084b26716921c6d12bb87104a04d4fc9aa73daf7e1f8cafd78f6bcb7ddcaf5cbf32679
+  checksum: 2386d02e9763215148e67ccaf2144c7ccaab97a840a2bdf678bde5a8401ec28a9574d3d2e3f7e8d3205a47e193139a15f16f65db2d092f3bca2420a740979ac7
   languageName: node
   linkType: hard
 
@@ -5238,13 +5245,13 @@ fsevents@~2.1.2:
     "@types/mathjs": ^6.0.9
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.16
+    "@types/node": ^14.14.17
     "@types/node-fetch": ^2.5.7
     "@types/prettier": ^2.1.6
     "@types/prompts": ^2.0.9
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
-    alpha-sort: ^3.1.0
+    alpha-sort: ^4.0.0
     bufferutil: ^4.0.2
     cleverbot-free: ^1.0.5
     consola: ^2.15.0
@@ -5257,7 +5264,7 @@ fsevents@~2.1.2:
     husky: ^4.3.6
     imageapi.js: ^1.3.0
     lint-staged: ^10.5.3
-    mathjs: ^8.1.0
+    mathjs: ^8.1.1
     mongoose: ^5.11.9
     ms: ^2.1.3
     node-fetch: ^2.6.1
@@ -5268,7 +5275,7 @@ fsevents@~2.1.2:
     tslib: ^2.0.3
     typescript: ^4.1.3
     utf-8-validate: ^5.0.3
-    vacefron: ^3.0.0
+    vacefron: ^3.2.0
     yn: ^4.0.0
     zlib-sync: ^0.1.7
   languageName: unknown
@@ -5940,15 +5947,15 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"vacefron@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "vacefron@npm:3.0.0"
+"vacefron@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "vacefron@npm:3.2.0"
   dependencies:
     "@types/node": ^14.11.10
     "@types/node-fetch": ^2.5.7
     node-fetch: ^2.6.1
     tslib: ^2.0.3
-  checksum: 626d18558d1a41ec52c10a27d41c67e98c198538c8f5e8258fd6446c666bb1ab9f0ebde7706fa698020d32de886b358c730eec28dd748878e93312eb8d6cb194
+  checksum: 2a53030683a45c87aa9a980f8fbc43d5a56d9789e236712e4a618c73ceac5d8a436b8c28af1bf17b98b32a7f88e93ff2f17131232574cfd930d221d6e84b217e
   languageName: node
   linkType: hard
 

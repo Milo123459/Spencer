@@ -7,7 +7,10 @@ import { promisify } from 'util';
 const globPromise = promisify(glob);
 (async () => {
 	const categorySet: Set<string> = new Set();
-	const paths: Array<{ type: 'command' | 'event' | 'model'; path: string }> = [
+	const paths: Array<{
+		type: 'command' | 'event' | 'model' | 'route';
+		path: string;
+	}> = [
 		{
 			type: 'command',
 			path: `${__dirname}/../commands/`,
@@ -28,7 +31,7 @@ const globPromise = promisify(glob);
 		choices: [
 			{ title: 'Command', value: 'command' },
 			{ title: 'Event', value: 'event' },
-			{ title: 'DB module', value: 'model' },
+			{ title: 'DB Module', value: 'model' },
 		],
 	});
 	(
@@ -114,7 +117,7 @@ const globPromise = promisify(glob);
 		}
         `.trim();
 		return fs.writeFile(path, prettier.format(source, { parser: 'babel' }));
-	} else {
+	} else if ((what.type as string) == 'model') {
 		const splitted: string[] = otherStuff.category.split('/');
 		const path: string = `${
 			paths.find((value) => value.type == what.type).path
