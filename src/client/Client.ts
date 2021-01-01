@@ -85,8 +85,8 @@ class Spencer extends Client {
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
-			...data,
 			color: 'RANDOM',
+			...data,
 			footer: {
 				text: `${message.author.tag} | 👦 Spencer`,
 				iconURL: message.author.displayAvatarURL({
