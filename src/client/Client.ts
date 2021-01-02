@@ -12,6 +12,7 @@ import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
+import pm2 from '@pm2/io';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
@@ -33,6 +34,11 @@ class Spencer extends Client {
 	public owners: Array<string>;
 	public config: Config;
 	public vacefron: VACEFronJS = new VACEFronJS();
+	public remindersMetric = pm2.metric({ name: 'reminders' });
+	public economiesMetric = pm2.metric({ name: 'economies' });
+	public suggestionsMetric = pm2.metric({ name: 'suggestions' });
+	public guildConfigMetric = pm2.metric({ name: 'guildconfigs' });
+	public raidUsersMetric = pm2.metric({ name: 'raidusers' });
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -82,6 +88,24 @@ class Spencer extends Client {
 		});
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
+
+		setInterval(async () => {
+			const RemindersSchema = await this.db.load('reminder');
+			const EconomySchema = await this.db.load('usereconomy');
+			const SuggestionSchema = await this.db.load('suggestion');
+			const GuildConfigSchema = await this.db.load('guildconfig');
+			const RaidUserSchema = await this.db.load('raiduser');
+			const Reminders = (await RemindersSchema.find({})).length;
+			const Economies = (await EconomySchema.find({})).length;
+			const Suggestions = (await SuggestionSchema.find({})).length;
+			const GuildConfigs = (await GuildConfigSchema.find({})).length;
+			const RaidUsers = (await RaidUserSchema.find({})).length;
+			this.remindersMetric.set(Reminders);
+			this.economiesMetric.set(Economies);
+			this.suggestionsMetric.set(Suggestions);
+			this.guildConfigMetric.set(GuildConfigs);
+			this.raidUsersMetric.set(RaidUsers);
+		}, 1000 * 60);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({

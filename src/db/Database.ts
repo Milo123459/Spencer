@@ -29,7 +29,7 @@ class DatabaseModule {
 		const Data = await this.schema.data.findOne(data);
 		return Data;
 	}
-	public async find(data: object) {
+	public async find(data: object): Promise<Array<any>> {
 		const Data = await this.schema.data.find(data);
 		return Data;
 	}
