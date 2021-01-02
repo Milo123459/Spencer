@@ -58,7 +58,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
-            ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
@@ -1933,16 +1932,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["bindings", [
-        ["npm:1.5.0", {
-          "packageLocation": "./.yarn/cache/bindings-npm-1.5.0-77ce1d213c-bd623dec58.zip/node_modules/bindings/",
-          "packageDependencies": [
-            ["bindings", "npm:1.5.0"],
-            ["file-uri-to-path", "npm:1.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["binjumper", [
         ["npm:0.1.4", {
           "packageLocation": "./.yarn/cache/binjumper-npm-0.1.4-8ed133195d-07b0f2cf66.zip/node_modules/binjumper/",
@@ -3047,18 +3036,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/env-paths-npm-2.2.0-ac4ed99068-09de4fd1c0.zip/node_modules/env-paths/",
           "packageDependencies": [
             ["env-paths", "npm:2.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["erlpack", [
-        ["npm:0.1.3", {
-          "packageLocation": "./.yarn/unplugged/erlpack-npm-0.1.3-da3e92777a/node_modules/erlpack/",
-          "packageDependencies": [
-            ["erlpack", "npm:0.1.3"],
-            ["bindings", "npm:1.5.0"],
-            ["nan", "npm:2.14.2"],
-            ["node-gyp", "npm:7.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -6844,7 +6821,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
-            ["erlpack", "npm:0.1.3"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
