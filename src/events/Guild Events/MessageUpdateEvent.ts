@@ -8,7 +8,7 @@ export const run: RunFunction = async (
 	newMessage: Message
 ) => {
 	if (oldMessage.partial) await oldMessage.fetch();
-	if (newMessage.author.bot) return;
+	if (!newMessage.author || newMessage?.author?.bot) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: oldMessage.guild.id,

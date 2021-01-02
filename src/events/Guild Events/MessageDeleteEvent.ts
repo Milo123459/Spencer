@@ -3,7 +3,7 @@ import { Anything } from '../../interfaces/Anything';
 import { Message, TextChannel, Util } from 'discord.js';
 
 export const run: RunFunction = async (client, message: Message) => {
-	if (message?.author?.bot) return;
+	if (!message.author || !message?.author?.bot) return;
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
