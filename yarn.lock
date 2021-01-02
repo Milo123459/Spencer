@@ -461,10 +461,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10":
-  version: 14.14.16
-  resolution: "@types/node@npm:14.14.16"
-  checksum: 220a7496ec73861ad7fb4ae762618bb46ac9d5d5f92f3a2fcebfd1a81a509ff558eface7bcd1d632598a8a28f856a74b324e7165918e8334a59c221cb06d15e3
+"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.19":
+  version: 14.14.19
+  resolution: "@types/node@npm:14.14.19"
+  checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
   languageName: node
   linkType: hard
 
@@ -472,13 +472,6 @@ __metadata:
   version: 13.13.38
   resolution: "@types/node@npm:13.13.38"
   checksum: b373d9285c7c6c867144d83df00095b201b9d6ea9211694c9b5df25bcd0f78f70e46da22aed3e31f7cc3ea4a326fb59c15326a051805e1cac5ae5df6dee56008
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.14.19":
-  version: 14.14.19
-  resolution: "@types/node@npm:14.14.19"
-  checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
   languageName: node
   linkType: hard
 
@@ -2671,17 +2664,17 @@ fsevents@~2.1.2:
   linkType: hard
 
 "git-raw-commits@npm:^2.0.0":
-  version: 2.0.8
-  resolution: "git-raw-commits@npm:2.0.8"
+  version: 2.0.9
+  resolution: "git-raw-commits@npm:2.0.9"
   dependencies:
     dargs: ^7.0.0
     lodash.template: ^4.0.2
     meow: ^8.0.0
-    split2: ^2.0.0
+    split2: ^3.0.0
     through2: ^4.0.0
   bin:
     git-raw-commits: cli.js
-  checksum: e61b9d747ee57beb6dd6cefcf35cbada93cf7c567d5301a3e6b6057e7c8f976316c1f4003b0e355e9d3392c70444defd15b0550d26902ce66f4003f5467a7763
+  checksum: 8824db4732ea0a74dc74adc120e1cd98515e2bd253125621e89a66f10a77e126fbb207c3f60132936603736c508b15cd09172edee27237b34622462713e4c3f9
   languageName: node
   linkType: hard
 
@@ -3740,19 +3733,19 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mime-db@npm:1.44.0":
-  version: 1.44.0
-  resolution: "mime-db@npm:1.44.0"
-  checksum: b4e3b2141418572fba9786f7e36324faef15e23032ad0871f56760cb304ee721ba4c8cc795d3c1cac69a2a8b94045c1d6b08c4a8d1ef6ba1226a3a5193915c57
+"mime-db@npm:1.45.0":
+  version: 1.45.0
+  resolution: "mime-db@npm:1.45.0"
+  checksum: 86701c54f748c72a5c05c16f881cdfa01db44a61e52f4cef3d872b5f3e4a3c4186c28df7a5fec31debc9bee42d5afc9b86ff8ff3d3eaf1440f07140b94a33d4a
   languageName: node
   linkType: hard
 
 "mime-types@npm:^2.1.12, mime-types@npm:~2.1.19, mime-types@npm:~2.1.24":
-  version: 2.1.27
-  resolution: "mime-types@npm:2.1.27"
+  version: 2.1.28
+  resolution: "mime-types@npm:2.1.28"
   dependencies:
-    mime-db: 1.44.0
-  checksum: 51fe2f2c08c10ac7a2f67e2ce5de30f6500faa88d095418a1ab6e90e30960db7c682a8ecce60d3d4e293ac52c4700ca99399833db998ea9ec83d6f0503b70a94
+    mime-db: 1.45.0
+  checksum: 89d14a1af2be7f3c9682d1af98f422addce894b9c3ed1e67acb6e59e4c910c58a3586db686d894b47708d07c2ae76de4246b66dc4a7d698b0d1bd761c309bb92
   languageName: node
   linkType: hard
 
@@ -4699,7 +4692,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:3, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -5287,6 +5280,15 @@ fsevents@~2.1.2:
   dependencies:
     through2: ^2.0.2
   checksum: cf58dc8aa424499cd68a9e7d9ae94441ff972ce0c1f9599bef9d65b3f4384913c557eeec939ea34e2832309d90b6ad6993c5b51b152cba2f72500299464e6a9c
+  languageName: node
+  linkType: hard
+
+"split2@npm:^3.0.0":
+  version: 3.2.2
+  resolution: "split2@npm:3.2.2"
+  dependencies:
+    readable-stream: ^3.0.0
+  checksum: 04bf20af25bfe917edbb7f719cc9dbd2ca16633e4e6a5e343a8c834310aafd802c74b3aceb96acf3571545b0340d55d2d3273dbee8f9bc6a811371dcfbe0c8a7
   languageName: node
   linkType: hard
 
