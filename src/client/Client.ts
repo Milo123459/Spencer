@@ -88,24 +88,6 @@ class Spencer extends Client {
 		});
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
-
-		setInterval(async () => {
-			const RemindersSchema = await this.db.load('reminder');
-			const EconomySchema = await this.db.load('usereconomy');
-			const SuggestionSchema = await this.db.load('suggestion');
-			const GuildConfigSchema = await this.db.load('guildconfig');
-			const RaidUserSchema = await this.db.load('raiduser');
-			const Reminders = (await RemindersSchema.find({})).length;
-			const Economies = (await EconomySchema.find({})).length;
-			const Suggestions = (await SuggestionSchema.find({})).length;
-			const GuildConfigs = (await GuildConfigSchema.find({})).length;
-			const RaidUsers = (await RaidUserSchema.find({})).length;
-			this.remindersMetric.set(Reminders);
-			this.economiesMetric.set(Economies);
-			this.suggestionsMetric.set(Suggestions);
-			this.guildConfigMetric.set(GuildConfigs);
-			this.raidUsersMetric.set(RaidUsers);
-		}, 1000 * 60);
 	}
 	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
 		return new MessageEmbed({
