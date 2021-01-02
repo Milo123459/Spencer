@@ -14,6 +14,7 @@ export const run: RunFunction = async (client) => {
 	});
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
+
 		(await ReminderSchema.find({})).map(async (value: Document) => {
 			if (Date.now() >= (value as Anything).Time) {
 				const User: User = client.users.cache.get((value as Anything).User);

@@ -63,11 +63,7 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-		return EconomySchema.decrement(
-			{ User: message.author.id },
-			'Coins',
-			500
-		);
+		return EconomySchema.decrement({ User: message.author.id }, 'Coins', 500);
 	} else {
 		const Amount =
 			Math.floor(Math.random() * ((TargetProfile as Anything)?.Coins || 1)) / 2;

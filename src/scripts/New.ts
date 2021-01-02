@@ -3,7 +3,6 @@ import glob from 'glob';
 import fs from 'fs/promises';
 import prettier from 'prettier';
 import { promisify } from 'util';
-
 const globPromise = promisify(glob);
 (async () => {
 	const categorySet: Set<string> = new Set();
