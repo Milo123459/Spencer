@@ -15,8 +15,7 @@
 		"gbump": "yarn bump && yarn sdk && git-go 'chore(Deps): bump deps'",
 		"new": "ts-node ./src/scripts/New.ts",
 		"test:language": "ts-node ./src/language/test.ts",
-		"nb": "git checkout master && git pull && git checkout -b",
-		"git": "ts-node ./src/scripts/Git.ts"
+		"nb": "git checkout master && git pull && git checkout -b"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
@@ -66,7 +65,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn doctor && yarn analyze && git add . && lint-staged",
+			"pre-commit": "yarn analyze && git add . && lint-staged",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
