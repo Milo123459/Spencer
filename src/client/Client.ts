@@ -12,6 +12,7 @@ import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
+import pm2 from '@pm2/io';
 import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
@@ -33,6 +34,17 @@ class Spencer extends Client {
 	public owners: Array<string>;
 	public config: Config;
 	public vacefron: VACEFronJS = new VACEFronJS();
+	public remindersMetric = pm2.metric({ name: 'reminders', unit: 'number' });
+	public economiesMetric = pm2.metric({ name: 'economies', unit: 'number' });
+	public suggestionsMetric = pm2.metric({
+		name: 'suggestions',
+		unit: 'number',
+	});
+	public guildConfigMetric = pm2.metric({
+		name: 'guildconfigs',
+		unit: 'number',
+	});
+	public raidUsersMetric = pm2.metric({ name: 'raidusers', unit: 'number' });
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
