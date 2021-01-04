@@ -355,13 +355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@top-gg/sdk@npm:^3.0.5":
-  version: 3.0.5
-  resolution: "@top-gg/sdk@npm:3.0.5"
+"@top-gg/sdk@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@top-gg/sdk@npm:3.0.6"
   dependencies:
     node-fetch: ^2.6.1
     raw-body: ^2.4.1
-  checksum: 111a603354e29c5ef6900c679987e6bac3df9d1d6e5aa10a03de5b6601c214bdcdc8c6bbfa3428cd2d60c366ad5f818ac7d3dba910d7cd8164a56b35d75e8b01
+  checksum: 2dc3ff882c795bd6fb9cc65e73fbe48ef2109af2bd3868bc445529ac20968e363359f68a9c6a86d1667725f35a563cf0950e7aceadf8eae6fae17e499c628125
   languageName: node
   linkType: hard
 
@@ -1521,13 +1521,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bufferutil@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "bufferutil@npm:4.0.2"
+"bufferutil@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "bufferutil@npm:4.0.3"
   dependencies:
     node-gyp: latest
     node-gyp-build: ^4.2.0
-  checksum: cb71bbdc609b6de49aaf2ff45fac5c64c55ff965f6bfe6f2bc357cc05afce69206a9ca1567011951b3f18b54dca24ef21be407d8ffce5a38a5f87bc2416140dd
+  checksum: 38ffbf450e071e2fc2a1ba2e353d5602749e74fcc0a302322c331a68d089c5bfcfb7b71dbc7fa07cbf08c15eb94128e5478ba8392a7a3691fd3277ef2c61665c
   languageName: node
   linkType: hard
 
@@ -5710,7 +5710,7 @@ fsevents@~2.1.2:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-angular": ^11.0.0
     "@pm2/io": ^4.3.5
-    "@top-gg/sdk": ^3.0.5
+    "@top-gg/sdk": ^3.0.6
     "@types/express": ^4.17.9
     "@types/glob": ^7.1.3
     "@types/mathjs": ^6.0.9
@@ -5723,7 +5723,7 @@ fsevents@~2.1.2:
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
     alpha-sort: ^4.0.0
-    bufferutil: ^4.0.2
+    bufferutil: ^4.0.3
     cleverbot-free: ^1.0.5
     consola: ^2.15.0
     del-cli: ^3.0.1
@@ -5744,7 +5744,7 @@ fsevents@~2.1.2:
     ts-node-dev: ^1.1.1
     tslib: ^2.0.3
     typescript: ^4.1.3
-    utf-8-validate: ^5.0.3
+    utf-8-validate: ^5.0.4
     vacefron: ^3.2.0
     yn: ^4.0.0
     zlib-sync: ^0.1.7
@@ -6423,13 +6423,13 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"utf-8-validate@npm:^5.0.3":
-  version: 5.0.3
-  resolution: "utf-8-validate@npm:5.0.3"
+"utf-8-validate@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "utf-8-validate@npm:5.0.4"
   dependencies:
     node-gyp: latest
     node-gyp-build: ^4.2.0
-  checksum: 0204294d8584ffba171c6b0f97613a4a9c882152067672b45f533f2c640786042ee2b4aeb5f390d6a741eb93b0dc925404652a78c29f9348e6cd422cbdaa44ca
+  checksum: 14dc9e6af0471436a419505205d2d46a9e89109fe88b0920abe58323029ef260a454b9e27ce5a6700b40c15f182bb139f0bd3eb7c58e318b92eaf4d522be04af
   languageName: node
   linkType: hard
 

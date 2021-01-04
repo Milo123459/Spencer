@@ -21,9 +21,9 @@
 	"license": "Creative Commons",
 	"dependencies": {
 		"@pm2/io": "^4.3.5",
-		"@top-gg/sdk": "^3.0.5",
+		"@top-gg/sdk": "^3.0.6",
 		"alpha-sort": "^4.0.0",
-		"bufferutil": "^4.0.2",
+		"bufferutil": "^4.0.3",
 		"cleverbot-free": "^1.0.5",
 		"consola": "^2.15.0",
 		"discord.js": "^12.5.1",
@@ -36,7 +36,7 @@
 		"node-fetch": "^2.6.1",
 		"prompts": "^2.4.0",
 		"tslib": "^2.0.3",
-		"utf-8-validate": "^5.0.3",
+		"utf-8-validate": "^5.0.4",
 		"vacefron": "^3.2.0",
 		"yn": "^4.0.0",
 		"zlib-sync": "^0.1.7"
