@@ -50,7 +50,7 @@ export const run: RunFunction = async (client, message, args) => {
 		client.embed(
 			{
 				description:
-					"Done, please make sure you're DMs are open! Note: Reminders are checked every minute, so if you set something less then a minute, you may be waiting a bit longer!",
+					'Done, please make sure your DMs are open! Note: Reminders are checked every minute, so if you set something less then a minute, you may be waiting a bit longer!',
 			},
 			message
 		)
