@@ -42,7 +42,7 @@ export const run: RunFunction = async (client, message: Message) => {
 							)
 						);
 					} catch {
-						return await message.channel.send(
+						return message.channel.send(
 							client.embed(
 								{
 									description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
@@ -72,7 +72,7 @@ export const run: RunFunction = async (client, message: Message) => {
 							)
 						);
 					} catch {
-						return await message.channel.send(
+						return message.channel.send(
 							client.embed(
 								{
 									description: `I can't ban ${message.author.tag} - I either don't have BAN_MEMBERS or my highest role is either equal to the user or lower.`,
