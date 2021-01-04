@@ -1,4 +1,4 @@
-import { GuildMember, Message, TextChannel } from 'discord.js';
+import { Message, TextChannel } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'message';
