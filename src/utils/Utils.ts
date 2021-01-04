@@ -135,5 +135,9 @@ class UtilsManager {
 	public randomElement(arr: any[]): any {
 		return arr[Math.floor(Math.random() * arr.length)];
 	}
+	public async getItems(schema: string): Promise<number> {
+		const loaded = await this.client.db.load(schema);
+		return (await loaded.find({})).length;
+	}
 }
 export { UtilsManager };

@@ -10,6 +10,7 @@ import {
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
+import io from '@pm2/io';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
 import { Command } from '../interfaces/Command';
@@ -33,6 +34,12 @@ class Spencer extends Client {
 	public owners: Array<string>;
 	public config: Config;
 	public vacefron: VACEFronJS = new VACEFronJS();
+	public pm2 = io.init();
+	public guildconfigMetric = this.pm2.metric({ name: 'guildconfigs' });
+	public raiduserMetric = this.pm2.metric({ name: 'raidusers' });
+	public reminderMetric = this.pm2.metric({ name: 'reminders' });
+	public suggestionMetric = this.pm2.metric({ name: 'suggestions' });
+	public usereconomyMetric = this.pm2.metric({ name: 'usereconomies' });
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
