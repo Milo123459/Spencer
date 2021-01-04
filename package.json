@@ -16,7 +16,7 @@
 		"new": "ts-node ./src/scripts/New.ts",
 		"test:language": "ts-node ./src/language/test.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
-		"start": "pm2 start dist/src/index.js --name Spencer"
+		"start": "yarn start:core && pm2 start dist/src/index.js --name Spencer"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
