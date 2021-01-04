@@ -115,35 +115,6 @@ export const subcommands: Array<SubCommand> = [
 	},
 	{
 		schema: 'guildconfig',
-		key: 'MessageLogsChannel',
-		description:
-			'Set up the channel allowing deleted / edited messages to be logged.',
-		search: (client, message) => new Object({ Guild: message.guild.id }),
-		validate: (client, message, args) => {
-			let value: boolean;
-			const channel: GuildChannel | undefined = client.utils.ResolveChannel(
-				message,
-				args[0]
-			);
-			if (!channel) value = undefined;
-			else {
-				value =
-					message.member.permissions.has('MANAGE_GUILD') &&
-					channel.isText() &&
-					channel.permissionsFor(message.guild.me).has('SEND_MESSAGES');
-			}
-			return {
-				value,
-				fix:
-					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES',
-				success: !!value,
-			};
-		},
-		parseToDB: (client, message, args) =>
-			client.utils.ResolveChannel(message, args[0]).id,
-	},
-	{
-		schema: 'guildconfig',
 		key: 'AntiRaid',
 		description:
 			"Setup the anti-raid level. Make sure my role is higher then the user that'd be banned/kicked.",
