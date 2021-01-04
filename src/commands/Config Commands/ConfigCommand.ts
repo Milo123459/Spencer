@@ -45,7 +45,7 @@ export const run: RunFunction = async (client, message, args) => {
 			subcommand.schema == 'guildconfig' &&
 			!message.member.permissions.has('ADMINISTRATOR')
 		)
-			return await message.channel.send(
+			return message.channel.send(
 				client.embed({ description: 'Come back with admin...' }, message)
 			);
 		await (await client.db.load(subcommand.schema)).update(
