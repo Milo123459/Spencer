@@ -10,6 +10,8 @@
 
 Spencer is a discord bot. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
 
+Looking for the website? Try [here](https://github.com/Milo123459/spencer-web)
+
 You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=765156777607823380&permissions=8&scope=bot)
 
 You can join the support server [here](https://discord.gg/22TtDpJcNE)
