@@ -528,7 +528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.19":
+"@types/node@npm:*, @types/node@npm:^14.11.10":
   version: 14.14.19
   resolution: "@types/node@npm:14.14.19"
   checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
@@ -539,6 +539,13 @@ __metadata:
   version: 13.13.38
   resolution: "@types/node@npm:13.13.38"
   checksum: b373d9285c7c6c867144d83df00095b201b9d6ea9211694c9b5df25bcd0f78f70e46da22aed3e31f7cc3ea4a326fb59c15326a051805e1cac5ae5df6dee56008
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.20":
+  version: 14.14.20
+  resolution: "@types/node@npm:14.14.20"
+  checksum: 84a9fd73de978967723f951173ff4d07dca259941d3e37c7a3dbb236c09b3f2294bb2098678a806afe6fd6cac39a7d0a1d399f602378c951bd5d01ede535d570
   languageName: node
   linkType: hard
 
@@ -4240,30 +4247,30 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.9, mongoose@npm:^5.11.9":
-  version: 5.11.9
-  resolution: "mongoose@npm:5.11.9"
+"mongoose@npm:5.11.10, mongoose@npm:^5.11.10":
+  version: 5.11.10
+  resolution: "mongoose@npm:5.11.10"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.2
     mongodb: 3.6.3
     mongoose-legacy-pluralize: 1.0.2
-    mpath: 0.8.1
+    mpath: 0.8.3
     mquery: 3.2.3
     ms: 2.1.2
     regexp-clone: 1.0.0
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: c5c637091d3fc5ce04407bc6c65949d211ccd38cf2b740bfb23413feb0650662a3e841867ed84b9fcdaf941d23c24d09ba2b8aedb2d6fe99de5452b96a5bc092
+  checksum: 978033afb1d32a45f833cb98f75306ce4b16622b03c6776c31ba5ecc2e4cee5f62babb17d074bbbfdff1ac86f354b46e00179221ebda859aa7ddbc24886fdc4f
   languageName: node
   linkType: hard
 
-"mpath@npm:0.8.1":
-  version: 0.8.1
-  resolution: "mpath@npm:0.8.1"
-  checksum: b2f1bafaaaadfd4306de79d6eb0ba8115063f65415539173c088f820550ab6b00c0a9f29a261aba6c64e63de23c745d379ac36764400e86f77330f3d09758065
+"mpath@npm:0.8.3":
+  version: 0.8.3
+  resolution: "mpath@npm:0.8.3"
+  checksum: 6c129da222169bcf2eb28ae73abca2a8a32c3c659748efd496308aed21c7dca7a9a923de53a5a1df3d898f5eba74c704fdf352ca68e5ecb602d2352a9d5ab90e
   languageName: node
   linkType: hard
 
@@ -5716,7 +5723,7 @@ fsevents@~2.1.2:
     "@types/mathjs": ^6.0.9
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.19
+    "@types/node": ^14.14.20
     "@types/node-fetch": ^2.5.7
     "@types/prettier": ^2.1.6
     "@types/prompts": ^2.0.9
@@ -5735,7 +5742,7 @@ fsevents@~2.1.2:
     imageapi.js: ^1.3.0
     lint-staged: ^10.5.3
     mathjs: ^8.1.1
-    mongoose: ^5.11.9
+    mongoose: ^5.11.10
     ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
