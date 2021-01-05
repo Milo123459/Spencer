@@ -528,24 +528,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10":
-  version: 14.14.19
-  resolution: "@types/node@npm:14.14.19"
-  checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
+"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.20":
+  version: 14.14.20
+  resolution: "@types/node@npm:14.14.20"
+  checksum: 84a9fd73de978967723f951173ff4d07dca259941d3e37c7a3dbb236c09b3f2294bb2098678a806afe6fd6cac39a7d0a1d399f602378c951bd5d01ede535d570
   languageName: node
   linkType: hard
 
 "@types/node@npm:^13.7.0":
-  version: 13.13.38
-  resolution: "@types/node@npm:13.13.38"
-  checksum: b373d9285c7c6c867144d83df00095b201b9d6ea9211694c9b5df25bcd0f78f70e46da22aed3e31f7cc3ea4a326fb59c15326a051805e1cac5ae5df6dee56008
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.14.20":
-  version: 14.14.20
-  resolution: "@types/node@npm:14.14.20"
-  checksum: 84a9fd73de978967723f951173ff4d07dca259941d3e37c7a3dbb236c09b3f2294bb2098678a806afe6fd6cac39a7d0a1d399f602378c951bd5d01ede535d570
+  version: 13.13.39
+  resolution: "@types/node@npm:13.13.39"
+  checksum: f618cab2f86dc6dada7600d51a552cb3d4e40f19e3e299a148ff13d9d5fba10e55d010db77e3e3267030f1d490e600e01f0fc21ed1d371fb4083e3bc8045695c
   languageName: node
   linkType: hard
 
@@ -2222,9 +2215,9 @@ __metadata:
   linkType: hard
 
 "denque@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "denque@npm:1.4.1"
-  checksum: 174e81b3c9407b2149216d9e793fb91d901c19b1225dceefdafe32d5abeca243382ffee9bb111a1f60e42d2791b457d029bb57379d48404b2fb351bf700b6a8c
+  version: 1.5.0
+  resolution: "denque@npm:1.5.0"
+  checksum: 3564778cda60c7dee3f1d71e397e50e6b39a8c06118aab9843b9396cb621b3191ab56d13de5237b8beee2b87bec485e8239c58ca3133472d2d1eaa3d2d518022
   languageName: node
   linkType: hard
 
