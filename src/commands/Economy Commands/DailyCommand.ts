@@ -5,7 +5,6 @@ import ms from 'ms';
 export const run: RunFunction = async (client, message) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const UserProfile = await EconomySchema.findOne({ User: message.author.id });
-	console.log((UserProfile as Anything).Daily - Date.now());
 	if (
 		!(UserProfile as Anything)?.Daily ||
 		Date.now() >= (UserProfile as Anything).Daily
@@ -14,7 +13,20 @@ export const run: RunFunction = async (client, message) => {
 			{ User: message.author.id },
 			{ Daily: Date.now() + ms('1d') }
 		);
-		await EconomySchema.increment({ User: message.author.id }, 'Coins', 2000);
+		let coinsToGive: number = 4000;
+		if (
+			(UserProfile as Anything)?.VoteReminder &&
+			(await client.topGGApi.getVotes()).filter(
+				(value) => value.id == message.author.id
+			).length
+		) {
+			coinsToGive += 1000;
+		}
+		await EconomySchema.increment(
+			{ User: message.author.id },
+			'Coins',
+			coinsToGive
+		);
 		return message.channel.send(
 			client.embed(
 				{ description: 'Placed 2000 coins in your account.' },

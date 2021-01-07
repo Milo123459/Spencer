@@ -18,6 +18,7 @@ import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
 import { VACEFronJS } from 'vacefron';
+import { Api, Webhook } from '@top-gg/sdk';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -40,6 +41,8 @@ class Spencer extends Client {
 	public reminderMetric = this.pm2.metric({ name: 'reminders' });
 	public suggestionMetric = this.pm2.metric({ name: 'suggestions' });
 	public usereconomyMetric = this.pm2.metric({ name: 'usereconomies' });
+	public topGGApi: Api;
+	public topGGWebhook: Webhook;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -61,6 +64,8 @@ class Spencer extends Client {
 				useUnifiedTopology: true,
 			})
 			.catch((e) => this.logger.error(e));
+		this.topGGApi = new Api(this.config.topGGToken);
+		this.topGGWebhook = new Webhook(this.config.webAuth);
 		const commandFiles: string[] = await globPromise(
 			`${__dirname}/../commands/**/*{.js,.ts}`
 		);
