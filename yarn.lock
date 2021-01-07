@@ -1658,12 +1658,12 @@ __metadata:
   linkType: hard
 
 "chokidar@npm:^3.4.0":
-  version: 3.4.3
-  resolution: "chokidar@npm:3.4.3"
+  version: 3.5.0
+  resolution: "chokidar@npm:3.5.0"
   dependencies:
     anymatch: ~3.1.1
     braces: ~3.0.2
-    fsevents: ~2.1.2
+    fsevents: ~2.3.1
     glob-parent: ~5.1.0
     is-binary-path: ~2.1.0
     is-glob: ~4.0.1
@@ -1672,7 +1672,7 @@ __metadata:
   dependenciesMeta:
     fsevents:
       optional: true
-  checksum: b5a566b31267b1a71c2e7544fbf8c21f597883515d9bfc0356719be6c3b34ee51b0329f3ee5f5d98060ce2930be68f8c33b53f8b3659dc101fd51be265831deb
+  checksum: 36c67d9d4b5a96006bc023b8c4799b4a5697ac602b3bd1cbcec54f8516c5625382aaee0bc9e2325b7fa288b1d67ecdc308911f7448b55cfe37c384ff1f8cb62a
   languageName: node
   linkType: hard
 
@@ -2805,21 +2805,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
-  version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
+"fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>":
+  version: 2.3.1
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"
   dependencies:
     node-gyp: latest
-  checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
+  checksum: 66b24358e15cdd0f705b456346e58b4613f2bf54206b47874decda4152614fb0632d2d662c92b0ea54810109f646e5233e4cdd64dbb2a1949070ee5dc14dab87
   languageName: node
   linkType: hard
 
-fsevents@~2.1.2:
-  version: 2.1.3
-  resolution: "fsevents@npm:2.1.3"
+fsevents@~2.3.1:
+  version: 2.3.1
+  resolution: "fsevents@npm:2.3.1"
   dependencies:
     node-gyp: latest
-  checksum: 8977781884d06c5bcb97b5f909efdce9683c925f2a0ce7e098d2cdffe2e0a0a50b1868547bb94dca75428c06535a4a70517a7bb3bb5a974d93bf9ffc067291eb
+  checksum: 32619a121e7f9ac8a5ce4954f5fdf06be68b7b1c16e4ac8fa6e5e13cbf97d83c86cdcdf872ab7b188ebb07b34d2271b7818aebfc305b4a7d5b35f4bc2117f8be
   languageName: node
   linkType: hard
 
@@ -3019,8 +3019,8 @@ fsevents@~2.1.2:
   linkType: hard
 
 "globby@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "globby@npm:11.0.1"
+  version: 11.0.2
+  resolution: "globby@npm:11.0.2"
   dependencies:
     array-union: ^2.1.0
     dir-glob: ^3.0.1
@@ -3028,7 +3028,7 @@ fsevents@~2.1.2:
     ignore: ^5.1.4
     merge2: ^1.3.0
     slash: ^3.0.0
-  checksum: e7239e9e468c3692aec31dc97b5efc13dd21edf38820baeda98118ade39f475c4ff9e7610859eb4a3c75277ca2616e371265fec3c626aba5db4335bc41c59ac7
+  checksum: d23f2a6b8897b97fb27422cde243e0fd406ebbaa821929293b27c977d169884f8112494cda4f456a51d0ec1e133e3ac703ec24bfed484e327305ea34a665eb06
   languageName: node
   linkType: hard
 
@@ -4010,11 +4010,12 @@ fsevents@~2.1.2:
   linkType: hard
 
 "meow@npm:^8.0.0":
-  version: 8.1.0
-  resolution: "meow@npm:8.1.0"
+  version: 8.1.1
+  resolution: "meow@npm:8.1.1"
   dependencies:
     "@types/minimist": ^1.2.0
     camelcase-keys: ^6.2.2
+    decamelize: ^1.2.0
     decamelize-keys: ^1.1.0
     hard-rejection: ^2.1.0
     minimist-options: 4.1.0
@@ -4024,7 +4025,7 @@ fsevents@~2.1.2:
     trim-newlines: ^3.0.0
     type-fest: ^0.18.0
     yargs-parser: ^20.2.3
-  checksum: 74dfb3e9f2b33dcbac60a2500818cdf18ea77c6196a743baa2c0940317e62a707c003e280fca09fa8186f6af17db3e47152565605079bd0bddce9f3b26f547f4
+  checksum: bde91695e2d5d7491668ff986a8001310c4c9dc25522ce3bc5386ea27dcc07e5fa6052f3a0c9f2f484da6a19db8c7913cded734dd10d9c8a8006649e1a3c61e2
   languageName: node
   linkType: hard
 
@@ -5742,6 +5743,7 @@ fsevents@~2.1.2:
     prompts: ^2.4.0
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1
+    tslib: ^2.1.0
     typescript: ^4.1.3
     utf-8-validate: ^5.0.4
     vacefron: ^3.2.0
@@ -6254,10 +6256,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.1, tslib@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "tslib@npm:2.0.3"
-  checksum: 447bfca5deaa157806c3f77eaba74d05dd0b38b014e47ce79d98b5c77ce7d91b00a687ba13ca1b5a74d35ca1098ac7a072c0a97fad06f0266612f2a03a6c8e8f
+"tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "tslib@npm:2.1.0"
+  checksum: d8f5bdd067611651c6b846c2388f4dc8ba1f5af124e66105f5263d1ad56da17f4b8c6566887ca2f205c5a9758451871ceca87d5d06087af2dca1699c5e33db69
   languageName: node
   linkType: hard
 

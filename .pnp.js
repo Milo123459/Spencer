@@ -72,6 +72,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prompts", "npm:2.4.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
+            ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.2.0"],
@@ -864,7 +865,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clipanion", "npm:2.6.2"],
             ["cross-spawn", "npm:7.0.3"],
             ["diff", "npm:4.0.2"],
-            ["globby", "npm:11.0.1"],
+            ["globby", "npm:11.0.2"],
             ["got", "npm:11.8.1"],
             ["json-file-plus", "npm:3.3.1"],
             ["lodash", "npm:4.17.20"],
@@ -892,7 +893,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/core", "npm:2.4.0"],
             ["@yarnpkg/fslib", "npm:2.4.0"],
             ["clipanion", "npm:2.6.2"],
-            ["globby", "npm:11.0.1"],
+            ["globby", "npm:11.0.2"],
             ["micromatch", "npm:4.0.2"],
             ["p-limit", "npm:2.3.0"],
             ["tslib", "npm:1.14.1"],
@@ -1814,7 +1815,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ast-types-npm-0.14.2-43c4ac4b0d-42bb8a72ce.zip/node_modules/ast-types/",
           "packageDependencies": [
             ["ast-types", "npm:0.14.2"],
-            ["tslib", "npm:2.0.3"]
+            ["tslib", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2190,13 +2191,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["chokidar", [
-        ["npm:3.4.3", {
-          "packageLocation": "./.yarn/cache/chokidar-npm-3.4.3-58f7548978-b5a566b312.zip/node_modules/chokidar/",
+        ["npm:3.5.0", {
+          "packageLocation": "./.yarn/cache/chokidar-npm-3.5.0-c42c4eef11-36c67d9d4b.zip/node_modules/chokidar/",
           "packageDependencies": [
-            ["chokidar", "npm:3.4.3"],
+            ["chokidar", "npm:3.5.0"],
             ["anymatch", "npm:3.1.1"],
             ["braces", "npm:3.0.2"],
-            ["fsevents", "patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"],
+            ["fsevents", "patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"],
             ["glob-parent", "npm:5.1.1"],
             ["is-binary-path", "npm:2.1.0"],
             ["is-glob", "npm:4.0.1"],
@@ -2494,7 +2495,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["JSONStream", "npm:1.3.5"],
             ["is-text-path", "npm:1.0.1"],
             ["lodash", "npm:4.17.20"],
-            ["meow", "npm:8.1.0"],
+            ["meow", "npm:8.1.1"],
             ["split2", "npm:2.2.0"],
             ["through2", "npm:4.0.2"],
             ["trim-off-newlines", "npm:1.0.1"]
@@ -3540,10 +3541,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fsevents", [
-        ["patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea", {
-          "packageLocation": "./.yarn/unplugged/fsevents-patch-5794df231e/node_modules/fsevents/",
+        ["patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea", {
+          "packageLocation": "./.yarn/unplugged/fsevents-patch-762d4cc204/node_modules/fsevents/",
           "packageDependencies": [
-            ["fsevents", "patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"],
+            ["fsevents", "patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"],
             ["node-gyp", "npm:7.1.2"]
           ],
           "linkType": "HARD",
@@ -3683,7 +3684,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["git-raw-commits", "npm:2.0.9"],
             ["dargs", "npm:7.0.0"],
             ["lodash.template", "npm:4.5.0"],
-            ["meow", "npm:8.1.0"],
+            ["meow", "npm:8.1.1"],
             ["split2", "npm:3.2.2"],
             ["through2", "npm:4.0.2"]
           ],
@@ -3762,10 +3763,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:11.0.1", {
-          "packageLocation": "./.yarn/cache/globby-npm-11.0.1-b32c0f1cff-e7239e9e46.zip/node_modules/globby/",
+        ["npm:11.0.2", {
+          "packageLocation": "./.yarn/cache/globby-npm-11.0.2-7ff8329b4b-d23f2a6b88.zip/node_modules/globby/",
           "packageDependencies": [
-            ["globby", "npm:11.0.1"],
+            ["globby", "npm:11.0.2"],
             ["array-union", "npm:2.1.0"],
             ["dir-glob", "npm:3.0.1"],
             ["fast-glob", "npm:3.2.4"],
@@ -4900,12 +4901,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:8.1.0", {
-          "packageLocation": "./.yarn/cache/meow-npm-8.1.0-fddcd55b28-74dfb3e9f2.zip/node_modules/meow/",
+        ["npm:8.1.1", {
+          "packageLocation": "./.yarn/cache/meow-npm-8.1.1-19f9dced48-bde91695e2.zip/node_modules/meow/",
           "packageDependencies": [
-            ["meow", "npm:8.1.0"],
+            ["meow", "npm:8.1.1"],
             ["@types/minimist", "npm:1.2.1"],
             ["camelcase-keys", "npm:6.2.2"],
+            ["decamelize", "npm:1.2.0"],
             ["decamelize-keys", "npm:1.1.0"],
             ["hard-rejection", "npm:2.1.0"],
             ["minimist-options", "npm:4.1.0"],
@@ -6834,6 +6836,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prompts", "npm:2.4.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
+            ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.2.0"],
@@ -7349,7 +7352,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["@types/node-notifier", null],
             ["@types/typescript", null],
-            ["chokidar", "npm:3.4.3"],
+            ["chokidar", "npm:3.5.0"],
             ["dateformat", "npm:1.0.12"],
             ["dynamic-dedupe", "npm:0.3.0"],
             ["minimist", "npm:1.2.5"],
@@ -7400,10 +7403,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/tslib-npm-2.0.3-62a2b3751d-447bfca5de.zip/node_modules/tslib/",
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/tslib-npm-2.1.0-81c9ac9b82-d8f5bdd067.zip/node_modules/tslib/",
           "packageDependencies": [
-            ["tslib", "npm:2.0.3"]
+            ["tslib", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -7607,7 +7610,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.20"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["node-fetch", "npm:2.6.1"],
-            ["tslib", "npm:2.0.3"]
+            ["tslib", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
