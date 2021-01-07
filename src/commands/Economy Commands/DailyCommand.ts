@@ -16,9 +16,7 @@ export const run: RunFunction = async (client, message) => {
 		let coinsToGive: number = 4000;
 		if (
 			(UserProfile as Anything)?.VoteReminder &&
-			(await client.topGGApi.getVotes()).filter(
-				(value) => value.id == message.author.id
-			).length
+			(await client.topGGApi.hasVoted(message.author.id))
 		) {
 			coinsToGive += 1000;
 		}
