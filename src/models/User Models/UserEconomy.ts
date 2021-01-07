@@ -8,5 +8,6 @@ export const data = model(
 		VoteReminder: Boolean,
 		Job: String,
 		DepositedCoins: Number,
+		Daily: Number,
 	})
 );
