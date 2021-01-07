@@ -29,7 +29,9 @@ export const run: RunFunction = async (client, message) => {
 		);
 		return message.channel.send(
 			client.embed(
-				{ description: 'Placed 2000 coins in your account.' },
+				{
+					description: `Placed ${coinsToGive} coins in your account.\nDid you know you can earn 5000 coins rather then 4000 by following these simple steps!\n[prefix]config votereminder true\n...and make sure you have voted in the last 12 hours!`,
+				},
 				message
 			)
 		);
