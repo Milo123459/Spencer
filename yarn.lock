@@ -4010,12 +4010,11 @@ fsevents@~2.3.1:
   linkType: hard
 
 "meow@npm:^8.0.0":
-  version: 8.1.1
-  resolution: "meow@npm:8.1.1"
+  version: 8.1.2
+  resolution: "meow@npm:8.1.2"
   dependencies:
     "@types/minimist": ^1.2.0
     camelcase-keys: ^6.2.2
-    decamelize: ^1.2.0
     decamelize-keys: ^1.1.0
     hard-rejection: ^2.1.0
     minimist-options: 4.1.0
@@ -4025,7 +4024,7 @@ fsevents@~2.3.1:
     trim-newlines: ^3.0.0
     type-fest: ^0.18.0
     yargs-parser: ^20.2.3
-  checksum: bde91695e2d5d7491668ff986a8001310c4c9dc25522ce3bc5386ea27dcc07e5fa6052f3a0c9f2f484da6a19db8c7913cded734dd10d9c8a8006649e1a3c61e2
+  checksum: 7246c3e824298dc1ceddc4b9930bf6a04df8f240d09e76ee180c4f9168df3d6a7d27593a5a3ef7005efbc1557780981e169a7acac56120c7bf2f99f5f54563aa
   languageName: node
   linkType: hard
 
@@ -4241,9 +4240,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.10, mongoose@npm:^5.11.10":
-  version: 5.11.10
-  resolution: "mongoose@npm:5.11.10"
+"mongoose@npm:5.11.11, mongoose@npm:^5.11.11":
+  version: 5.11.11
+  resolution: "mongoose@npm:5.11.11"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -4257,7 +4256,7 @@ fsevents@~2.3.1:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 978033afb1d32a45f833cb98f75306ce4b16622b03c6776c31ba5ecc2e4cee5f62babb17d074bbbfdff1ac86f354b46e00179221ebda859aa7ddbc24886fdc4f
+  checksum: 7e1ef49ddfec927e6017afc38b471f414bb1f90ff6b2454ae19b7dab4216f3926e491896fbc87b74485043064f064f21f59c8679fa875e79ad5cea2b92060f44
   languageName: node
   linkType: hard
 
@@ -5736,7 +5735,7 @@ fsevents@~2.3.1:
     imageapi.js: ^1.3.1
     lint-staged: ^10.5.3
     mathjs: ^8.1.1
-    mongoose: ^5.11.10
+    mongoose: ^5.11.11
     ms: ^2.1.3
     node-fetch: ^2.6.1
     prettier: ^2.2.1
@@ -6051,8 +6050,8 @@ fsevents@~2.3.1:
   linkType: hard
 
 "tar@npm:^6.0.2":
-  version: 6.0.5
-  resolution: "tar@npm:6.0.5"
+  version: 6.1.0
+  resolution: "tar@npm:6.1.0"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -6060,7 +6059,7 @@ fsevents@~2.3.1:
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: 7ae26210927bdf590686db21e66d5579020ccbebda93a1adffe266eb88ca8b152c56dd8ce0df87d81e3dbe709bfe8562b29c584871ba015ec868dec9062e91ea
+  checksum: d1d988eceb1ad2ecfaaf6fc5ecfe0c46fa005d04fe4c283355ccc52d3ffb4b6bf459a62f9ac7e36fd35251ab020399bdf527ab48b968120e06b4f61906a87d62
   languageName: node
   linkType: hard
 
