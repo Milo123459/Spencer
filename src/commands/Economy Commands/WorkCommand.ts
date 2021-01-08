@@ -197,6 +197,9 @@ export const run: RunFunction = async (client, message) => {
 			'end',
 			async (collected: Collection<string, Message>, reason: string) => {
 				try {
+					await message.delete();
+				} catch {}
+				try {
 					await collected.first().delete();
 				} catch {}
 				if (reason == 'failed')
@@ -223,16 +226,10 @@ export const run: RunFunction = async (client, message) => {
 						message
 					)
 				);
-				await giveMoney(
+				return await giveMoney(
 					message.author.id,
 					parseInt(collected.first().content) * 2
 				);
-				try {
-					await message.delete();
-					return;
-				} catch {
-					return;
-				}
 			}
 		);
 	} else {
