@@ -196,6 +196,9 @@ export const run: RunFunction = async (client, message) => {
 		messageCollector.on(
 			'end',
 			async (collected: Collection<string, Message>, reason: string) => {
+				try {
+					await collected.first().delete();
+				} catch {}
 				if (reason == 'failed')
 					return await msg.edit(
 						client.embed(
