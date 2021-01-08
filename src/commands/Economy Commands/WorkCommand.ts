@@ -16,7 +16,7 @@ export const run: RunFunction = async (client, message) => {
 				message
 			)
 		);
-	// decide a job
+	// get job
 	const Job: string = (User as Anything).Job;
 	// function to add money to user
 	const giveMoney = async (User: string, Coins: number) => {
@@ -82,7 +82,7 @@ export const run: RunFunction = async (client, message) => {
 			return msg.delete({ timeout: 1000 });
 		});
 		// decreased rate if they fail
-		const decreasedRate: number = Math.floor(Math.random() * 100);
+		const decreasedRate: number = Math.floor(Math.random() * 50);
 		// rate if they score
 		const rate: number = Math.floor(Math.random() * 100);
 		messageCollector.on(
@@ -169,6 +169,62 @@ export const run: RunFunction = async (client, message) => {
 						} catch {
 							return;
 						}
+				}
+			}
+		);
+	} else if (Job == 'Rocket scientist') {
+		// math
+		const current: number = Math.floor(Math.random() * 100);
+		const msg: Message = await message.channel.send(
+			client.embed(
+				{
+					description: `The rocket bosters only have ${current}L but it needs to be 100L. How many more litres do you need?`,
+				},
+				message
+			)
+		);
+		const messageCollector: MessageCollector = message.channel.createMessageCollector(
+			(m: Message) => m.author.id == message.author.id,
+			{ time: 10000, max: 1 }
+		);
+		messageCollector.on('collect', async (msg: Message) => {
+			if (isNaN(parseInt(msg.content))) return messageCollector.stop('failed');
+			else if (parseInt(msg.content) != 100 - current)
+				return messageCollector.stop('failed');
+			else return messageCollector.stop('success');
+		});
+		messageCollector.on(
+			'end',
+			async (collected: Collection<string, Message>, reason: string) => {
+				if (reason == 'failed')
+					return await msg.edit(
+						client.embed(
+							{
+								description:
+									"That wasn't right, sadly, you get nothing from that!",
+							},
+							message
+						)
+					);
+				await msg.edit(
+					client.embed(
+						{
+							description: `Congrats! You earned${
+								parseInt(collected.first().content) * 4
+							} coins!`,
+						},
+						message
+					)
+				);
+				await giveMoney(
+					message.author.id,
+					parseInt(collected.first().content) * 4
+				);
+				try {
+					await message.delete();
+					return;
+				} catch {
+					return;
 				}
 			}
 		);
