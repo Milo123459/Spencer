@@ -209,9 +209,9 @@ export const run: RunFunction = async (client, message) => {
 				await msg.edit(
 					client.embed(
 						{
-							description: `Congrats! You earned${
+							description: `Congrats! You earned **${
 								parseInt(collected.first().content) * 4
-							} coins!`,
+							}** coins!`,
 						},
 						message
 					)
