@@ -13,22 +13,24 @@ export const run: RunFunction = async (client, message, args) => {
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
-				} \`$${(UserCoins as Anything)?.Coins || 0}\` in ${
+				} \`$${((UserCoins as Anything)?.Coins || 0).toLocaleString()}\` in ${
 					User == message.author.id ? 'your' : 'their'
 				} wallet.\n${
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
-				} \`$${(UserCoins as Anything)?.DepositedCoins || 0}\` in ${
+				} \`$${(
+					(UserCoins as Anything)?.DepositedCoins || 0
+				).toLocaleString()}\` in ${
 					User == message.author.id ? 'your' : 'their'
 				} bank.\n${
 					User == message.author.id
 						? 'You have'
 						: `${message.guild.members.cache.get(User).displayName} has`
-				} \`$${
+				} \`$${(
 					((UserCoins as Anything)?.DepositedCoins || 0) +
 					((UserCoins as Anything)?.Coins || 0)
-				}\` in total.`,
+				).toLocaleString()}\` in total.`,
 			},
 			message
 		)
