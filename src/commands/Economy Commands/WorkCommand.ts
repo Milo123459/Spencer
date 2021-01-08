@@ -213,7 +213,7 @@ export const run: RunFunction = async (client, message) => {
 					client.embed(
 						{
 							description: `Congrats! You earned **${
-								parseInt(collected.first().content) * 4
+								parseInt(collected.first().content) * 2
 							}** coins!`,
 						},
 						message
@@ -221,7 +221,7 @@ export const run: RunFunction = async (client, message) => {
 				);
 				await giveMoney(
 					message.author.id,
-					parseInt(collected.first().content) * 4
+					parseInt(collected.first().content) * 2
 				);
 				try {
 					await message.delete();
