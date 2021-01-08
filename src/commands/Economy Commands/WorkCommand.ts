@@ -203,7 +203,7 @@ export const run: RunFunction = async (client, message) => {
 					await collected.first().delete();
 				} catch {}
 				if (reason == 'failed')
-					return await msg.edit(
+					return msg.edit(
 						client.embed(
 							{
 								description:
@@ -213,7 +213,7 @@ export const run: RunFunction = async (client, message) => {
 						)
 					);
 				if (reason == 'time')
-					return await msg.edit(
+					return msg.edit(
 						client.embed({ description: 'Try to respond next time!' }, message)
 					);
 				await msg.edit(
@@ -226,7 +226,7 @@ export const run: RunFunction = async (client, message) => {
 						message
 					)
 				);
-				return await giveMoney(
+				return giveMoney(
 					message.author.id,
 					parseInt(collected.first().content) * 2
 				);
