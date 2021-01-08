@@ -188,8 +188,9 @@ export const run: RunFunction = async (client, message) => {
 			{ time: 10000, max: 1 }
 		);
 		messageCollector.on('collect', async (msg: Message) => {
-			if (isNaN(parseInt(msg.content))) return messageCollector.stop('failed');
-			else if (parseInt(msg.content) != 100 - current)
+			if (isNaN(parseInt(msg.content, 10)))
+				return messageCollector.stop('failed');
+			else if (parseInt(msg.content, 10) != 100 - current)
 				return messageCollector.stop('failed');
 			else return messageCollector.stop('success');
 		});
@@ -220,7 +221,7 @@ export const run: RunFunction = async (client, message) => {
 					client.embed(
 						{
 							description: `Congrats! You earned **${
-								parseInt(collected.first().content) * 2
+								parseInt(collected.first().content, 10) * 2
 							}** coins!`,
 						},
 						message
@@ -228,7 +229,7 @@ export const run: RunFunction = async (client, message) => {
 				);
 				return giveMoney(
 					message.author.id,
-					parseInt(collected.first().content) * 2
+					parseInt(collected.first().content, 10) * 2
 				);
 			}
 		);
