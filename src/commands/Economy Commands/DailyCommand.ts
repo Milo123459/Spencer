@@ -37,9 +37,8 @@ export const run: RunFunction = async (client, message) => {
 		return message.channel.send(
 			client.embed(
 				{
-					description: `You can use this command again in \`${ms(
-						(UserProfile as Anything).Daily - Date.now(),
-						{ long: true }
+					description: `You can use this command again in \`${client.utils.formatMS(
+						(UserProfile as Anything).Daily - Date.now()
 					)}\`.`,
 				},
 				message
