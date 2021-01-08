@@ -123,8 +123,11 @@ export const run: RunFunction = async (client, message) => {
 						await giveMoney(message.author.id, decreasedRate);
 						// delete original message
 						try {
-							return await message.delete();
-						} catch {}
+							await message.delete();
+							return;
+						} catch {
+							return;
+						}
 					case 'time':
 						// dont give them anything
 						await msg.edit('');
@@ -140,8 +143,11 @@ export const run: RunFunction = async (client, message) => {
 						Game.length = 0;
 						// delete original message
 						try {
-							return await message.delete();
-						} catch {}
+							await message.delete();
+							return;
+						} catch {
+							return;
+						}
 					case 'scored':
 						// send a nice message
 						await msg.edit('');
@@ -158,8 +164,11 @@ export const run: RunFunction = async (client, message) => {
 						await giveMoney(message.author.id, rate);
 						// delete original message
 						try {
-							return await message.delete({ timeout: 3000 });
-						} catch {}
+							await message.delete();
+							return;
+						} catch {
+							return;
+						}
 				}
 			}
 		);
