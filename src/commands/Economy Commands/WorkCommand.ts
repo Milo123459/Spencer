@@ -209,6 +209,10 @@ export const run: RunFunction = async (client, message) => {
 							message
 						)
 					);
+				if (reason == 'time')
+					return await msg.edit(
+						client.embed({ description: 'Try to respond next time!' }, message)
+					);
 				await msg.edit(
 					client.embed(
 						{
