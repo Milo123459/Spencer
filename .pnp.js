@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
-            ["vacefron", "npm:3.2.0"],
+            ["vacefron", "npm:3.3.1"],
             ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
@@ -6839,7 +6839,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
-            ["vacefron", "npm:3.2.0"],
+            ["vacefron", "npm:3.3.1"],
             ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
@@ -7603,10 +7603,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["vacefron", [
-        ["npm:3.2.0", {
-          "packageLocation": "./.yarn/cache/vacefron-npm-3.2.0-61517541e8-2a53030683.zip/node_modules/vacefron/",
+        ["npm:3.3.1", {
+          "packageLocation": "./.yarn/cache/vacefron-npm-3.3.1-6d67021efb-677cdd6fc3.zip/node_modules/vacefron/",
           "packageDependencies": [
-            ["vacefron", "npm:3.2.0"],
+            ["vacefron", "npm:3.3.1"],
             ["@types/node", "npm:14.14.20"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["node-fetch", "npm:2.6.1"],
