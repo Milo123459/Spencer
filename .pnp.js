@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
-            ["vacefron", "npm:3.3.1"],
+            ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
@@ -2086,10 +2086,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["call-bind", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/call-bind-npm-1.0.0-6bb7f0ff8b-aeb82f8f5d.zip/node_modules/call-bind/",
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/call-bind-npm-1.0.1-3402c33ee1-be1156afc8.zip/node_modules/call-bind/",
           "packageDependencies": [
-            ["call-bind", "npm:1.0.0"],
+            ["call-bind", "npm:1.0.1"],
             ["function-bind", "npm:1.1.1"],
             ["get-intrinsic", "npm:1.0.2"]
           ],
@@ -5445,7 +5445,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/object.assign-npm-4.1.2-d52edada1c-a5855cc6db.zip/node_modules/object.assign/",
           "packageDependencies": [
             ["object.assign", "npm:4.1.2"],
-            ["call-bind", "npm:1.0.0"],
+            ["call-bind", "npm:1.0.1"],
             ["define-properties", "npm:1.1.3"],
             ["has-symbols", "npm:1.0.1"],
             ["object-keys", "npm:1.1.1"]
@@ -6838,7 +6838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
             ["utf-8-validate", "npm:5.0.4"],
-            ["vacefron", "npm:3.3.1"],
+            ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
@@ -7602,10 +7602,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["vacefron", [
-        ["npm:3.3.1", {
-          "packageLocation": "./.yarn/cache/vacefron-npm-3.3.1-6d67021efb-677cdd6fc3.zip/node_modules/vacefron/",
+        ["npm:3.4.0", {
+          "packageLocation": "./.yarn/cache/vacefron-npm-3.4.0-e0432db290-485c53313a.zip/node_modules/vacefron/",
           "packageDependencies": [
-            ["vacefron", "npm:3.3.1"],
+            ["vacefron", "npm:3.4.0"],
             ["@types/node", "npm:14.14.20"],
             ["@types/node-fetch", "npm:2.5.7"],
             ["node-fetch", "npm:2.6.1"],

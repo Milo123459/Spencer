@@ -38,7 +38,7 @@
 		"prompts": "^2.4.0",
 		"tslib": "^2.1.0",
 		"utf-8-validate": "^5.0.4",
-		"vacefron": "^3.3.1",
+		"vacefron": "^3.4.0",
 		"yn": "^4.0.0",
 		"zlib-sync": "^0.1.7"
 	},

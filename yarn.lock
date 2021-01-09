@@ -1561,12 +1561,12 @@ __metadata:
   linkType: hard
 
 "call-bind@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "call-bind@npm:1.0.0"
+  version: 1.0.1
+  resolution: "call-bind@npm:1.0.1"
   dependencies:
     function-bind: ^1.1.1
-    get-intrinsic: ^1.0.0
-  checksum: aeb82f8f5dfd56592c7dcef89367227daa60be4f8e7fdb7689d6c1f8712872911d7e31fddd3336534f45cea56d9a4e7d48889596ce6d2f1ada4507573306e6b1
+    get-intrinsic: ^1.0.2
+  checksum: be1156afc82af29126410ec7422e2a53ba384e6c3f2438dbaf31a21f81d68e9c1eac2eb23c87344ef6c6d84f0b049c0cb3ffb238e17ee025c0a44d477e0b9821
   languageName: node
   linkType: hard
 
@@ -2863,7 +2863,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"get-intrinsic@npm:^1.0.0":
+"get-intrinsic@npm:^1.0.2":
   version: 1.0.2
   resolution: "get-intrinsic@npm:1.0.2"
   dependencies:
@@ -5745,7 +5745,7 @@ fsevents@~2.3.1:
     tslib: ^2.1.0
     typescript: ^4.1.3
     utf-8-validate: ^5.0.4
-    vacefron: ^3.3.1
+    vacefron: ^3.4.0
     yn: ^4.0.0
     zlib-sync: ^0.1.7
   languageName: unknown
@@ -6456,15 +6456,15 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"vacefron@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "vacefron@npm:3.3.1"
+"vacefron@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "vacefron@npm:3.4.0"
   dependencies:
     "@types/node": ^14.11.10
     "@types/node-fetch": ^2.5.7
     node-fetch: ^2.6.1
     tslib: ^2.0.3
-  checksum: 677cdd6fc35b8be977667f46d1ff27814d7fa01bb8d9aee7e0937d0b9acc5821e477df93627920fa32ba8ec98d464d4872cf4f46bf70b79cf3f4b840f0d0842e
+  checksum: 485c53313a77c8d6a31063d94c296acb20631ed3c18fe565b3f8cea55d297a78607b9d7d6fec70f1ca3599a8d388208003388dc424dcb23d6e959fba433e597a
   languageName: node
   linkType: hard
 
