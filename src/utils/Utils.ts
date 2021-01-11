@@ -127,6 +127,7 @@ class UtilsManager {
 	): Promise<number> {
 		const EconomySchema = await this.client.db.load('usereconomy');
 		const UserData = await EconomySchema.findOne({ User });
+		amount = amount.replace(new RegExp(',', 'gi'), '');
 		if (amount == 'max' || amount == 'all')
 			return (UserData as Anything)?.[load] || 0;
 		if (isNaN(parseInt(amount, 10))) return 0;
