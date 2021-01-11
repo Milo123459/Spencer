@@ -40,7 +40,6 @@ export const run: RunFunction = async (client, message) => {
 						client.embed({ description: "You can't bet nothing.." }, message)
 					);
 				const shouldDouble: number = Math.floor(Math.random() * 100);
-				console.log(shouldDouble);
 				if (shouldDouble > 50) {
 					await UserEconomySchema.increment(
 						{ User: message.author.id },
