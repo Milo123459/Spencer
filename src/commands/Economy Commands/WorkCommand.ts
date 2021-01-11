@@ -111,7 +111,7 @@ export const run: RunFunction = async (client, message) => {
 						await msg.edit(
 							client.embed(
 								{
-									description: `The fans hate you. How could you not the see the goal keeper? He was standing still! The captain gives you $${decreasedRate} for that.`,
+									description: `The fans hate you. How could you not see the goal keeper? He was standing still! The captain gives you $${decreasedRate} for that.`,
 								},
 								message
 							)
