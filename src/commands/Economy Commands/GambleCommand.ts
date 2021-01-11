@@ -15,6 +15,9 @@ export const run: RunFunction = async (client, message) => {
 			msg,
 			['📇']
 		);
+		try {
+			await msg.reactions.removeAll();
+		} catch {}
 		if (reaction == '📇') {
 			try {
 				await msg.edit(
