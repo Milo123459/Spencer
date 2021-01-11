@@ -7,7 +7,6 @@ import {
 	MessageReaction,
 	TextChannel,
 } from 'discord.js';
-import { Collection } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
 class UtilsManager {
@@ -29,7 +28,7 @@ class UtilsManager {
 	public formatMS(ms: number): string {
 		const times: object = {
 			week: Math.floor(ms / (1000 * 60 * 60 * 24 * 7)),
-			day: Math.floor(ms / (1000 * 60 * 60 * 24)),
+			day: Math.floor((ms / (1000 * 60 * 60 * 24)) % 7),
 			hour: Math.floor((ms / (1000 * 60 * 60)) % 24),
 			minute: Math.floor((ms / (1000 * 60)) % 60),
 			second: Math.floor((ms / 1000) % 60),
