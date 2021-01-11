@@ -5,7 +5,9 @@ import {
 	GuildChannel,
 	User,
 	MessageReaction,
+	TextChannel,
 } from 'discord.js';
+import { Collection } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
 class UtilsManager {
@@ -138,6 +140,22 @@ class UtilsManager {
 	public async getItems(schema: string): Promise<number> {
 		const loaded = await this.client.db.load(schema);
 		return (await loaded.find({})).length;
+	}
+	public async awaitMessages(
+		queryUser: string,
+		channel: TextChannel,
+		time?: number
+	): Promise<Message> {
+		return new Promise(async (resolve, reject) => {
+			const messageCollector = channel.createMessageCollector(
+				(msg: Message) => msg.author.id == queryUser,
+				{ time: time ?? 30000 }
+			);
+			messageCollector.on('collect', (msg: Message) => {
+				resolve(msg);
+			});
+			messageCollector.on('end', (collected, reason: string) => reject(reason));
+		});
 	}
 }
 export { UtilsManager };
