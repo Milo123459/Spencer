@@ -75,7 +75,7 @@ export const run: RunFunction = async (client, message) => {
 			}
 		}
 	} catch {
-		return await msg.edit("Nice one, you didn't respond.");
+		return msg.edit("Nice one, you didn't respond.");
 	}
 };
 
