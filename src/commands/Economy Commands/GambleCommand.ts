@@ -35,6 +35,9 @@ export const run: RunFunction = async (client, message) => {
 					m.content,
 					'Coins'
 				);
+				try {
+					await m.delete();
+				} catch {}
 				if (balance == 0)
 					return await msg.edit(
 						client.embed({ description: "You can't bet nothing.." }, message)
