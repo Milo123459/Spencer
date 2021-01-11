@@ -80,6 +80,9 @@ export const run: RunFunction = async (client, message) => {
 			}
 		}
 	} catch {
+		try {
+			await msg.reactions.removeAll();
+		} catch {}
 		return msg.edit("Nice one, you didn't respond.");
 	}
 };
