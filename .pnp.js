@@ -41,9 +41,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@pm2/io", "npm:4.3.5"],
             ["@top-gg/sdk", "npm:3.0.6"],
-            ["@types/express", "npm:4.17.9"],
+            ["@types/express", "npm:4.17.10"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mathjs", "npm:6.0.9"],
+            ["@types/mathjs", "npm:6.0.10"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.20"],
@@ -536,10 +536,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express", [
-        ["npm:4.17.9", {
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.9-7895807ac2-80cd74784e.zip/node_modules/@types/express/",
+        ["npm:4.17.10", {
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.10-28ee3c0d90-334a238936.zip/node_modules/@types/express/",
           "packageDependencies": [
-            ["@types/express", "npm:4.17.9"],
+            ["@types/express", "npm:4.17.10"],
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/express-serve-static-core", "npm:4.17.17"],
             ["@types/qs", "npm:6.9.5"],
@@ -591,10 +591,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mathjs", [
-        ["npm:6.0.9", {
-          "packageLocation": "./.yarn/cache/@types-mathjs-npm-6.0.9-e3d4bac599-6278cac2d7.zip/node_modules/@types/mathjs/",
+        ["npm:6.0.10", {
+          "packageLocation": "./.yarn/cache/@types-mathjs-npm-6.0.10-5cf0615fa4-a9a57f08c5.zip/node_modules/@types/mathjs/",
           "packageDependencies": [
-            ["@types/mathjs", "npm:6.0.9"],
+            ["@types/mathjs", "npm:6.0.10"],
             ["decimal.js", "npm:10.2.1"]
           ],
           "linkType": "HARD",
@@ -6804,9 +6804,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@pm2/io", "npm:4.3.5"],
             ["@top-gg/sdk", "npm:3.0.6"],
-            ["@types/express", "npm:4.17.9"],
+            ["@types/express", "npm:4.17.10"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mathjs", "npm:6.0.9"],
+            ["@types/mathjs", "npm:6.0.10"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.20"],
