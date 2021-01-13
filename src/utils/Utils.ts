@@ -163,7 +163,7 @@ class UtilsManager {
 		embed: MessageEmbedOptions,
 		cmd: string
 	): Promise<Message> {
-		this.client.cooldowns.delete(`${message.author.id}${cmd}`);
+		this.client.cooldowns.set(`${message.author.id}${cmd}`, Date.now() + 3000);
 		return message.channel.send(this.client.embed(embed, message));
 	}
 }
