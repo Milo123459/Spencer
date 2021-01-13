@@ -41,9 +41,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@pm2/io", "npm:4.3.5"],
             ["@top-gg/sdk", "npm:3.0.6"],
-            ["@types/express", "npm:4.17.10"],
+            ["@types/express", "npm:4.17.11"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mathjs", "npm:6.0.10"],
+            ["@types/mathjs", "npm:6.0.11"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.20"],
@@ -536,12 +536,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express", [
-        ["npm:4.17.10", {
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.10-28ee3c0d90-334a238936.zip/node_modules/@types/express/",
+        ["npm:4.17.11", {
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.11-1b3f17f056-2818120a0f.zip/node_modules/@types/express/",
           "packageDependencies": [
-            ["@types/express", "npm:4.17.10"],
+            ["@types/express", "npm:4.17.11"],
             ["@types/body-parser", "npm:1.19.0"],
-            ["@types/express-serve-static-core", "npm:4.17.17"],
+            ["@types/express-serve-static-core", "npm:4.17.18"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/serve-static", "npm:1.13.8"]
           ],
@@ -549,10 +549,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express-serve-static-core", [
-        ["npm:4.17.17", {
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.17-7991258b35-97a4f64b61.zip/node_modules/@types/express-serve-static-core/",
+        ["npm:4.17.18", {
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.18-3a96b13167-329d5ded5c.zip/node_modules/@types/express-serve-static-core/",
           "packageDependencies": [
-            ["@types/express-serve-static-core", "npm:4.17.17"],
+            ["@types/express-serve-static-core", "npm:4.17.18"],
             ["@types/node", "npm:14.14.20"],
             ["@types/qs", "npm:6.9.5"],
             ["@types/range-parser", "npm:1.2.3"]
@@ -591,10 +591,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mathjs", [
-        ["npm:6.0.10", {
-          "packageLocation": "./.yarn/cache/@types-mathjs-npm-6.0.10-5cf0615fa4-a9a57f08c5.zip/node_modules/@types/mathjs/",
+        ["npm:6.0.11", {
+          "packageLocation": "./.yarn/cache/@types-mathjs-npm-6.0.11-7d2160a90d-3e24a7dda4.zip/node_modules/@types/mathjs/",
           "packageDependencies": [
-            ["@types/mathjs", "npm:6.0.10"],
+            ["@types/mathjs", "npm:6.0.11"],
             ["decimal.js", "npm:10.2.1"]
           ],
           "linkType": "HARD",
@@ -6804,9 +6804,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-angular", "npm:11.0.0"],
             ["@pm2/io", "npm:4.3.5"],
             ["@top-gg/sdk", "npm:3.0.6"],
-            ["@types/express", "npm:4.17.10"],
+            ["@types/express", "npm:4.17.11"],
             ["@types/glob", "npm:7.1.3"],
-            ["@types/mathjs", "npm:6.0.10"],
+            ["@types/mathjs", "npm:6.0.11"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.20"],
