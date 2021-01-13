@@ -164,7 +164,7 @@ class UtilsManager {
 		cmd: string
 	): Promise<Message> {
 		this.client.cooldowns.delete(`${message.author.id}${cmd}`);
-		return await message.channel.send(this.client.embed(embed, message));
+		return message.channel.send(this.client.embed(embed, message));
 	}
 }
 export { UtilsManager };
