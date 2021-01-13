@@ -6,6 +6,7 @@ import {
 	User,
 	MessageReaction,
 	TextChannel,
+	MessageEmbedOptions,
 } from 'discord.js';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
@@ -156,6 +157,14 @@ class UtilsManager {
 			});
 			messageCollector.on('end', (collected, reason: string) => reject(reason));
 		});
+	}
+	public async fail(
+		message: Message,
+		embed: MessageEmbedOptions,
+		cmd: string
+	): Promise<Message> {
+		this.client.cooldowns.delete(`${message.author.id}${cmd}`);
+		return await message.channel.send(this.client.embed(embed, message));
 	}
 }
 export { UtilsManager };

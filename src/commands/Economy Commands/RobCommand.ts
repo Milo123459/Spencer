@@ -4,20 +4,23 @@ import { Anything } from '../../interfaces/Anything';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
-		return message.channel.send(
-			client.embed({ description: 'Please provide someone to rob...' }, message)
+		return client.utils.fail(
+			message,
+			{ description: 'Please provide someone to rob...' },
+			'rob'
 		);
 	const member: GuildMember = client.utils.ResolveMember(message, args[0]);
 	if (!member)
-		return message.channel.send(
-			client.embed({ description: "I couldn't find that user!" }, message)
+		return client.utils.fail(
+			message,
+			{ description: "I couldn't find that user!" },
+			'rob'
 		);
 	if (member.id == message.author.id)
-		return message.channel.send(
-			client.embed(
-				{ description: 'You tried to rob your self, god, how dumb are you?' },
-				message
-			)
+		return client.utils.fail(
+			message,
+			{ description: "You can't rob yourself..." },
+			'rob'
 		);
 	const EconomySchema = await client.db.load('usereconomy');
 	const RobberProfile = await EconomySchema.findOne({
@@ -25,32 +28,34 @@ export const run: RunFunction = async (client, message, args) => {
 	});
 	const TargetProfile = await EconomySchema.findOne({ User: member.id });
 	if (!RobberProfile)
-		return message.channel.send(
-			client.embed({ description: "You're profile doesn't exist..." }, message)
+		return client.utils.fail(
+			message,
+			{ description: "You're profile doesn't exist..." },
+			'rob'
 		);
 	if (!TargetProfile)
-		return message.channel.send(
-			client.embed({ description: "Their profile doesn't exist..." }, message)
+		return client.utils.fail(
+			message,
+			{ description: "Their profile doesn't exist..." },
+			'rob'
 		);
 	if (500 > (RobberProfile as Anything)?.Coins)
-		return message.channel.send(
-			client.embed(
-				{
-					description:
-						'You need atleast 500 coins in your wallet before robbing someone...',
-				},
-				message
-			)
+		return client.utils.fail(
+			message,
+			{
+				description:
+					'You need atleast 500 coins in your wallet before robbing someone...',
+			},
+			'rob'
 		);
 	if (500 > (TargetProfile as Anything)?.Coins)
-		return message.channel.send(
-			client.embed(
-				{
-					description:
-						"Uhhh, they have like no money in their wallet, it's not worth it, cancelling...",
-				},
-				message
-			)
+		return client.utils.fail(
+			message,
+			{
+				description:
+					"Uhhh, they have like no money in their wallet, it's not worth it, cancelling...",
+			},
+			'rob'
 		);
 	const ShouldRob = Math.floor(Math.random() * 100) > 50;
 	if (!!!ShouldRob) {
