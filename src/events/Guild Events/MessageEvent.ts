@@ -171,56 +171,54 @@ export const run: RunFunction = async (client, message: Message) => {
 				)
 			);
 		}
-		command.run(client, message, args).catch((e: Error) => {
-			client.logger.error(e);
-			message.channel
-				.send(
-					client.embed(
-						{
-							title: `❌ An error came about..`,
-							description: `\`\`\`\n${e.message}\`\`\``,
-						},
-						message
-					)
-				)
-				.catch(() => client.logger.error("Can't send error message"));
-			if (e?.message?.toLowerCase()?.includes('missing permissions') || false)
-				return;
-			return (client.channels.cache.get(
-				'787685747649019925'
-			) as TextChannel).send(
+		client.cooldowns.set(
+			`${message.author.id}${command.name}`,
+			client.utils.checkMultipleRoles('784470505607528448', message.author.id, [
+				'787656384808353803',
+				'787656420258086922',
+				'787656471679991829',
+			])
+				? Date.now() + command?.cooldown / 2
+				: Date.now() + command?.cooldown
+		);
+	}
+	command.run(client, message, args).catch((e: Error) => {
+		client.logger.error(e);
+		message.channel
+			.send(
 				client.embed(
 					{
 						title: `❌ An error came about..`,
-						description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\`\nNOTES: GID: ${message.guild.id} | UID: ${message.author.id} | CMD: ${command.name}`,
+						description: `\`\`\`\n${e.message}\`\`\``,
 					},
 					message
 				)
-			);
-		});
-		if (command?.cooldown) {
-			client.cooldowns.set(
-				`${message.author.id}${command.name}`,
-				client.utils.checkMultipleRoles(
-					'784470505607528448',
-					message.author.id,
-					['787656384808353803', '787656420258086922', '787656471679991829']
-				)
-					? Date.now() + command?.cooldown / 2
-					: Date.now() + command?.cooldown
-			);
-			setTimeout(
-				() => {
-					client.cooldowns.delete(`${message.author.id}${command.name}`);
+			)
+			.catch(() => client.logger.error("Can't send error message"));
+		if (e?.message?.toLowerCase()?.includes('missing permissions') || false)
+			return;
+		return (client.channels.cache.get(
+			'787685747649019925'
+		) as TextChannel).send(
+			client.embed(
+				{
+					title: `❌ An error came about..`,
+					description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\`\nNOTES: GID: ${message.guild.id} | UID: ${message.author.id} | CMD: ${command.name}`,
 				},
-				client.utils.checkMultipleRoles(
-					'784470505607528448',
-					message.author.id,
-					['787656384808353803', '787656420258086922', '787656471679991829']
-				)
-					? command?.cooldown / 2
-					: command?.cooldown
-			);
-		}
-	}
+				message
+			)
+		);
+	});
+	setTimeout(
+		() => {
+			client.cooldowns.delete(`${message.author.id}${command.name}`);
+		},
+		client.utils.checkMultipleRoles('784470505607528448', message.author.id, [
+			'787656384808353803',
+			'787656420258086922',
+			'787656471679991829',
+		])
+			? command?.cooldown / 2
+			: command?.cooldown
+	);
 };
