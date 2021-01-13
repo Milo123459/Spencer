@@ -2,6 +2,14 @@
 
 This file goes over a few things you should keep in mind when contributing.
 
+# 😒 Installing
+
+You need to install the following things:
+
+- [Git](https://git-scm.com)
+- [NodeJS V14+](https://nodejs.org)
+- Yarn (tye npm i -g yarn)
+
 # ⚡ Setup
 
 In order to contribute you need to fork the repo.
