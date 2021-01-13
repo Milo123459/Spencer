@@ -164,6 +164,7 @@ class UtilsManager {
 		cmd: string
 	): Promise<Message> {
 		this.client.cooldowns.set(`${message.author.id}${cmd}`, Date.now() + 3000);
+        setTimeout(() => this.client.cooldowns.delete(`${message.author.id}${cmd}`), 3000) 
 		return message.channel.send(this.client.embed(embed, message));
 	}
 }
