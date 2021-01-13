@@ -23,6 +23,8 @@ CD into your repo and run `yarn nb my-feature-name` - whenever making a new bran
 
 If you are making a command, event or DB model you can try out `yarn new`, this set's up everything for you. If this doesn't work, have no fear! Try observing other commands/events/models and going with that.
 
+Editing someting? That's nice, find the file and uh... write the code!
+
 # 👍 PR standards
 
 We expect PRs to follow a few guidelines, for example:
