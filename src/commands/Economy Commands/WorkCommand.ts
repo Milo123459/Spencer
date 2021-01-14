@@ -7,14 +7,13 @@ export const run: RunFunction = async (client, message) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const User = await EconomySchema.findOne({ User: message.author.id });
 	if (!(User as Anything)?.Job)
-		return message.channel.send(
-			client.embed(
-				{
-					description:
-						"Wait a minute, you haven't got a job, and you are trying to work? Talk about stupid. Set a job using `sp!setjob`.",
-				},
-				message
-			)
+		return client.utils.fail(
+			message,
+			{
+				description:
+					"Wait a minute, you don't have a job! Use [prefix]setjob to get a job!",
+			},
+			'work'
 		);
 	// get job
 	const Job: string = (User as Anything).Job;
