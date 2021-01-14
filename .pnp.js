@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["erlpack", "https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
@@ -68,6 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongoose", "npm:5.11.11"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
+            ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
@@ -1932,6 +1934,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["bindings", [
+        ["npm:1.5.0", {
+          "packageLocation": "./.yarn/cache/bindings-npm-1.5.0-77ce1d213c-bd623dec58.zip/node_modules/bindings/",
+          "packageDependencies": [
+            ["bindings", "npm:1.5.0"],
+            ["file-uri-to-path", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["binjumper", [
         ["npm:0.1.4", {
           "packageLocation": "./.yarn/cache/binjumper-npm-0.1.4-8ed133195d-07b0f2cf66.zip/node_modules/binjumper/",
@@ -3045,6 +3057,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/env-paths-npm-2.2.0-ac4ed99068-09de4fd1c0.zip/node_modules/env-paths/",
           "packageDependencies": [
             ["env-paths", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["erlpack", [
+        ["https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d", {
+          "packageLocation": "./.yarn/unplugged/erlpack-https-2595d388eb/node_modules/erlpack/",
+          "packageDependencies": [
+            ["erlpack", "https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d"],
+            ["bindings", "npm:1.5.0"],
+            ["nan", "npm:2.14.2"]
           ],
           "linkType": "HARD",
         }]
@@ -5665,7 +5688,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["parse-path", "npm:4.0.3"],
             ["is-ssh", "npm:1.3.2"],
             ["protocols", "npm:1.4.8"],
-            ["qs", "npm:6.9.5"],
+            ["qs", "npm:6.9.6"],
             ["query-string", "npm:6.13.8"]
           ],
           "linkType": "HARD",
@@ -6060,10 +6083,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:6.9.5", {
-          "packageLocation": "./.yarn/cache/qs-npm-6.9.5-f92319da4b-890913a6f7.zip/node_modules/qs/",
+        ["npm:6.9.6", {
+          "packageLocation": "./.yarn/cache/qs-npm-6.9.6-fee5de1427-853715ab6d.zip/node_modules/qs/",
           "packageDependencies": [
-            ["qs", "npm:6.9.5"]
+            ["qs", "npm:6.9.6"]
           ],
           "linkType": "HARD",
         }]
@@ -6844,6 +6867,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["consola", "npm:2.15.0"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
+            ["erlpack", "https://github.com/discord/erlpack.git#commit=e27db8f82892bdb9b28a0547cc394d68b5d2242d"],
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
@@ -6854,6 +6878,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mongoose", "npm:5.11.11"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
+            ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
@@ -7150,7 +7175,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["formidable", "npm:1.2.2"],
             ["methods", "npm:1.1.2"],
             ["mime", "npm:2.4.7"],
-            ["qs", "npm:6.9.5"],
+            ["qs", "npm:6.9.6"],
             ["readable-stream", "npm:3.6.0"],
             ["semver", "npm:7.3.4"]
           ],
