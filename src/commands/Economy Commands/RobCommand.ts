@@ -30,7 +30,7 @@ export const run: RunFunction = async (client, message, args) => {
 	if (!RobberProfile)
 		return client.utils.fail(
 			message,
-			{ description: "You're profile doesn't exist..." },
+			{ description: "Your profile doesn't exist..." },
 			'rob'
 		);
 	if (!TargetProfile)

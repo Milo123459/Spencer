@@ -10,7 +10,7 @@ export const run: RunFunction = async (client, message, args) => {
 		const sum = evaluate(args.join(' '));
 		await message.channel.send(
 			client.embed(
-				{ description: `You\'re equasion results:\n\`\`\`\n${sum}\`\`\`` },
+				{ description: `Your equasion results:\n\`\`\`\n${sum}\`\`\`` },
 				message
 			)
 		);
