@@ -23,13 +23,31 @@ export const run: RunFunction = async (client, message, args) => {
 										.filter((value) => value.name != '@everyone')
 										.map((value: Role) => value.toString())
 										.join(', ') || '*No roles.*'
-						}`
+						}`,
+						true
 					),
 					client.utils.constructField(
 						`Join position`,
 						(
 							await client.utils.calculateJoinPosition(message, member)
-						).toString()
+						).toString(),
+						true
+					),
+					client.utils.constructField(
+						'Presence',
+						Object.entries(member.user.presence.clientStatus)
+							.map(
+								(value: [string, string]) =>
+									`Device: **${
+										value[0][0].toUpperCase() + value[0].slice(1)
+									}**\nStatus: **${
+										value[1].toLowerCase() == 'dnd'
+											? value[1].toUpperCase()
+											: value[1][0].toUpperCase() + value[1].slice(1)
+									}**`
+							)
+							.join(''),
+						true
 					),
 				],
 			},
