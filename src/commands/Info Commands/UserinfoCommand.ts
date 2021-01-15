@@ -6,8 +6,16 @@ export const run: RunFunction = async (client, message, args) => {
 	await message.channel.send(
 		client.embed(
 			{
-				title: `${member.user.tag} (${member.user.id})`,
+				title: `${member.user.tag}`,
 				fields: [
+					client.utils.constructField(
+						'Identification',
+						`
+                        Tag: **${member.user.tag}**
+                        ID: **${member.id}**
+                        Display name in **${message.guild.name}**: **${member.displayName}**`,
+						true
+					),
 					client.utils.constructField(
 						`Roles [${
 							member.roles.cache.filter(
