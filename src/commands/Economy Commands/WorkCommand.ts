@@ -177,7 +177,7 @@ export const run: RunFunction = async (client, message) => {
 		const msg: Message = await message.channel.send(
 			client.embed(
 				{
-					description: `The rocket bosters only have ${current}L but it needs to be 100L. How many more litres do you need?`,
+					description: `The rocket boosters only have ${current}L but it needs to be 100L. How many more litres do you need?`,
 				},
 				message
 			)
