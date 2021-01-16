@@ -170,5 +170,8 @@ class UtilsManager {
 		);
 		return message.channel.send(this.client.embed(embed, message));
 	}
+	public arrayIfy<T, R>(input: T | Readonly<T>): Array<R> {
+		return [...(input as any)];
+	}
 }
 export { UtilsManager };

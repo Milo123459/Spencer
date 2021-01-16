@@ -1,4 +1,4 @@
-import { Role } from 'discord.js';
+import { Role, UserFlags } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 export const name: string = 'userinfo';
 export const run: RunFunction = async (client, message, args) => {
@@ -71,6 +71,27 @@ export const run: RunFunction = async (client, message, args) => {
 																  member.user.presence.status.slice(1)
 														}**
                             `.trim(),
+						true
+					),
+					client.utils.constructField(
+						`Badges [${
+							member.user?.flags
+								? client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
+										.length
+								: '0'
+						}]`,
+						member.user?.flags
+							? client.utils
+									.arrayIfy<UserFlags, string>(member.user.flags)
+									.map(
+										(value: string) =>
+											`**${
+												value[0].toUpperCase() +
+												value.slice(1).toLowerCase().replaceAll('_', ' ')
+											}**`
+									)
+									.join('\n')
+							: '*No badges.*',
 						true
 					),
 				],
