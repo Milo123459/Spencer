@@ -11,9 +11,9 @@ export const run: RunFunction = async (client, message, args) => {
     ${subcommands
 			.map(
 				(value: SubCommand) =>
-					`${value.key.toLowerCase()}: **\`${value.description} - For: ${
+					`${value.key.toLowerCase()}: \`${value.description} - For: ${
 						value.schema
-					}\`**`
+					}\``
 			)
 			.join('\n')}
 
