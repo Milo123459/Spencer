@@ -33,6 +33,12 @@ If you are making a command, event or DB model you can try out `yarn new`, this 
 
 Editing someting? That's nice, find the file and uh... write the code!
 
+Commiting! 
+
+Easy as hell, just do this:
+
+`yarn git "commit-message-following-our-standards!"` - works with all branches.
+
 # 👍 PR standards
 
 We expect PRs to follow a few guidelines, for example:
