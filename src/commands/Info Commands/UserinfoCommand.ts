@@ -45,9 +45,9 @@ export const run: RunFunction = async (client, message, args) => {
 						'Presence',
 						`
                         Devices logged in on: **${
-													Object.entries(member.user.presence.clientStatus)
+													Object.entries(member.user.presence?.clientStatus || {})
 														.length
-												}**${Object.entries(member.user.presence.clientStatus)
+												}**${Object.entries(member.user.presence?.clientStatus || {})
 							.map(
 								(value: [string, string], index: number) =>
 									`
