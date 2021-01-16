@@ -31,7 +31,7 @@ export const run: RunFunction = async (client, message, args) => {
 			description: `**${client.user.username}** currently has **${
 				client.commands.filter((value: Command) => value.category != 'owner')
 					.size
-			}** public commands available!`,
+			}** public commands available!\nWant to support us? Go to the [GitHub repo](https://github.com/Milo123459/Spencer) and give us a star! You can also click that discussions button to ask questions, submit ideas, etc!`,
 		},
 		message
 	);
