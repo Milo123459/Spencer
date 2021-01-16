@@ -43,18 +43,31 @@ export const run: RunFunction = async (client, message, args) => {
 					),
 					client.utils.constructField(
 						'Presence',
-						Object.entries(member.user.presence.clientStatus)
+						`
+                        Devices logged in on: **${
+													Object.entries(member.user.presence.clientStatus)
+														.length
+												}**${Object.entries(member.user.presence.clientStatus)
 							.map(
-								(value: [string, string]) =>
-									`Device: **${
+								(value: [string, string], index: number) =>
+									`
+                                    Device${(Object.entries(
+																			member.user.presence.clientStatus
+																		).length > 1
+																			? ` [${index + 1}]:`
+																			: ':'
+																		).trim()} **${
 										value[0][0].toUpperCase() + value[0].slice(1)
-									}**\nStatus: **${
-										value[1].toLowerCase() == 'dnd'
-											? value[1].toUpperCase()
-											: value[1][0].toUpperCase() + value[1].slice(1)
 									}**`
 							)
-							.join(''),
+							.join('')}
+                            Status: **${
+															member.user.presence.status.toLowerCase() == 'dnd'
+																? 'DND'
+																: member.user.presence.status[0].toUpperCase() +
+																  member.user.presence.status.slice(1)
+														}**
+                            `.trim(),
 						true
 					),
 				],

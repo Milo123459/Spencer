@@ -98,6 +98,7 @@ export const run: RunFunction = async (client, message: Message) => {
 	if (client.config.onlyUsed) {
 		if (!client.config.onlyUsed.includes(message.author.id)) return;
 	}
+	if (!command || command == undefined) return;
 	if (command) {
 		if (command.userPermissions) {
 			if (!message.member.permissions.has(command.userPermissions))
@@ -150,6 +151,7 @@ export const run: RunFunction = async (client, message: Message) => {
 					)
 				);
 		}
+
 		if (
 			command.ownerOnly &&
 			command.ownerOnly == true &&
