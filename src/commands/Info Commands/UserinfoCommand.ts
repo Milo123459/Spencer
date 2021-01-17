@@ -75,12 +75,11 @@ export const run: RunFunction = async (client, message, args) => {
 					),
 					client.utils.constructField(
 						`Badges [${
-							member.user?.flags
-								? client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
-										.length
-								: '0'
+							client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
+								.length ?? 0
 						}]`,
-						member.user?.flags
+						!!client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
+							.length
 							? client.utils
 									.arrayIfy<UserFlags, string>(member.user.flags)
 									.map(
