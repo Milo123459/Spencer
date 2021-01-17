@@ -81,7 +81,7 @@ export const run: RunFunction = async (client, message, args) => {
 		await m.delete();
 		if (should == '❌') return;
 	} catch {
-		await m.delete();
+		return await m.delete();
 	}
 	const msg: Message = await (channel as TextChannel).send(
 		client
