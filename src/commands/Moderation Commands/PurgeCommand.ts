@@ -27,7 +27,9 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-	await message.delete();
+	try {
+		await message.delete();
+	} catch {}
 	const messages: Collection<
 		string,
 		Message
