@@ -54,12 +54,13 @@ export const run: RunFunction = async (client, message, args) => {
 							.map(
 								(value: [string, string], index: number) =>
 									`
-                                    Device${(Object.entries(
-																			member.user.presence.clientStatus
-																		).length > 1
-																			? ` [${index + 1}]:`
-																			: ':'
-																		).trim()} **${
+                                    Device${
+																			Object.entries(
+																				member.user.presence.clientStatus
+																			).length > 1
+																				? ` [${index + 1}]:`
+																				: ':'
+																		} **${
 										value[0][0].toUpperCase() + value[0].slice(1)
 									}**`
 							)
