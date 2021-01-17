@@ -4,7 +4,7 @@ export const run: RunFunction = async (client, message) => {
 	return message.channel.send(
 		client.embed(
 			{
-				description: `**${message.guild.name}** has got **${message.guild.memberCount}** members! (Well, cached members!)`,
+				description: `**${message.guild.name}** has got **${message.guild.memberCount}** members!`,
 			},
 			message
 		)
