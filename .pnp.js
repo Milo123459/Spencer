@@ -62,10 +62,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.7"],
+            ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:8.1.1"],
+            ["mathjs", "npm:9.0.0"],
             ["mongoose", "npm:5.11.12"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
@@ -4037,10 +4037,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.3.7", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.7-8b04d59b66/node_modules/husky/",
+        ["npm:4.3.8", {
+          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.8-f7cd00e56d/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.3.7"],
+            ["husky", "npm:4.3.8"],
             ["chalk", "npm:4.1.0"],
             ["ci-info", "npm:2.0.0"],
             ["compare-versions", "npm:3.6.0"],
@@ -4852,10 +4852,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mathjs", [
-        ["npm:8.1.1", {
-          "packageLocation": "./.yarn/cache/mathjs-npm-8.1.1-765c490991-2386d02e97.zip/node_modules/mathjs/",
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-9.0.0-3fe23943bf-d5eb86f172.zip/node_modules/mathjs/",
           "packageDependencies": [
-            ["mathjs", "npm:8.1.1"],
+            ["mathjs", "npm:9.0.0"],
             ["complex.js", "npm:2.0.11"],
             ["decimal.js", "npm:10.2.1"],
             ["escape-latex", "npm:1.2.0"],
@@ -6872,10 +6872,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.7"],
+            ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:8.1.1"],
+            ["mathjs", "npm:9.0.0"],
             ["mongoose", "npm:5.11.12"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
