@@ -13,7 +13,10 @@ export const run: RunFunction = async (client, message, args) => {
 						`
                         Tag: **${member.user.tag}**
                         ID: **${member.id}**
-                        Display name in **${message.guild.name}**: **${member.displayName}**`,
+                        Display name in **${message.guild.name}**: **${
+							member.displayName
+						}**
+                        Bot: **${member.user.bot ? 'Yes' : 'No'}**`,
 						true
 					),
 					client.utils.constructField(
