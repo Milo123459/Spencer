@@ -1914,6 +1914,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.10.3":
+  version: 1.10.3
+  resolution: "dayjs@npm:1.10.3"
+  checksum: df7d13e99a2932c12efb3fc9c36e537ee6722ed1763fb2b74559bf9a864828b3d3eac6d3ae59f0c1dbef8dae52444059d8c8bc540c7edb13d665fcd2b08028e6
+  languageName: node
+  linkType: hard
+
 "debug@npm:2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -5268,6 +5275,7 @@ fsevents@~2.3.1:
     bufferutil: ^4.0.3
     cleverbot-free: ^1.0.5
     consola: ^2.15.0
+    dayjs: ^1.10.3
     del-cli: ^3.0.1
     discord.js: ^12.5.1
     erlpack: ^0.1.3

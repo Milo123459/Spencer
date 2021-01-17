@@ -1,4 +1,5 @@
 import { Role, UserFlags } from 'discord.js';
+import dayjs from 'dayjs';
 import { RunFunction } from '../../interfaces/Command';
 export const name: string = 'userinfo';
 export const run: RunFunction = async (client, message, args) => {
@@ -95,6 +96,19 @@ export const run: RunFunction = async (client, message, args) => {
 									)
 									.join('\n')
 							: '*No badges.*',
+						true
+					),
+					client.utils.constructField(
+						'Miscellaneous',
+						`
+                    Boosting **${message.guild.name}**: ${
+							member.premiumSince
+								? `Since **${dayjs(member.premiumSinceTimestamp).format(
+										'[DD/MM/YYYY] DD/MM/YYYY'
+								  )}**`
+								: '**No**'
+						}
+                    `,
 						true
 					),
 				],
