@@ -21,7 +21,6 @@
 	},
 	"license": "Creative Commons",
 	"dependencies": {
-		"@pm2/io": "^4.3.5",
 		"@top-gg/sdk": "^3.0.6",
 		"alpha-sort": "^4.0.0",
 		"bufferutil": "^4.0.3",
