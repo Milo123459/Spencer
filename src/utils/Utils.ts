@@ -8,6 +8,7 @@ import {
 	TextChannel,
 	MessageEmbedOptions,
 } from 'discord.js';
+import { acos } from 'mathjs';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
 class UtilsManager {
@@ -173,6 +174,13 @@ class UtilsManager {
 	public arrayIfy<T, R>(input: T | Readonly<T>): Array<R> {
 		if (!input) return [];
 		return [...(input as any)];
+	}
+	public limitArray<R>(arr: Array<R>, length: number): Array<Array<R>> {
+		if (arr.length < length) return [arr];
+		const R: Array<Array<R>> = [];
+		for (let i = 0; i < arr.length; i += length)
+			R.push(arr.slice(i, i + length));
+		return R;
 	}
 }
 export { UtilsManager };
