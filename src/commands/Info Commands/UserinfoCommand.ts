@@ -1,6 +1,7 @@
 import { Role, UserFlags } from 'discord.js';
 import dayjs from 'dayjs';
 import { RunFunction } from '../../interfaces/Command';
+import { arrayIfy } from 'tyvn';
 export const name: string = 'userinfo';
 export const run: RunFunction = async (client, message, args) => {
 	const member = client.utils.ResolveMember(message, args[0]) || message.member;
@@ -80,13 +81,10 @@ export const run: RunFunction = async (client, message, args) => {
 					),
 					client.utils.constructField(
 						`Badges [${
-							client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
-								.length ?? 0
+							arrayIfy<UserFlags, string>(member.user?.flags).length ?? 0
 						}]`,
-						!!client.utils.arrayIfy<UserFlags, string>(member.user?.flags)
-							.length
-							? client.utils
-									.arrayIfy<UserFlags, string>(member.user.flags)
+						!!arrayIfy<UserFlags, string>(member.user?.flags).length
+							? arrayIfy<UserFlags, string>(member.user.flags)
 									.map(
 										(value: string) =>
 											`**${
