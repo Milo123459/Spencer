@@ -49,7 +49,11 @@ class DatabaseModule {
 			return this.create(newData);
 		} else {
 			if ((data as Anything)[key]) {
-				if (isNaN((data as Anything)[key])) (data as Anything)[key] = 0;
+				if (isNaN((data as Anything)[key])) {
+					(data as Anything)[key] = value;
+					await data.save();
+					return data;
+				}
 			}
 			(data as Anything)[key]
 				? ((data as Anything)[key] += value)
@@ -67,7 +71,11 @@ class DatabaseModule {
 			return this.create(newData);
 		} else {
 			if ((data as Anything)[key]) {
-				if (isNaN((data as Anything)[key])) (data as Anything)[key] = 0;
+				if (isNaN((data as Anything)[key])) {
+					(data as Anything)[key] = 0;
+					await data.save();
+					return data;
+				}
 			}
 			(data as Anything)[key] -= value;
 			if ((data as Anything)[key] < 0) {
