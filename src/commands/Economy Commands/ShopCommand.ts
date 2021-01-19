@@ -4,7 +4,7 @@ import { RunFunction } from '../../interfaces/Command';
 import { Item } from '../../interfaces/Item';
 import { limitArray } from 'tyvn';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, message) => {
 	return pagination(
 		message,
 		limitArray<Item>(items, 5).map((value: Array<Item>) =>
