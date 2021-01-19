@@ -9,6 +9,7 @@ import {
 	MessageEmbedOptions,
 } from 'discord.js';
 import { acos } from 'mathjs';
+import { Document } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
 class UtilsManager {
@@ -170,6 +171,39 @@ class UtilsManager {
 			3000
 		);
 		return message.channel.send(this.client.embed(embed, message));
+	}
+	public async incrementItem(user: string, id: string): Promise<Document> {
+		const usereconomy = await this.client.db.load('usereconomy');
+		const profile = await usereconomy.findOne({ User: user });
+		if (!profile)
+			return await usereconomy.create({
+				User: user,
+				Coins: 0,
+				DepositedCoins: 0,
+				Inventory: this.proper(id, 1),
+			});
+		else {
+			const inventory = (profile as Anything)?.Inventory || {};
+			inventory[id] = inventory[id] ? (inventory[id] += 1) : 1;
+			return await usereconomy.update({ User: user }, { Inventory: inventory });
+		}
+	}
+	public async decrementItem(user: string, id: string): Promise<Document> {
+		const usereconomy = await this.client.db.load('usereconomy');
+		const profile = await usereconomy.findOne({ User: user });
+		if (!profile)
+			return await usereconomy.create({
+				User: user,
+				Coins: 0,
+				DepositedCoins: 0,
+				Inventory: this.proper(id, 1),
+			});
+		else {
+			const inventory = (profile as Anything)?.Inventory || {};
+			inventory[id] = inventory[id] ? (inventory[id] -= 1) : 0;
+			if (inventory[id] <= 0) delete inventory[id];
+			return await usereconomy.update({ User: user }, { Inventory: inventory });
+		}
 	}
 }
 export { UtilsManager };

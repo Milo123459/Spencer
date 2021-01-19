@@ -9,5 +9,6 @@ export const data = model(
 		Job: String,
 		DepositedCoins: Number,
 		Daily: Number,
+		Inventory: Object,
 	})
 );
