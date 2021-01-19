@@ -71,7 +71,10 @@ class DatabaseModule {
 			return this.create(newData);
 		} else {
 			if ((data as Anything)[key]) {
-				if (isNaN((data as Anything)[key])) {
+				if (
+					isNaN((data as Anything)[key]) ||
+					(data as Anything)[key] == undefined
+				) {
 					(data as Anything)[key] = 0;
 					await data.save();
 					return data;
