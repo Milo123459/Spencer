@@ -146,7 +146,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/load", "npm:11.0.0"],
             ["@commitlint/read", "npm:11.0.0"],
             ["chalk", "npm:4.1.0"],
-            ["core-js", "npm:3.8.2"],
+            ["core-js", "npm:3.8.3"],
             ["get-stdin", "npm:8.0.0"],
             ["lodash", "npm:4.17.20"],
             ["resolve-from", "npm:5.0.0"],
@@ -475,7 +475,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/express-serve-static-core", "npm:4.17.18"],
             ["@types/qs", "npm:6.9.5"],
-            ["@types/serve-static", "npm:1.13.8"]
+            ["@types/serve-static", "npm:1.13.9"]
           ],
           "linkType": "HARD",
         }]
@@ -533,10 +533,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/mime", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/@types-mime-npm-2.0.3-809d6f0e0f-6df548a912.zip/node_modules/@types/mime/",
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.2-ea71878ab3-c354bc1356.zip/node_modules/@types/mime/",
           "packageDependencies": [
-            ["@types/mime", "npm:2.0.3"]
+            ["@types/mime", "npm:1.3.2"]
           ],
           "linkType": "HARD",
         }]
@@ -691,11 +691,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/serve-static", [
-        ["npm:1.13.8", {
-          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.8-c8cbed794a-39db4c0f0f.zip/node_modules/@types/serve-static/",
+        ["npm:1.13.9", {
+          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.9-59107a68c3-f261127514.zip/node_modules/@types/serve-static/",
           "packageDependencies": [
-            ["@types/serve-static", "npm:1.13.8"],
-            ["@types/mime", "npm:2.0.3"],
+            ["@types/serve-static", "npm:1.13.9"],
+            ["@types/mime", "npm:1.3.2"],
             ["@types/node", "npm:14.14.21"]
           ],
           "linkType": "HARD",
@@ -2395,10 +2395,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["core-js", [
-        ["npm:3.8.2", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-3.8.2-9054e52bf1/node_modules/core-js/",
+        ["npm:3.8.3", {
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.8.3-f6bf459c9f/node_modules/core-js/",
           "packageDependencies": [
-            ["core-js", "npm:3.8.2"]
+            ["core-js", "npm:3.8.3"]
           ],
           "linkType": "HARD",
         }]
@@ -2419,7 +2419,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cosmiconfig", "npm:7.0.0"],
             ["@types/parse-json", "npm:4.0.0"],
             ["import-fresh", "npm:3.3.0"],
-            ["parse-json", "npm:5.1.0"],
+            ["parse-json", "npm:5.2.0"],
             ["path-type", "npm:4.0.0"],
             ["yaml", "npm:1.10.0"]
           ],
@@ -5214,10 +5214,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:5.1.0", {
-          "packageLocation": "./.yarn/cache/parse-json-npm-5.1.0-a83e3ab0f2-5e09955194.zip/node_modules/parse-json/",
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/parse-json-npm-5.2.0-00a63b1199-65b1e494a5.zip/node_modules/parse-json/",
           "packageDependencies": [
-            ["parse-json", "npm:5.1.0"],
+            ["parse-json", "npm:5.2.0"],
             ["@babel/code-frame", "npm:7.12.11"],
             ["error-ex", "npm:1.3.2"],
             ["json-parse-even-better-errors", "npm:2.3.1"],
@@ -5679,7 +5679,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["read-pkg", "npm:5.2.0"],
             ["@types/normalize-package-data", "npm:2.4.0"],
             ["normalize-package-data", "npm:2.5.0"],
-            ["parse-json", "npm:5.1.0"],
+            ["parse-json", "npm:5.2.0"],
             ["type-fest", "npm:0.6.0"]
           ],
           "linkType": "HARD",

@@ -14,9 +14,10 @@ export const run: RunFunction = async (client, message, args) => {
 							name: value.name,
 							value: `${
 								value.description
-							}\nPrice: ${value.price.toLocaleString()}`,
+							}\nPrice: ${value.price.toLocaleString()}\nID: \`${value.id}\``,
 						};
 					}),
+					description: 'Use sp!buy <item-id> to buy items!',
 				},
 				message
 			)
