@@ -9,7 +9,7 @@ class DatabaseModule {
 	public constructor(schema: Schema) {
 		this.schema = schema;
 	}
-	public async update(find: object, update: object) {
+	public async update(find: object, update: object): Promise<Document> {
 		const existingData = await this.schema.data.findOne(find);
 		if (!existingData) return this.create({ ...find, ...update });
 		else if (existingData) {
@@ -20,12 +20,12 @@ class DatabaseModule {
 			return existingData;
 		}
 	}
-	public async create(data: object) {
+	public async create(data: object): Promise<Document> {
 		const NewModel = new this.schema.data(data);
 		await NewModel.save();
 		return NewModel;
 	}
-	public async findOne(data: object) {
+	public async findOne(data: object): Promise<Document> {
 		const Data = await this.schema.data.findOne(data);
 		return Data;
 	}
@@ -33,14 +33,18 @@ class DatabaseModule {
 		const Data = await this.schema.data.find(data);
 		return Data;
 	}
-	public async delete(data: object) {
+	public async delete(data: object): Promise<boolean> {
 		const Data = await this.findOne(data); // get data
 		if (!Data) return false;
 		// if no data, return false
 		else await Data.deleteOne(); // if exists delete
 		return true; // return true because the data exists & was deleted
 	}
-	public async increment(search: object, key: string, value: number) {
+	public async increment(
+		search: object,
+		key: string,
+		value: number
+	): Promise<Document> {
 		// increment a number by whatever
 		const data = await this.findOne(search);
 		if (!data) {
@@ -54,15 +58,24 @@ class DatabaseModule {
 					await data.save();
 					return data;
 				}
+
+				(data as Anything)[key]
+					? ((data as Anything)[key] += value)
+					: ((data as Anything)[key] = value);
+				await data.save();
+				return data;
+			} else {
+				(data as Anything)[key] = value;
+				await data.save();
+				return data;
 			}
-			(data as Anything)[key]
-				? ((data as Anything)[key] += value)
-				: ((data as Anything)[key] = value);
-			await data.save();
-			return data;
 		}
 	}
-	public async decrement(search: object, key: string, value: number) {
+	public async decrement(
+		search: object,
+		key: string,
+		value: number
+	): Promise<Document> {
 		// decrement a number by whatever
 		const data = await this.findOne(search);
 		if (!data) {
@@ -92,7 +105,7 @@ class DatabaseModule {
 			}
 		}
 	}
-	public async leaderboard(sort: SortFunction) {
+	public async leaderboard(sort: SortFunction): Promise<Array<Document>> {
 		// create a leaderboard
 		const Data: Array<Document> = [...(await this.find({}))].sort(sort);
 		return Data.length > 9 ? Data.slice(0, 10) : Data;
