@@ -176,7 +176,7 @@ class UtilsManager {
 		const usereconomy = await this.client.db.load('usereconomy');
 		const profile = await usereconomy.findOne({ User: user });
 		if (!profile)
-			return await usereconomy.create({
+			return usereconomy.create({
 				User: user,
 				Coins: 0,
 				DepositedCoins: 0,
@@ -185,14 +185,14 @@ class UtilsManager {
 		else {
 			const inventory = (profile as Anything)?.Inventory || {};
 			inventory[id] = inventory[id] ? (inventory[id] += 1) : 1;
-			return await usereconomy.update({ User: user }, { Inventory: inventory });
+			return usereconomy.update({ User: user }, { Inventory: inventory });
 		}
 	}
 	public async decrementItem(user: string, id: string): Promise<Document> {
 		const usereconomy = await this.client.db.load('usereconomy');
 		const profile = await usereconomy.findOne({ User: user });
 		if (!profile)
-			return await usereconomy.create({
+			return usereconomy.create({
 				User: user,
 				Coins: 0,
 				DepositedCoins: 0,
@@ -202,7 +202,7 @@ class UtilsManager {
 			const inventory = (profile as Anything)?.Inventory || {};
 			inventory[id] = inventory[id] ? (inventory[id] -= 1) : 0;
 			if (inventory[id] <= 0) delete inventory[id];
-			return await usereconomy.update({ User: user }, { Inventory: inventory });
+			return usereconomy.update({ User: user }, { Inventory: inventory });
 		}
 	}
 }
