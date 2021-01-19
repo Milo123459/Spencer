@@ -22,7 +22,7 @@ export const run: RunFunction = async (client, message) => {
 							}`,
 							value: `You have ${value[1]} ${items
 								.find((value_: Item) => value_.id == value[0])
-								.name.toLowerCase()}'s.`,
+								.name.toLowerCase()}s.`,
 						};
 					}),
 					description: 'Use sp!buy <item-id> to buy items!',

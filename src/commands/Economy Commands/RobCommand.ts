@@ -57,6 +57,19 @@ export const run: RunFunction = async (client, message, args) => {
 			},
 			'rob'
 		);
+	if (
+		((TargetProfile as Anything)?.Inventory || {})['padlock'] &&
+		((TargetProfile as Anything)?.Inventory || {})['padlock'] > 0
+	) {
+		await client.utils.decrementItem(member.id, 'padlock');
+		EconomySchema.decrement({ User: message.author.id }, 'Coins', 500);
+		return message.channel.send(
+			client.embed(
+				{ description: 'Ahhhhh they had a padlock on! You lose 500 coins.' },
+				message
+			)
+		);
+	}
 	const ShouldRob = Math.floor(Math.random() * 100) > 50;
 	if (!!!ShouldRob) {
 		await message.channel.send(
