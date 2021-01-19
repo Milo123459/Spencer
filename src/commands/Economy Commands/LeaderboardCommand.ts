@@ -2,11 +2,14 @@ import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
 import { Document } from 'mongoose';
 import { Util } from 'discord.js';
+import { addProp } from 'tyvn';
 
 export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const Leaderboard = await EconomySchema.leaderboard(
-		(a: Anything, b: Anything) => b.Coins - a.Coins
+		(a: Anything, b: Anything) =>
+			addProp<Anything>(['Coins', 'DepositedCoins'], 0, 0, b) -
+			addProp<Anything>(['Coins', 'DepositedCoins'], 0, 0, a)
 	);
 	const UserProfile = await EconomySchema.findOne({ User: message.author.id });
 	if (!UserProfile)
@@ -15,7 +18,9 @@ export const run: RunFunction = async (client, message, args) => {
 			{ DepositedCoins: 0, Coins: 0 }
 		);
 	const massive: Array<Document> = [...(await EconomySchema.find({}))].sort(
-		(a: Anything, b: Anything) => b.Coins - a.Coins
+		(a: Anything, b: Anything) =>
+			addProp<Anything>(['Coins', 'DepositedCoins'], 0, 0, b) -
+			addProp<Anything>(['Coins', 'DepositedCoins'], 0, 0, a)
 	);
 	const userPosition: number = massive
 		.map((value: Document, index: number) =>
@@ -30,14 +35,22 @@ export const run: RunFunction = async (client, message, args) => {
 						`${index + 1} - ${Util.escapeMarkdown(
 							client.users.cache.get((value as Anything).User)?.tag ||
 								'Unknown user'
-						)} - \`${(value as Anything).Coins?.toLocaleString() || 0} coins.\``
+						)} - \`${addProp<Anything>(
+							['Coins', 'DepositedCoins'],
+							0,
+							0,
+							value
+						).toLocaleString()} coins.\``
 				).join('\n')}\n${
 					userPosition > 10
-						? `${userPosition} - ${message.author.tag} - \`${
-								UserProfile ? (UserProfile as Anything).Coins : 0
-						  } coins.\``
+						? `${userPosition} - ${message.author.tag} - \`${addProp<Anything>(
+								['Coins', 'DepositedCoins'],
+								0,
+								0,
+								UserProfile
+						  ).toLocaleString()} coins.\``
 						: ''
-				}\nNote, the money is in how much they have in their wallet!`,
+				}\nNote, the money is in how much they have in their wallet & bank!`,
 			},
 			message
 		)

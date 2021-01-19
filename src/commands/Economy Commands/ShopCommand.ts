@@ -2,11 +2,12 @@ import { items } from '../../static/Items';
 import pagination from '../../utils/Pagination';
 import { RunFunction } from '../../interfaces/Command';
 import { Item } from '../../interfaces/Item';
+import { limitArray } from 'tyvn';
 
 export const run: RunFunction = async (client, message, args) => {
 	return pagination(
 		message,
-		client.utils.limitArray<Item>(items, 5).map((value: Array<Item>) =>
+		limitArray<Item>(items, 5).map((value: Array<Item>) =>
 			client.embed(
 				{
 					fields: value.map((value: Item) => {

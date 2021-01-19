@@ -5296,6 +5296,7 @@ fsevents@~2.3.1:
     ts-node-dev: ^1.1.1
     tslib: ^2.1.0
     typescript: ^4.1.3
+    tyvn: ^1.3.0
     utf-8-validate: ^5.0.4
     vacefron: ^3.4.0
     yn: ^4.0.0
@@ -5926,6 +5927,13 @@ typescript@^4.1.3:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 017af992148346e671d5b83b041773825888e9c94db8d2b9472cdbb6d6f0ee85927817473121524d319f8be6ffe5a6904d27ff6ef21356d2274fcadd52e17938
+  languageName: node
+  linkType: hard
+
+"tyvn@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "tyvn@npm:1.3.0"
+  checksum: ba8d8971fc8a7e391f1c8f9402dd6b0e1eaea992aed35b0f1524666eb634282b8d6a695d52d8f9e439805e652bff7c305960178814812ef5999cbe9e25e081dd
   languageName: node
   linkType: hard
 
