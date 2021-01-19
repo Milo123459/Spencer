@@ -79,13 +79,17 @@ class DatabaseModule {
 					await data.save();
 					return data;
 				}
-			}
-			(data as Anything)[key] -= value;
-			if ((data as Anything)[key] < 0) {
+				(data as Anything)[key] -= value;
+				if ((data as Anything)[key] < 0) {
+					(data as Anything)[key] = 0;
+				}
+				await data.save();
+				return data;
+			} else {
 				(data as Anything)[key] = 0;
+				await data.save();
+				return data;
 			}
-			await data.save();
-			return data;
 		}
 	}
 	public async leaderboard(sort: SortFunction) {
