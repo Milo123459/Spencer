@@ -38,7 +38,7 @@ export const run: RunFunction = async (client) => {
 				await EconomySchema.increment(
 					{ User: req.vote.user },
 					'Coins',
-					req.vote.isWeekend ? 1000 : 2000
+					req.vote.isWeekend ? 2000 : 1000
 				);
 				const Profile = await EconomySchema.findOne({ User: req.vote.user });
 				const voteReminder = (Profile as Anything)?.VoteReminder || false;
