@@ -14,19 +14,22 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	const item = items.find(
-		(value) => value.id.toLowerCase() == args.join(' ').toLowerCase()
+		(value) => value.id.toLowerCase() == args[0].toLowerCase()
 	);
+	const amount = args[1] ? parseInt(args[1], 10) : 1;
 	if (!item)
 		return message.channel.send(
 			client.embed({ description: "I couldn't find that item." }, message)
 		);
 	const UserEconomy = await client.db.load('usereconomy');
 	const UserProfile = await UserEconomy.findOne({ User: message.author.id });
-	if (!(((UserProfile as Anything)?.Coins || 0) >= item.price))
+	if (!(((UserProfile as Anything)?.Coins || 0) >= item.price * amount))
 		return message.channel.send(
 			client.embed(
 				{
-					description: `You don't have enough money for that. You need ${item.price} coins!`,
+					description: `You don't have enough money for that. You need ${(
+						item.price * amount
+					).toLocaleString()} coins to buy ${amount}!`,
 				},
 				message
 			)
@@ -34,11 +37,18 @@ export const run: RunFunction = async (client, message, args) => {
 	await UserEconomy.decrement({ User: message.author.id }, 'Coins', item.price);
 	await client.utils.incrementItem(message.author.id, item.id);
 	return message.channel.send(
-		client.embed({ description: `You bought one ${item.name}` }, message)
+		client.embed(
+			{
+				description: `You bought ${amount} ${
+					amount > 1 ? `${item.name}s` : item.name
+				}`,
+			},
+			message
+		)
 	);
 };
 
-export const usage: string = '<...item id>';
+export const usage: string = '<item id> [amount]';
 export const name: string = 'buy';
 export const category: string = 'economy';
-export const description: string = 'A cool command';
+export const description: string = 'Buy something from the shop.';
