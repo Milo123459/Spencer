@@ -37,7 +37,7 @@ Commiting!
 
 Easy as hell, just do this:
 
-`yarn git "commit-message-following-our-standards!"` - note, the branch has to exist first.
+`yarn git "commit-message-following-our-standards!"` - note, the branch has to exist on the hosted repo first.
 
 # 👍 PR standards
 
