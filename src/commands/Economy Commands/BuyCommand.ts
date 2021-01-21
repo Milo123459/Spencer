@@ -34,8 +34,14 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-	await UserEconomy.decrement({ User: message.author.id }, 'Coins', item.price);
-	await client.utils.incrementItem(message.author.id, item.id);
+	await UserEconomy.decrement(
+		{ User: message.author.id },
+		'Coins',
+		item.price * amount
+	);
+	for (let i = 0; i < amount; i++) {
+		await client.utils.incrementItem(message.author.id, item.id);
+	}
 	return message.channel.send(
 		client.embed(
 			{
