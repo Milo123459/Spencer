@@ -8,7 +8,7 @@ You need to install the following things:
 
 - [Git](https://git-scm.com)
 - [NodeJS V14+](https://nodejs.org)
-- Yarn (tye npm i -g yarn)
+- Yarn (type npm i -g yarn)
 
 # ⚡ Setup
 
