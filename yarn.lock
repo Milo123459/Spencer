@@ -3452,8 +3452,8 @@ fsevents@~2.3.1:
   linkType: hard
 
 "listr2@npm:^3.2.2":
-  version: 3.2.3
-  resolution: "listr2@npm:3.2.3"
+  version: 3.3.0
+  resolution: "listr2@npm:3.3.0"
   dependencies:
     chalk: ^4.1.0
     cli-truncate: ^2.1.0
@@ -3463,9 +3463,10 @@ fsevents@~2.3.1:
     p-map: ^4.0.0
     rxjs: ^6.6.3
     through: ^2.3.8
+    wrap-ansi: ^7.0.0
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: 83f7659bd94f714274284e238562e4f78beb213d02ec0575210a1254e9bb3415a8040c691d419633e029099f2629a99e05c8b0adb0dade3f6a9ff6499e69c69f
+  checksum: 3af0a81f612c43f4266e6b94ef849c5da988126d3cd52267a412f99b68bb827968365434b8c0810a14a86877bec4af3c2e1240ea5734e1d3e5e82f20386763a1
   languageName: node
   linkType: hard
 
@@ -6075,6 +6076,17 @@ typescript@^4.1.3:
     string-width: ^4.1.0
     strip-ansi: ^6.0.0
   checksum: ee4ed8b2994cfbdcd571f4eadde9d8ba00b8a74113483fe5d0c5f9e84054e43df8e9092d7da35c5b051faeca8fe32bd6cea8bf5ae8ad4896d6ea676a347e90af
+  languageName: node
+  linkType: hard
+
+"wrap-ansi@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "wrap-ansi@npm:7.0.0"
+  dependencies:
+    ansi-styles: ^4.0.0
+    string-width: ^4.1.0
+    strip-ansi: ^6.0.0
+  checksum: 09939dd775ae565bb99a25a6c072fe3775a95fa71751b5533c94265fe986ba3e3ab071a027ab76cf26876bd9afd10ac3c2d06d7c4bcce148bf7d2d9514e3a0df
   languageName: node
   linkType: hard
 
