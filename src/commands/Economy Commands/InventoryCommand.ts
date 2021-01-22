@@ -29,7 +29,9 @@ export const run: RunFunction = async (client, message, args) => {
 								.name.toLowerCase()}s.`,
 						};
 					}),
-					description: 'Use sp!buy <item-id> to buy items!',
+					description: `${
+						message.guild.member(User).user.tag
+					}'s inventory\nUse sp!buy <item-id> to buy items!`,
 				},
 				message
 			)
