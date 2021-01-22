@@ -47,6 +47,20 @@ export const run: RunFunction = async (client, message, args) => {
         `,
 						true
 					),
+					client.utils.constructField(
+						'Miscellaneous',
+						`
+                    Voted for Spencer in the last 12 hours?: **${
+											(await client.utils.tryItAndSee<string>(async () => {
+												const hasVoted: boolean = await client.topGGApi.hasVoted(
+													User
+												);
+												if (hasVoted) return 'Yes';
+												else if (!hasVoted) return 'No';
+											})) || 'Unknown'
+										}**
+                    `
+					),
 				],
 			},
 			message

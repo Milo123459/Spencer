@@ -205,5 +205,13 @@ class UtilsManager {
 			return usereconomy.update({ User: user }, { Inventory: inventory });
 		}
 	}
+	public async tryItAndSee<T>(code: Function): Promise<T | boolean> {
+		try {
+			const response: T = await code();
+			return response;
+		} catch {
+			return false;
+		}
+	}
 }
 export { UtilsManager };
