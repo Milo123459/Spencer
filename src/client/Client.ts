@@ -27,7 +27,6 @@ class Spencer extends Client {
 	public commands: Collection<string, Command> = new Collection();
 	public aliases: Collection<string, string> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();
-	public events: Collection<string, Event> = new Collection();
 	public schemas: Collection<string, Schema> = new Collection();
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
@@ -85,7 +84,6 @@ class Spencer extends Client {
 		});
 		eventFiles.map(async (eventFile: string) => {
 			const ev = (await import(eventFile)) as Event;
-			this.events.set(ev.name, ev);
 			if (ev.emitter && typeof ev.emitter == 'function') {
 				ev.emitter(this).on(ev.name, ev.run.bind(null, this));
 			} else if (ev.emitter && ev.emitter instanceof EventEmitter) {

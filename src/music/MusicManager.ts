@@ -9,6 +9,7 @@ class MusicManager {
 	public dispatchers: Dispatchers = new Dispatchers();
 	public shoukaku: Shoukaku;
 	public constructor(public client: Spencer) {
+		this.client.logger.info('Music has been constructed');
 		this.shoukaku = new Shoukaku(
 			this.client,
 			this.client.config.lavalinkNodes,
