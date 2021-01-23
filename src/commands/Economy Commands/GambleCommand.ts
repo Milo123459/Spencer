@@ -45,6 +45,12 @@ export const run: RunFunction = async (client, message) => {
 					return await msg.edit(
 						client.embed({ description: "You can't bet nothing.." }, message)
 					);
+				if (balance > 10000)
+					return await client.utils.fail(
+						message,
+						{ description: 'You can only bet less then 10000!' },
+						'gamble'
+					);
 				const shouldDouble: number = Math.floor(Math.random() * 100);
 				if (shouldDouble > 50) {
 					await UserEconomySchema.increment(

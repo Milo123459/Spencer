@@ -56,7 +56,7 @@ class Dispatcher {
 		});
 	}
 	public get exists(): boolean {
-		return this.client.music.queue.has(this.guild.id);
+		return this.client.music.dispatchers.has(this.guild.id);
 	}
 	public async play(): Promise<void> {
 		if (!this.exists || !this.queue.length) return this.destroy();
