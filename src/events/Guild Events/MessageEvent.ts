@@ -22,7 +22,12 @@ export const run: RunFunction = async (client, message: Message) => {
 				1
 			);
 			if ((GuildConfig as Anything).AntiRaid == 'low') {
-				await message.reply("Please don't mass ping people.");
+				await message.reply(
+					client.embed(
+						{ description: "Please don't mass mention people." },
+						message
+					)
+				);
 				if (
 					((await RaidUserSchema.findOne({
 						User: message.author.id,
