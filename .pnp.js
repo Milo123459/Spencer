@@ -55,7 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],
-            ["dayjs", "npm:1.10.3"],
+            ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
             ["erlpack", "npm:0.1.3"],
@@ -2498,10 +2498,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dayjs", [
-        ["npm:1.10.3", {
-          "packageLocation": "./.yarn/cache/dayjs-npm-1.10.3-cee1f6fe9d-df7d13e99a.zip/node_modules/dayjs/",
+        ["npm:1.10.4", {
+          "packageLocation": "./.yarn/cache/dayjs-npm-1.10.4-e450424eab-3b7bb2232f.zip/node_modules/dayjs/",
           "packageDependencies": [
-            ["dayjs", "npm:1.10.3"]
+            ["dayjs", "npm:1.10.4"]
           ],
           "linkType": "HARD",
         }]
@@ -6313,7 +6313,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
             ["consola", "npm:2.15.0"],
-            ["dayjs", "npm:1.10.3"],
+            ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
             ["erlpack", "npm:0.1.3"],
