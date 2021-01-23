@@ -18,6 +18,7 @@ import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
 import { VACEFronJS } from 'vacefron';
 import { Api, Webhook } from '@top-gg/sdk';
+import EventEmitter from 'events';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -79,7 +80,13 @@ class Spencer extends Client {
 		eventFiles.map(async (eventFile: string) => {
 			const ev = (await import(eventFile)) as Event;
 			this.events.set(ev.name, ev);
-			(ev.emitter || this).on(ev.name, ev.run.bind(null, this));
+			if (ev.emitter && typeof ev.emitter == 'function') {
+				ev.emitter(this).on(ev.name, ev.run.bind(null, this));
+			} else if (ev.emitter && ev.emitter instanceof EventEmitter) {
+				(ev.emitter as EventEmitter).on(ev.name, ev.run.bind(null, this));
+			} else {
+				this.on(ev.name, ev.run.bind(null, this));
+			}
 		});
 		schemaFiles.map(async (schemaFile: string) => {
 			const sch = (await import(schemaFile)) as Schema;

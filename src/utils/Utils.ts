@@ -8,7 +8,6 @@ import {
 	TextChannel,
 	MessageEmbedOptions,
 } from 'discord.js';
-import { acos } from 'mathjs';
 import { Document } from 'mongoose';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
