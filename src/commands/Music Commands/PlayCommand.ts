@@ -24,7 +24,7 @@ export const run: RunFunction = async (client, message, args) => {
 		const result = await node.rest.resolve(args.join(' '));
 		if (!result)
 			return message.channel.send(
-				client.embed({ description: "I couldn't find that!" }, message)
+				client.embed({ description: "I couldn't find that song!" }, message)
 			);
 		const playlist = result.type == 'PLAYLIST';
 		const track = result.tracks.shift();
@@ -48,12 +48,6 @@ export const run: RunFunction = async (client, message, args) => {
 				if (track.info.isStream) return;
 				if (track.info.length > ms('3h')) return;
 				await client.music.handle(node, track, message);
-			}
-		}
-		if (handled) {
-			if (client.music.dispatchers.get(message.guild.id).playing == false) {
-				await handled.play();
-				client.music.dispatchers.get(message.guild.id).setPlaying(true);
 			}
 		}
 		return message.channel.send(

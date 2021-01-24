@@ -2,6 +2,7 @@ import { Spencer } from '../client/Client';
 import yocto from 'yocto-queue';
 import { Guild, TextChannel, Message } from 'discord.js';
 import { ShoukakuPlayer, ShoukakuTrack } from 'shoukaku';
+import { Anything } from '../interfaces/Anything';
 
 interface Queue extends ShoukakuTrack {
 	message: Message;
@@ -9,7 +10,6 @@ interface Queue extends ShoukakuTrack {
 
 class Dispatcher {
 	public destroyed: boolean = false;
-	public playing: boolean = false;
 	public current: Queue;
 	public queue: yocto<Queue> = new yocto();
 	public constructor(
@@ -19,7 +19,6 @@ class Dispatcher {
 		public player: ShoukakuPlayer
 	) {
 		this.player.on('start', () => {
-			this.setPlaying(true);
 			this.text.send(
 				client
 					.embed(
@@ -34,8 +33,9 @@ class Dispatcher {
 			);
 		});
 		this.player.on('end', async () => {
+			if (this.queue.size == 0) return this.destroy();
 			try {
-				await this.play(this.playing);
+				await this.play();
 			} catch (e) {
 				this.queue.clear();
 				this.destroy(this.destroyed, 'the queue ended');
@@ -62,10 +62,10 @@ class Dispatcher {
 	public get exists(): boolean {
 		return this.client.music.dispatchers.has(this.guild.id);
 	}
-	public async play(playing?: boolean): Promise<void> {
-		if (!this.exists || !this.queue.size) return this.destroy();
-		if (playing && playing == true) return;
+	public async play(stuff?: Anything): Promise<void> {
+		if (this.queue.size == 0) return this.destroy();
 		this.current = this.queue.dequeue();
+		if (!this.current) return this.destroy();
 		await this.player.playTrack(this.current.track);
 	}
 
@@ -76,10 +76,6 @@ class Dispatcher {
 		this.player.disconnect();
 		this.text.send(`I left because ${reason ?? 'of an empty queue'}.`);
 		this.client.music.remove(this.guild.id);
-	}
-	public setPlaying(val: boolean): boolean {
-		this.playing = val;
-		return this.playing;
 	}
 }
 

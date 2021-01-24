@@ -26,7 +26,10 @@ class MusicManager {
 		message: Message
 	): Promise<void | Dispatcher> {
 		const dispatcher: Dispatcher = this.dispatchers.get(message.guild.id);
-		if (!dispatcher || !dispatcher.queue.size) {
+		if (dispatcher?.current) {
+			dispatcher.queue.enqueue({ message, ...track });
+			return dispatcher;
+		} else {
 			const player = await node.joinVoiceChannel({
 				guildID: message.guild.id,
 				voiceChannelID: message.member.voice.channelID,
@@ -39,10 +42,8 @@ class MusicManager {
 			);
 			newDispatcher.queue.enqueue({ message, ...track });
 			this.dispatchers.set(message.guild.id, newDispatcher);
+			await newDispatcher.play();
 			return newDispatcher;
-		} else {
-			dispatcher.queue.enqueue({ message, ...track });
-			return dispatcher;
 		}
 	}
 	public remove(guild: string): void {
