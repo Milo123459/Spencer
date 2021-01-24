@@ -5313,6 +5313,7 @@ fsevents@~2.3.1:
     utf-8-validate: ^5.0.4
     vacefron: ^3.4.0
     yn: ^4.0.0
+    yocto-queue: ^0.1.0
     zlib-sync: ^0.1.7
   languageName: unknown
   linkType: soft

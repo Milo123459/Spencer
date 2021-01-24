@@ -81,6 +81,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
+            ["yocto-queue", "npm:0.1.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
           "linkType": "SOFT",
@@ -6352,6 +6353,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
+            ["yocto-queue", "npm:0.1.0"],
             ["zlib-sync", "npm:0.1.7"]
           ],
           "linkType": "SOFT",

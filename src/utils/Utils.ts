@@ -9,6 +9,7 @@ import {
 	MessageEmbedOptions,
 } from 'discord.js';
 import { Document } from 'mongoose';
+import { URL } from 'url';
 import { Spencer } from '../client/Client';
 import { Anything } from '../interfaces/Anything';
 class UtilsManager {
@@ -208,6 +209,21 @@ class UtilsManager {
 		try {
 			const response: T = await code();
 			return response;
+		} catch {
+			return false;
+		}
+	}
+	public checkVC(message: Message): boolean {
+		if (!message.member.voice.channel) return false;
+		if (!message.guild.me.voice.channel) return true;
+		if (message.member.voice.channelID == message.guild.me.voice.channelID)
+			return true;
+		else return false;
+	}
+	public checkURL(url: string): boolean {
+		try {
+			new URL(url);
+			return true;
 		} catch {
 			return false;
 		}

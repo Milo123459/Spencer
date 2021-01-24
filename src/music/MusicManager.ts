@@ -24,9 +24,9 @@ class MusicManager {
 		node: ShoukakuSocket,
 		track: ShoukakuTrack,
 		message: Message
-	): Promise<void> {
+	): Promise<void | Dispatcher> {
 		const dispatcher: Dispatcher = this.dispatchers.get(message.guild.id);
-		if (!dispatcher) {
+		if (!dispatcher || !dispatcher.queue.size) {
 			const player = await node.joinVoiceChannel({
 				guildID: message.guild.id,
 				voiceChannelID: message.member.voice.channelID,
@@ -37,9 +37,16 @@ class MusicManager {
 				message.channel as TextChannel,
 				player
 			);
-			newDispatcher.queue.push({ message, ...track });
+			newDispatcher.queue.enqueue({ message, ...track });
 			this.dispatchers.set(message.guild.id, newDispatcher);
-		} else dispatcher.queue.push({ message, ...track });
+			return newDispatcher;
+		} else {
+			dispatcher.queue.enqueue({ message, ...track });
+			return dispatcher;
+		}
+	}
+	public remove(guild: string): void {
+		this.dispatchers.delete(guild);
 	}
 }
 
