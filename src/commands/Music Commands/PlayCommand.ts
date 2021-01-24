@@ -51,9 +51,6 @@ export const run: RunFunction = async (client, message, args) => {
 			}
 		}
 		if (handled) {
-			console.log(
-				client.music.dispatchers.get(message.guild.id).playing == false
-			);
 			if (client.music.dispatchers.get(message.guild.id).playing == false) {
 				await handled.play();
 				client.music.dispatchers.get(message.guild.id).setPlaying(true);
