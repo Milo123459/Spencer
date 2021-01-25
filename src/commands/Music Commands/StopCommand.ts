@@ -21,20 +21,14 @@ export const run: RunFunction = async (client, message) => {
 		return message.channel.send(
 			client.embed({ description: 'I need to be in a VC as well!' }, message)
 		);
-	if (!dispatch.queue.size)
-		return message.channel.send(
-			client.embed(
-				{ description: 'There is nothing else in the queue!' },
-				message
-			)
-		);
 	if (
 		message.guild.me.voice.channel.members.size == 2 &&
 		message.guild.me.voice.channel.members.has(message.author.id)
 	) {
+		dispatch.queue.clear();
 		await dispatch.player.stopTrack();
 		return message.channel.send(
-			client.embed({ description: 'Skipped!' }, message)
+			client.embed({ description: 'Cleared the queue!' }, message)
 		);
 	} else {
 		if (!message.member.permissions.has('MANAGE_GUILD'))
@@ -42,17 +36,19 @@ export const run: RunFunction = async (client, message) => {
 				client.embed(
 					{
 						description:
-							'You need MANAGE_GUILD to skip as there are other people in the VC.',
+							'You need MANAGE_GUILD to clear the queue as there are other people in the VC.',
 					},
 					message
 				)
 			);
+		dispatch.queue.clear();
 		await dispatch.player.stopTrack();
 		return message.channel.send(
-			client.embed({ description: 'Skipped!' }, message)
+			client.embed({ description: 'Cleared the queue!' }, message)
 		);
 	}
 };
-export const name: string = 'skip';
+export const name: string = 'stop';
 export const category: string = 'music';
-export const description: string = 'Skip the current song';
+export const description: string = 'Stop the music';
+export const aliases: string[] = ['disconnect', 'leave'];

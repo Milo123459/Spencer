@@ -32,4 +32,4 @@ export const run: RunFunction = async (client, message) => {
 };
 export const name: string = 'nowplaying';
 export const category: string = 'music';
-export const description: string = 'A cool command.';
+export const description: string = 'See what is currently playing';
