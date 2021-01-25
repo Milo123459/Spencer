@@ -63,7 +63,7 @@ export const run: RunFunction = async (client, message, args) => {
 	} else {
 		const searchData = await node.rest.resolve(args.join(' '), 'youtube');
 		if (!searchData.tracks.length)
-			return await message.channel.send(
+			return message.channel.send(
 				client.embed(
 					{ description: "I couldnt't find anything with that query!" },
 					message
