@@ -8,6 +8,11 @@ export const run: RunFunction = async (client, message) => {
 			client.embed({ description: "This guild isn't playing music!" }, message)
 		);
 	const currentSong = dispatch.current;
+	const bar = progress(
+		currentSong.info.length,
+		dispatch?.player?.position ?? 0,
+		20
+	);
 	return message.channel.send(
 		client
 			.embed(
@@ -15,12 +20,8 @@ export const run: RunFunction = async (client, message) => {
 					description: `**${currentSong.info.title}** by **${
 						currentSong.info.author
 					}** | Requested by: ${currentSong.message.author}\n${
-						progress(
-							currentSong.info.length,
-							dispatch?.player?.position == 0 ? 1 : dispatch.player.position,
-							20
-						)[0]
-					}`,
+						bar[0]
+					}\n${parseInt(bar[1], 10).toFixed(0)}% through the song. `,
 				},
 				message
 			)

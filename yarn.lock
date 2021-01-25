@@ -5305,7 +5305,7 @@ fsevents@~2.3.1:
     prettier: ^2.2.1
     prompts: ^2.4.0
     shoukaku: ^1.5.2
-    string-progressbar: ^1.0.2
+    string-progressbar: ^1.0.3
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1
     tslib: ^2.1.0
@@ -5429,10 +5429,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"string-progressbar@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "string-progressbar@npm:1.0.2"
-  checksum: 8f7286cfe390a4a314292281a03cd246a972f91b461dd2afd7f45ff7d558531ae4c22ac34c8771320fe7c3c659638876ddd2afcec4082b85eb299954e459f519
+"string-progressbar@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "string-progressbar@npm:1.0.3"
+  checksum: 77063b841b63a9fbf88b1851f9e9cbfc9f44cf7f74332d1a426937893949c80cc32d354dd0bb0ce1fcb879fcb42c980301ab9fc81d414cbdb78eec4b80ef9acb
   languageName: node
   linkType: hard
 
