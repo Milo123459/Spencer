@@ -8,7 +8,6 @@ export const run: RunFunction = async (client, message) => {
 			client.embed({ description: "This guild isn't playing music!" }, message)
 		);
 	const currentSong = dispatch.current;
-	console.log(dispatch?.player?.position);
 	return message.channel.send(
 		client
 			.embed(
@@ -33,3 +32,4 @@ export const run: RunFunction = async (client, message) => {
 export const name: string = 'nowplaying';
 export const category: string = 'music';
 export const description: string = 'See what is currently playing';
+export const aliases: string[] = ['np', 'playing'];
