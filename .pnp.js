@@ -73,6 +73,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
+            ["string-progressbar", "npm:1.0.2"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
@@ -6345,6 +6346,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
+            ["string-progressbar", "npm:1.0.2"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
@@ -6477,6 +6479,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/string-argv-npm-0.3.1-b4f6cd3d7b-002a690269.zip/node_modules/string-argv/",
           "packageDependencies": [
             ["string-argv", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["string-progressbar", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/string-progressbar-npm-1.0.2-df10661fe2-8f7286cfe3.zip/node_modules/string-progressbar/",
+          "packageDependencies": [
+            ["string-progressbar", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]

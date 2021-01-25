@@ -42,7 +42,7 @@ export const run: RunFunction = async (client, message, args) => {
 					message
 				)
 			);
-		const handled = await client.music.handle(node, track, message);
+		await client.music.handle(node, track, message);
 		if (playlist) {
 			for (const track of result.tracks) {
 				if (track.info.isStream) return;
@@ -57,6 +57,23 @@ export const run: RunFunction = async (client, message, args) => {
 						? `Queued **${result.playlistName}** and all of its ${result.tracks.length} songs.`
 						: `Queued **${track.info.title}** by **${track.info.author}**`,
 				},
+				message
+			)
+		);
+	} else {
+		const searchData = await node.rest.resolve(args.join(' '), 'youtube');
+		if (!searchData.tracks.length)
+			return await message.channel.send(
+				client.embed(
+					{ description: "I couldnt't find anything with that query!" },
+					message
+				)
+			);
+		const track = searchData.tracks.shift();
+		await client.music.handle(node, track, message);
+		return message.channel.send(
+			client.embed(
+				{ description: `Added the track **${track.info.title}** in queue!` },
 				message
 			)
 		);

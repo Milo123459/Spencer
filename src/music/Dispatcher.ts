@@ -2,7 +2,6 @@ import { Spencer } from '../client/Client';
 import yocto from 'yocto-queue';
 import { Guild, TextChannel, Message } from 'discord.js';
 import { ShoukakuPlayer, ShoukakuTrack } from 'shoukaku';
-import { Anything } from '../interfaces/Anything';
 
 interface Queue extends ShoukakuTrack {
 	message: Message;
@@ -43,14 +42,10 @@ class Dispatcher {
 			}
 		});
 		this.player.on('closed', (data: object | Error) => {
-			if (data instanceof Error || data instanceof Object)
-				this.client.logger.error(data);
 			this.queue.clear();
 			this.destroy(this.destroyed, 'the socket connection closed');
 		});
 		this.player.on('error', (data: object | Error) => {
-			if (data instanceof Error || data instanceof Object)
-				this.client.logger.error(data);
 			this.queue.clear();
 			this.destroy(this.destroyed, 'of an error');
 		});
@@ -62,7 +57,7 @@ class Dispatcher {
 	public get exists(): boolean {
 		return this.client.music.dispatchers.has(this.guild.id);
 	}
-	public async play(stuff?: Anything): Promise<void> {
+	public async play(): Promise<void> {
 		if (this.queue.size == 0) return this.destroy();
 		this.current = this.queue.dequeue();
 		if (!this.current) return this.destroy();
