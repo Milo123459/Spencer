@@ -17,7 +17,7 @@ export const run: RunFunction = async (client, message) => {
 					}** | Requested by: ${currentSong.message.author}\n${
 						progress(
 							currentSong.info.length,
-							dispatch?.player?.position ?? 0,
+							dispatch?.player?.position == 0 ? 1 : dispatch.player.position,
 							20
 						)[0]
 					}`,
