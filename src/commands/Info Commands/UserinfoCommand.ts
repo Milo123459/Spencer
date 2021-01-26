@@ -13,7 +13,7 @@ export const run: RunFunction = async (client, message, args) => {
 					client.utils.constructField(
 						'Identification',
 						`
-                        Tag: **${member.user.tag}**
+                        Discriminator: **${member.user.discriminator}**
                         ID: **${member.id}**
                         Display name in **${message.guild.name}**: **${
 							member.displayName
