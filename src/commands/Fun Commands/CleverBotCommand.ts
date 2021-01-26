@@ -7,7 +7,7 @@ export const run: RunFunction = async (client, message, args) => {
 			client.embed(
 				{
 					description:
-						'If you want to ask the bot of clever, please ask a question..',
+						'If you want to ask cleverbot a question, please actually ask one.',
 				},
 				message
 			)
