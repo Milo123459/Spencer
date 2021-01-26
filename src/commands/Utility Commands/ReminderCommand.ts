@@ -45,6 +45,7 @@ export const run: RunFunction = async (client, message, args) => {
 		User: message.author.id,
 		Message: args.slice(1).join(' '),
 		Time: Date.now() + time,
+		Guild: message.guild.id,
 	});
 	await message.channel.send(
 		client.embed(

@@ -21,7 +21,11 @@ export const run: RunFunction = async (client) => {
 				try {
 					await value.delete();
 					await User.send(
-						`I was told to remind you: ${(value as Anything).Message}`
+						`I was told to remind you${
+							(value as Anything)?.Guild
+								? ' ' + client.guilds.cache.get((value as Anything)?.Guild).name
+								: ''
+						}: **${(value as Anything).Message}**`
 					);
 				} catch {}
 			}

@@ -6,5 +6,6 @@ export const data = model(
 		User: String,
 		Message: String,
 		Time: Number,
+		Guild: String,
 	})
 );
