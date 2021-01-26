@@ -14,7 +14,6 @@
 		"sdk": "yarn pnpify --sdk",
 		"gbump": "yarn bump && yarn sdk && yarn git 'chore(Deps): bump deps'",
 		"new": "ts-node ./src/scripts/New.ts",
-		"test:language": "ts-node ./src/language/test.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
 		"start": "yarn start:core && pm2 start dist/src/index.js --name Spencer",
 		"git": "ts-node ./src/scripts/Git.ts"
