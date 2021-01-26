@@ -23,7 +23,8 @@ export const run: RunFunction = async (client) => {
 					await User.send(
 						`I was told to remind you${
 							(value as Anything)?.Guild
-								? ' ' + client.guilds.cache.get((value as Anything)?.Guild).name
+								? ' from ' +
+								  client.guilds.cache.get((value as Anything)?.Guild).name
 								: ''
 						}: **${(value as Anything).Message}**`
 					);
