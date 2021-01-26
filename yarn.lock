@@ -2619,13 +2619,13 @@ fsevents@~2.3.1:
   linkType: hard
 
 "get-intrinsic@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "get-intrinsic@npm:1.0.2"
+  version: 1.1.0
+  resolution: "get-intrinsic@npm:1.1.0"
   dependencies:
     function-bind: ^1.1.1
     has: ^1.0.3
     has-symbols: ^1.0.1
-  checksum: 1916051d494f7265bf1072bf0243052d79be1d38fa2fa4561695ee7162a2c29f208fbc4ad3c82c340eb1ca5c788ec11791a5e345ff7d35f789438b237c941271
+  checksum: 002cb2f94800009e88620e9260399370dab1d110a8d2de49a01c49fdc277fdfc8245403acc7242d22deda996be707c1131e66046d92a3de92c25e0b660da75dc
   languageName: node
   linkType: hard
 

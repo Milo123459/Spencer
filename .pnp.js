@@ -1979,7 +1979,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["call-bind", "npm:1.0.2"],
             ["function-bind", "npm:1.1.1"],
-            ["get-intrinsic", "npm:1.0.2"]
+            ["get-intrinsic", "npm:1.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3323,10 +3323,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["get-intrinsic", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/get-intrinsic-npm-1.0.2-e224a79528-1916051d49.zip/node_modules/get-intrinsic/",
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/get-intrinsic-npm-1.1.0-23db05b438-002cb2f948.zip/node_modules/get-intrinsic/",
           "packageDependencies": [
-            ["get-intrinsic", "npm:1.0.2"],
+            ["get-intrinsic", "npm:1.1.0"],
             ["function-bind", "npm:1.1.1"],
             ["has", "npm:1.0.3"],
             ["has-symbols", "npm:1.0.1"]
