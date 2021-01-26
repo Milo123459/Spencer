@@ -22,7 +22,7 @@ export const run: RunFunction = async (client, message, args) => {
 	const node = client.music.shoukaku.getNode();
 	if (client.utils.checkURL(args.join(' '))) {
 		const result = await node.rest.resolve(args.join(' '));
-		if (!result)
+		if (!result || !result?.tracks?.length)
 			return message.channel.send(
 				client.embed({ description: "I couldn't find that song!" }, message)
 			);
