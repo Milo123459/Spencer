@@ -17,7 +17,9 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 			.join('\n')}
 
-    You can do sp!config <config-name> <value> like so, some require extra permissions.
+    You can do ${await client.utils.getPrefix(
+			message.guild.id
+		)}config <config-name> <value> like so, some require extra permissions.
     `,
 				},
 				message

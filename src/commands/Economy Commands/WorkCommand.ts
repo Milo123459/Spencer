@@ -10,8 +10,9 @@ export const run: RunFunction = async (client, message) => {
 		return client.utils.fail(
 			message,
 			{
-				description:
-					"Wait a minute, you don't have a job! Use [prefix]setjob to get a job!",
+				description: `Wait a minute, you don't have a job! Use ${await client.utils.getPrefix(
+					message.guild.id
+				)}setjob to get a job!`,
 			},
 			'work'
 		);

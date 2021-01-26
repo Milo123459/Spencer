@@ -34,7 +34,9 @@ export const run: RunFunction = async (client, message) => {
 											.join('\n')}
                     ${
 											dispatch.queue.size > 10
-												? `... and ${dispatch.queue.size - 10} more songs..`
+												? `... and ${dispatch.queue.size - 10} more song${
+														dispatch.queue.size == 11 ? '' : 's'
+												  }`
 												: ''
 										}
                     `.trim(),

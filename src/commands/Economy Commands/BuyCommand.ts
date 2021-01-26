@@ -7,8 +7,9 @@ export const run: RunFunction = async (client, message, args) => {
 		return message.channel.send(
 			client.embed(
 				{
-					description:
-						"Please provide a valid item id! Don't know what to buy? sp!shop is for you.",
+					description: `Please provide a valid item id! Don't know what to buy? ${await client.utils.getPrefix(
+						message.guild.id
+					)}shop is for you.`,
 				},
 				message
 			)

@@ -5,6 +5,7 @@ import { Item } from '../../interfaces/Item';
 import { limitArray } from 'tyvn';
 
 export const run: RunFunction = async (client, message) => {
+	const prefix = await client.utils.getPrefix(message.guild.id);
 	return pagination(
 		message,
 		limitArray<Item>(items, 5).map((value: Array<Item>) =>
@@ -18,7 +19,7 @@ export const run: RunFunction = async (client, message) => {
 							}\nPrice: ${value.price.toLocaleString()}\nID: \`${value.id}\``,
 						};
 					}),
-					description: 'Use sp!buy <item-id> to buy items!',
+					description: `Use ${prefix}buy <item-id> to buy items!`,
 				},
 				message
 			)

@@ -71,7 +71,7 @@ export const subcommands: Array<SubCommand> = [
 		schema: 'guildconfig',
 		key: 'AutoDeleteActions',
 		description:
-			'Toggles if you want to delete sp!accept,consider,deny commands',
+			'Toggles if you want to automatically delete accept,consider,deny',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =

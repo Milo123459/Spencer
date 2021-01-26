@@ -11,7 +11,7 @@ export const run: RunFunction = async (client, message, args) => {
 		client.utils.ResolveMember(message, args[0])?.id || message.author.id;
 	const Profile = await UserEconomy.findOne({ User: User });
 	const Inventory = (Profile as Anything)?.Inventory || {};
-
+	const prefix = await client.utils.getPrefix(message.guild.id);
 	return pagination(
 		message,
 		limitArray<[string, any]>(Object.entries(Inventory), 5).map((value) =>
@@ -31,7 +31,7 @@ export const run: RunFunction = async (client, message, args) => {
 					}),
 					description: `${
 						message.guild.member(User).user.tag
-					}'s inventory\nUse sp!buy <item-id> to buy items!`,
+					}'s inventory\nUse ${prefix}buy <item-id> to buy items!`,
 				},
 				message
 			)

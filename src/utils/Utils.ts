@@ -228,5 +228,10 @@ class UtilsManager {
 			return false;
 		}
 	}
+	public async getPrefix(id: string): Promise<string> {
+		const Schema = await this.client.db.load('guildconfig');
+		const Config = await Schema.findOne({ Guild: id });
+		return (Config as Anything)?.Prefix || this.client.prefix;
+	}
 }
 export { UtilsManager };
