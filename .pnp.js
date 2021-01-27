@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:9.0.0"],
+            ["mathjs", "npm:9.1.0"],
             ["mongoose", "npm:5.11.13"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
@@ -78,7 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["tyvn", "npm:1.5.0"],
+            ["tyvn", "npm:1.6.0"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
@@ -4465,10 +4465,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mathjs", [
-        ["npm:9.0.0", {
-          "packageLocation": "./.yarn/cache/mathjs-npm-9.0.0-3fe23943bf-d5eb86f172.zip/node_modules/mathjs/",
+        ["npm:9.1.0", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-9.1.0-7c313ae978-042970fe9c.zip/node_modules/mathjs/",
           "packageDependencies": [
-            ["mathjs", "npm:9.0.0"],
+            ["mathjs", "npm:9.1.0"],
             ["complex.js", "npm:2.0.11"],
             ["decimal.js", "npm:10.2.1"],
             ["escape-latex", "npm:1.2.0"],
@@ -6338,7 +6338,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:9.0.0"],
+            ["mathjs", "npm:9.1.0"],
             ["mongoose", "npm:5.11.13"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
@@ -6351,7 +6351,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["tyvn", "npm:1.5.0"],
+            ["tyvn", "npm:1.6.0"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
@@ -7039,10 +7039,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["tyvn", [
-        ["npm:1.5.0", {
-          "packageLocation": "./.yarn/cache/tyvn-npm-1.5.0-8a0971aac0-ecf664876c.zip/node_modules/tyvn/",
+        ["npm:1.6.0", {
+          "packageLocation": "./.yarn/cache/tyvn-npm-1.6.0-84d0009d1b-a9e271e31d.zip/node_modules/tyvn/",
           "packageDependencies": [
-            ["tyvn", "npm:1.5.0"]
+            ["tyvn", "npm:1.6.0"]
           ],
           "linkType": "HARD",
         }]
