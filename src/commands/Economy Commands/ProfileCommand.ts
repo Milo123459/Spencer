@@ -23,7 +23,7 @@ export const run: RunFunction = async (client, message, args) => {
 						`
         Wallet: **${(UserCoins as Anything)?.Coins || 0}**
         Bank: **${(UserCoins as Anything)?.DepositedCoins || 0}**
-        Total: **${addProp<{ Coins?: Number; DepositedCoins?: number }>(
+        Total: **${addProp<Anything>(
 					['Coins', 'DepositedCoins'],
 					0,
 					0,
