@@ -3,7 +3,6 @@ import { Document } from 'mongoose';
 import { Anything } from '../../interfaces/Anything';
 import { User } from 'discord.js';
 import express from 'express';
-import * as sdk from '@top-gg/sdk';
 import ms from 'ms';
 
 export const name: string = 'ready';
