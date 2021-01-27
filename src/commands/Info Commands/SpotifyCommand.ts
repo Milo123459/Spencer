@@ -16,7 +16,10 @@ export const run: RunFunction = async (client, message, args) => {
 		client.embed(
 			{
 				title: spotify.details,
-				description: `by **${spotify.state}** on **${spotify.assets.largeText}**`,
+				description: `by **${spotify.state}** on **${
+					spotify.assets?.largeText ||
+					"apparently unknown? Discord didn't display the data correctly"
+				}**`,
 				thumbnail: {
 					url: `https://i.scdn.co/image/${spotify.assets.largeImage?.slice(8)}`,
 				},
