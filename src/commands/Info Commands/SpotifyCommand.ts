@@ -18,7 +18,7 @@ export const run: RunFunction = async (client, message, args) => {
 				title: spotify.details,
 				description: `by **${spotify.state}** on **${spotify.assets.largeText}**`,
 				thumbnail: {
-					url: `https://i.scdn.co/image/${spotify.assets.largeImage.slice(8)}`,
+					url: `https://i.scdn.co/image/${spotify.assets.largeImage?.slice(8)}`,
 				},
 			},
 			message
