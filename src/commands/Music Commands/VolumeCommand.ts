@@ -31,9 +31,9 @@ export const run: RunFunction = async (client, message, args) => {
 			)
 		);
 	if (
-		isNaN(parseInt(args[0])) ||
-		parseInt(args[0]) > 100 ||
-		parseInt(args[0]) < 0
+		isNaN(parseInt(args[0], 10)) ||
+		parseInt(args[0], 10) > 100 ||
+		parseInt(args[0], 10) < 0
 	)
 		return message.channel.send(
 			client.embed({ description: 'Provide a valid volume! 0-100!' }, message)
@@ -42,7 +42,7 @@ export const run: RunFunction = async (client, message, args) => {
 		message.guild.me.voice.channel.members.size == 2 &&
 		message.guild.me.voice.channel.members.has(message.author.id)
 	) {
-		await dispatch.player.setVolume(parseInt(args[0]));
+		await dispatch.player.setVolume(parseInt(args[0], 10));
 		return message.channel.send(
 			client.embed({ description: 'Updated the volume!' }, message)
 		);
@@ -57,7 +57,7 @@ export const run: RunFunction = async (client, message, args) => {
 					message
 				)
 			);
-		await dispatch.player.setVolume(parseInt(args[0]));
+		await dispatch.player.setVolume(parseInt(args[0], 10));
 		return message.channel.send(
 			client.embed({ description: 'Updated the volume!' }, message)
 		);
