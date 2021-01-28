@@ -8,7 +8,7 @@ interface Queue extends ShoukakuTrack {
 }
 
 class Dispatcher {
-	public destroyed: boolean = false;
+	public loop: Queue;
 	public current: Queue;
 	public queue: yocto<Queue> = new yocto();
 	public constructor(
@@ -22,7 +22,11 @@ class Dispatcher {
 				client
 					.embed(
 						{
-							description: `Now playing [**${this.current.info.title}**](${this.current.info.uri}) by **${this.current.info.author}**`,
+							description: `Now playing [**${this.current.info.title}**](${
+								this.current.info.uri
+							}) by **${this.current.info.author}**${
+								this.loop ? '\nThis song is looped.' : ''
+							}`,
 						},
 						this.current.message
 					)
@@ -32,41 +36,50 @@ class Dispatcher {
 			);
 		});
 		this.player.on('end', async () => {
-			if (this.queue.size == 0) return this.destroy();
-			try {
-				await this.play();
-			} catch (e) {
-				this.queue.clear();
-				this.destroy(this.destroyed, 'the queue ended');
-				this.client.logger.error(e);
-			}
+			if (this.queue.size == 0 && !!this.loop?.message) {
+				try {
+					await this.play();
+				} catch (e) {
+					this.queue.clear();
+					this.destroy('the queue ended');
+					this.client.logger.error(e);
+				}
+			} else if (this.queue.size > 0) {
+				try {
+					await this.play();
+				} catch (e) {
+					this.queue.clear();
+					this.destroy('the queue ended');
+					this.client.logger.error(e);
+				}
+			} else return this.destroy();
 		});
 		this.player.on('closed', (data: object | Error) => {
 			this.queue.clear();
-			this.destroy(this.destroyed, 'the socket connection closed');
+			this.destroy('the socket connection closed');
 		});
 		this.player.on('error', (data: object | Error) => {
 			this.queue.clear();
-			this.destroy(this.destroyed, 'of an error');
+			this.destroy('of an error');
 		});
 		this.player.on('nodeDisconnect', () => {
 			this.queue.clear();
-			this.destroy(this.destroyed, 'of a node disconnecting');
+			this.destroy('of a node disconnecting');
 		});
 	}
 	public get exists(): boolean {
 		return this.client.music.dispatchers.has(this.guild.id);
 	}
 	public async play(): Promise<void> {
-		if (this.queue.size == 0) return this.destroy();
+		if (this.queue.size == 0 && !!!this.loop?.message) return this.destroy();
+		if (!!this.loop?.message == true)
+			return void (await this.player.playTrack(this.loop.track));
 		this.current = this.queue.dequeue();
 		if (!this.current) return this.destroy();
 		await this.player.playTrack(this.current.track);
 	}
 
-	public destroy(destroyed?: boolean, reason?: string): void {
-		if (destroyed && destroyed == true) return;
-		this.destroyed = true;
+	public destroy(reason?: string): void {
 		this.queue.clear();
 		this.player.disconnect();
 		this.text.send(`I left because ${reason ?? 'of an empty queue'}.`);

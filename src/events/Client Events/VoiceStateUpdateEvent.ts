@@ -15,9 +15,6 @@ export const run: RunFunction = async (
 	)
 		return client.music.dispatchers
 			.get(oldState.guild.id)
-			.destroy(
-				client.music.dispatchers.get(oldState.guild.id).destroyed,
-				'everyone else left'
-			);
+			.destroy('everyone else left');
 };
 export const name: string = 'voiceStateUpdate';
