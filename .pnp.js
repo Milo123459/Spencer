@@ -78,7 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["tyvn", "npm:1.6.0"],
+            ["tyvn", "npm:1.7.0"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
@@ -6321,7 +6321,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
             ["tslib", "npm:2.1.0"],
             ["typescript", "patch:typescript@npm%3A4.1.3#builtin<compat/typescript>::version=4.1.3&hash=cc6730"],
-            ["tyvn", "npm:1.6.0"],
+            ["tyvn", "npm:1.7.0"],
             ["utf-8-validate", "npm:5.0.4"],
             ["vacefron", "npm:3.4.0"],
             ["yn", "npm:4.0.0"],
@@ -7009,10 +7009,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["tyvn", [
-        ["npm:1.6.0", {
-          "packageLocation": "./.yarn/cache/tyvn-npm-1.6.0-84d0009d1b-a9e271e31d.zip/node_modules/tyvn/",
+        ["npm:1.7.0", {
+          "packageLocation": "./.yarn/cache/tyvn-npm-1.7.0-82da932f8b-2c81ea72bf.zip/node_modules/tyvn/",
           "packageDependencies": [
-            ["tyvn", "npm:1.6.0"]
+            ["tyvn", "npm:1.7.0"]
           ],
           "linkType": "HARD",
         }]
