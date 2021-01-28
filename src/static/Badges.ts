@@ -9,4 +9,5 @@ export const badges = {
 	BUGHUNTER_LEVEL_2: '<:B_goldenbughunter:800036977969594368>',
 	EARLY_SUPPORTER: '<:B_earlysupporter:800037079379476530>',
 	VERIFIED_DEVELOPER: '<:B_verifiedbotdeveloper:800036567037116416>',
+	VERIFIED_BOT: '<:B_verifiedbot:804367669192818741>',
 };
