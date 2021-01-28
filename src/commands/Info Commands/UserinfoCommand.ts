@@ -1,10 +1,12 @@
 import { Role, UserFlags } from 'discord.js';
 import dayjs from 'dayjs';
 import { RunFunction } from '../../interfaces/Command';
+import { badges } from '../../static/Badges';
 import { arrayIfy } from 'tyvn';
 export const name: string = 'userinfo';
 export const run: RunFunction = async (client, message, args) => {
 	const member = client.utils.ResolveMember(message, args[0]) || message.member;
+
 	await message.channel.send(
 		client.embed(
 			{
@@ -85,9 +87,12 @@ export const run: RunFunction = async (client, message, args) => {
 						}]`,
 						!!arrayIfy<UserFlags, string>(member.user?.flags).length
 							? arrayIfy<UserFlags, string>(member.user.flags)
+									.filter(
+										(value: string) => value != 'EARLY_VERIFIED_DEVELOPER'
+									)
 									.map(
 										(value: string) =>
-											`**${
+											`${badges[value.toUpperCase()] ?? '🤷‍♂️'} **${
 												value[0].toUpperCase() +
 												value.slice(1).toLowerCase().replaceAll('_', ' ')
 											}**`
