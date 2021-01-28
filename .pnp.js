@@ -277,7 +277,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/read", "npm:11.0.0"],
             ["@commitlint/top-level", "npm:11.0.0"],
             ["fs-extra", "npm:9.1.0"],
-            ["git-raw-commits", "npm:2.0.9"]
+            ["git-raw-commits", "npm:2.0.10"]
           ],
           "linkType": "HARD",
         }]
@@ -3389,12 +3389,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["git-raw-commits", [
-        ["npm:2.0.9", {
-          "packageLocation": "./.yarn/cache/git-raw-commits-npm-2.0.9-b8359db32c-8824db4732.zip/node_modules/git-raw-commits/",
+        ["npm:2.0.10", {
+          "packageLocation": "./.yarn/cache/git-raw-commits-npm-2.0.10-66e3a843dd-8c8769db98.zip/node_modules/git-raw-commits/",
           "packageDependencies": [
-            ["git-raw-commits", "npm:2.0.9"],
+            ["git-raw-commits", "npm:2.0.10"],
             ["dargs", "npm:7.0.0"],
-            ["lodash.template", "npm:4.5.0"],
+            ["lodash", "npm:4.17.20"],
             ["meow", "npm:8.1.2"],
             ["split2", "npm:3.2.2"],
             ["through2", "npm:4.0.2"]
@@ -4342,36 +4342,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.20-c0db62021c-c62101d250.zip/node_modules/lodash/",
           "packageDependencies": [
             ["lodash", "npm:4.17.20"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["lodash._reinterpolate", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/lodash._reinterpolate-npm-3.0.0-3c62ca439e-27513557d6.zip/node_modules/lodash._reinterpolate/",
-          "packageDependencies": [
-            ["lodash._reinterpolate", "npm:3.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["lodash.template", [
-        ["npm:4.5.0", {
-          "packageLocation": "./.yarn/cache/lodash.template-npm-4.5.0-5272df3039-e27068e20b.zip/node_modules/lodash.template/",
-          "packageDependencies": [
-            ["lodash.template", "npm:4.5.0"],
-            ["lodash._reinterpolate", "npm:3.0.0"],
-            ["lodash.templatesettings", "npm:4.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["lodash.templatesettings", [
-        ["npm:4.2.0", {
-          "packageLocation": "./.yarn/cache/lodash.templatesettings-npm-4.2.0-15fbdebcf4-45546a5b76.zip/node_modules/lodash.templatesettings/",
-          "packageDependencies": [
-            ["lodash.templatesettings", "npm:4.2.0"],
-            ["lodash._reinterpolate", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
