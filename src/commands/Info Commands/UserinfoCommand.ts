@@ -83,7 +83,9 @@ export const run: RunFunction = async (client, message, args) => {
 					),
 					client.utils.constructField(
 						`Badges [${
-							arrayIfy<UserFlags, string>(member.user?.flags).length ?? 0
+							arrayIfy<UserFlags, string>(member.user?.flags).filter(
+								(value: string) => value != 'EARLY_VERIFIED_DEVELOPER'
+							).length ?? 0
 						}]`,
 						!!arrayIfy<UserFlags, string>(member.user?.flags).length
 							? arrayIfy<UserFlags, string>(member.user.flags)
