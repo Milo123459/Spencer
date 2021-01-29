@@ -10,5 +10,6 @@ export const data = model(
 		MessageLogsChannel: String,
 		ReportChannel: String,
 		AntiRaid: String,
+		AntiLink: Boolean,
 	})
 );

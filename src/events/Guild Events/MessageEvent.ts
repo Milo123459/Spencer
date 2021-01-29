@@ -10,6 +10,21 @@ export const run: RunFunction = async (client, message: Message) => {
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
 	});
+	if (
+		(GuildConfig as Anything)?.AntiLink &&
+		(GuildConfig as Anything)?.AntiLink == true &&
+		!message.member.permissions.has(['MANAGE_GUILD'])
+	) {
+		if (
+			/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi.test(
+				message.content
+			)
+		) {
+			try {
+				await message.delete();
+			} catch {}
+		}
+	}
 	if ((GuildConfig as Anything)?.AntiRaid) {
 		const RaidUserSchema = await client.db.load('raiduser');
 		if (
