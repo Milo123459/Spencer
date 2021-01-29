@@ -3889,9 +3889,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.13, mongoose@npm:^5.11.13":
-  version: 5.11.13
-  resolution: "mongoose@npm:5.11.13"
+"mongoose@npm:5.11.14, mongoose@npm:^5.11.14":
+  version: 5.11.14
+  resolution: "mongoose@npm:5.11.14"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3905,7 +3905,7 @@ fsevents@~2.3.1:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 739e41dae71232cdc490dc1fc59c189d41655762911fc732fc806dfb3a224c769768a9e97b40a3fcf6c68f57956a6c2eb1f4d63b78e9fd5c3f2cc321ccd1f6fd
+  checksum: 85f9517824c0bb2e9a865f374762c59883c6ba66e6fc269983c1327ec66381e75aa7df6fa0345a26688eeb7bfbf667dc0c1cadd3ee87c666071ce1c461df823c
   languageName: node
   linkType: hard
 
@@ -5272,7 +5272,7 @@ fsevents@~2.3.1:
     imageapi.js: ^1.3.2
     lint-staged: ^10.5.3
     mathjs: ^9.1.0
-    mongoose: ^5.11.13
+    mongoose: ^5.11.14
     ms: ^2.1.3
     node-fetch: ^2.6.1
     node-gyp: ^7.1.2
@@ -5284,7 +5284,7 @@ fsevents@~2.3.1:
     ts-node-dev: ^1.1.1
     tslib: ^2.1.0
     typescript: ^4.1.3
-    tyvn: ^1.7.0
+    tyvn: ^1.8.0
     utf-8-validate: ^5.0.4
     vacefron: ^3.4.0
     yn: ^4.0.0
@@ -5926,10 +5926,10 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"tyvn@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "tyvn@npm:1.7.0"
-  checksum: 2c81ea72bf8f6c406043edb5aafdf7adf09328c6ee746e6c8d4dfd5c55181014dd96a3c8041cd36bf4cbc888b4ceea8e103072c78a3cadeecba2e5044eddbde4
+"tyvn@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "tyvn@npm:1.8.0"
+  checksum: f9728aabd7ff4eebb37952cac0c49f6672f5ff67f92683d717cd09065361f68bb47c7f9def4a310e26631db0fbb7652237151b366119fe55c91ec1b4381df6d0
   languageName: node
   linkType: hard
 
