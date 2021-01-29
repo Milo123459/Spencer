@@ -59,7 +59,7 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	}
 	const validated = subcommand.validate(client, message, args.slice(1));
-	if (!!!validated.value)
+	if (validated.value == false || !validated.value)
 		return message.channel.send(
 			client.embed({ description: validated.fix }, message)
 		);
