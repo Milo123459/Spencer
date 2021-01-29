@@ -14,7 +14,6 @@ export const subcommands: Array<SubCommand> = [
 			return {
 				value,
 				fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
-				success: value != undefined,
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
@@ -31,7 +30,6 @@ export const subcommands: Array<SubCommand> = [
 				value,
 				fix:
 					'Please make sure you have the permission MANAGE_GUILD & the prefix length is less then 5!',
-				success: value,
 			};
 		},
 		parseToDB: (client, message, args) => args[0],
@@ -61,7 +59,6 @@ export const subcommands: Array<SubCommand> = [
 				value,
 				fix:
 					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES & ADD_REACTIONS',
-				success: !!value,
 			};
 		},
 		parseToDB: (client, message, args) =>
@@ -79,7 +76,6 @@ export const subcommands: Array<SubCommand> = [
 			return {
 				value,
 				fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off' & make sure you have MANAGE_GUILD`,
-				success: value != undefined,
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
@@ -107,7 +103,6 @@ export const subcommands: Array<SubCommand> = [
 				value,
 				fix:
 					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES',
-				success: !!value,
 			};
 		},
 		parseToDB: (client, message, args) =>
@@ -129,7 +124,6 @@ export const subcommands: Array<SubCommand> = [
 				value,
 				fix:
 					'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
-				success: !!value,
 			};
 		},
 		parseToDB: (client, message, args) => args[0].toLowerCase(),
@@ -138,14 +132,13 @@ export const subcommands: Array<SubCommand> = [
 		schema: 'guildconfig',
 		key: 'AntiLink',
 		description: 'Toggles if you want members to be able to send links.',
-		search: (client, message) => new Object({ User: message.author.id }),
+		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
-			let value: boolean =
+			const value: boolean =
 				yn(args[0]) && message.member.permissions.has('MANAGE_GUILD');
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
-				success: value == false,
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),

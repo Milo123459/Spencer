@@ -3,7 +3,6 @@ import { Spencer } from '../client/Client';
 export interface ValidationResponse {
 	value: boolean;
 	fix: string;
-	success: boolean;
 }
 
 export interface SubCommand {
