@@ -51,8 +51,8 @@ export const run: RunFunction = async (client, message) => {
 						{ description: 'You can only bet less then 10000!' },
 						'gamble'
 					);
-				const shouldDouble: number = Math.floor(Math.random() * 100);
-				if (shouldDouble > 50) {
+				const shouldDouble: boolean = client.utils.randomElement([true, false]);
+				if (shouldDouble == true) {
 					await UserEconomySchema.increment(
 						{ User: message.author.id },
 						'Coins',
