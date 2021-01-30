@@ -2370,11 +2370,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.10.0
-  resolution: "fastq@npm:1.10.0"
+  version: 1.10.1
+  resolution: "fastq@npm:1.10.1"
   dependencies:
     reusify: ^1.0.4
-  checksum: 706546e7fb2fbb5dbc98df821abfa258e93a1162663af6f1e491207229e91a72c7391920e9567a8b02d342e01d670ffbbee2ebb5f034993080ac9fa9895e3b2f
+  checksum: 7606ad72f22fe81996006f032e7fee4d50005ac0521c39b8d2eb22c5f7a6dc880dd301cbf6755b00136bf500c857d3be9d867685fc1cd31a89e76fa9b170e9fb
   languageName: node
   linkType: hard
 
@@ -2882,11 +2882,11 @@ fsevents@~2.3.1:
   linkType: hard
 
 "hosted-git-info@npm:^3.0.6":
-  version: 3.0.7
-  resolution: "hosted-git-info@npm:3.0.7"
+  version: 3.0.8
+  resolution: "hosted-git-info@npm:3.0.8"
   dependencies:
     lru-cache: ^6.0.0
-  checksum: 010f06d5a6ac76d9b4b258e3719fc7cd9cc9beea51478afd7db0648f6a6019d8410aef560e09bae6bfc4ba572aa4ed52e62a0a8ae0267c645519e852b9087f42
+  checksum: 686512459ccb7e7eac7833fc4e8e35a0533c0dda5f516025f276ecb620b316010b853c785439ac63702e044ab56b2485cf7e1b088c1f9a46675b9496f7a45683
   languageName: node
   linkType: hard
 

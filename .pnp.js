@@ -383,7 +383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@nodelib/fs.walk", "npm:1.2.6"],
             ["@nodelib/fs.scandir", "npm:2.1.4"],
-            ["fastq", "npm:1.10.0"]
+            ["fastq", "npm:1.10.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3049,10 +3049,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fastq", [
-        ["npm:1.10.0", {
-          "packageLocation": "./.yarn/cache/fastq-npm-1.10.0-f4846e7dd0-706546e7fb.zip/node_modules/fastq/",
+        ["npm:1.10.1", {
+          "packageLocation": "./.yarn/cache/fastq-npm-1.10.1-d4a56f5b46-7606ad72f2.zip/node_modules/fastq/",
           "packageDependencies": [
-            ["fastq", "npm:1.10.0"],
+            ["fastq", "npm:1.10.1"],
             ["reusify", "npm:1.0.4"]
           ],
           "linkType": "HARD",
@@ -3616,10 +3616,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:3.0.7", {
-          "packageLocation": "./.yarn/cache/hosted-git-info-npm-3.0.7-1e5a6cf744-010f06d5a6.zip/node_modules/hosted-git-info/",
+        ["npm:3.0.8", {
+          "packageLocation": "./.yarn/cache/hosted-git-info-npm-3.0.8-e1d95672ef-686512459c.zip/node_modules/hosted-git-info/",
           "packageDependencies": [
-            ["hosted-git-info", "npm:3.0.7"],
+            ["hosted-git-info", "npm:3.0.8"],
             ["lru-cache", "npm:6.0.0"]
           ],
           "linkType": "HARD",
@@ -4946,7 +4946,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/normalize-package-data-npm-3.0.0-ac75fb58ce-1a7d7a2f98.zip/node_modules/normalize-package-data/",
           "packageDependencies": [
             ["normalize-package-data", "npm:3.0.0"],
-            ["hosted-git-info", "npm:3.0.7"],
+            ["hosted-git-info", "npm:3.0.8"],
             ["resolve", "patch:resolve@npm%3A1.19.0#builtin<compat/resolve>::version=1.19.0&hash=3388aa"],
             ["semver", "npm:7.3.4"],
             ["validate-npm-package-license", "npm:3.0.4"]
