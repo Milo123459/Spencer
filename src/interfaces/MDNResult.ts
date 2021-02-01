@@ -18,7 +18,7 @@ export interface Document {
 	title: string;
 	slug: string;
 	locale: Locale;
-	excerpt: string;
+	summary: string;
 }
 
 export enum Locale {

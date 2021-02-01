@@ -27,7 +27,7 @@ export const run: RunFunction = async (client, message, args) => {
 			client.embed(
 				{
 					title: document.title,
-					description: document.excerpt.replace(/<\/?[^>]+(>|$)/g, ''),
+					description: document.summary.replace(/<\/?[^>]+(>|$)/g, ''),
 				},
 				message
 			)
