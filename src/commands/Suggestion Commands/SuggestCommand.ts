@@ -1,5 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
+import { emojis } from '../../static/Emojis';
 import { GuildChannel, Message, TextChannel } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
@@ -96,8 +97,8 @@ export const run: RunFunction = async (client, message, args) => {
 			.setTimestamp()
 			.addField('State', 'N/A')
 	);
-	await msg.react('👍');
-	await msg.react('👎');
+	await msg.react(emojis.spencerup);
+	await msg.react(emojis.spencerdown);
 	try {
 		await message.react('🚀');
 	} catch {}
