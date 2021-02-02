@@ -9,17 +9,31 @@ export const run: RunFunction = async (client, message, args) => {
 		);
 	const SuggestionSchema = await client.db.load('suggestion');
 	const GuildConfigSchema = await client.db.load('guildconfig');
+	let shouldID: boolean = false;
 	try {
 		await SuggestionSchema.findOne({ Guild: message.guild.id, _id: args[0] });
 	} catch {
-		return message.channel.send(
-			client.embed({ description: "That suggestion doesn't exist!" }, message)
-		);
+		try {
+			const data = await SuggestionSchema.findOne({
+				Guild: message.guild.id,
+				MessageID: args[0],
+			});
+			if (data) {
+				shouldID = true;
+			}
+		} catch {
+			return message.channel.send(
+				client.embed({ description: "That suggestion doesn't exist!" }, message)
+			);
+		}
 	}
-	const Suggestion = await SuggestionSchema.findOne({
-		Guild: message.guild.id,
-		_id: args[0],
-	});
+	const search = { Guild: message.guild.id };
+	if (shouldID == true) {
+		search['MessageID'] = args[0];
+	} else {
+		search['_id'] = args[0];
+	}
+	const Suggestion = await SuggestionSchema.findOne(search);
 	const GuildConfig = await GuildConfigSchema.findOne({
 		Guild: message.guild.id,
 	});
@@ -52,10 +66,9 @@ export const run: RunFunction = async (client, message, args) => {
 	const msg: Message = await (channel as TextChannel).messages.fetch(
 		(Suggestion as Anything).MessageID
 	);
-	const UpdatedSuggestion = await SuggestionSchema.update(
-		{ _id: args[0] },
-		{ State: 'Accepted' }
-	);
+	const UpdatedSuggestion = await SuggestionSchema.update(search, {
+		State: 'Accepted',
+	});
 	await msg.edit(
 		new MessageEmbed({
 			...msg.embeds[0],
@@ -92,5 +105,5 @@ export const run: RunFunction = async (client, message, args) => {
 export const userPermissions: string = 'MANAGE_GUILD';
 export const name: string = 'accept';
 export const category: string = 'suggestion';
-export const usage: string = '<suggestion_id> [...reason]';
+export const usage: string = '<suggestion_id | message_id> [...reason]';
 export const description: string = 'Accept a suggestion';
