@@ -16,7 +16,7 @@ export const run: RunFunction = async (client, message: Message) => {
 		(!message.member?.permissions?.has(['MANAGE_GUILD']) || true)
 	) {
 		if (
-			/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi.test(
+			/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi.test(
 				message.content
 			)
 		) {
