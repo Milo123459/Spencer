@@ -288,13 +288,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@top-gg/sdk@npm:^3.0.6":
-  version: 3.0.6
-  resolution: "@top-gg/sdk@npm:3.0.6"
+"@top-gg/sdk@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "@top-gg/sdk@npm:3.0.7"
   dependencies:
     node-fetch: ^2.6.1
     raw-body: ^2.4.1
-  checksum: 2dc3ff882c795bd6fb9cc65e73fbe48ef2109af2bd3868bc445529ac20968e363359f68a9c6a86d1667725f35a563cf0950e7aceadf8eae6fae17e499c628125
+  checksum: a991bf22dba844c75194e6758abb71b216821aa7b03d2269455f8733722fb4fc9d23c8c585e268843e38bd8e031fa2b343a379e985f1d4c8d623f8e1ba739772
   languageName: node
   linkType: hard
 
@@ -1747,10 +1747,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^2.15.0":
-  version: 2.15.0
-  resolution: "consola@npm:2.15.0"
-  checksum: 9a20844425061e100eb81cc9eb6ed05b54c38630151c6419c6a8526bd6b1eaaa7d61d37618cf7a1dee0e2052548fee41a99b8856f351733c12c6d85f20a3199c
+"consola@npm:^2.15.1":
+  version: 2.15.1
+  resolution: "consola@npm:2.15.1"
+  checksum: d3b70570aa232c8b0e09cecff87eed25d3ad5113025a3e9545cebbefdce634208e5deb5aa251c5376a06c920e3049876d3992369d4f48f649a81fef3ade0867c
   languageName: node
   linkType: hard
 
@@ -5245,7 +5245,7 @@ fsevents@~2.3.1:
   dependencies:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-angular": ^11.0.0
-    "@top-gg/sdk": ^3.0.6
+    "@top-gg/sdk": ^3.0.7
     "@types/express": ^4.17.11
     "@types/glob": ^7.1.3
     "@types/mathjs": ^6.0.11
@@ -5260,7 +5260,7 @@ fsevents@~2.3.1:
     alpha-sort: ^4.0.0
     bufferutil: ^4.0.3
     cleverbot-free: ^1.0.5
-    consola: ^2.15.0
+    consola: ^2.15.1
     dayjs: ^1.10.4
     del-cli: ^3.0.1
     discord.js: ^12.5.1

@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.6"],
+            ["@top-gg/sdk", "npm:3.0.7"],
             ["@types/express", "npm:4.17.11"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mathjs", "npm:6.0.11"],
@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.0"],
+            ["consola", "npm:2.15.1"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
@@ -408,10 +408,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@top-gg/sdk", [
-        ["npm:3.0.6", {
-          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.6-08177e102c-2dc3ff882c.zip/node_modules/@top-gg/sdk/",
+        ["npm:3.0.7", {
+          "packageLocation": "./.yarn/cache/@top-gg-sdk-npm-3.0.7-eda90dc6fa-a991bf22db.zip/node_modules/@top-gg/sdk/",
           "packageDependencies": [
-            ["@top-gg/sdk", "npm:3.0.6"],
+            ["@top-gg/sdk", "npm:3.0.7"],
             ["node-fetch", "npm:2.6.1"],
             ["raw-body", "npm:2.4.1"]
           ],
@@ -2308,10 +2308,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["consola", [
-        ["npm:2.15.0", {
-          "packageLocation": "./.yarn/cache/consola-npm-2.15.0-71e35f623c-9a20844425.zip/node_modules/consola/",
+        ["npm:2.15.1", {
+          "packageLocation": "./.yarn/cache/consola-npm-2.15.1-5f642d6025-d3b70570aa.zip/node_modules/consola/",
           "packageDependencies": [
-            ["consola", "npm:2.15.0"]
+            ["consola", "npm:2.15.1"]
           ],
           "linkType": "HARD",
         }]
@@ -6282,7 +6282,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["spencer", "workspace:."],
             ["@commitlint/cli", "npm:11.0.0"],
             ["@commitlint/config-angular", "npm:11.0.0"],
-            ["@top-gg/sdk", "npm:3.0.6"],
+            ["@top-gg/sdk", "npm:3.0.7"],
             ["@types/express", "npm:4.17.11"],
             ["@types/glob", "npm:7.1.3"],
             ["@types/mathjs", "npm:6.0.11"],
@@ -6297,7 +6297,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.0"],
+            ["consola", "npm:2.15.1"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
