@@ -425,12 +425,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.3
-  resolution: "@types/mongodb@npm:3.6.3"
+  version: 3.6.5
+  resolution: "@types/mongodb@npm:3.6.5"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: 2ccf239c496ad5a36ff014211a073a28878ddeda7f8a73c7e2f75a9587c295dec60fff57b6036b789c9e37d74923ddfb66e1d2f70c659b3f61c9382d2bff6b38
+  checksum: d428a4f174b6553a949db1e090896c3aed0f05d6a253985260b0452e60c85156d8824b2c6fa1361ddbff8484908fe7167cf7844ea7467cff39f4994ceae8c226
   languageName: node
   linkType: hard
 
@@ -461,24 +461,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10":
-  version: 14.14.22
-  resolution: "@types/node@npm:14.14.22"
-  checksum: e46e32685b4d0261779c13c10ba3ff220cfa714b5c12f8f571fd52cc309546bdbc8ffc86cbad20559ad88e7b17e66fc51c98b067d8c3766597092c05df157b9b
+"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.25":
+  version: 14.14.25
+  resolution: "@types/node@npm:14.14.25"
+  checksum: 64c42730f4169e49ec378870622ef06c5d820b31340e224cc1b45bf06c8b0cfa28daa587b4ae2b8ea1f712ef049bae4d9c92925b157ba9ba7cde3b22ff552513
   languageName: node
   linkType: hard
 
 "@types/node@npm:^13.7.0":
-  version: 13.13.40
-  resolution: "@types/node@npm:13.13.40"
-  checksum: a0e9433459390329a9f0756a5bbc1e3b4ca4bb5043df6acd68ff0ca3f177222182b7dcbd3b41536dde15a8c151c64b0758bd39b4a25bbb5dd324cd2ba822d256
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.14.24":
-  version: 14.14.24
-  resolution: "@types/node@npm:14.14.24"
-  checksum: b01653edcbca44e08129cb9676c2a77c88d9dee0eba9949edc6a29694585a11b87b2c54cd174f806db9cb2cf4d73783e5e05be34c9b41cd736861cbfb71c9b46
+  version: 13.13.41
+  resolution: "@types/node@npm:13.13.41"
+  checksum: 12d385e54cb3bfd7814a954f177b0d9e7a641bfac0e7898fa77f2db104b6a77f4366005436464f28990b5c212900febd551044067568e32619e4d98cae8ccfa4
   languageName: node
   linkType: hard
 
@@ -1339,13 +1332,13 @@ __metadata:
   linkType: hard
 
 "bl@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "bl@npm:4.0.3"
+  version: 4.0.4
+  resolution: "bl@npm:4.0.4"
   dependencies:
     buffer: ^5.5.0
     inherits: ^2.0.4
     readable-stream: ^3.4.0
-  checksum: 1f33c5a3da08a87260a7f11acadf088ef331ebb4b86db1160ec332be9326afdf9f73dca1fd5cc431dba7cc9d5574b508192f9fd7c37a9a11c9e4a50025917690
+  checksum: 6364c6328f65b37659ece3c293ac8af429d8605dfed83908dad1067aedc14b6718b701bf1deb082608a2fd73021d864172bc98c79d363fa2f626103308d59521
   languageName: node
   linkType: hard
 
@@ -2626,13 +2619,13 @@ fsevents@~2.3.1:
   linkType: hard
 
 "get-intrinsic@npm:^1.0.2":
-  version: 1.1.0
-  resolution: "get-intrinsic@npm:1.1.0"
+  version: 1.1.1
+  resolution: "get-intrinsic@npm:1.1.1"
   dependencies:
     function-bind: ^1.1.1
     has: ^1.0.3
     has-symbols: ^1.0.1
-  checksum: 002cb2f94800009e88620e9260399370dab1d110a8d2de49a01c49fdc277fdfc8245403acc7242d22deda996be707c1131e66046d92a3de92c25e0b660da75dc
+  checksum: acf1506f25a32a194cfc5c19d33835756080d970eb6e29a8a3852380106df981acef7bb9ac2002689437235221f24bcbdc1e3532b9bcacd7ff3621091fafe607
   languageName: node
   linkType: hard
 
@@ -4460,10 +4453,10 @@ fsevents@~2.3.1:
   linkType: hard
 
 "prism-media@npm:^1.2.2":
-  version: 1.2.3
-  resolution: "prism-media@npm:1.2.3"
+  version: 1.2.5
+  resolution: "prism-media@npm:1.2.5"
   peerDependencies:
-    "@discordjs/opus": ^0.3.3
+    "@discordjs/opus": ^0.4.0
     ffmpeg-static: ^4.2.7 || ^3.0.0 || ^2.4.0
     node-opus: ^0.3.3
     opusscript: ^0.0.7
@@ -4476,7 +4469,7 @@ fsevents@~2.3.1:
       optional: true
     opusscript:
       optional: true
-  checksum: 337cfb80dba36ffb96989b3b6832cf1e46b0706da73ebb3d3de6a6d1429302e318961ee5cc048ea3e997c23c543e950d08a20a89cadc84ec37b2b0a856946397
+  checksum: e6a72b0e272a59238d9ad85f9d665efa27711254a7b33f0eb1acc1bb9211643079c6dbc5a0e27a6ee3e2cc34c4cc2e3ef6416851508128d313556e1127f2868b
   languageName: node
   linkType: hard
 
@@ -5258,7 +5251,7 @@ fsevents@~2.3.1:
     "@types/mathjs": ^6.0.11
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.24
+    "@types/node": ^14.14.25
     "@types/node-fetch": ^2.5.8
     "@types/prettier": ^2.1.6
     "@types/prompts": ^2.0.9
