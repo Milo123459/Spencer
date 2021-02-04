@@ -22,9 +22,15 @@ export const run: RunFunction = async (client, message: Message) => {
 		) {
 			try {
 				await message.delete();
-			} catch (e) {
-				console.error(e);
-			}
+				const msg: Message = await message.channel.send(
+					client.embed({ description: 'No links allowed.' }, message)
+				);
+				setTimeout(async () => {
+					try {
+						await msg.delete();
+					} catch {}
+				}, 3000);
+			} catch {}
 		}
 	}
 	if ((GuildConfig as Anything)?.AntiRaid) {
