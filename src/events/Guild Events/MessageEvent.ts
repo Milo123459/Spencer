@@ -13,7 +13,7 @@ export const run: RunFunction = async (client, message: Message) => {
 	if (
 		(GuildConfig as Anything)?.AntiLink &&
 		(GuildConfig as Anything)?.AntiLink == true &&
-		(!message.member?.permissions?.has(['MANAGE_GUILD']) || true)
+		!message.member?.permissions?.has(['MANAGE_GUILD'])
 	) {
 		if (
 			/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi.test(
