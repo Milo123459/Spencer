@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.11"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.22"],
+            ["@types/node", "npm:14.14.24"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.1"],
+            ["consola", "npm:2.15.2"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
@@ -65,8 +65,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:9.1.0"],
-            ["mongoose", "npm:5.11.14"],
+            ["mathjs", "npm:9.2.0"],
+            ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
@@ -606,6 +606,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.22-fe4ed4ddc2-e46e32685b.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.14.22"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:14.14.24", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.24-a5a4e37c48-b01653edcb.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:14.14.24"]
           ],
           "linkType": "HARD",
         }]
@@ -2308,10 +2315,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["consola", [
-        ["npm:2.15.1", {
-          "packageLocation": "./.yarn/cache/consola-npm-2.15.1-5f642d6025-d3b70570aa.zip/node_modules/consola/",
+        ["npm:2.15.2", {
+          "packageLocation": "./.yarn/cache/consola-npm-2.15.2-7955725f98-6ea5e83d5a.zip/node_modules/consola/",
           "packageDependencies": [
-            ["consola", "npm:2.15.1"]
+            ["consola", "npm:2.15.2"]
           ],
           "linkType": "HARD",
         }]
@@ -4435,10 +4442,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mathjs", [
-        ["npm:9.1.0", {
-          "packageLocation": "./.yarn/cache/mathjs-npm-9.1.0-7c313ae978-042970fe9c.zip/node_modules/mathjs/",
+        ["npm:9.2.0", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-9.2.0-d365056644-873a41da19.zip/node_modules/mathjs/",
           "packageDependencies": [
-            ["mathjs", "npm:9.1.0"],
+            ["mathjs", "npm:9.2.0"],
             ["complex.js", "npm:2.0.11"],
             ["decimal.js", "npm:10.2.1"],
             ["escape-latex", "npm:1.2.0"],
@@ -4729,10 +4736,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:3.6.3", {
-          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-534c0e7dee/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
+        ["virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:3.6.3", {
+          "packageLocation": "./.yarn/$$virtual/mongodb-virtual-0e21971e3b/0/cache/mongodb-npm-3.6.3-3206384cb1-85a8064180.zip/node_modules/mongodb/",
           "packageDependencies": [
-            ["mongodb", "virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:3.6.3"],
+            ["mongodb", "virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:3.6.3"],
             ["aws4", null],
             ["bl", "npm:2.2.1"],
             ["bson", "npm:1.1.5"],
@@ -4758,15 +4765,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mongoose", [
-        ["npm:5.11.14", {
-          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.14-d31a2a0e0a-85f9517824.zip/node_modules/mongoose/",
+        ["npm:5.11.15", {
+          "packageLocation": "./.yarn/cache/mongoose-npm-5.11.15-77a1818808-b8670af3ac.zip/node_modules/mongoose/",
           "packageDependencies": [
-            ["mongoose", "npm:5.11.14"],
+            ["mongoose", "npm:5.11.15"],
             ["@types/mongodb", "npm:3.6.3"],
             ["bson", "npm:1.1.5"],
             ["kareem", "npm:2.3.2"],
-            ["mongodb", "virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:3.6.3"],
-            ["mongoose-legacy-pluralize", "virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:1.0.2"],
+            ["mongodb", "virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:3.6.3"],
+            ["mongoose-legacy-pluralize", "virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:1.0.2"],
             ["mpath", "npm:0.8.3"],
             ["mquery", "npm:3.2.3"],
             ["ms", "npm:2.1.2"],
@@ -4786,12 +4793,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:1.0.2", {
-          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-90fa690940/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
+        ["virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:1.0.2", {
+          "packageLocation": "./.yarn/$$virtual/mongoose-legacy-pluralize-virtual-96056fb486/0/cache/mongoose-legacy-pluralize-npm-1.0.2-2fbdda9a5a-a1f86450b3.zip/node_modules/mongoose-legacy-pluralize/",
           "packageDependencies": [
-            ["mongoose-legacy-pluralize", "virtual:d31a2a0e0a3509798b2d334fe0f7ea2042fb14e84965b8c72d820f29c215bfcfb700b6564283c97961b87c6a05fae672362a5108fdca62a665899c338eeee4a1#npm:1.0.2"],
+            ["mongoose-legacy-pluralize", "virtual:77a1818808c7a21bc172e116519daa057d99e464684e97443eb8a4bfb83562b74795dc2638b7ee2d9b7927f36b2433c3f6f32de1f45c36c28f599c6b5fa6f2c1#npm:1.0.2"],
             ["@types/mongoose", null],
-            ["mongoose", "npm:5.11.14"]
+            ["mongoose", "npm:5.11.15"]
           ],
           "packagePeers": [
             "@types/mongoose",
@@ -6288,7 +6295,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mathjs", "npm:6.0.11"],
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
-            ["@types/node", "npm:14.14.22"],
+            ["@types/node", "npm:14.14.24"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -6297,7 +6304,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.1"],
+            ["consola", "npm:2.15.2"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
@@ -6308,8 +6315,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.3.8"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.3"],
-            ["mathjs", "npm:9.1.0"],
-            ["mongoose", "npm:5.11.14"],
+            ["mathjs", "npm:9.2.0"],
+            ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],

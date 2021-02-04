@@ -461,7 +461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.22":
+"@types/node@npm:*, @types/node@npm:^14.11.10":
   version: 14.14.22
   resolution: "@types/node@npm:14.14.22"
   checksum: e46e32685b4d0261779c13c10ba3ff220cfa714b5c12f8f571fd52cc309546bdbc8ffc86cbad20559ad88e7b17e66fc51c98b067d8c3766597092c05df157b9b
@@ -472,6 +472,13 @@ __metadata:
   version: 13.13.40
   resolution: "@types/node@npm:13.13.40"
   checksum: a0e9433459390329a9f0756a5bbc1e3b4ca4bb5043df6acd68ff0ca3f177222182b7dcbd3b41536dde15a8c151c64b0758bd39b4a25bbb5dd324cd2ba822d256
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.24":
+  version: 14.14.24
+  resolution: "@types/node@npm:14.14.24"
+  checksum: b01653edcbca44e08129cb9676c2a77c88d9dee0eba9949edc6a29694585a11b87b2c54cd174f806db9cb2cf4d73783e5e05be34c9b41cd736861cbfb71c9b46
   languageName: node
   linkType: hard
 
@@ -1747,10 +1754,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^2.15.1":
-  version: 2.15.1
-  resolution: "consola@npm:2.15.1"
-  checksum: d3b70570aa232c8b0e09cecff87eed25d3ad5113025a3e9545cebbefdce634208e5deb5aa251c5376a06c920e3049876d3992369d4f48f649a81fef3ade0867c
+"consola@npm:^2.15.2":
+  version: 2.15.2
+  resolution: "consola@npm:2.15.2"
+  checksum: 6ea5e83d5a788acc8b7d3be1368e35a2bec8232969fc4df2cf71a8eed664c421c13624b8028dbb523b2f55e8a11c5cf06f7aab802d7aceee38126ce11f2e696c
   languageName: node
   linkType: hard
 
@@ -3585,9 +3592,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mathjs@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "mathjs@npm:9.1.0"
+"mathjs@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "mathjs@npm:9.2.0"
   dependencies:
     complex.js: ^2.0.11
     decimal.js: ^10.2.1
@@ -3599,7 +3606,7 @@ fsevents@~2.3.1:
     typed-function: ^2.0.0
   bin:
     mathjs: bin/cli.js
-  checksum: 042970fe9c20adc02e502accfd09870ead1c8abc67b5af530e2784f7c2ed6a267167d9c3f6417ff74dde418e6c17539b54505f2a95455df2f65d3223c785b062
+  checksum: 873a41da19cce03770fb9bc5a64a4100913ece59671309110d72a9e702cacfc9f37fb2c143a3c2553648b7f07892d7854b4e2a94f7abd7f7e6d52733c68d0fea
   languageName: node
   linkType: hard
 
@@ -3889,9 +3896,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.14, mongoose@npm:^5.11.14":
-  version: 5.11.14
-  resolution: "mongoose@npm:5.11.14"
+"mongoose@npm:5.11.15, mongoose@npm:^5.11.15":
+  version: 5.11.15
+  resolution: "mongoose@npm:5.11.15"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3905,7 +3912,7 @@ fsevents@~2.3.1:
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: 85f9517824c0bb2e9a865f374762c59883c6ba66e6fc269983c1327ec66381e75aa7df6fa0345a26688eeb7bfbf667dc0c1cadd3ee87c666071ce1c461df823c
+  checksum: b8670af3ac998605a89e895ce859c5336ef1789a80992b03f3a95824f30c3d94c84f975975da34bd8c2e057d93ce57b70a2d337bddf6cbf0204896e503b3aa24
   languageName: node
   linkType: hard
 
@@ -5251,7 +5258,7 @@ fsevents@~2.3.1:
     "@types/mathjs": ^6.0.11
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.22
+    "@types/node": ^14.14.24
     "@types/node-fetch": ^2.5.8
     "@types/prettier": ^2.1.6
     "@types/prompts": ^2.0.9
@@ -5260,7 +5267,7 @@ fsevents@~2.3.1:
     alpha-sort: ^4.0.0
     bufferutil: ^4.0.3
     cleverbot-free: ^1.0.5
-    consola: ^2.15.1
+    consola: ^2.15.2
     dayjs: ^1.10.4
     del-cli: ^3.0.1
     discord.js: ^12.5.1
@@ -5271,8 +5278,8 @@ fsevents@~2.3.1:
     husky: ^4.3.8
     imageapi.js: ^1.3.2
     lint-staged: ^10.5.3
-    mathjs: ^9.1.0
-    mongoose: ^5.11.14
+    mathjs: ^9.2.0
+    mongoose: ^5.11.15
     ms: ^2.1.3
     node-fetch: ^2.6.1
     node-gyp: ^7.1.2
