@@ -46,7 +46,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.25"],
-            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -69,13 +68,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
-            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
-            ["sourcebin", "npm:4.0.2"],
+            ["statcord.js", "npm:3.1.4"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
@@ -400,15 +398,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@sourcebin/linguist", [
-        ["npm:0.0.3", {
-          "packageLocation": "./.yarn/cache/@sourcebin-linguist-npm-0.0.3-0ab5bd9639-39e4772232.zip/node_modules/@sourcebin/linguist/",
-          "packageDependencies": [
-            ["@sourcebin/linguist", "npm:0.0.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@szmarczak/http-timer", [
         ["npm:4.0.5", {
           "packageLocation": "./.yarn/cache/@szmarczak-http-timer-npm-4.0.5-03463d10ab-13d8f71dbd.zip/node_modules/@szmarczak/http-timer/",
@@ -622,16 +611,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@types/node-cron", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/@types-node-cron-npm-2.0.3-5019ac0479-3542f5e758.zip/node_modules/@types/node-cron/",
-          "packageDependencies": [
-            ["@types/node-cron", "npm:2.0.3"],
-            ["@types/tz-offset", "npm:0.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@types/node-fetch", [
         ["npm:2.5.8", {
           "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.5.8-d946aa06c6-608cdd6aed.zip/node_modules/@types/node-fetch/",
@@ -750,15 +729,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-treeify-npm-1.0.0-b5e04e9cd3-f7b82d91a4.zip/node_modules/@types/treeify/",
           "packageDependencies": [
             ["@types/treeify", "npm:1.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/tz-offset", [
-        ["npm:0.0.0", {
-          "packageLocation": "./.yarn/cache/@types-tz-offset-npm-0.0.0-382f91759c-bf36bc5840.zip/node_modules/@types/tz-offset/",
-          "packageDependencies": [
-            ["@types/tz-offset", "npm:0.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4903,17 +4873,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["node-cron", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/unplugged/node-cron-npm-2.0.3-1a42e4b789/node_modules/node-cron/",
-          "packageDependencies": [
-            ["node-cron", "npm:2.0.3"],
-            ["opencollective-postinstall", "npm:2.0.3"],
-            ["tz-offset", "npm:0.0.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["node-fetch", [
         ["npm:2.6.1", {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
@@ -6267,17 +6226,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["sourcebin", [
-        ["npm:4.0.2", {
-          "packageLocation": "./.yarn/cache/sourcebin-npm-4.0.2-5e63df1ecf-afdb3f309f.zip/node_modules/sourcebin/",
-          "packageDependencies": [
-            ["sourcebin", "npm:4.0.2"],
-            ["@sourcebin/linguist", "npm:0.0.3"],
-            ["got", "npm:11.8.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["sparse-bitfield", [
         ["npm:3.0.3", {
           "packageLocation": "./.yarn/cache/sparse-bitfield-npm-3.0.3-cb80d0c89f-3d7ea483df.zip/node_modules/sparse-bitfield/",
@@ -6342,7 +6290,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.25"],
-            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -6365,13 +6312,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
-            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
-            ["sourcebin", "npm:4.0.2"],
+            ["statcord.js", "npm:3.1.4"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
@@ -6447,6 +6393,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ssri", "npm:6.0.1"],
             ["figgy-pudding", "npm:3.5.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["statcord.js", [
+        ["npm:3.1.4", {
+          "packageLocation": "./.yarn/cache/statcord.js-npm-3.1.4-1d212663a7-95a16e698a.zip/node_modules/statcord.js/",
+          "packageDependencies": [
+            ["statcord.js", "npm:3.1.4"],
+            ["node-fetch", "npm:2.6.1"],
+            ["systeminformation", "npm:4.34.9"]
           ],
           "linkType": "HARD",
         }]
@@ -6701,6 +6658,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/synchronous-promise-npm-2.0.15-5311c7e3c6-3462a5aa24.zip/node_modules/synchronous-promise/",
           "packageDependencies": [
             ["synchronous-promise", "npm:2.0.15"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["systeminformation", [
+        ["npm:4.34.9", {
+          "packageLocation": "./.yarn/cache/systeminformation-npm-4.34.9-7eb882d97e-f2712028d5.zip/node_modules/systeminformation/",
+          "packageDependencies": [
+            ["systeminformation", "npm:4.34.9"]
           ],
           "linkType": "HARD",
         }]
@@ -7069,15 +7035,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tyvn-npm-1.8.0-9eabc35d4c-f9728aabd7.zip/node_modules/tyvn/",
           "packageDependencies": [
             ["tyvn", "npm:1.8.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["tz-offset", [
-        ["npm:0.0.1", {
-          "packageLocation": "./.yarn/cache/tz-offset-npm-0.0.1-90d858a725-e6dc8d6b1d.zip/node_modules/tz-offset/",
-          "packageDependencies": [
-            ["tz-offset", "npm:0.0.1"]
           ],
           "linkType": "HARD",
         }]

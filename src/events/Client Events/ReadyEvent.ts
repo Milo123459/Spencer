@@ -1,10 +1,8 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Document } from 'mongoose';
 import { Anything } from '../../interfaces/Anything';
-import { User, TextChannel, MessageEmbed } from 'discord.js';
+import { User } from 'discord.js';
 import express from 'express';
-import nodeCron from 'node-cron';
-import sourcebin from 'sourcebin';
 import ms from 'ms';
 
 export const name: string = 'ready';
@@ -13,6 +11,7 @@ export const run: RunFunction = async (client) => {
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
+	await client.statcord.autopost();
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
 
@@ -74,49 +73,4 @@ export const run: RunFunction = async (client) => {
 			});
 		}, 1800000);
 	}
-	nodeCron
-		.schedule('0 0 * * * ', async () => {
-			const schema = await client.db.load('command');
-			const data = await schema.findOne({});
-			await schema.update({}, { Daily: {} });
-			const lifetime = Object.entries((data as Anything)?.LifeTime)
-				.sort((a: [string, number], b: [string, number]) => b[1] - a[1])
-				.map(
-					(value: [string, number]) =>
-						`${value[0]} - ${value[1].toLocaleString()}`
-				)
-				.join('\n');
-			const daily = Object.entries((data as Anything)?.Daily)
-				.sort((a: [string, number], b: [string, number]) => b[1] - a[1])
-				.map(
-					(value: [string, number]) =>
-						`${value[0]} - ${value[1].toLocaleString()}`
-				)
-				.join('\n');
-			const lifeTimeSourcebin = await sourcebin.create([
-				{
-					name: 'Life time most ran Commands',
-					language: 'text',
-					content: lifetime,
-				},
-			]);
-			const dailySourcebin = await sourcebin.create([
-				{
-					name: 'Daily most ran Commands',
-					language: 'text',
-					content: daily,
-				},
-			]);
-			const channel = client.channels.cache.get('807186889797926912');
-			(channel as TextChannel).send(
-				new MessageEmbed({
-					description: `
-        [Click this to view the last 24 hours](${dailySourcebin.url})
-        [Click this to view the life time stats](${lifeTimeSourcebin.url})
-        `,
-					title: 'Last 24 hours',
-				})
-			);
-		})
-		.start();
 };

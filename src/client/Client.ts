@@ -20,6 +20,7 @@ import { VACEFronJS } from 'vacefron';
 import { Api, Webhook } from '@top-gg/sdk';
 import EventEmitter from 'events';
 import { MusicManager } from '../music/MusicManager';
+import Statcord from 'statcord.js';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -38,6 +39,7 @@ class Spencer extends Client {
 	public vacefron: VACEFronJS = new VACEFronJS();
 	public topGGApi: Api;
 	public topGGWebhook: Webhook;
+	public statcord: Statcord.Client;
 	public constructor() {
 		super({
 			ws: { intents: Intents.ALL },
@@ -63,6 +65,13 @@ class Spencer extends Client {
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
 		this.music = new MusicManager(this);
+		this.statcord = new Statcord.Client({
+			key: config.statcordToken,
+			postCpuStatistics: false,
+			postMemStatistics: false,
+			postNetworkStatistics: false,
+			client: this,
+		});
 		this.topGGApi = new Api(this.config.topGGToken);
 		this.topGGWebhook = new Webhook(this.config.webAuth);
 		const commandFiles: string[] = await globPromise(
