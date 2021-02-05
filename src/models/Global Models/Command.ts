@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-export const name: string = 'commands';
+export const name: string = 'command';
 export const data = model(
 	'command',
 	new Schema({
