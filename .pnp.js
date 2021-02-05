@@ -46,6 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.25"],
+            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -68,6 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
+            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
@@ -610,6 +612,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/node-cron", [
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/cache/@types-node-cron-npm-2.0.3-5019ac0479-3542f5e758.zip/node_modules/@types/node-cron/",
+          "packageDependencies": [
+            ["@types/node-cron", "npm:2.0.3"],
+            ["@types/tz-offset", "npm:0.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/node-fetch", [
         ["npm:2.5.8", {
           "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.5.8-d946aa06c6-608cdd6aed.zip/node_modules/@types/node-fetch/",
@@ -728,6 +740,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-treeify-npm-1.0.0-b5e04e9cd3-f7b82d91a4.zip/node_modules/@types/treeify/",
           "packageDependencies": [
             ["@types/treeify", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/tz-offset", [
+        ["npm:0.0.0", {
+          "packageLocation": "./.yarn/cache/@types-tz-offset-npm-0.0.0-382f91759c-bf36bc5840.zip/node_modules/@types/tz-offset/",
+          "packageDependencies": [
+            ["@types/tz-offset", "npm:0.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4872,6 +4893,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["node-cron", [
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/unplugged/node-cron-npm-2.0.3-1a42e4b789/node_modules/node-cron/",
+          "packageDependencies": [
+            ["node-cron", "npm:2.0.3"],
+            ["opencollective-postinstall", "npm:2.0.3"],
+            ["tz-offset", "npm:0.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["node-fetch", [
         ["npm:2.6.1", {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
@@ -6289,6 +6321,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mongoose", "npm:5.10.3"],
             ["@types/ms", "npm:0.7.31"],
             ["@types/node", "npm:14.14.25"],
+            ["@types/node-cron", "npm:2.0.3"],
             ["@types/node-fetch", "npm:2.5.8"],
             ["@types/prettier", "npm:2.1.6"],
             ["@types/prompts", "npm:2.4.0"],
@@ -6311,6 +6344,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],
             ["ms", "npm:2.1.3"],
+            ["node-cron", "npm:2.0.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
             ["prettier", "npm:2.2.1"],
@@ -7013,6 +7047,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tyvn-npm-1.8.0-9eabc35d4c-f9728aabd7.zip/node_modules/tyvn/",
           "packageDependencies": [
             ["tyvn", "npm:1.8.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tz-offset", [
+        ["npm:0.0.1", {
+          "packageLocation": "./.yarn/cache/tz-offset-npm-0.0.1-90d858a725-e6dc8d6b1d.zip/node_modules/tz-offset/",
+          "packageDependencies": [
+            ["tz-offset", "npm:0.0.1"]
           ],
           "linkType": "HARD",
         }]

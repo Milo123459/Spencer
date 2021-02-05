@@ -451,6 +451,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-cron@npm:^2":
+  version: 2.0.3
+  resolution: "@types/node-cron@npm:2.0.3"
+  dependencies:
+    "@types/tz-offset": "*"
+  checksum: 3542f5e7588fe035911ef0456bc6487ad1b2c467dd577443b1cf91174c5a6bc7810c9e1a137672789f1354e0695f0bd8b2054cf6eed470bed51941dbcebff341
+  languageName: node
+  linkType: hard
+
 "@types/node-fetch@npm:^2.5.7, @types/node-fetch@npm:^2.5.8":
   version: 2.5.8
   resolution: "@types/node-fetch@npm:2.5.8"
@@ -561,6 +570,13 @@ __metadata:
   version: 1.0.0
   resolution: "@types/treeify@npm:1.0.0"
   checksum: f7b82d91a4be51d5b93fb1e245ea71768e06a567daa1ff84fe075c3e62ce90f2703fa8258f0f093f92816416fe2f41c3177e5005114613adbdddabe2ddc3e593
+  languageName: node
+  linkType: hard
+
+"@types/tz-offset@npm:*":
+  version: 0.0.0
+  resolution: "@types/tz-offset@npm:0.0.0"
+  checksum: bf36bc5840821baf77120ab5cc585687af4a99f1f4186a32d64b989b9db9a33148199d665e0a6af984d7e3b2cbd1390ec456c4bc1c6e9f1a5241e8b04ea99f0e
   languageName: node
   linkType: hard
 
@@ -3973,6 +3989,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"node-cron@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "node-cron@npm:2.0.3"
+  dependencies:
+    opencollective-postinstall: ^2.0.0
+    tz-offset: 0.0.1
+  checksum: 857e68d5e5cce5c9648d8c6f2b8aa814319d7f21c5aabf8481d54fbcbfb4a2a2315fb99fd32d0d87e93ac64770dd60f7c71cc96435a13e7e5b1d890f241f8c49
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:^2.6.1":
   version: 2.6.1
   resolution: "node-fetch@npm:2.6.1"
@@ -4174,7 +4200,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"opencollective-postinstall@npm:^2.0.2":
+"opencollective-postinstall@npm:^2.0.0, opencollective-postinstall@npm:^2.0.2":
   version: 2.0.3
   resolution: "opencollective-postinstall@npm:2.0.3"
   bin:
@@ -5252,6 +5278,7 @@ fsevents@~2.3.1:
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
     "@types/node": ^14.14.25
+    "@types/node-cron": ^2
     "@types/node-fetch": ^2.5.8
     "@types/prettier": ^2.1.6
     "@types/prompts": ^2.0.9
@@ -5274,6 +5301,7 @@ fsevents@~2.3.1:
     mathjs: ^9.2.0
     mongoose: ^5.11.15
     ms: ^2.1.3
+    node-cron: ^2.0.3
     node-fetch: ^2.6.1
     node-gyp: ^7.1.2
     prettier: ^2.2.1
@@ -5930,6 +5958,13 @@ typescript@^4.1.3:
   version: 1.8.0
   resolution: "tyvn@npm:1.8.0"
   checksum: f9728aabd7ff4eebb37952cac0c49f6672f5ff67f92683d717cd09065361f68bb47c7f9def4a310e26631db0fbb7652237151b366119fe55c91ec1b4381df6d0
+  languageName: node
+  linkType: hard
+
+"tz-offset@npm:0.0.1":
+  version: 0.0.1
+  resolution: "tz-offset@npm:0.0.1"
+  checksum: e6dc8d6b1d1ae971dad79b00ac60ff738ea8ceb4ab2984f6462941ca4124f87ae5a93fdbb2dc28c10122763b0dbeb64b04d3058f9df8f0bb91656cab9eeab81d
   languageName: node
   linkType: hard
 
