@@ -240,6 +240,18 @@ export const run: RunFunction = async (client, message: Message) => {
 			)
 		);
 	});
+    setTimeout(
+		() => {
+			client.cooldowns.delete(`${message.author.id}${command.name}`);
+		},
+		client.utils.checkMultipleRoles('784470505607528448', message.author.id, [
+			'787656384808353803',
+			'787656420258086922',
+			'787656471679991829',
+		])
+			? command?.cooldown / 2
+			: command?.cooldown
+	);
 	const CommandSchema = await client.db.load('command');
 	const data = await CommandSchema.findOne({});
 	if (!data || !(data as Anything)?.LifeTime || !(data as Anything)?.Daily) {
@@ -257,16 +269,4 @@ export const run: RunFunction = async (client, message: Message) => {
 		} else (data as Anything).Daily[command.name] += 1;
 		await CommandSchema.update({}, data);
 	}
-	setTimeout(
-		() => {
-			client.cooldowns.delete(`${message.author.id}${command.name}`);
-		},
-		client.utils.checkMultipleRoles('784470505607528448', message.author.id, [
-			'787656384808353803',
-			'787656420258086922',
-			'787656471679991829',
-		])
-			? command?.cooldown / 2
-			: command?.cooldown
-	);
 };
