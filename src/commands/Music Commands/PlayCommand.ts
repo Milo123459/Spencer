@@ -27,7 +27,11 @@ export const run: RunFunction = async (client, message, args) => {
 				client.embed({ description: "I couldn't find that song!" }, message)
 			);
 		const playlist = result.type == 'PLAYLIST';
-		const track = result.tracks.shift();
+		const track = result?.tracks?.shift();
+		if (!track)
+			return message.channel.send(
+				client.embed({ description: "I couldn't find that song!" }, message)
+			);
 		if (track.info.isStream)
 			return message.channel.send(
 				client.embed({ description: 'You cannot play live streams!' }, message)

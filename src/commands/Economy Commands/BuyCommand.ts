@@ -35,6 +35,20 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
+	if (item.unique == true) {
+		if (
+			((UserProfile as Anything)?.Inventory || {})?.[item.name] &&
+			((UserProfile as Anything)?.Inventory || {})?.[item.name] >= 1
+		)
+			return message.channel.send(
+				client.embed(
+					{
+						description: `You already have a ${item.name}! This item is unique so you can only have 1.`,
+					},
+					message
+				)
+			);
+	}
 	await UserEconomy.decrement(
 		{ User: message.author.id },
 		'Coins',

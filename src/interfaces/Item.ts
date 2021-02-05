@@ -3,4 +3,5 @@ export interface Item {
 	description: string;
 	price: number;
 	id: string;
+	unique?: boolean;
 }

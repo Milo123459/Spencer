@@ -7,4 +7,11 @@ export const items: Array<Item> = [
 		price: 5000,
 		id: 'padlock',
 	},
+	{
+		name: 'Dviih',
+		description: 'You have 1 million coins and you wasted it on a rank',
+		price: 1000000,
+		id: 'dviihrank',
+		unique: true,
+	},
 ];
