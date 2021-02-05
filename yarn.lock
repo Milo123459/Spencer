@@ -3973,7 +3973,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.0, node-fetch@npm:^2.6.1":
+"node-fetch@npm:^2.6.1":
   version: 2.6.1
   resolution: "node-fetch@npm:2.6.1"
   checksum: cbb171635e538162b977eac5dfe7a1e07a9a02e991924377a6435502291e2f823d306b95aabc455caebf4a118ccf836868462bc70ccc3095af02bb9da61fda37
@@ -5279,7 +5279,6 @@ fsevents@~2.3.1:
     prettier: ^2.2.1
     prompts: ^2.4.0
     shoukaku: ^1.5.2
-    statcord.js: ^3.1.4
     string-progressbar: ^1.0.3
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1
@@ -5353,16 +5352,6 @@ fsevents@~2.3.1:
   dependencies:
     figgy-pudding: ^3.5.1
   checksum: 828c8c24c993c77646e22e869f93ee0fd3406fed7d793a46fd2cb88b8fcf49ca610ac79a88776b2be62df92be7878cda334c8d98e041d6182eac33cf16cc65b6
-  languageName: node
-  linkType: hard
-
-"statcord.js@npm:^3.1.4":
-  version: 3.1.4
-  resolution: "statcord.js@npm:3.1.4"
-  dependencies:
-    node-fetch: ^2.6.0
-    systeminformation: ^4.26.9
-  checksum: 95a16e698a9419c856283e0a6238a708df90809d503e5e2b6eacf2b5839489e6b188cae271a4640021935812c66b7c7b598b1a717a38363ce574b3bbba742541
   languageName: node
   linkType: hard
 
@@ -5600,15 +5589,6 @@ fsevents@~2.3.1:
   version: 2.0.15
   resolution: "synchronous-promise@npm:2.0.15"
   checksum: 3462a5aa243969dc07aeeac00d77d56fc49663441f0167d48b39468e673cb294ce18ec1848aa24cd04961a0678d374f4cd77226d8288ebd57873d24a2a20f7eb
-  languageName: node
-  linkType: hard
-
-"systeminformation@npm:^4.26.9":
-  version: 4.34.9
-  resolution: "systeminformation@npm:4.34.9"
-  bin:
-    systeminformation: lib/cli.js
-  checksum: f2712028d5806a005421d6451c728824ca4b19456741720206e7bb92a9e2dabcc73356c71f6d7d5882fa2a0b31f5d66f3b8f27958c614526d7a541138448d055
   languageName: node
   linkType: hard
 

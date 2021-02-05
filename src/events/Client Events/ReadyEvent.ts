@@ -11,7 +11,6 @@ export const run: RunFunction = async (client) => {
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
-	await client.statcord.autopost();
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
 

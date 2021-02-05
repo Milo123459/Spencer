@@ -9,5 +9,4 @@ export interface Config {
 	topGGToken?: string;
 	onlyUsed?: string[];
 	lavalinkNodes: ShoukakuNodeOptions[];
-	statcordToken: string;
 }

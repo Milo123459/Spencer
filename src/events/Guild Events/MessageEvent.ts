@@ -252,5 +252,4 @@ export const run: RunFunction = async (client, message: Message) => {
 			? command?.cooldown / 2
 			: command?.cooldown
 	);
-	await client.statcord.postCommand(command.name, message.author.id);
 };

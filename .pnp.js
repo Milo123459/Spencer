@@ -73,7 +73,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
-            ["statcord.js", "npm:3.1.4"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
@@ -6317,7 +6316,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
-            ["statcord.js", "npm:3.1.4"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
@@ -6393,17 +6391,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ssri", "npm:6.0.1"],
             ["figgy-pudding", "npm:3.5.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["statcord.js", [
-        ["npm:3.1.4", {
-          "packageLocation": "./.yarn/cache/statcord.js-npm-3.1.4-1d212663a7-95a16e698a.zip/node_modules/statcord.js/",
-          "packageDependencies": [
-            ["statcord.js", "npm:3.1.4"],
-            ["node-fetch", "npm:2.6.1"],
-            ["systeminformation", "npm:4.34.9"]
           ],
           "linkType": "HARD",
         }]
@@ -6658,15 +6645,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/synchronous-promise-npm-2.0.15-5311c7e3c6-3462a5aa24.zip/node_modules/synchronous-promise/",
           "packageDependencies": [
             ["synchronous-promise", "npm:2.0.15"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["systeminformation", [
-        ["npm:4.34.9", {
-          "packageLocation": "./.yarn/cache/systeminformation-npm-4.34.9-7eb882d97e-f2712028d5.zip/node_modules/systeminformation/",
-          "packageDependencies": [
-            ["systeminformation", "npm:4.34.9"]
           ],
           "linkType": "HARD",
         }]
