@@ -279,6 +279,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sourcebin/linguist@npm:latest":
+  version: 0.0.3
+  resolution: "@sourcebin/linguist@npm:0.0.3"
+  checksum: 39e477223221ca21cffc78d6088da69bf2e553fc1ca99da8e8e592d00374254ca167e50e162134e4ef15d205058a163c6fec3a8b95ad2e2452b73c08168c1d3f
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^4.0.5":
   version: 4.0.5
   resolution: "@szmarczak/http-timer@npm:4.0.5"
@@ -2789,7 +2796,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"got@npm:^11.7.0":
+"got@npm:^11.7.0, got@npm:^11.8.1":
   version: 11.8.1
   resolution: "got@npm:11.8.1"
   dependencies:
@@ -5222,6 +5229,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"sourcebin@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "sourcebin@npm:4.0.2"
+  dependencies:
+    "@sourcebin/linguist": latest
+    got: ^11.8.1
+  checksum: afdb3f309ffa85599ceb4abf64a2f4e62725a4d9f62b12bdbd9c9647e62b7e1fe824a712462865ec51dc6993e799bb96041a451752a4264b648a041beee0db66
+  languageName: node
+  linkType: hard
+
 "sparse-bitfield@npm:^3.0.3":
   version: 3.0.3
   resolution: "sparse-bitfield@npm:3.0.3"
@@ -5307,6 +5324,7 @@ fsevents@~2.3.1:
     prettier: ^2.2.1
     prompts: ^2.4.0
     shoukaku: ^1.5.2
+    sourcebin: ^4.0.2
     string-progressbar: ^1.0.3
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1

@@ -240,6 +240,23 @@ export const run: RunFunction = async (client, message: Message) => {
 			)
 		);
 	});
+	const CommandSchema = await client.db.load('command');
+	const data = await CommandSchema.findOne({});
+	if (!data || !(data as Anything)?.LifeTime || !(data as Anything)?.Daily) {
+		const object = { LifeTime: (data as Anything)?.LifeTime || {}, Daily: {} };
+		if (Object.entries(object.LifeTime).length)
+			object['LifeTime'][command.name] = 1;
+		object['Daily'][command.name] = 1;
+		await CommandSchema.create(object);
+	} else {
+		if (!(data as Anything).LifeTime?.[command.name]) {
+			(data as Anything).LifeTime[command.name] = 1;
+		} else (data as Anything).LifeTime[command.name] += 1;
+		if (!(data as Anything).Daily?.[command.name]) {
+			(data as Anything).Daily[command.name] = 1;
+		} else (data as Anything).Daily[command.name] += 1;
+		await CommandSchema.update({}, data);
+	}
 	setTimeout(
 		() => {
 			client.cooldowns.delete(`${message.author.id}${command.name}`);

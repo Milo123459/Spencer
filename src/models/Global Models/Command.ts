@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose';
 export const name: string = 'commands';
 export const data = model(
-	'commands',
+	'command',
 	new Schema({
 		LifeTime: Object,
 		Daily: Object,
