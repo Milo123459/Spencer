@@ -76,6 +76,13 @@ export const run: RunFunction = async (client, message, args) => {
                     `
 					),
 				],
+				description: `Get userinfo on this user: \`${
+					User == message.author.id
+						? `${await client.utils.getPrefix(message.guild.id)}userinfo`
+						: `${await client.utils.getPrefix(
+								message.guild.id
+						  )}userinfo ${User}`
+				}\``,
 			},
 			message
 		)
@@ -83,4 +90,4 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'profile';
 export const category: string = 'economy';
-export const description: string = 'A cool command';
+export const description: string = 'Get info on someone in the economy';

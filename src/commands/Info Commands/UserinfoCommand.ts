@@ -117,6 +117,20 @@ export const run: RunFunction = async (client, message, args) => {
 						true
 					),
 				],
+				description: `Get economy info on this user: \`${
+					member.id == message.author.id
+						? `${await client.utils.getPrefix(message.guild.id)}profile`
+						: `${await client.utils.getPrefix(message.guild.id)}profile ${
+								member.id
+						  }`
+				}\``,
+				thumbnail: {
+					url: member.user.displayAvatarURL({
+						dynamic: true,
+						format: 'png',
+						size: 256,
+					}),
+				},
 			},
 			message
 		)
