@@ -7,4 +7,5 @@ export const emojis = {
 	spencerhappy: '<:spencerhappy:801829612924960828>',
 	spencerwave: '<:spencerwave:802196284584230973>',
 	spencermusic: '<:spencermusic:803190237684826132>',
+	dviih: '<:dviih:807279334602702879>',
 };

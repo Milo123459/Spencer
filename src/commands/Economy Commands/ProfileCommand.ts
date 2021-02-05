@@ -2,6 +2,7 @@ import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
 import { addProp } from 'tyvn';
 import { items } from '../../static/Items';
+import { emojis } from '../../static/Emojis';
 
 export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
@@ -59,6 +60,19 @@ export const run: RunFunction = async (client, message, args) => {
 												else if (!hasVoted) return 'No';
 											})) || 'Unknown'
 										}**
+                    **Ranks**: ${
+											!!Object.entries(Inventory).length
+												? Object.entries(Inventory)
+														.filter((value: [string, number]) =>
+															value[0].includes('rank')
+														)
+														.map(
+															(value: [string, number]) =>
+																emojis[value[0].split('rank')[0]]
+														)
+														.join(',') || '*No ranks.*'
+												: '*No ranks.*'
+										}
                     `
 					),
 				],
