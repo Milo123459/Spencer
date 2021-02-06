@@ -425,12 +425,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.5
-  resolution: "@types/mongodb@npm:3.6.5"
+  version: 3.6.6
+  resolution: "@types/mongodb@npm:3.6.6"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: d428a4f174b6553a949db1e090896c3aed0f05d6a253985260b0452e60c85156d8824b2c6fa1361ddbff8484908fe7167cf7844ea7467cff39f4994ceae8c226
+  checksum: ea23d63aa9ef999dabdf902ad20f2024218f4efa5e5f9e64c1501b538602d8747145be895b2ee18e629c79bf2e104da45f1597becf4d51950f9065e05b258230
   languageName: node
   linkType: hard
 
@@ -489,10 +489,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.1.6":
-  version: 2.1.6
-  resolution: "@types/prettier@npm:2.1.6"
-  checksum: c78a6406b0b0d167c3285c84ca63308028517bc772b16960d959ae0ab8947f58c33aac4ba4485ac878f114be230764f7d5582a43115727ba68e5fb59360d5f37
+"@types/prettier@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@types/prettier@npm:2.2.0"
+  checksum: 68d29aee4cc009c863388cce564406599630cd287c830436e943cebfd38280c15903e2e74f0270b25f8ef84307030600e1fd4bdc3205c2aa17eae758b9560d3e
   languageName: node
   linkType: hard
 
@@ -2571,20 +2571,20 @@ __metadata:
   linkType: hard
 
 "fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>":
-  version: 2.3.1
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.1#builtin<compat/fsevents>::version=2.3.1&hash=11e9ea"
+  version: 2.3.2
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"
   dependencies:
     node-gyp: latest
-  checksum: 66b24358e15cdd0f705b456346e58b4613f2bf54206b47874decda4152614fb0632d2d662c92b0ea54810109f646e5233e4cdd64dbb2a1949070ee5dc14dab87
+  checksum: 7b25d9251aefe433d508a0eb614217f0495ae05a9e8af15f7dbf9998e08c4e675acd1cf32361e0fcf71d917d9e8c4b76301fdc72a1ec1105a3ea0994f5e15a8d
   languageName: node
   linkType: hard
 
 fsevents@~2.3.1:
-  version: 2.3.1
-  resolution: "fsevents@npm:2.3.1"
+  version: 2.3.2
+  resolution: "fsevents@npm:2.3.2"
   dependencies:
     node-gyp: latest
-  checksum: 32619a121e7f9ac8a5ce4954f5fdf06be68b7b1c16e4ac8fa6e5e13cbf97d83c86cdcdf872ab7b188ebb07b34d2271b7818aebfc305b4a7d5b35f4bc2117f8be
+  checksum: a1883f4ca12b8b403ec528f1a4cb312b0877eacd24719da535cabea78d6fdd78530e3538bdba590a1c0f6c295128f964a89182621885296353a44dcfa4f9db53
   languageName: node
   linkType: hard
 
@@ -2793,9 +2793,9 @@ fsevents@~2.3.1:
   linkType: hard
 
 "graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.2, graceful-fs@npm:^4.2.3":
-  version: 4.2.4
-  resolution: "graceful-fs@npm:4.2.4"
-  checksum: d095ee4dc6eacc76814cd52d5d185b860119378a6fd4888e7d4e94983095c54d4f6369942a5e3d759cdbdd4e3ee7eaeb27a39ff938c6ee4610894fd9de46b6cb
+  version: 4.2.5
+  resolution: "graceful-fs@npm:4.2.5"
+  checksum: 164eeef7f8aca15aff8d3c61c780e286ec8867deb23d6f3cee2d6231e0b422233bf4d905edf585ce2c204e485b8511188e6752e1a28e7176f296fbdaa6269dc1
   languageName: node
   linkType: hard
 
@@ -3426,9 +3426,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.3":
-  version: 10.5.3
-  resolution: "lint-staged@npm:10.5.3"
+"lint-staged@npm:^10.5.4":
+  version: 10.5.4
+  resolution: "lint-staged@npm:10.5.4"
   dependencies:
     chalk: ^4.1.0
     cli-truncate: ^2.1.0
@@ -3447,7 +3447,7 @@ fsevents@~2.3.1:
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: cd34098f62feac51a8eb6a6abff6a15be292bfcac55d04c3e9f21c3ea8e472b94fac27507e4d087f0c6e159881216cd22bdf02d2b8d21cd8d0ffdf8ed00875b4
+  checksum: dbcafe3679668379fc03f3aef481c3f710794ec03dd5c3915f26a0de110977fbcb44b55ab6dfcff9e8e5789c568ea5629e92f55944fc43f6f6fa1890ee5b07ba
   languageName: node
   linkType: hard
 
@@ -5253,7 +5253,7 @@ fsevents@~2.3.1:
     "@types/ms": ^0.7.31
     "@types/node": ^14.14.25
     "@types/node-fetch": ^2.5.8
-    "@types/prettier": ^2.1.6
+    "@types/prettier": ^2.2.0
     "@types/prompts": ^2.0.9
     "@yarnpkg/doctor": ^2.1.3
     "@yarnpkg/pnpify": ^2.4.0
@@ -5270,7 +5270,7 @@ fsevents@~2.3.1:
     glob: ^7.1.6
     husky: ^4.3.8
     imageapi.js: ^1.3.2
-    lint-staged: ^10.5.3
+    lint-staged: ^10.5.4
     mathjs: ^9.2.0
     mongoose: ^5.11.15
     ms: ^2.1.3
