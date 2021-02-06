@@ -128,7 +128,6 @@ export const run: RunFunction = async (client, message, args) => {
 					url: member.user.displayAvatarURL({
 						dynamic: true,
 						format: 'png',
-						size: 256,
 					}),
 				},
 			},
