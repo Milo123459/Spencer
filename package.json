@@ -5,6 +5,7 @@
 	"main": "dist/src/index.js",
 	"scripts": {
 		"dev": "yarn analyze && ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"dev:language": "ts-node-dev --respawn --transpile-only --poll ./src/language/test.ts",
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
 		"start:core": "del-cli ./dist && yarn build",
