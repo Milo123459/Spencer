@@ -234,7 +234,11 @@ export const run: RunFunction = async (client, message: Message) => {
 			client.embed(
 				{
 					title: `❌ An error came about..`,
-					description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${e.message}\`\`\`\nNOTES: GID: ${message.guild.id} | UID: ${message.author.id} | CMD: ${command.name}`,
+					description: `\`\`\`\n${e.stack}\`\`\`\n\`\`\`\n${
+						e.message
+					}\`\`\`\nNOTES: GID: ${message.guild.id} | UID: ${
+						message.author.id
+					} | CMD: ${command.name} | ARGS: ${args.join(' ')}`,
 				},
 				message
 			)
