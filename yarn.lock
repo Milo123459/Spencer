@@ -1747,10 +1747,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^2.15.2":
-  version: 2.15.2
-  resolution: "consola@npm:2.15.2"
-  checksum: 6ea5e83d5a788acc8b7d3be1368e35a2bec8232969fc4df2cf71a8eed664c421c13624b8028dbb523b2f55e8a11c5cf06f7aab802d7aceee38126ce11f2e696c
+"consola@npm:^2.15.3":
+  version: 2.15.3
+  resolution: "consola@npm:2.15.3"
+  checksum: 914e2b0b24605a41f1a83ae29a0238558d01a01c40ada5817db81b2dd1543a540d59e38e81e736d05360246379a18013e6930b32231650898dfc4adb52a93523
   languageName: node
   linkType: hard
 
@@ -5260,7 +5260,7 @@ fsevents@~2.3.1:
     alpha-sort: ^4.0.0
     bufferutil: ^4.0.3
     cleverbot-free: ^1.0.5
-    consola: ^2.15.2
+    consola: ^2.15.3
     dayjs: ^1.10.4
     del-cli: ^3.0.1
     discord.js: ^12.5.1

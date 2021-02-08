@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.2"],
+            ["consola", "npm:2.15.3"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
@@ -2308,10 +2308,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["consola", [
-        ["npm:2.15.2", {
-          "packageLocation": "./.yarn/cache/consola-npm-2.15.2-7955725f98-6ea5e83d5a.zip/node_modules/consola/",
+        ["npm:2.15.3", {
+          "packageLocation": "./.yarn/cache/consola-npm-2.15.3-7b4cf44fed-914e2b0b24.zip/node_modules/consola/",
           "packageDependencies": [
-            ["consola", "npm:2.15.2"]
+            ["consola", "npm:2.15.3"]
           ],
           "linkType": "HARD",
         }]
@@ -6297,7 +6297,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["alpha-sort", "npm:4.0.0"],
             ["bufferutil", "npm:4.0.3"],
             ["cleverbot-free", "npm:1.0.5"],
-            ["consola", "npm:2.15.2"],
+            ["consola", "npm:2.15.3"],
             ["dayjs", "npm:1.10.4"],
             ["del-cli", "npm:3.0.1"],
             ["discord.js", "npm:12.5.1"],
