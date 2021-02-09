@@ -6,7 +6,7 @@
 
 [![Discord Bots](https://top.gg/api/widget/765156777607823380.svg)](https://top.gg/bot/765156777607823380)
 
-# Spencer
+# Spencer 😎
 
 Spencer is a discord bot. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
 
