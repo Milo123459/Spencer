@@ -17,7 +17,8 @@
 		"new": "ts-node ./src/scripts/New.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
 		"start": "yarn start:core && pm2 start dist/src/index.js --name Spencer",
-		"git": "git-go"
+		"git": "git-go",
+		"postinstall": "husky install"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
@@ -31,7 +32,7 @@
 		"erlpack": "^0.1.3",
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
-		"husky": "4.3.8",
+		"husky": "^5.0.9",
 		"imageapi.js": "^1.3.2",
 		"mathjs": "^9.2.0",
 		"mongoose": "^5.11.15",
@@ -70,12 +71,6 @@
 		"ts-node": "^9.1.1",
 		"ts-node-dev": "^1.1.1",
 		"typescript": "^4.1.3"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn analyze && git add . && lint-staged",
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-		}
 	},
 	"lint-staged": {
 		"*{.js,.ts,.json,.d.ts,.md,.yml,.yaml}": "prettier --write"

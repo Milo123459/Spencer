@@ -16,7 +16,7 @@ In order to contribute you need to fork the repo.
 
 Once you've forked it, clone the repo on your machine (or an online code editor like gitpod).
 
-No need to install dependencies, we use Yarn [Berry](https://github.com/yarnpkg/berry) - a glorified name for Yarn 2. We use the PnP (PlugNPlay) feature on Yarn to allow for 0 installs.
+No need to install dependencies, we use Yarn [Berry](https://github.com/yarnpkg/berry) - a glorified name for Yarn 2. We use the PnP (PlugNPlay) feature on Yarn to allow for 0 installs. (all though, to be sure, run `yarn`)
 
 Some things to keep in mind:
 
