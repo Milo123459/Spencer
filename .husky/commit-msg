@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn commitlint -e $1
+echo '$ commit-msg' && yarn commitlint -e $1

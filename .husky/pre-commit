@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn analyze && git add . && yarn lint-staged
+echo '$ pre-commit' && yarn analyze && git add . && yarn lint-staged
