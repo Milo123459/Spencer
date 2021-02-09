@@ -1,5 +1,6 @@
 import { MessageEmbed } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
+import * as pkg from '../../../package.json';
 export const name: string = 'stats';
 export const run: RunFunction = async (client, message) => {
 	const embed: MessageEmbed = client.embed(
@@ -12,7 +13,8 @@ export const run: RunFunction = async (client, message) => {
 			Uptime: \`${client.utils.formatMS(client.uptime)}\`
 			Discord API version: \`${client.options.http?.version || 'Unknown'}\`
 			Running OS: \`${process.platform || 'Unknown'}\`
-            WebSocket Ping: \`${client.ws.ping}\``,
+            WebSocket Ping: \`${client.ws.ping}\`
+            Bot Version: ${pkg.version}`,
 		},
 		message
 	);
