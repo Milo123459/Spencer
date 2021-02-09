@@ -5,9 +5,7 @@ exec('git branch --show-current', (error, stdout) => {
 	execSync(
 		`git add . && git commit -m "${argv
 			.slice(2)
-			.join(
-				' '
-			)}" && git pull origin ${stdout.trim()} && git push origin ${stdout.trim()}`,
+			.join(' ')}" && git pull && git push origin ${stdout.trim()}`,
 		{ stdio: 'inherit' }
 	);
 });
