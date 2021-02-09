@@ -1839,10 +1839,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:4.0.4", {
-          "packageLocation": "./.yarn/cache/bl-npm-4.0.4-142b0d603a-6364c6328f.zip/node_modules/bl/",
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/bl-npm-4.1.0-7f94cdcf3f-15d009339c.zip/node_modules/bl/",
           "packageDependencies": [
-            ["bl", "npm:4.0.4"],
+            ["bl", "npm:4.1.0"],
             ["buffer", "npm:5.7.1"],
             ["inherits", "npm:2.0.4"],
             ["readable-stream", "npm:3.6.0"]
@@ -6612,7 +6612,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tar-stream-npm-2.2.0-884c79b510-7eec0a7fc8.zip/node_modules/tar-stream/",
           "packageDependencies": [
             ["tar-stream", "npm:2.2.0"],
-            ["bl", "npm:4.0.4"],
+            ["bl", "npm:4.1.0"],
             ["end-of-stream", "npm:1.4.4"],
             ["fs-constants", "npm:1.0.0"],
             ["inherits", "npm:2.0.4"],
