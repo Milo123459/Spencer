@@ -46,3 +46,7 @@ mkdir my_cool_project
 cd my_cool_project
 yarn create ts-pro
 ```
+
+## The team
+
+![yes](https://badges.pufler.dev/contributors/Milo123459/Spencer?bots=true)
