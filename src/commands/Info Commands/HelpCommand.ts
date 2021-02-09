@@ -23,7 +23,7 @@ export const run: RunFunction = async (client, message, args) => {
 	const commandEmbed: MessageEmbed = client.embed(
 		{
 			fields,
-			title: `Prefix: ${Prefix}`,
+			title: `Prefix: \`${Prefix}\``,
 			description: `**${client.user.username}** currently has **${
 				client.commands.filter((value: Command) => value.category != 'owner')
 					.size
@@ -69,7 +69,7 @@ export const run: RunFunction = async (client, message, args) => {
 							  }`
 					)
 					.join('\n'),
-				title: `Prefix: ${Prefix}`,
+				title: `Prefix: \`${Prefix}\``,
 				fields: [
 					{
 						name: 'Note!',
