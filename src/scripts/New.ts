@@ -7,7 +7,7 @@ const globPromise = promisify(glob);
 (async () => {
 	const categorySet: Set<string> = new Set();
 	const paths: Array<{
-		type: 'command' | 'event' | 'model' | 'route';
+		type: 'command' | 'event' | 'model';
 		path: string;
 	}> = [
 		{
