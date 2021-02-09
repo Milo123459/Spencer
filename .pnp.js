@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.8"],
+            ["husky", "npm:5.0.9"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.4"],
             ["mathjs", "npm:9.2.0"],
@@ -2271,15 +2271,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["compare-versions", [
-        ["npm:3.6.0", {
-          "packageLocation": "./.yarn/cache/compare-versions-npm-3.6.0-0bb57ed638-0952526450.zip/node_modules/compare-versions/",
-          "packageDependencies": [
-            ["compare-versions", "npm:3.6.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["complex.js", [
         ["npm:2.0.11", {
           "packageLocation": "./.yarn/cache/complex.js-npm-2.0.11-89ac9823c9-00305ab626.zip/node_modules/complex.js/",
@@ -3141,16 +3132,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["find-versions", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/find-versions-npm-4.0.0-e4bd62bace-0517412834.zip/node_modules/find-versions/",
-          "packageDependencies": [
-            ["find-versions", "npm:4.0.0"],
-            ["semver-regex", "npm:3.1.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["fn-name", [
         ["npm:2.0.1", {
           "packageLocation": "./.yarn/cache/fn-name-npm-2.0.1-955ccc097e-0b2a1df516.zip/node_modules/fn-name/",
@@ -3693,20 +3674,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.3.8", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.3.8-f7cd00e56d/node_modules/husky/",
+        ["npm:5.0.9", {
+          "packageLocation": "./.yarn/cache/husky-npm-5.0.9-911a42768b-135129469a.zip/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.3.8"],
-            ["chalk", "npm:4.1.0"],
-            ["ci-info", "npm:2.0.0"],
-            ["compare-versions", "npm:3.6.0"],
-            ["cosmiconfig", "npm:7.0.0"],
-            ["find-versions", "npm:4.0.0"],
-            ["opencollective-postinstall", "npm:2.0.3"],
-            ["pkg-dir", "npm:5.0.0"],
-            ["please-upgrade-node", "npm:3.2.0"],
-            ["slash", "npm:3.0.0"],
-            ["which-pm-runs", "npm:1.0.0"]
+            ["husky", "npm:5.0.9"]
           ],
           "linkType": "HARD",
         }]
@@ -5089,15 +5060,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["opencollective-postinstall", [
-        ["npm:2.0.3", {
-          "packageLocation": "./.yarn/cache/opencollective-postinstall-npm-2.0.3-954643c36b-d75b06b80e.zip/node_modules/opencollective-postinstall/",
-          "packageDependencies": [
-            ["opencollective-postinstall", "npm:2.0.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["p-cancelable", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/p-cancelable-npm-2.0.0-5f988ffca4-966065f056.zip/node_modules/p-cancelable/",
@@ -5350,16 +5312,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["pinkie-promise", "npm:2.0.1"],
             ["pinkie", "npm:2.0.4"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["pkg-dir", [
-        ["npm:5.0.0", {
-          "packageLocation": "./.yarn/cache/pkg-dir-npm-5.0.0-3ba6768b42-86f6ecee17.zip/node_modules/pkg-dir/",
-          "packageDependencies": [
-            ["pkg-dir", "npm:5.0.0"],
-            ["find-up", "npm:5.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -6036,15 +5988,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["semver-regex", [
-        ["npm:3.1.2", {
-          "packageLocation": "./.yarn/cache/semver-regex-npm-3.1.2-66d0f8130f-6a83740f3f.zip/node_modules/semver-regex/",
-          "packageDependencies": [
-            ["semver-regex", "npm:3.1.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["send", [
         ["npm:0.17.1", {
           "packageLocation": "./.yarn/cache/send-npm-0.17.1-aad5512679-58e4ab2e07.zip/node_modules/send/",
@@ -6305,7 +6248,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.17.1"],
             ["git-go", "npm:1.0.3"],
             ["glob", "npm:7.1.6"],
-            ["husky", "npm:4.3.8"],
+            ["husky", "npm:5.0.9"],
             ["imageapi.js", "npm:1.3.2"],
             ["lint-staged", "npm:10.5.4"],
             ["mathjs", "npm:9.2.0"],
@@ -7143,15 +7086,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/which-module-npm-2.0.0-daf3daa08d-3d2107ab18.zip/node_modules/which-module/",
           "packageDependencies": [
             ["which-module", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["which-pm-runs", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/which-pm-runs-npm-1.0.0-c3252bc9d6-0bb79a782e.zip/node_modules/which-pm-runs/",
-          "packageDependencies": [
-            ["which-pm-runs", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
