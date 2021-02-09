@@ -1,0 +1,11 @@
+name: Run TSC
+on:
+  push:
+  pull_request:
+jobs:
+  run_tsc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@latest
+      - uses: actions/setup-node@latest
+      - run: yarn build
