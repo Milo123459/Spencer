@@ -5,11 +5,7 @@ import alphaSort from 'alpha-sort';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
-	const GuildConfigSchema = await client.db.load(`guildconfig`);
-	const GuildConfig = await GuildConfigSchema.findOne({
-		Guild: message.guild.id,
-	});
-	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
+	const Prefix = await client.utils.getPrefix(message.guild.id);
 	const fields: Array<EmbedFieldData> = [...client.categories]
 		.filter((value: string) => value != 'owner')
 		.map((category: string) => {
@@ -27,7 +23,7 @@ export const run: RunFunction = async (client, message, args) => {
 	const commandEmbed: MessageEmbed = client.embed(
 		{
 			fields,
-			title: `Prefix: \`${Prefix}\``,
+			title: `Prefix: ${Prefix}`,
 			description: `**${client.user.username}** currently has **${
 				client.commands.filter((value: Command) => value.category != 'owner')
 					.size
@@ -73,7 +69,7 @@ export const run: RunFunction = async (client, message, args) => {
 							  }`
 					)
 					.join('\n'),
-				title: `Prefix: \`${Prefix}\``,
+				title: `Prefix: ${Prefix}`,
 				fields: [
 					{
 						name: 'Note!',
