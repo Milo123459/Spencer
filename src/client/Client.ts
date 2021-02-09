@@ -9,6 +9,7 @@ import {
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
+import { MusicManager } from '../music/MusicManager';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
@@ -19,7 +20,6 @@ import { Config } from '../interfaces/Config';
 import { VACEFronJS } from 'vacefron';
 import { Api, Webhook } from '@top-gg/sdk';
 import EventEmitter from 'events';
-import { MusicManager } from '../music/MusicManager';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
