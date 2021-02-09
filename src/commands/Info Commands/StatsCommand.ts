@@ -14,7 +14,7 @@ export const run: RunFunction = async (client, message) => {
 			Discord API version: \`${client.options.http?.version || 'Unknown'}\`
 			Running OS: \`${process.platform || 'Unknown'}\`
             WebSocket Ping: \`${client.ws.ping}\`
-            Bot Version: ${pkg.version}`,
+            Bot Version: \`${pkg.version}\``,
 		},
 		message
 	);
