@@ -37,7 +37,7 @@ export const run: RunFunction = async (client, message, args) => {
 	);
 };
 export const aliases: string[] = [
-	'balance',
+	'bal',
 	'money',
 	'cash',
 	'howmuchdollar',
