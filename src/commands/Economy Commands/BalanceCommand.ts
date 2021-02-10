@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
-export const name: string = 'bal';
+
 export const run: RunFunction = async (client, message, args) => {
 	const EconomySchema = await client.db.load('usereconomy');
 	const User: string =
@@ -36,6 +36,8 @@ export const run: RunFunction = async (client, message, args) => {
 		)
 	);
 };
+
+export const name: string = 'balance';
 export const aliases: string[] = [
 	'bal',
 	'money',
