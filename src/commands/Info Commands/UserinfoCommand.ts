@@ -39,7 +39,7 @@ export const run: RunFunction = async (client, message, args) => {
 										.map((value: Role) => value.toString())
 										.join(', ') || '*No roles.*'
 						}`,
-						true
+						false
 					),
 					client.utils.constructField(
 						`Join position`,
