@@ -1,6 +1,7 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
 import { Document } from 'mongoose';
+import { emojis } from '../../static/Emojis';
 import { Util } from 'discord.js';
 import { addProp } from 'tyvn';
 
@@ -32,7 +33,7 @@ export const run: RunFunction = async (client, message, args) => {
 			{
 				description: `${Leaderboard.map(
 					(value: Document, index: number) =>
-						`${index + 1} - ${Util.escapeMarkdown(
+						`${emojis[`medal${index + 1}`]} - ${Util.escapeMarkdown(
 							client.users.cache.get((value as Anything).User)?.tag ||
 								'Unknown user'
 						)} - \`${addProp<Anything>(
