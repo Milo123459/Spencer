@@ -8,7 +8,7 @@
 
 # Spencer 😎
 
-Spencer is a discord bot. Made by **Salvage_Dev**. Has some cool technical systems built in such as a command analyzer.
+Spencer is a discord bot. Made by **Salvage_Dev**.
 
 Looking for the website? Try [here](https://github.com/Milo123459/spencer-web)
 
@@ -26,7 +26,7 @@ Has a cool little DB system, allowing you to load schemas remotely.
 
 - Fork this repo
 - Clone your forked repo
-- Make a branch by running `yarn nb awesome-feature-name-here`
+- Make a branch by running `yarn nb awesome-feature-name-here`.
 - Add your code
 - Add and commit your code
 - Go to [this](https://github.com/Milo123459/Spencer) repo and create a pull request
@@ -37,11 +37,11 @@ Has a cool little DB system, allowing you to load schemas remotely.
 
 **Spencer** is still under active development, have an idea? Make an issue.
 
-Psst! This project was made with create-ts-pro
+Psst! This project was created with `create-ts-pro`.
 
 Use it like so:
 
-```
+```sh
 mkdir my_cool_project
 cd my_cool_project
 yarn create ts-pro
