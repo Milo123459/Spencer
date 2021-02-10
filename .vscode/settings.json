@@ -5,5 +5,19 @@
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+"prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+"grammarly.overrides": [
+    {
+        "files": [
+            "**/README.md"
+        ],
+        "config": {
+            "audience": "general",
+            "dialect": "british",
+            "domain": "casual",
+            "emotions": [],
+            "goals": []
+        }
+    }
+]
 }
