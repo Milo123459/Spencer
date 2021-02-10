@@ -70,7 +70,7 @@
 		"prettier": "^2.2.1",
 		"ts-node": "^9.1.1",
 		"ts-node-dev": "^1.1.1",
-		"typescript": "^4.1.4"
+		"typescript": "^4.1.5"
 	},
 	"lint-staged": {
 		"*{.js,.ts,.json,.d.ts,.md,.yml,.yaml}": "prettier --write"
