@@ -45,7 +45,7 @@ export const run: RunFunction = async (client, message, args) => {
 						`Join position`,
 						(
 							await client.utils.calculateJoinPosition(message, member)
-						).toString(),
+						).toLocaleString(),
 						true
 					),
 					client.utils.constructField(
