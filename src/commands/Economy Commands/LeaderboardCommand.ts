@@ -61,3 +61,4 @@ export const run: RunFunction = async (client, message, args) => {
 export const name: string = 'leaderboard';
 export const category: string = 'economy';
 export const description: string = 'View the top users on the economy';
+export const aliases: string[] = ['leaders', 'lb'];
