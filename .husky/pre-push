@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '$ pre-push'
+LINK = $(yarn terminal-link-cli 'repo' 'https://github.com/Milo123459/Spencer')
+echo '$ See you on the ${LINK}. 🚀'
