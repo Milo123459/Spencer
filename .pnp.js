@@ -64,6 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:7.1.6"],
             ["husky", "npm:5.0.9"],
             ["imageapi.js", "npm:1.3.2"],
+            ["leven", "npm:3.1.0"],
             ["lint-staged", "npm:10.5.4"],
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],
@@ -4221,6 +4222,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["leven", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/leven-npm-3.1.0-b7697736a3-6ebca75298.zip/node_modules/leven/",
+          "packageDependencies": [
+            ["leven", "npm:3.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lines-and-columns", [
         ["npm:1.1.6", {
           "packageLocation": "./.yarn/cache/lines-and-columns-npm-1.1.6-23e74fab67-798b80ed7a.zip/node_modules/lines-and-columns/",
@@ -6270,6 +6280,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:7.1.6"],
             ["husky", "npm:5.0.9"],
             ["imageapi.js", "npm:1.3.2"],
+            ["leven", "npm:3.1.0"],
             ["lint-staged", "npm:10.5.4"],
             ["mathjs", "npm:9.2.0"],
             ["mongoose", "npm:5.11.15"],

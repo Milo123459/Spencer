@@ -3398,6 +3398,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"leven@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "leven@npm:3.1.0"
+  checksum: 6ebca7529809b8d099ab8793091b1ee8712a87932fae14c7d0c2693b0fcc0640aea72141a6539c03b9dae53a34f15a43dc151bb5c04eded0d1d38b277bfd206a
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.1.6
   resolution: "lines-and-columns@npm:1.1.6"
@@ -5234,6 +5241,7 @@ fsevents@~2.3.1:
     glob: ^7.1.6
     husky: ^5.0.9
     imageapi.js: ^1.3.2
+    leven: ^3.1.0
     lint-staged: ^10.5.4
     mathjs: ^9.2.0
     mongoose: ^5.11.15

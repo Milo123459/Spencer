@@ -11,5 +11,6 @@ export const data = model(
 		ReportChannel: String,
 		AntiRaid: String,
 		AntiLink: Boolean,
+		DidYouMean: Boolean,
 	})
 );
