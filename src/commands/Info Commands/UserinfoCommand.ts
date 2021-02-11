@@ -108,13 +108,13 @@ export const run: RunFunction = async (client, message, args) => {
 						`
                     Boosting **${message.guild.name}**: ${
 							member.premiumSince
-								? `Since **${dayjs(member.premiumSinceTimestamp).format(
+								? `Since ${dayjs(member.premiumSinceTimestamp).format(
 										'DD/MM/YYYY'
-								  )}** (${client.utils.formatMS(
+								  )} (${client.utils.formatMS(
 										Date.now() - member.premiumSinceTimestamp,
 										true
 								  )} ago)`
-								: '**No**'
+								: 'No'
 						}
                     Joined **${message.guild.name}**: ${dayjs(
 							member.joinedAt
