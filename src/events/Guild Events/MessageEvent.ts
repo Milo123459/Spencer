@@ -133,8 +133,8 @@ export const run: RunFunction = async (client, message: Message) => {
 	if (!command || command == undefined) {
 		if (
 			(GuildConfig as Anything)?.DidYouMean == true ||
-			(!(GuildConfig as Anything)?.GuildConfig &&
-				(GuildConfig as Anything)?.GuildConfig != false)
+			((GuildConfig as Anything)?.DidYouMean != false &&
+				(GuildConfig as Anything)?.DidYouMean == undefined)
 		) {
 			const best: string[] = [
 				...client.commands.map((value: Command) => value.name),
@@ -159,7 +159,7 @@ export const run: RunFunction = async (client, message: Message) => {
 					message
 				)
 			);
-		}
+		} else return;
 	}
 	if (command) {
 		if (command.userPermissions) {
