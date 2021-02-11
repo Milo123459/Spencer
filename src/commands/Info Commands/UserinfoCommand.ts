@@ -117,7 +117,11 @@ export const run: RunFunction = async (client, message, args) => {
 						true
 					),
 				],
-				description: `Get economy info on this user: \`${
+				description: `Get economy info on ${
+					member.id == message.author.id
+						? 'yourself'
+						: `**${member.displayName}**`
+				}: \`${
 					member.id == message.author.id
 						? `${await client.utils.getPrefix(message.guild.id)}profile`
 						: `${await client.utils.getPrefix(message.guild.id)}profile ${
