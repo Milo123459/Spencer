@@ -1,6 +1,9 @@
 import { Message, TextChannel } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
 import { Anything } from '../../interfaces/Anything';
+import leven from 'leven';
+import { Command } from '../../interfaces/Command';
+
 export const name: string = 'message';
 export const run: RunFunction = async (client, message: Message) => {
 	if (message.partial) await message.fetch();
@@ -127,7 +130,33 @@ export const run: RunFunction = async (client, message: Message) => {
 	if (client.config.onlyUsed) {
 		if (!client.config.onlyUsed.includes(message.author.id)) return;
 	}
-	if (!command || command == undefined) return;
+	if (!command || command == undefined) {
+		if ((GuildConfig as Anything)?.DidYouMean == true) {
+			const best: string[] = [
+				...client.commands.map((value: Command) => value.name),
+				...client.aliases.map((value: string, key: string) => key),
+			].filter(
+				(cmd: string) =>
+					leven(cmd.toLowerCase(), cmd.toLowerCase()) < cmd.length * 0.4
+			);
+			const dym: string =
+				best.length == 0
+					? ''
+					: best.length == 1
+					? `\nDid you mean this?\n${best[0]}`
+					: `\nDid you mean one of these?\n${best.slice(0, 3).join('\n')}`;
+			return message.channel.send(
+				client.embed(
+					{
+						description: `Couldn't find that command!\nYou can disable this command by typing \`${await client.utils.getPrefix(
+							message.guild.id
+						)}config didyoumean no\`.${dym}`,
+					},
+					message
+				)
+			);
+		}
+	}
 	if (command) {
 		if (command.userPermissions) {
 			if (!message.member.permissions.has(command.userPermissions))

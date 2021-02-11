@@ -150,4 +150,20 @@ export const subcommands: Array<SubCommand> = [
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
 	},
+	{
+		schema: 'guildconfig',
+		key: 'DidYouMean',
+		description: 'Toggles if you want the bot to send "did you mean" messages.',
+		search: (client, message) => new Object({ Guild: message.guild.id }),
+		validate: (client, message, args) => {
+			const value: boolean =
+				yn(args[0]) && message.member.permissions.has('MANAGE_GUILD');
+			return {
+				value,
+				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
+				success: value != undefined,
+			};
+		},
+		parseToDB: (client, message, args) => yn(args[0]),
+	},
 ];
