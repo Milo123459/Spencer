@@ -104,15 +104,30 @@ export const run: RunFunction = async (client, message, args) => {
 						true
 					),
 					client.utils.constructField(
-						'Miscellaneous',
+						'Notable dates',
 						`
                     Boosting **${message.guild.name}**: ${
 							member.premiumSince
 								? `Since **${dayjs(member.premiumSinceTimestamp).format(
 										'DD/MM/YYYY'
-								  )}**`
+								  )}** (${client.utils.formatMS(
+										Date.now() - member.premiumSinceTimestamp,
+										true
+								  )} ago)`
 								: '**No**'
 						}
+                    Joined **${message.guild.name}**: ${dayjs(
+							member.joinedAt
+						).format('DD/MM/YYYY')} (${client.utils.formatMS(
+							Date.now() - member.joinedTimestamp,
+							true
+						)} ago)
+                    Crated **${message.guild.name}**: ${dayjs(
+							member.user.createdAt
+						).format('DD/MM/YYYY')} (${client.utils.formatMS(
+							Date.now() - member.user.createdTimestamp,
+							true
+						)} ago)
                     `,
 						true
 					),
