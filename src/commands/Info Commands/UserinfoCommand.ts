@@ -109,7 +109,7 @@ export const run: RunFunction = async (client, message, args) => {
                     Boosting **${message.guild.name}**: ${
 							member.premiumSince
 								? `Since **${dayjs(member.premiumSinceTimestamp).format(
-										'[DD/MM/YYYY] DD/MM/YYYY'
+										'DD/MM/YYYY'
 								  )}**`
 								: '**No**'
 						}
@@ -122,7 +122,8 @@ export const run: RunFunction = async (client, message, args) => {
 						? `${await client.utils.getPrefix(message.guild.id)}profile`
 						: `${await client.utils.getPrefix(message.guild.id)}profile ${
 								member.id
-						  }`
+						  }
+                          All dates are formatted like so: \`DD/MM/YYYY\``
 				}\``,
 				thumbnail: {
 					url: member.user.displayAvatarURL({
