@@ -152,11 +152,9 @@ class UtilsManager {
 		return new Promise(async (resolve, reject) => {
 			const messageCollector = channel.createMessageCollector(
 				(msg: Message) => msg.author.id == queryUser,
-				{ time: time ?? 30000 }
+				{ time: time ?? 30000, max: 1 }
 			);
-			messageCollector.on('collect', (msg: Message) => {
-				resolve(msg);
-			});
+			messageCollector.on('collect', (msg: Message) => resolve(msg));
 			messageCollector.on('end', (collected, reason: string) => reject(reason));
 		});
 	}

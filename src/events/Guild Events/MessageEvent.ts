@@ -115,7 +115,7 @@ export const run: RunFunction = async (client, message: Message) => {
 		}
 	}
 	if (message.author.bot) return;
-	const Prefix = (GuildConfig as Anything)?.Prefix || client.prefix;
+	const Prefix = await client.utils.getPrefix(message.guild.id);
 	if (!message.content.toLowerCase().startsWith(Prefix)) return;
 	const [cmd, ...args]: string[] = message.content
 		.slice(Prefix.length)
