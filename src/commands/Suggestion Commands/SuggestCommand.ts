@@ -49,6 +49,13 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
+	if (!message.guild.me.permissions.has('USE_EXTERNAL_EMOJIS'))
+		return message.channel.send(
+			client.embed(
+				{ description: 'I need permission to use external emotes!' },
+				message
+			)
+		);
 	const Suggestion = await SuggestionSchema.create({
 		Guild: message.guild.id,
 		Content: args.join(' '),
