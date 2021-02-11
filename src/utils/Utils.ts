@@ -28,7 +28,7 @@ class UtilsManager {
 			return message.mentions.channels.first();
 		if (!isNaN(parseInt(arg, 10))) return message.guild.channels.cache.get(arg);
 	}
-	public formatMS(ms: number): string {
+	public formatMS(ms: number, noDetails?: boolean): string {
 		const times: object = {
 			week: Math.floor(ms / (1000 * 60 * 60 * 24 * 7)),
 			day: Math.floor((ms / (1000 * 60 * 60 * 24)) % 7),
@@ -39,7 +39,12 @@ class UtilsManager {
 
 		let string = '';
 
-		for (const [key, value] of Object.entries(times)) {
+		for (const [key, value] of noDetails === true
+			? Object.entries(times).filter(
+					(value: [string, any]) =>
+						value[0] != 'hour' && value[0] != 'minute' && value[0] != 'second'
+			  )
+			: Object.entries(times)) {
 			if (value > 0) string += ` ${value} ${key}${value > 1 ? 's, ' : ','}`;
 		}
 		return string
