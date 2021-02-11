@@ -131,13 +131,17 @@ export const run: RunFunction = async (client, message: Message) => {
 		if (!client.config.onlyUsed.includes(message.author.id)) return;
 	}
 	if (!command || command == undefined) {
-		if ((GuildConfig as Anything)?.DidYouMean == true) {
+		if (
+			(GuildConfig as Anything)?.DidYouMean == true ||
+			(!(GuildConfig as Anything)?.GuildConfig &&
+				(GuildConfig as Anything)?.GuildConfig != false)
+		) {
 			const best: string[] = [
 				...client.commands.map((value: Command) => value.name),
 				...client.aliases.map((value: string, key: string) => key),
 			].filter(
-				(cmd: string) =>
-					leven(cmd.toLowerCase(), cmd.toLowerCase()) < cmd.length * 0.4
+				(input: string) =>
+					leven(cmd.toLowerCase(), input.toLowerCase()) < input.length * 0.4
 			);
 			const dym: string =
 				best.length == 0
@@ -148,7 +152,7 @@ export const run: RunFunction = async (client, message: Message) => {
 			return message.channel.send(
 				client.embed(
 					{
-						description: `Couldn't find that command!\nYou can disable this command by typing \`${await client.utils.getPrefix(
+						description: `Couldn't find that command!\nYou can disable this message by typing \`${await client.utils.getPrefix(
 							message.guild.id
 						)}config didyoumean no\`.${dym}`,
 					},
