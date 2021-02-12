@@ -130,7 +130,7 @@ export const run: RunFunction = async (client, message: Message) => {
 	if (client.config.onlyUsed) {
 		if (!client.config.onlyUsed.includes(message.author.id)) return;
 	}
-	if (!command || command == undefined) {
+	if (!command || (command == undefined && cmd.length)) {
 		if (
 			(GuildConfig as Anything)?.DidYouMean == true ||
 			((GuildConfig as Anything)?.DidYouMean != false &&
