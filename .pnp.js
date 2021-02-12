@@ -71,6 +71,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
+            ["os-name", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
@@ -4389,6 +4390,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["macos-release", [
+        ["npm:2.4.1", {
+          "packageLocation": "./.yarn/cache/macos-release-npm-2.4.1-4856441ab1-0d15f4b163.zip/node_modules/macos-release/",
+          "packageDependencies": [
+            ["macos-release", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["make-dir", [
         ["npm:3.1.0", {
           "packageLocation": "./.yarn/cache/make-dir-npm-3.1.0-d1d7505142-54b6f186c2.zip/node_modules/make-dir/",
@@ -5075,6 +5085,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["onetime", "npm:5.1.2"],
             ["mimic-fn", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["os-name", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/os-name-npm-4.0.0-a24c30b783-6f0d404e34.zip/node_modules/os-name/",
+          "packageDependencies": [
+            ["os-name", "npm:4.0.0"],
+            ["macos-release", "npm:2.4.1"],
+            ["windows-release", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -6287,6 +6308,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ms", "npm:2.1.3"],
             ["node-fetch", "npm:2.6.1"],
             ["node-gyp", "npm:7.1.2"],
+            ["os-name", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
             ["shoukaku", "npm:1.5.2"],
@@ -7127,6 +7149,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["wide-align", "npm:1.1.3"],
             ["string-width", "npm:2.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["windows-release", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/windows-release-npm-4.0.0-0487118638-6e285986c3.zip/node_modules/windows-release/",
+          "packageDependencies": [
+            ["windows-release", "npm:4.0.0"],
+            ["execa", "npm:4.1.0"]
           ],
           "linkType": "HARD",
         }]
