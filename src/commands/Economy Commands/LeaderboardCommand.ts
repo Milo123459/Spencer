@@ -33,23 +33,23 @@ export const run: RunFunction = async (client, message, args) => {
 			{
 				description: `${Leaderboard.map(
 					(value: Document, index: number) =>
-						`${emojis[`medal${index + 1}`]} - ${Util.escapeMarkdown(
+						`${emojis[`medal${index + 1}`]} **${Util.escapeMarkdown(
 							client.users.cache.get((value as Anything).User)?.tag ||
-								'Unknown user'
-						)} - \`${addProp<Anything>(
+								'Unknown user#0000'
+						)}** \`${addProp<Anything>(
 							['Coins', 'DepositedCoins'],
 							0,
 							0,
 							value
-						).toLocaleString()} coins.\``
+						).toLocaleString()} coins\`.`
 				).join('\n')}\n${
 					userPosition > 10
-						? `${userPosition} - ${message.author.tag} - \`${addProp<Anything>(
+						? `${userPosition} - **You** - \`${addProp<Anything>(
 								['Coins', 'DepositedCoins'],
 								0,
 								0,
 								UserProfile
-						  ).toLocaleString()} coins.\``
+						  ).toLocaleString()} coins\`.`
 						: ''
 				}\nNote, the money is in how much they have in their wallet & bank!`,
 			},
