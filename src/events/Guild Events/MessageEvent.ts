@@ -147,8 +147,11 @@ export const run: RunFunction = async (client, message: Message) => {
 				best.length == 0
 					? ''
 					: best.length == 1
-					? `\nDid you mean this?\n${best[0]}`
-					: `\nDid you mean one of these?\n${best.slice(0, 3).join('\n')}`;
+					? `\nDid you mean this?\n**${best[0]}**`
+					: `\nDid you mean one of these?\n${best
+							.slice(0, 3)
+							.map((value: string) => `**${value}**`)
+							.join('\n')}`;
 			return message.channel.send(
 				client.embed(
 					{
