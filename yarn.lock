@@ -425,12 +425,12 @@ __metadata:
   linkType: hard
 
 "@types/mongodb@npm:*, @types/mongodb@npm:^3.5.27":
-  version: 3.6.6
-  resolution: "@types/mongodb@npm:3.6.6"
+  version: 3.6.7
+  resolution: "@types/mongodb@npm:3.6.7"
   dependencies:
     "@types/bson": "*"
     "@types/node": "*"
-  checksum: ea23d63aa9ef999dabdf902ad20f2024218f4efa5e5f9e64c1501b538602d8747145be895b2ee18e629c79bf2e104da45f1597becf4d51950f9065e05b258230
+  checksum: 9a334a2528455869d7c3af3bd73ebce6647ce372effea9ce91905911e93e36ffc760a60e6779508d49dafa8b75e22bdd9a72fe8d03efc9650f1c652afc59178d
   languageName: node
   linkType: hard
 
@@ -461,10 +461,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.25":
-  version: 14.14.25
-  resolution: "@types/node@npm:14.14.25"
-  checksum: 64c42730f4169e49ec378870622ef06c5d820b31340e224cc1b45bf06c8b0cfa28daa587b4ae2b8ea1f712ef049bae4d9c92925b157ba9ba7cde3b22ff552513
+"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.26":
+  version: 14.14.26
+  resolution: "@types/node@npm:14.14.26"
+  checksum: 03067a0bdb168322d0efbd21176a61c042d2d37c18db5caa7bf3ad7f27364078c26f6861dd0d73278a1a4cdac51232c393e4087bf2dd63dc43fe4f2731c67a7c
   languageName: node
   linkType: hard
 
@@ -5222,7 +5222,7 @@ fsevents@~2.3.1:
     "@types/mathjs": ^6.0.11
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.25
+    "@types/node": ^14.14.26
     "@types/node-fetch": ^2.5.8
     "@types/prettier": ^2.2.0
     "@types/prompts": ^2.0.9
