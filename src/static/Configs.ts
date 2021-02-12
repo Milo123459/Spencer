@@ -129,7 +129,10 @@ export const subcommands: Array<SubCommand> = [
 				value,
 				fix:
 					'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
-				success: value != undefined,
+				success:
+					value != undefined &&
+					message.member.permissions.has(['ADMINISTRATOR', 'BAN_MEMBERS']) &&
+					message.guild.me.permissions.has('BAN_MEMBERS'),
 			};
 		},
 		parseToDB: (client, message, args) => args[0].toLowerCase(),
@@ -145,7 +148,8 @@ export const subcommands: Array<SubCommand> = [
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
-				success: value != undefined,
+				success:
+					value != undefined && message.member.permissions.has('MANAGE_GUILD'),
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
