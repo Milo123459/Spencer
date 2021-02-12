@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Document } from 'mongoose';
 import { Anything } from '../../interfaces/Anything';
-import { User } from 'discord.js';
+import { GuildMember, User } from 'discord.js';
 import express from 'express';
 import ms from 'ms';
 
@@ -11,6 +11,14 @@ export const run: RunFunction = async (client) => {
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
+	if (client.config.onlyUsed) {
+		client.guilds.cache
+			.get('784470505607528448')
+			.roles.cache.get('809733163252187156')
+			.members.map((value: GuildMember) => {
+				client.config.onlyUsed.push(value.id);
+			});
+	}
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
 
