@@ -161,7 +161,8 @@ export const subcommands: Array<SubCommand> = [
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
-				success: value != undefined,
+				success:
+					value != undefined && message.member.permissions.has('MANAGE_GUILD'),
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
