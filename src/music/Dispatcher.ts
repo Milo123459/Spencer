@@ -80,6 +80,7 @@ class Dispatcher {
 	}
 
 	public destroy(reason?: string): void {
+		delete this.loop;
 		this.queue.clear();
 		this.player.disconnect();
 		this.text.send(`I left because ${reason ?? 'of an empty queue'}.`);
