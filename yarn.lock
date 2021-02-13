@@ -461,7 +461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^14.11.10, @types/node@npm:^14.14.26":
+"@types/node@npm:*, @types/node@npm:^14.11.10":
   version: 14.14.26
   resolution: "@types/node@npm:14.14.26"
   checksum: 03067a0bdb168322d0efbd21176a61c042d2d37c18db5caa7bf3ad7f27364078c26f6861dd0d73278a1a4cdac51232c393e4087bf2dd63dc43fe4f2731c67a7c
@@ -472,6 +472,13 @@ __metadata:
   version: 13.13.41
   resolution: "@types/node@npm:13.13.41"
   checksum: 12d385e54cb3bfd7814a954f177b0d9e7a641bfac0e7898fa77f2db104b6a77f4366005436464f28990b5c212900febd551044067568e32619e4d98cae8ccfa4
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^14.14.27":
+  version: 14.14.27
+  resolution: "@types/node@npm:14.14.27"
+  checksum: efc78cf6e698e09925a2542bbea932dfe092408f4ce39b8f260b71df502221d76c925fd3227bc1f7427edd9cfb6f8c81c68a56b9ab690f08425e7e6e177e61e0
   languageName: node
   linkType: hard
 
@@ -3843,9 +3850,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongodb@npm:3.6.3":
-  version: 3.6.3
-  resolution: "mongodb@npm:3.6.3"
+"mongodb@npm:3.6.4":
+  version: 3.6.4
+  resolution: "mongodb@npm:3.6.4"
   dependencies:
     bl: ^2.2.1
     bson: ^1.1.4
@@ -3869,7 +3876,7 @@ fsevents@~2.3.1:
       optional: true
     snappy:
       optional: true
-  checksum: 85a80641803e75b93e76bb9e84c26429ec2c374e7138114562a25a6272880d1c18cf5dda21b8bd75c7dd110dac997d11572bb2da506c12c99c9faa4c668364c7
+  checksum: f2331e7cdce7694b033346f898af9429bab53505ffc1175cb66e370eecc26eb3ae08d950f57ee6ca0be1a4d24f735c40ac758f3e8f0f68826b43e7a36ed5f5bf
   languageName: node
   linkType: hard
 
@@ -3882,23 +3889,23 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.11.15, mongoose@npm:^5.11.15":
-  version: 5.11.15
-  resolution: "mongoose@npm:5.11.15"
+"mongoose@npm:5.11.16, mongoose@npm:^5.11.16":
+  version: 5.11.16
+  resolution: "mongoose@npm:5.11.16"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.2
-    mongodb: 3.6.3
+    mongodb: 3.6.4
     mongoose-legacy-pluralize: 1.0.2
     mpath: 0.8.3
-    mquery: 3.2.3
+    mquery: 3.2.4
     ms: 2.1.2
     regexp-clone: 1.0.0
     safe-buffer: 5.2.1
     sift: 7.0.1
     sliced: 1.0.1
-  checksum: b8670af3ac998605a89e895ce859c5336ef1789a80992b03f3a95824f30c3d94c84f975975da34bd8c2e057d93ce57b70a2d337bddf6cbf0204896e503b3aa24
+  checksum: 1ddf33178fede52d2c7772e757dcded8f17639c7b85a8ece7284d0a6b83b49593d3bfd4f37c82faa5433fd5e1f2809454c92a2ae8c4045bff701b98871fef2f4
   languageName: node
   linkType: hard
 
@@ -3909,16 +3916,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mquery@npm:3.2.3":
-  version: 3.2.3
-  resolution: "mquery@npm:3.2.3"
+"mquery@npm:3.2.4":
+  version: 3.2.4
+  resolution: "mquery@npm:3.2.4"
   dependencies:
     bluebird: 3.5.1
     debug: 3.1.0
     regexp-clone: ^1.0.0
     safe-buffer: 5.1.2
     sliced: 1.0.1
-  checksum: 4eecfd75bfd1f0094e24aa5905df70e96e630f002a3fbee5b0443cd56e21720930a8f38f8afff6a7d4318fcb3d04317d632bca2f7a06c3facd3913365bc32420
+  checksum: 80410d4e80b40730b0121315e34b33a37a7e468b9c9d517072b7b5e7f6fd00f04a42b3cffa458f5b4b71433f2313e9e227d4a507f3c66a7646fe153e153158fb
   languageName: node
   linkType: hard
 
@@ -5239,7 +5246,7 @@ fsevents@~2.3.1:
     "@types/mathjs": ^6.0.11
     "@types/mongoose": ^5.10.3
     "@types/ms": ^0.7.31
-    "@types/node": ^14.14.26
+    "@types/node": ^14.14.27
     "@types/node-fetch": ^2.5.8
     "@types/prettier": ^2.2.0
     "@types/prompts": ^2.0.9
@@ -5261,7 +5268,7 @@ fsevents@~2.3.1:
     leven: ^3.1.0
     lint-staged: ^10.5.4
     mathjs: ^9.2.0
-    mongoose: ^5.11.15
+    mongoose: ^5.11.16
     ms: ^2.1.3
     node-fetch: ^2.6.1
     node-gyp: ^7.1.2
