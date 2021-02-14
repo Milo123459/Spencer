@@ -122,9 +122,9 @@ export const run: RunFunction = async (client, message, args) => {
 							Date.now() - member.joinedTimestamp,
 							true
 						)} ago)
-                    Crated **${message.guild.name}**: ${dayjs(
-							member.user.createdAt
-						).format('DD/MM/YYYY')} (${client.utils.formatMS(
+                    Created account: ${dayjs(member.user.createdAt).format(
+											'DD/MM/YYYY'
+										)} (${client.utils.formatMS(
 							Date.now() - member.user.createdTimestamp,
 							true
 						)} ago)
