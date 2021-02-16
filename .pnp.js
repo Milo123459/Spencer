@@ -74,7 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["os-name", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
-            ["shoukaku", "npm:1.6.0"],
+            ["shoukaku", "npm:1.5.2"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],
@@ -6121,10 +6121,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["shoukaku", [
-        ["npm:1.6.0", {
-          "packageLocation": "./.yarn/cache/shoukaku-npm-1.6.0-d394af3eb0-efdba9235e.zip/node_modules/shoukaku/",
+        ["npm:1.5.2", {
+          "packageLocation": "./.yarn/cache/shoukaku-npm-1.5.2-130cba4e19-9e1ff81bb3.zip/node_modules/shoukaku/",
           "packageDependencies": [
-            ["shoukaku", "npm:1.6.0"],
+            ["shoukaku", "npm:1.5.2"],
             ["abort-controller", "npm:3.0.0"],
             ["node-fetch", "npm:2.6.1"],
             ["ws", "virtual:e8b380c863850045a09fce6a1a72065e59ee06032967e3a05d31d31a6b12f36728a27d7aa0dd96dbe022359b27ded736a360a4131e9d020175782aee48634e4d#npm:7.4.3"]
@@ -6311,7 +6311,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["os-name", "npm:4.0.0"],
             ["prettier", "npm:2.2.1"],
             ["prompts", "npm:2.4.0"],
-            ["shoukaku", "npm:1.6.0"],
+            ["shoukaku", "npm:1.5.2"],
             ["string-progressbar", "npm:1.0.3"],
             ["ts-node", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:9.1.1"],
             ["ts-node-dev", "virtual:523c71c97f9702a89e93eae878f1287b4eb8704861aa07c213e341a8d0f4bd2964affb313176b35b904ddeb0fe1bbca462caa20832357c33b9732b9e87933daf#npm:1.1.1"],

@@ -5099,14 +5099,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"shoukaku@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "shoukaku@npm:1.6.0"
+"shoukaku@npm:1.5.2":
+  version: 1.5.2
+  resolution: "shoukaku@npm:1.5.2"
   dependencies:
     abort-controller: ^3.0.0
     node-fetch: ^2.6.1
-    ws: ^7.4.1
-  checksum: efdba9235eaf7fe05eb083ca8883075004eb3ea524b7856583657cce72c471483e13411eb4bf64dc7100984307411e7a9a17d38e1e8aa6823f3407a86245ec8c
+    ws: ^7.3.1
+  checksum: 9e1ff81bb3b7665f7844e07229e2cfb4f5b6e547ee42480e49584797822d70ef0e972c2983e115e551ea560c3b740eda2baece15e41171eb8f57a80a3688ee7a
   languageName: node
   linkType: hard
 
@@ -5268,7 +5268,7 @@ fsevents@~2.3.1:
     os-name: ^4.0.0
     prettier: ^2.2.1
     prompts: ^2.4.0
-    shoukaku: ^1.6.0
+    shoukaku: 1.5.2
     string-progressbar: ^1.0.3
     ts-node: ^9.1.1
     ts-node-dev: ^1.1.1
@@ -6065,7 +6065,7 @@ typescript@^4.1.5:
   languageName: node
   linkType: hard
 
-"ws@npm:^7.3.1, ws@npm:^7.4.1":
+"ws@npm:^7.3.1":
   version: 7.4.3
   resolution: "ws@npm:7.4.3"
   peerDependencies:
