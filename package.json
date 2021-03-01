@@ -41,7 +41,7 @@
 		"node-fetch": "^2.6.1",
 		"os-name": "^4.0.0",
 		"prompts": "^2.4.0",
-		"shoukaku": "1.5.2",
+		"shoukaku": "1.6.2",
 		"string-progressbar": "^1.0.3",
 		"tslib": "^2.1.0",
 		"tyvn": "^1.8.0",
