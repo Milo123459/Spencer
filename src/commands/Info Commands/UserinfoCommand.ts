@@ -142,7 +142,7 @@ export const run: RunFunction = async (client, message, args) => {
 						: `${await client.utils.getPrefix(message.guild.id)}profile ${
 								member.id
 						  }\`
-                          All dates are formatted like so: \`DD/MM/YYYY\``
+                          All dates are formatted like so: \`DD/MM/YYYY`
 				}\``,
 				thumbnail: {
 					url: member.user.displayAvatarURL({
