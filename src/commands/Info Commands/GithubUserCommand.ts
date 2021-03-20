@@ -78,18 +78,18 @@ export const run: RunFunction = async (client, message, args) => {
 							},
 							{
 								name: 'Account Creation Date',
-								value: dayjs
-									.utc(res.created_at)
-									.format('dddd Do MMMM, YYYY, hh:mm a'),
+								value: dayjs(res.created_at).format(
+									'dddd Do MMMM, YYYY, hh:mm a'
+								),
 								inline: true,
 							},
 							{
 								name: 'Account Last Updated',
 								value: `${
 									res.updated_at
-										? dayjs
-												.utc(res.updated_at)
-												.format('dddd Do MMMM, YYYY, hh:mm a')
+										? dayjs(res.updated_at).format(
+												'dddd Do MMMM, YYYY, hh:mm a'
+										  )
 										: 'Never Updated'
 								}`,
 								inline: true,
