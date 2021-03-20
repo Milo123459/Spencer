@@ -8,3 +8,4 @@ config.json
 !.yarn/sdks
 !.yarn/versions
 .husky/_
+node_modules
