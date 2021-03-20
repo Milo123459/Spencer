@@ -19,5 +19,6 @@
         "goals": []
       }
     }
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }

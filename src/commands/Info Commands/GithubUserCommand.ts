@@ -1,7 +1,7 @@
 import { RunFunction } from '../../interfaces/Command';
 import { GithubUser } from '../../interfaces/GithubUser';
 import fetch from 'node-fetch';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export const run: RunFunction = async (client, message, args) => {
 	const user = args.join(' ');
