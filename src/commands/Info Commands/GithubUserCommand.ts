@@ -1,6 +1,7 @@
 import { RunFunction } from '../../interfaces/Command';
 import { GithubUser } from '../../interfaces/GithubUser';
 import fetch from 'node-fetch';
+import dayjs from 'dayjs';
 
 export const run: RunFunction = async (client, message, args) => {
 	const user = args.join(' ');
@@ -77,12 +78,20 @@ export const run: RunFunction = async (client, message, args) => {
 							},
 							{
 								name: 'Account Creation Date',
-								value: res.created_at,
+								value: dayjs(res.created_at).format(
+									'dddd Do MMMM, YYYY, hh:mm a'
+								),
 								inline: true,
 							},
 							{
 								name: 'Account Last Updated',
-								value: `${res.updated_at ? res.updated_at : 'Never Updated'}`,
+								value: `${
+									res.updated_at
+										? dayjs(res.updated_at).format(
+												'dddd Do MMMM, YYYY, hh:mm a'
+										  )
+										: 'Never Updated'
+								}`,
 								inline: true,
 							},
 						],
