@@ -33,7 +33,7 @@
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
 		"husky": "^5.1.3",
-		"imageapi.js": "^1.3.2",
+		"imageapi.js": "^1.6.1",
 		"leven": "^3.1.0",
 		"mathjs": "^9.3.2",
 		"mongoose": "^5.12.5",
