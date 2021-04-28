@@ -2332,7 +2332,7 @@ map-obj@^4.0.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.2.1.tgz#e4ea399dbc979ae735c83c863dd31bdf364277b7"
 
-mathjs@^9.2.0:
+mathjs@^9.3.2:
   version "9.3.2"
   resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-9.3.2.tgz#6523dd5c963d200ff1cea0ff7963b10521b82185"
   dependencies:
@@ -3286,7 +3286,7 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
 
-shoukaku@^1.6.2:
+shoukaku@^1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/shoukaku/-/shoukaku-1.6.4.tgz#23710b221239505aaa2d9bc3c20c2ad26b52bb91"
   dependencies:
