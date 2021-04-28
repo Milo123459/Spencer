@@ -3286,7 +3286,7 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
 
-shoukaku@^1.6.2:
+shoukaku@^1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/shoukaku/-/shoukaku-1.6.4.tgz#23710b221239505aaa2d9bc3c20c2ad26b52bb91"
   dependencies:
