@@ -43,7 +43,7 @@
 		"prompts": "^2.4.1",
 		"shoukaku": "^1.6.4",
 		"string-progressbar": "^1.0.3",
-		"tslib": "^2.1.0",
+		"tslib": "^2.2.0",
 		"tyvn": "^1.8.0",
 		"utf-8-validate": "^5.0.4",
 		"vacefron": "^3.4.0",
