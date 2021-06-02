@@ -1,7 +1,6 @@
 import { Command, RunFunction } from '../../interfaces/Command';
 import { EmbedFieldData, MessageEmbed } from 'discord.js';
 import ms from 'ms';
-import alphaSort from 'alpha-sort';
 import { Anything } from '../../interfaces/Anything';
 export const name: string = 'help';
 export const run: RunFunction = async (client, message, args) => {
@@ -53,7 +52,6 @@ export const run: RunFunction = async (client, message, args) => {
 		client.embed(
 			{
 				description: Object.entries(command)
-					.sort((a: [string, any], b: [string, any]) => alphaSort()(a[0], b[0]))
 					.filter((data) => typeof data[1] != 'function')
 					.map((data) =>
 						data[0] == 'usage'
