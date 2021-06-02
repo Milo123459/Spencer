@@ -1,10 +1,5 @@
 dist
 .idea
 config.json
-.yarn/*
-!.yarn/cache
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
 .husky/_
+node_modules

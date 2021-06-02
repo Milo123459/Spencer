@@ -1,4 +1,3 @@
-import { ShoukakuNodeOptions } from 'shoukaku';
 export interface Config {
 	token: string;
 	mongoURI: string;
@@ -8,5 +7,4 @@ export interface Config {
 	webPort?: number;
 	topGGToken?: string;
 	onlyUsed?: string[];
-	lavalinkNodes: ShoukakuNodeOptions[];
 }

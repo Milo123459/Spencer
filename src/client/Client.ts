@@ -9,7 +9,6 @@ import {
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
-import { MusicManager } from '../music/MusicManager';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
@@ -31,7 +30,6 @@ class Spencer extends Client {
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
 	public utils: UtilsManager;
-	public music: MusicManager;
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
@@ -62,7 +60,6 @@ class Spencer extends Client {
 
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
-		this.music = new MusicManager(this);
 		this.topGGApi = new Api(this.config.topGGToken);
 		this.topGGWebhook = new Webhook(this.config.webAuth);
 		const commandFiles: string[] = await globPromise(

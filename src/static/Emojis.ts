@@ -6,7 +6,6 @@ export const emojis = {
 	spencersad: '<:spencersad:801828233091350548>',
 	spencerhappy: '<:spencerhappy:801829612924960828>',
 	spencerwave: '<:spencerwave:802196284584230973>',
-	spencermusic: '<:spencermusic:803190237684826132>',
 	dviih: '<:dviih:807279334602702879>',
 	medal1: '<:1_:808980788032569346>',
 	medal2: '<:2_:808980787969785857>',

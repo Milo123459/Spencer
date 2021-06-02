@@ -45,26 +45,25 @@ export const run: RunFunction = async (client) => {
 		server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
 		server.post(
 			'/webhooks/dbl',
-			client.topGGWebhook.middleware(),
-			async (req, res) => {
+            client.topGGWebhook.listener(async (vote, req, res) => {
 				await EconomySchema.increment(
-					{ User: req.vote.user },
+					{ User: vote.user },
 					'Coins',
-					req.vote.isWeekend ? 2000 : 1000
+					vote.isWeekend ? 2000 : 1000
 				);
-				const Profile = await EconomySchema.findOne({ User: req.vote.user });
+				const Profile = await EconomySchema.findOne({ User: vote.user });
 				const voteReminder = (Profile as Anything)?.VoteReminder || false;
 				if (!!voteReminder) {
 					const ReminderSchema = await client.db.load('reminder');
 					await ReminderSchema.create({
-						User: req.vote.user,
+						User: vote.user,
 						Time: Date.now() + ms('12h'),
 						Message:
 							'🚀 Vote reminder, you can now vote on top.gg! ⭐ Here is the link: https://top.gg/bot/765156777607823380/vote',
 					});
-				}
-				return res.json({ msg: 'Success, 🚀' });
-			}
+				};
+                res.send("Worked.");
+            })
 		);
 		server.listen(client.config.webPort, () =>
 			client.logger.success(
