@@ -29,8 +29,7 @@ export const subcommands: Array<SubCommand> = [
 				message.member.permissions.has('MANAGE_GUILD') && args[0].length < 5;
 			return {
 				value,
-				fix:
-					'Please make sure you have the permission MANAGE_GUILD & the prefix length is less then 5!',
+				fix: 'Please make sure you have the permission MANAGE_GUILD & the prefix length is less then 5!',
 				success: value != false,
 			};
 		},
@@ -59,8 +58,7 @@ export const subcommands: Array<SubCommand> = [
 			}
 			return {
 				value,
-				fix:
-					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES & ADD_REACTIONS',
+				fix: 'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES & ADD_REACTIONS',
 				success: value != undefined,
 			};
 		},
@@ -105,8 +103,7 @@ export const subcommands: Array<SubCommand> = [
 			}
 			return {
 				value,
-				fix:
-					'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES',
+				fix: 'Make sure you have MANAGE_GUILD, the channel exists, it is a text channel & I can SEND_MESSAGES',
 				success: value != undefined,
 			};
 		},
@@ -127,8 +124,7 @@ export const subcommands: Array<SubCommand> = [
 				message.guild.me.permissions.has('BAN_MEMBERS');
 			return {
 				value,
-				fix:
-					'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
+				fix: 'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
 				success:
 					value != undefined &&
 					message.member.permissions.has(['ADMINISTRATOR', 'BAN_MEMBERS']) &&

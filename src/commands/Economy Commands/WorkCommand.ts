@@ -61,10 +61,11 @@ export const run: RunFunction = async (client, message) => {
 				message
 			)
 		);
-		const messageCollector: MessageCollector = message.channel.createMessageCollector(
-			(m: Message) => m.author.id == message.author.id,
-			{ time: 5000, max: 1 }
-		);
+		const messageCollector: MessageCollector =
+			message.channel.createMessageCollector(
+				(m: Message) => m.author.id == message.author.id,
+				{ time: 5000, max: 1 }
+			);
 		messageCollector.on('collect', async (msg: Message) => {
 			// get input values
 			const Input: string = msg.content.toLowerCase();
@@ -183,10 +184,11 @@ export const run: RunFunction = async (client, message) => {
 				message
 			)
 		);
-		const messageCollector: MessageCollector = message.channel.createMessageCollector(
-			(m: Message) => m.author.id == message.author.id,
-			{ time: 10000, max: 1 }
-		);
+		const messageCollector: MessageCollector =
+			message.channel.createMessageCollector(
+				(m: Message) => m.author.id == message.author.id,
+				{ time: 10000, max: 1 }
+			);
 		messageCollector.on('collect', async (msg: Message) => {
 			if (isNaN(parseInt(msg.content, 10)))
 				return messageCollector.stop('failed');

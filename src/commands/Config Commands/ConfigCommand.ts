@@ -50,7 +50,9 @@ export const run: RunFunction = async (client, message, args) => {
 			return message.channel.send(
 				client.embed({ description: 'Come back with admin...' }, message)
 			);
-		await (await client.db.load(subcommand.schema)).update(
+		await (
+			await client.db.load(subcommand.schema)
+		).update(
 			subcommand.search(client, message),
 			client.utils.proper(subcommand.key, undefined)
 		);
@@ -63,7 +65,9 @@ export const run: RunFunction = async (client, message, args) => {
 		return message.channel.send(
 			client.embed({ description: validated.fix }, message)
 		);
-	await (await client.db.load(subcommand.schema)).update(
+	await (
+		await client.db.load(subcommand.schema)
+	).update(
 		subcommand.search(client, message),
 		client.utils.proper(
 			subcommand.key,

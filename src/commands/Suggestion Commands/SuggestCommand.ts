@@ -95,9 +95,7 @@ export const run: RunFunction = async (client, message, args) => {
 		client
 			.embed(
 				{
-					description: `${args.join(' ')}\n\nSuggestion ID: **${
-						Suggestion._id
-					}**`,
+					description: `${args.join(' ')}`,
 				},
 				message
 			)

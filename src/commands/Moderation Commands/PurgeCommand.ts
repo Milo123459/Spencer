@@ -30,10 +30,8 @@ export const run: RunFunction = async (client, message, args) => {
 	try {
 		await message.delete();
 	} catch {}
-	const messages: Collection<
-		string,
-		Message
-	> = await message.channel.messages.fetch({ limit: parseInt(args[0], 10) });
+	const messages: Collection<string, Message> =
+		await message.channel.messages.fetch({ limit: parseInt(args[0], 10) });
 	await (message.channel as TextChannel).bulkDelete(
 		messages.filter(
 			(value: Message) => Date.now() - value.createdTimestamp < ms('14d')

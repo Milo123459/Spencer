@@ -53,9 +53,8 @@ export const run: RunFunction = async (client, message, args) => {
 						`
                     Voted for Spencer in the last 12 hours: **${
 											(await client.utils.tryItAndSee<string>(async () => {
-												const hasVoted: boolean = await client.topGGApi.hasVoted(
-													User
-												);
+												const hasVoted: boolean =
+													await client.topGGApi.hasVoted(User);
 												if (hasVoted) return 'Yes';
 												else if (!hasVoted) return 'No';
 											})) || 'Unknown'

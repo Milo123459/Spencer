@@ -56,10 +56,12 @@ export const run: RunFunction = async (client, message: Message) => {
 					)
 				);
 				if (
-					((await RaidUserSchema.findOne({
-						User: message.author.id,
-						Guild: message.guild.id,
-					})) as Anything).Actions >= 3
+					(
+						(await RaidUserSchema.findOne({
+							User: message.author.id,
+							Guild: message.guild.id,
+						})) as Anything
+					).Actions >= 3
 				) {
 					try {
 						await message.member.ban({ reason: 'Too many infractions.' });
@@ -86,10 +88,12 @@ export const run: RunFunction = async (client, message: Message) => {
 				}
 			} else if ((GuildConfig as Anything).AntiRaid == 'high') {
 				if (
-					((await RaidUserSchema.findOne({
-						User: message.author.id,
-						Guild: message.guild.id,
-					})) as Anything).Actions >= 1
+					(
+						(await RaidUserSchema.findOne({
+							User: message.author.id,
+							Guild: message.guild.id,
+						})) as Anything
+					).Actions >= 1
 				) {
 					try {
 						await message.member.ban({ reason: 'Too many infractions.' });
@@ -265,9 +269,9 @@ export const run: RunFunction = async (client, message: Message) => {
 			.catch(() => client.logger.error("Can't send error message"));
 		if (e?.message?.toLowerCase()?.includes('missing permissions') || false)
 			return;
-		return (client.channels.cache.get(
-			'787685747649019925'
-		) as TextChannel).send(
+		return (
+			client.channels.cache.get('787685747649019925') as TextChannel
+		).send(
 			client.embed(
 				{
 					title: `❌ An error came about..`,

@@ -45,7 +45,7 @@ export const run: RunFunction = async (client) => {
 		server.get('/', (req, res) => res.status(200).json({ msg: '🚀' }));
 		server.post(
 			'/webhooks/dbl',
-            client.topGGWebhook.listener(async (vote, req, res) => {
+			client.topGGWebhook.listener(async (vote, req, res) => {
 				await EconomySchema.increment(
 					{ User: vote.user },
 					'Coins',
@@ -61,9 +61,9 @@ export const run: RunFunction = async (client) => {
 						Message:
 							'🚀 Vote reminder, you can now vote on top.gg! ⭐ Here is the link: https://top.gg/bot/765156777607823380/vote',
 					});
-				};
-                res.send("Worked.");
-            })
+				}
+				res.send('Worked.');
+			})
 		);
 		server.listen(client.config.webPort, () =>
 			client.logger.success(
