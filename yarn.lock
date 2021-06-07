@@ -1237,10 +1237,10 @@ map-obj@^4.0.0:
   resolved "https://registry.npmjs.org/map-obj/-/map-obj-4.2.1.tgz"
   integrity sha512-+WA2/1sPmDj1dlvvJmB5G6JKfY9dpn7EVBUL06+y6PoljPkh+6V1QihwxNkbcGxCRjt2b0F9K0taiCuo7MbdFQ==
 
-mathjs@*, mathjs@^9.3.2:
-  version "9.4.1"
-  resolved "https://registry.npmjs.org/mathjs/-/mathjs-9.4.1.tgz"
-  integrity sha512-zAepVEfVyv4C7PM8gZ5jDzC7bZscdIcqTKsNqiqmFP+0SFHFffWT84l2v3z2zT41n9Rmdn3aWR8/bpFlnNjC6g==
+mathjs@*, mathjs@^9.4.2:
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-9.4.2.tgz#4a7908f23bed3fda5c4435b8d72e0cb100c1c453"
+  integrity sha512-xu0AU6bpjxbDgCB824s/yDpAe0KR1TMUYz/yY7rYyRcEH56OuG8JPgxJhqlUyhhRpY++ZFDnRxRNGChYx1FLKQ==
   dependencies:
     "@babel/runtime" "^7.14.0"
     complex.js "^2.0.13"
