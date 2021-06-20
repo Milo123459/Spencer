@@ -21,7 +21,9 @@ export const run: RunFunction = async (
 	const Suggestion = await SuggestionSchema.findOne({ MessageID: messageID });
 	if (!(Suggestion as Anything) || !(Suggestion as Anything).User) return;
 	if ((Suggestion as Anything).User == userID) {
+        try {
 		await reaction.users.remove(userID);
+        } catch {};
 	}
 };
 export const name: string = 'messageReactionAdd';
