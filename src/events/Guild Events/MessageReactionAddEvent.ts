@@ -25,6 +25,7 @@ export const run: RunFunction = async (
 			await reaction.users.remove(userID);
 		} catch {}
 	} else {
+        console.log(reaction.message.reactions);
 		const up = reaction.message.reactions.cache.get(emojis.spencerup);
 		const down = reaction.message.reactions.cache.get(emojis.spencerdown);
 		await up.fetch();
