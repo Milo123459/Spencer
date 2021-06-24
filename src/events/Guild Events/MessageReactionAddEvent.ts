@@ -21,9 +21,29 @@ export const run: RunFunction = async (
 	const Suggestion = await SuggestionSchema.findOne({ MessageID: messageID });
 	if (!(Suggestion as Anything) || !(Suggestion as Anything).User) return;
 	if ((Suggestion as Anything).User == userID) {
-        try {
-		await reaction.users.remove(userID);
-        } catch {};
+		try {
+			await reaction.users.remove(userID);
+		} catch {}
+	} else {
+		const up = reaction.message.reactions.cache.get(emojis.spencerup);
+		const down = reaction.message.reactions.cache.get(emojis.spencerdown);
+		await up.fetch();
+		await up.users.fetch();
+		await down.fetch();
+		await down.users.fetch();
+		const upvote =
+			reaction.emoji.toString() == '<:spencerup:801826018096054293>'
+				? true
+				: false;
+		if (upvote) {
+			if (down.users.cache.has(userID)) {
+				await reaction.users.remove(userID);
+			}
+		} else {
+			if (up.users.cache.has(userID)) {
+				await reaction.users.remove(userID);
+			}
+		}
 	}
 };
 export const name: string = 'messageReactionAdd';
