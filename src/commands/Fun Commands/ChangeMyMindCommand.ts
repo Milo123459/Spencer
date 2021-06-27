@@ -27,4 +27,4 @@ export const category: string = 'fun';
 export const aliases: string[] = ['cmm'];
 export const usage: string = '<...text>';
 export const description: string =
-	'Generate a change my mine meme. (Example: https://i.imgur.com/3Qh649F.png)';
+	'Generate a change my mind meme. (Example: https://i.imgur.com/3Qh649F.png)';
