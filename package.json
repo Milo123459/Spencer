@@ -20,7 +20,7 @@
 	},
 	"license": "Creative Commons",
 	"dependencies": {
-		"@top-gg/sdk": "^3.0.9",
+		"@top-gg/sdk": "^3.1.2",
 		"bufferutil": "^4.0.3",
 		"cleverbot-free": "^1.0.5",
 		"consola": "^2.15.3",
