@@ -65,10 +65,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@top-gg/sdk@^3.0.9":
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/@top-gg/sdk/-/sdk-3.1.1.tgz"
-  integrity sha512-G1JmSDN/JDAkIQdKvPbY49Ercca38234WEgnA1s1Zve28Ga0OWpooMm6k7Idran7Phnva6iQxtH/aWyYGaXPvA==
+"@top-gg/sdk@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@top-gg/sdk/-/sdk-3.1.2.tgz#dc5cf2d3ea31cfd6919aa7bd3051d3bea14c7bb6"
+  integrity sha512-k44J9lCzyER4F7CClhhP9apgTqGLQeKCy4Hop2g2357QYOAFk8YlbdJOaEFts1v0V9rIQPrWK7w2t1KI/mgzCQ==
   dependencies:
     node-fetch "^2.6.1"
     raw-body "^2.4.1"
