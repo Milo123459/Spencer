@@ -24,7 +24,7 @@
 		"bufferutil": "^4.0.3",
 		"cleverbot-free": "^1.0.5",
 		"consola": "^2.15.3",
-		"dayjs": "^1.10.4",
+		"dayjs": "^1.10.6",
 		"discord.js": "^12.5.1",
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
