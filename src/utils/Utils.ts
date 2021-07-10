@@ -92,9 +92,9 @@ class UtilsManager {
 		user: string,
 		roles: string | string[]
 	): boolean {
-		const member: GuildMember = this.client.guilds.cache
-			.get(guild)
-			.members.cache.get(user);
+		const guild_cached = this.client.guilds.cache.get(guild);
+		if (!guild_cached) return false;
+		const member: GuildMember = guild_cached.members.cache.get(user);
 		if (!member) return false;
 		const res: boolean[] = [];
 		if (typeof roles == 'string') {

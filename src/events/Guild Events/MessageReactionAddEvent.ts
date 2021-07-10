@@ -25,8 +25,8 @@ export const run: RunFunction = async (
 			await reaction.users.remove(userID);
 		} catch {}
 	} else {
-		const up = reaction.message.reactions.cache.get("801826018096054293");
-		const down = reaction.message.reactions.cache.get("801826044562767892");
+		const up = reaction.message.reactions.cache.get('801826018096054293');
+		const down = reaction.message.reactions.cache.get('801826044562767892');
 		await up.fetch();
 		await up.users.fetch();
 		await down.fetch();
