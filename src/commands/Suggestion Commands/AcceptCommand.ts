@@ -76,10 +76,10 @@ export const run: RunFunction = async (client, message, args) => {
 		author.send(
 			client.embed(
 				{
-					title: 'Your suggestion was accepted!',
+					title: `Your suggestion was accepted in ${message.guild.name}!`,
 					description: `A staff member accepted your suggestion: ${
 						(Suggestion as Anything).Content
-					} `,
+					}`,
 					color: 'GREEN',
 				},
 				message
