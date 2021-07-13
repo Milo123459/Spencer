@@ -68,8 +68,8 @@ export const run: RunFunction = async (client, message, args) => {
 const author: User = client.users.cache.get((Suggestion as Anything).User);
 	author.send(
 		new MessageEmbed({
-			name: 'Your suggestion was denied',
-			value: `A staff member denied your suggestion: ${Suggestion.Content} `,
+			name: `Your suggestion was denied in ${message.guild.name}`,
+			value: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
 			color: 'RED'
 		})
 	);
