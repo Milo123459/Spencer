@@ -69,8 +69,8 @@ const author: User = client.users.cache.get((Suggestion as Anything).User);
 	if (author) {
 		author.send(
 			new MessageEmbed({
-				name: 'Your suggestion was accepted!',
-				value: `A staff member accepted your suggestion: ${Suggestion.Content} `,
+				title: 'Your suggestion was accepted!',
+				description: `A staff member accepted your suggestion: ${Suggestion.Content} `,
 				color: 'GREEN'
 			})
 		);
