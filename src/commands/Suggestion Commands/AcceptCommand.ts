@@ -1,6 +1,12 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
-import { GuildChannel, Message, TextChannel, MessageEmbed } from 'discord.js';
+import {
+	GuildChannel,
+	Message,
+	TextChannel,
+	MessageEmbed,
+	User,
+} from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
@@ -64,6 +70,23 @@ export const run: RunFunction = async (client, message, args) => {
 			color: 'GREEN',
 		})
 	);
+
+	const author: User = client.users.cache.get((Suggestion as Anything).User);
+	if (author) {
+		author.send(
+			client.embed(
+				{
+					title: 'Your suggestion was accepted!',
+					description: `A staff member accepted your suggestion: ${
+						(Suggestion as Anything).Content
+					} `,
+					color: 'GREEN',
+				},
+				message
+			)
+		);
+	}
+
 	try {
 		await msg.reactions.removeAll();
 	} catch {}
