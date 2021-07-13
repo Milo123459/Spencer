@@ -75,8 +75,6 @@ export const run: RunFunction = async (client, message, args) => {
 				color: 'RED'
 			})
 		)
-	} else {
-		console.log('An error occured: could not find suggestion author in database');
 	}
 	
 	try {
