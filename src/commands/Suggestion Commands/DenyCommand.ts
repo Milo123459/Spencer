@@ -69,7 +69,7 @@ export const run: RunFunction = async (client, message, args) => {
 
 	if (author) {
 		author.send(
-			new MessageEmbed({
+			client.embed({
 				title: `Your suggestion was denied in ${message.guild.name}`,
 				description: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'RED'
