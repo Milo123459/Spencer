@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Command';
 import { Anything } from '../../interfaces/Anything';
-import { GuildChannel, Message, TextChannel, MessageEmbed } from 'discord.js';
+import { GuildChannel, Message, TextChannel, MessageEmbed, User } from 'discord.js';
 
 export const run: RunFunction = async (client, message, args) => {
 	if (!args.length)
