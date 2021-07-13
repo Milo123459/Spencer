@@ -71,7 +71,8 @@ export const run: RunFunction = async (client, message, args) => {
 			name: 'Your suggestion was accepted!',
 			value: `A staff member accepted your suggestion: ${Suggestion.Content} `,
 			color: 'GREEN'
-		});
+		})
+	);
 	
 	try {
 		await msg.reactions.removeAll();
