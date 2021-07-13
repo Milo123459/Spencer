@@ -64,6 +64,15 @@ export const run: RunFunction = async (client, message, args) => {
 			color: 'GREEN',
 		})
 	);
+	
+	const author: User = client.users.cache.get(Suggestion.User);
+	author.send(
+		new MessageEmbed({
+			name: 'Your suggestion was accepted!',
+			value: `A staff member accepted your suggestion: ${Suggestion.Content} `,
+			color: 'GREEN'
+		});
+	
 	try {
 		await msg.reactions.removeAll();
 	} catch {}
