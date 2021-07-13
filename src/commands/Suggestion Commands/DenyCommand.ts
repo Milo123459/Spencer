@@ -64,6 +64,16 @@ export const run: RunFunction = async (client, message, args) => {
 			color: 'RED',
 		})
 	);
+	
+	const author: User = client.users.cache.get(Suggestion.User);
+	author.send(
+		new MessageEmbed({
+			name: 'Your suggestion was denied',
+			value: `A staff member denied your suggestion: ${Suggestion.Content} `,
+			color: 'RED'
+		})
+	);
+	
 	try {
 		await msg.reactions.removeAll();
 	} catch {}
