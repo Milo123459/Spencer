@@ -66,13 +66,17 @@ export const run: RunFunction = async (client, message, args) => {
 	);
 	
 	const author: User = client.users.cache.get(Suggestion.User);
-	author.send(
-		new MessageEmbed({
-			name: 'Your suggestion was accepted!',
-			value: `A staff member accepted your suggestion: ${Suggestion.Content} `,
-			color: 'GREEN'
-		})
-	);
+	if (author) {
+		author.send(
+			new MessageEmbed({
+				name: 'Your suggestion was accepted!',
+				value: `A staff member accepted your suggestion: ${Suggestion.Content} `,
+				color: 'GREEN'
+			})
+		);
+	} else {
+		console.log('An error occured: could not find suggestion author in database');	
+	}
 	
 	try {
 		await msg.reactions.removeAll();
