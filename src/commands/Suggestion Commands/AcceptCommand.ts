@@ -68,7 +68,7 @@ export const run: RunFunction = async (client, message, args) => {
 const author: User = client.users.cache.get((Suggestion as Anything).User);
 	if (author) {
 		author.send(
-			new MessageEmbed({
+			client.embed({
 				title: 'Your suggestion was accepted!',
 				description: `A staff member accepted your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'GREEN'
