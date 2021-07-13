@@ -65,7 +65,7 @@ export const run: RunFunction = async (client, message, args) => {
 		})
 	);
 	
-	const author: User = client.users.cache.get(Suggestion.User);
+const author: User = client.users.cache.get((Suggestion as Anything).User);
 	if (author) {
 		author.send(
 			new MessageEmbed({
