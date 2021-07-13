@@ -74,8 +74,6 @@ const author: User = client.users.cache.get((Suggestion as Anything).User);
 				color: 'GREEN'
 			})
 		);
-	} else {
-		console.log('An error occured: could not find suggestion author in database');
 	}
 	
 	try {
