@@ -72,8 +72,8 @@ const author: User = client.users.cache.get((Suggestion as Anything).User);
 				title: 'Your suggestion was accepted!',
 				description: `A staff member accepted your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'GREEN'
-			})
-		), message
+			}, message)
+		)
 	}
 	
 	try {
