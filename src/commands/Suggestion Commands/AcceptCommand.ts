@@ -73,7 +73,7 @@ const author: User = client.users.cache.get((Suggestion as Anything).User);
 				description: `A staff member accepted your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'GREEN'
 			})
-		);
+		), message
 	}
 	
 	try {
