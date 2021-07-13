@@ -1,4 +1,4 @@
-name: Run TSC
+name: CI
 on:
   push:
   pull_request:
