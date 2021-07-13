@@ -65,14 +65,20 @@ export const run: RunFunction = async (client, message, args) => {
 		})
 	);
 	
-const author: User = client.users.cache.get((Suggestion as Anything).User);
-	author.send(
-		new MessageEmbed({
-			name: `Your suggestion was denied in ${message.guild.name}`,
-			value: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
-			color: 'RED'
-		})
-	);
+	const author: User = client.users.cache.get((Suggestion as Anything).User);
+
+	if (author) {
+		author.send(
+			new MessageEmbed({
+				name: `Your suggestion was denied in ${message.guild.name}`,
+				value: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
+				color: 'RED'
+			})
+		);
+	else {
+		console.log('An error occured: could not find suggestion author in database');	
+	}
+	
 	
 	try {
 		await msg.reactions.removeAll();
