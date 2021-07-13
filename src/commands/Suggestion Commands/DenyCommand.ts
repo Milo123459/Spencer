@@ -74,11 +74,10 @@ export const run: RunFunction = async (client, message, args) => {
 				value: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'RED'
 			})
-		);
-	else {
+		)
+	} else {
 		console.log('An error occured: could not find suggestion author in database');
 	}
-	
 	
 	try {
 		await msg.reactions.removeAll();
