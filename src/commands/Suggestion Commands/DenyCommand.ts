@@ -73,8 +73,8 @@ export const run: RunFunction = async (client, message, args) => {
 				title: `Your suggestion was denied in ${message.guild.name}`,
 				description: `A staff member denied your suggestion: ${(Suggestion as Anything).Content} `,
 				color: 'RED'
-			})
-		), message
+			}, message)
+		)
 	}
 	
 	try {
