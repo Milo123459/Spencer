@@ -33,7 +33,7 @@ export const run: RunFunction = async (client, message, args) => {
 				message
 			)
 		);
-	if (time > ms('30d'))
+	if ((time > ms('30d')) && !client.config.owners.includes(message.author.id))
 		return message.channel.send(
 			client.embed(
 				{ description: "You can't set a reminder for more then 30 days!" },
