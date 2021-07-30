@@ -197,11 +197,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.1.tgz#9fad171a5b701613ee8a6f4ece3c88b1034b1b03"
   integrity sha512-UW7cbLqf/Wu5XH2RKKY1cHwUNLicIDRLMraYKz+HHAerJ0ZffUEk+fMnd8qU2JaS6cAy0r8tsaf7yqHASf/Y0Q==
 
-"@types/node@14.x || 15.x":
-  version "15.14.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.1.tgz#4f9d3689532499fdda1c898e19f4593718655e36"
-  integrity sha512-wF6hazbsnwaW3GhK4jFuw5NaLDQVRQ6pWQUGAUrJzxixFkTaODSiAKMPXuHwPEPkAKQWHAzj6uJ5h+3zU9gQxg==
-
 "@types/node@^14.11.10":
   version "14.17.2"
   resolved "https://registry.npmjs.org/@types/node/-/node-14.17.2.tgz"
@@ -1337,13 +1332,12 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.npmjs.org/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
-mongoose@*, mongoose@^5.13.3:
-  version "5.13.3"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.13.3.tgz#42cb40207bbcaca9c6fa94b0a8c0a38181c1965e"
-  integrity sha512-q+zX6kqHAvwxf5speMWhq6qF4vdj+x6/kfD5RSKdZKNm52yGmaUygN+zgrtQjBZPFEzG0B3vF6GP0PoAGadE+w==
+mongoose@*, mongoose@^5.13.5:
+  version "5.13.5"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.13.5.tgz#9c8c0b46d35116dd4ea47683dfa836137e475243"
+  integrity sha512-sSUAk9GWgA8r3w3nVNrNjBaDem86aevwXO8ltDMKzCf+rjnteMMQkXHQdn1ePkt7alROEPZYCAjiRjptWRSPiQ==
   dependencies:
     "@types/mongodb" "^3.5.27"
-    "@types/node" "14.x || 15.x"
     bson "^1.1.4"
     kareem "2.3.2"
     mongodb "3.6.10"
@@ -1351,6 +1345,7 @@ mongoose@*, mongoose@^5.13.3:
     mpath "0.8.3"
     mquery "3.2.5"
     ms "2.1.2"
+    optional-require "1.0.x"
     regexp-clone "1.0.0"
     safe-buffer "5.2.1"
     sift "13.5.2"
@@ -1460,7 +1455,7 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-optional-require@^1.0.3:
+optional-require@1.0.x, optional-require@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/optional-require/-/optional-require-1.0.3.tgz"
   integrity sha512-RV2Zp2MY2aeYK5G+B/Sps8lW5NHAzE5QClbFP15j+PWmP+T9PxlJXBOOLoSAdgwFvS4t0aMR4vpedMkbHfh0nA==
