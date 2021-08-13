@@ -24,7 +24,6 @@ const globPromise = promisify(glob);
 class Spencer extends Client {
 	public logger: Consola = consola;
 	public commands: Collection<string, Command> = new Collection();
-	public aliases: Collection<string, string> = new Collection();
 	public cooldowns: Collection<string, number> = new Collection();
 	public schemas: Collection<string, Schema> = new Collection();
 	public categories: Set<string> = new Set();
@@ -74,9 +73,6 @@ class Spencer extends Client {
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
 			this.commands.set(cmd.name, { cooldown: 3000, ...cmd });
-			if (cmd.aliases) {
-				cmd.aliases.map((alias: string) => this.aliases.set(alias, cmd.name));
-			}
 			this.categories.add(cmd.category);
 		});
 		eventFiles.map(async (eventFile: string) => {

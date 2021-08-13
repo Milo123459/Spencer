@@ -130,7 +130,7 @@ export const run: RunFunction = async (client, message: Message) => {
 		.split(/ +/g);
 	const command: Anything =
 		client.commands.get(cmd.toLowerCase()) ||
-		client.commands.get(client.aliases.get(cmd.toLowerCase()));
+		client.commands.find((c) => c.aliases?.includes(cmd.toLowerCase()));
 	if (client.config.onlyUsed) {
 		if (!client.config.onlyUsed.includes(message.author.id)) return;
 	}
@@ -143,7 +143,10 @@ export const run: RunFunction = async (client, message: Message) => {
 		) {
 			const best: string[] = [
 				...client.commands.map((value: Command) => value.name),
-				...client.aliases.map((value: string, key: string) => key),
+				...client.commands.reduce((a, v) => {
+					if (v.aliases) return [...a, ...v.aliases];
+					return a;
+				}, []),
 			].filter(
 				(input: string) =>
 					leven(cmd.toLowerCase(), input.toLowerCase()) < input.length * 0.4
