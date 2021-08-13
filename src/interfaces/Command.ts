@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { Message, PermissionResolvable } from 'discord.js';
 import { Spencer } from '../client/Client';
 
 export interface RunFunction {
@@ -11,7 +11,7 @@ export interface Command {
 	description: string;
 	cooldown?: number;
 	category: string;
-	userPermissions?: string | string[];
+	userPermissions?: PermissionResolvable | PermissionResolvable[];
 	ownerOnly?: boolean;
 	usage?: string;
 }
