@@ -25,7 +25,7 @@
 		"cleverbot-free": "^1.0.5",
 		"consola": "^2.15.3",
 		"dayjs": "^1.10.6",
-		"discord.js": "^12.5.1",
+		"discord.js": "^13.3.0",
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
 		"imageapi.js": "^1.6.1",
