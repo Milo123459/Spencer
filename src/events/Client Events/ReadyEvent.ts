@@ -8,8 +8,8 @@ import ms from 'ms';
 export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
 	client.logger.success(`${client.user.tag} is now online!`);
-	const commands = [...client.commands.values()]
-	client.application.commands.set(commands)
+	const commands = [...client.commands.values()];
+	client.application.commands.set(commands);
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});

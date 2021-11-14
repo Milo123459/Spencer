@@ -14,13 +14,14 @@ const paginationEmbed = async (
 	msg.reply({
 		embeds: [pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)],
 	});
-	const curPage = await msg.fetchReply() as Message
+	const curPage = (await msg.fetchReply()) as Message;
 	for (const emoji of emojiList) await curPage.react(emoji);
 
-	const reactionCollector = curPage.createReactionCollector(
-		{filter: (reaction, user) => emojiList.includes(reaction.emoji.name) && !user.bot,
-		 time: timeout }
-	);
+	const reactionCollector = curPage.createReactionCollector({
+		filter: (reaction, user) =>
+			emojiList.includes(reaction.emoji.name) && !user.bot,
+		time: timeout,
+	});
 
 	reactionCollector.on('collect', (reaction) => {
 		reaction.users.remove(msg.user);
@@ -35,7 +36,9 @@ const paginationEmbed = async (
 				break;
 		}
 
-		curPage.edit({embeds: [pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)]});
+		curPage.edit({
+			embeds: [pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)],
+		});
 	});
 
 	reactionCollector.on('end', () => {

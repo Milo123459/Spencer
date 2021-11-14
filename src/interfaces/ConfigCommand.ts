@@ -1,4 +1,8 @@
-import { CommandInteractionOption, CommandInteraction, Message } from 'discord.js';
+import {
+	CommandInteractionOption,
+	CommandInteraction,
+	Message,
+} from 'discord.js';
 import { Spencer } from '../client/Client';
 export interface ValidationResponse {
 	value: boolean;
@@ -16,5 +20,9 @@ export interface SubCommand {
 		interaction: CommandInteraction,
 		arg: CommandInteractionOption
 	) => ValidationResponse;
-	parseToDB: (client: Spencer, interaction: CommandInteraction,arg: CommandInteractionOption) => any;
+	parseToDB: (
+		client: Spencer,
+		interaction: CommandInteraction,
+		arg: CommandInteractionOption
+	) => any;
 }

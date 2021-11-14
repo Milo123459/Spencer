@@ -13,4 +13,4 @@ export const run: RunFunction = async (client, interaction) => {
 export const name: string = 'fact';
 export const category: string = 'fun';
 export const description: string = "Get a random fact you didn't need to know.";
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

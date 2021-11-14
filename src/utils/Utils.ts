@@ -105,11 +105,11 @@ class UtilsManager {
 	): Promise<string> {
 		reactions.map(async (value: string) => message.react(value));
 		return new Promise(async (resolve, reject) => {
-			const reactionCollector = message.createReactionCollector(
-				{ filter: (reaction: MessageReaction, user: User) =>
+			const reactionCollector = message.createReactionCollector({
+				filter: (reaction: MessageReaction, user: User) =>
 					reactions.includes(reaction.emoji.name) && user.id == queryUser,
-				 time: time ?? 30000 }
-			);
+				time: time ?? 30000,
+			});
 			reactionCollector.on('collect', (reaction: MessageReaction) =>
 				resolve(reaction.emoji.name)
 			);
@@ -145,10 +145,11 @@ class UtilsManager {
 		time?: number
 	): Promise<Message> {
 		return new Promise(async (resolve, reject) => {
-			const messageCollector = channel.createMessageCollector(
-				{ filter: (msg: Message) => msg.author.id == queryUser,
-				 time: time ?? 30000, max: 1 }
-			);
+			const messageCollector = channel.createMessageCollector({
+				filter: (msg: Message) => msg.author.id == queryUser,
+				time: time ?? 30000,
+				max: 1,
+			});
 			messageCollector.on('collect', (msg: Message) => resolve(msg));
 			messageCollector.on('end', (collected, reason: string) => reject(reason));
 		});
@@ -167,7 +168,7 @@ class UtilsManager {
 			3000
 		);
 		interaction.reply({ embeds: [this.client.embed(embed, interaction)] });
-		return interaction.fetchReply() as Promise<Message>
+		return interaction.fetchReply() as Promise<Message>;
 	}
 	public async incrementItem(user: string, id: string): Promise<Document> {
 		const usereconomy = await this.client.db.load('usereconomy');

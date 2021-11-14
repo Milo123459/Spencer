@@ -201,4 +201,4 @@ export const run: RunFunction = async (client, interaction) => {
 export const category: string = 'economy';
 export const cooldown: number = 30000; // 30 seconds
 export const description: string = 'Work for money';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

@@ -66,4 +66,4 @@ export const name: string = 'leaderboard';
 export const category: string = 'economy';
 export const description: string = 'View the top users on the economy';
 export const aliases: string[] = ['leaders', 'lb'];
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

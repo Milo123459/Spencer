@@ -27,4 +27,4 @@ export const name: string = 'stonks';
 export const category: string = 'fun';
 export const cooldown: number = 3000;
 export const description: string = 'Get a stonk';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

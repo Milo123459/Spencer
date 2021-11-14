@@ -22,4 +22,4 @@ export const run: RunFunction = async (client, interaction) => {
 export const name: string = 'dadjoke';
 export const category: string = 'fun';
 export const description: string = 'Get a horrid dad joke';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

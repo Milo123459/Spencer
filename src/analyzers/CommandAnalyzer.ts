@@ -36,7 +36,7 @@ const analyzeCommands = async () => {
 			'run',
 			'category',
 			'description',
-            'options'
+			'options',
 		]);
 		AnalyzedCommands.push({ file: value, analyzed });
 	}
@@ -72,15 +72,18 @@ const analyzeCommands = async () => {
 			fixed.push('category');
 		}
 		if (value.analyzed.includes('run')) unAble.push('run');
-        if (value.analyzed.includes('options')) {
-            if((await readPromise(value.file)).includes(".options.get(")) {
-            unAble.push('options');
-            } else {
-                const buffer: Buffer = await readPromise(value.file);
-                const content: string = buffer.toString();
-                await writePromise(value.file, `${content.trim()}\nexport const options: import("discord.js").ApplicationCommandOption[] = []`)
-            }
-        }
+		if (value.analyzed.includes('options')) {
+			if ((await readPromise(value.file)).includes('.options.get(')) {
+				unAble.push('options');
+			} else {
+				const buffer: Buffer = await readPromise(value.file);
+				const content: string = buffer.toString();
+				await writePromise(
+					value.file,
+					`${content.trim()}\nexport const options: import("discord.js").ApplicationCommandOption[] = []`
+				);
+			}
+		}
 		FixedCommands.push({ file: value.file, fixed, unAble });
 		if (value.analyzed.includes('description')) {
 			const buffer: Buffer = await readPromise(value.file);
@@ -92,9 +95,9 @@ const analyzeCommands = async () => {
 			);
 			fixed.push('name');
 		}
-        unAble.map((v) => {
-            consola.info(`${v} @ ${value.file.split("Commands")[1]}`)
-        })
+		unAble.map((v) => {
+			consola.info(`${v} @ ${value.file.split('Commands')[1]}`);
+		});
 	}
 	let ErrorsOriginal: number = 0;
 	let FixedErrors: number = 0;

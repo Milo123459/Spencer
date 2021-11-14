@@ -49,7 +49,11 @@ export const run: RunFunction = async (client, interaction) => {
 			],
 		});
 	}
-	const validated = subcommand.validate(client, interaction,interaction.options.get("key",true));
+	const validated = subcommand.validate(
+		client,
+		interaction,
+		interaction.options.get('key', true)
+	);
 	if (!!!validated.success)
 		return interaction.reply({
 			embeds: [client.embed({ description: validated.fix }, interaction)],
@@ -60,7 +64,11 @@ export const run: RunFunction = async (client, interaction) => {
 		subcommand.search(client, interaction),
 		client.utils.proper(
 			subcommand.key,
-			subcommand.parseToDB(client, interaction,interaction.options.get("value",true))
+			subcommand.parseToDB(
+				client,
+				interaction,
+				interaction.options.get('value', true)
+			)
 		)
 	);
 	return interaction.reply({
@@ -69,7 +77,11 @@ export const run: RunFunction = async (client, interaction) => {
 				{
 					description: `Successfully set ${
 						subcommand.key
-					} to ${subcommand.parseToDB(client, interaction,interaction.options.get("value",true))}!`,
+					} to ${subcommand.parseToDB(
+						client,
+						interaction,
+						interaction.options.get('value', true)
+					)}!`,
 				},
 				interaction
 			),
@@ -80,14 +92,17 @@ export const name: string = 'config';
 export const category: string = 'config';
 export const description: string = 'Configure the bot how you like it';
 export const usage: string = '<key> <config_value | delete>';
-export const options: ApplicationCommandOption[] = [{
-	name: "key",
-	description: "The key",
-	type: "STRING",
-	required: true
-},{
-	name: "value",
-	description: "The value",
-	type: "STRING",
-	required: true
-}];
+export const options: ApplicationCommandOption[] = [
+	{
+		name: 'key',
+		description: 'The key',
+		type: 'STRING',
+		required: true,
+	},
+	{
+		name: 'value',
+		description: 'The value',
+		type: 'STRING',
+		required: true,
+	},
+];

@@ -88,4 +88,4 @@ export const run: RunFunction = async (client, interaction) => {
 export const name: string = 'setjob';
 export const category: string = 'economy';
 export const description: string = 'Set a job';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

@@ -22,4 +22,4 @@ export const category: string = 'config';
 export const userPermissions: string = 'MANAGE_GUILD';
 export const description: string =
 	'Delete guild config, ie removing the prefix';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

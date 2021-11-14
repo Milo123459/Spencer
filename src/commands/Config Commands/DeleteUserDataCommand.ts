@@ -21,4 +21,4 @@ export const userPermissions: string = 'MANAGE_GUILD';
 export const aliases: string[] = ['deluserdata'];
 export const description: string =
 	'Delete data stored with you, ie, your usereconomy profile';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

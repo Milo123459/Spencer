@@ -16,4 +16,4 @@ export const aliases: string[] = ['membercount'];
 export const name: string = 'members';
 export const category: string = 'info';
 export const description: string = 'Display how many members you have';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

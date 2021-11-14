@@ -147,9 +147,7 @@ export const run: RunFunction = async (client, interaction) => {
 					}: \`${
 						member.id == interaction.user.id
 							? `/profile`
-							: `/profile ${
-									member.id
-							  }\`
+							: `/profile ${member.id}\`
                           All dates are formatted like so: \`DD/MM/YYYY`
 					}\``,
 					thumbnail: {

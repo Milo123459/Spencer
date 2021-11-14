@@ -20,4 +20,4 @@ export const name: string = 'flip';
 export const category: string = 'fun';
 export const description: string = 'Flip a coin!';
 export const aliases: string[] = ['flipcoin', 'coinflip'];
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

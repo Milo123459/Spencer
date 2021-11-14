@@ -43,13 +43,13 @@ export const run: RunFunction = async (client, interaction) => {
 };
 export const name: string = 'inventory';
 export const category: string = 'economy';
-export const description: string = 'View your or someone else\'s inventory';
+export const description: string = "View your or someone else's inventory";
 export const aliases: string[] = ['inv'];
 export const usage: string = '[user]';
-export const options: import("discord.js").ApplicationCommandOption[] = [
-    {
-        type: 'USER',
-        name: 'user',
-        description: 'Check someone else\'s inventory',
-    }
-]
+export const options: import('discord.js').ApplicationCommandOption[] = [
+	{
+		type: 'USER',
+		name: 'user',
+		description: "Check someone else's inventory",
+	},
+];

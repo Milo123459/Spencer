@@ -99,4 +99,4 @@ export const cooldown: number = 30 * 1000;
 export const description: string = 'Test your luck in gamble!';
 export const name: string = 'gamble';
 export const category: string = 'economy';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

@@ -9,7 +9,7 @@ export const subcommands: Array<SubCommand> = [
 		description:
 			'Toggles if you want to be DMed when you can next vote on top.gg',
 		search: (client, interaction) => new Object({ User: interaction.user.id }),
-		validate: (client, interaction,arg) => {
+		validate: (client, interaction, arg) => {
 			const value: boolean = yn(arg.value);
 			return {
 				value,
@@ -24,10 +24,14 @@ export const subcommands: Array<SubCommand> = [
 		key: 'SuggestionChannel',
 		description:
 			'Setup the suggestion channel, allowing people to suggest things',
-		search: (client, interaction) => new Object({ Guild: interaction.guild.id }),
-		validate: (client, interaction,arg) => {
+		search: (client, interaction) =>
+			new Object({ Guild: interaction.guild.id }),
+		validate: (client, interaction, arg) => {
 			let value: boolean;
-			const channel: GuildChannel | undefined = interaction.guild.channels.cache.get(arg.value as string) as GuildChannel;
+			const channel: GuildChannel | undefined =
+				interaction.guild.channels.cache.get(
+					arg.value as string
+				) as GuildChannel;
 			if (!channel) value = undefined;
 			else {
 				value =

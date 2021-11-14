@@ -19,4 +19,4 @@ export const aliases: string[] = ['invite', 'supportserver', 'vote', 'topgg'];
 export const name: string = 'links';
 export const category: string = 'info';
 export const description: string = 'Display essential links for the bot';
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

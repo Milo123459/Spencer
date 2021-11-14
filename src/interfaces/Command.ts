@@ -1,4 +1,8 @@
-import { CommandInteraction, PermissionResolvable, ApplicationCommandOption } from 'discord.js';
+import {
+	CommandInteraction,
+	PermissionResolvable,
+	ApplicationCommandOption,
+} from 'discord.js';
 import { Spencer } from '../client/Client';
 
 export interface RunFunction {
@@ -13,5 +17,5 @@ export interface Command {
 	userPermissions?: PermissionResolvable | PermissionResolvable[];
 	ownerOnly?: boolean;
 	usage?: string;
-    options?: ApplicationCommandOption[];
+	options?: ApplicationCommandOption[];
 }

@@ -26,4 +26,4 @@ export const run: RunFunction = async (client, interaction) => {
 };
 export const category: string = 'info';
 export const description: string = "View the bot's stats";
-export const options: import("discord.js").ApplicationCommandOption[] = []
+export const options: import('discord.js').ApplicationCommandOption[] = [];

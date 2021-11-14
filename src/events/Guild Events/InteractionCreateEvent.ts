@@ -34,14 +34,16 @@ export const run: RunFunction = async (
 					Date.now()
 			);
 			return interaction.reply({
-				embeds: [client.embed(
-					{
-						description: `You can use this command again in \`${
-							cooldownTime.split('').length == 0 ? '1 second' : cooldownTime
-						}\`\nDid you know, people who donate to Spencer have their cooldown time halfed! Exciting times! *Please note: For donation perks to work, you have to join Spencer support!*`,
-					},
-					interaction
-				)]
+				embeds: [
+					client.embed(
+						{
+							description: `You can use this command again in \`${
+								cooldownTime.split('').length == 0 ? '1 second' : cooldownTime
+							}\`\nDid you know, people who donate to Spencer have their cooldown time halfed! Exciting times! *Please note: For donation perks to work, you have to join Spencer support!*`,
+						},
+						interaction
+					),
+				],
 			});
 		}
 		client.cooldowns.set(
@@ -54,17 +56,17 @@ export const run: RunFunction = async (
 				? Date.now() + command?.cooldown / 2
 				: Date.now() + command?.cooldown
 		);
-	
+
 		await command.run(client, interaction);
 		setTimeout(
 			() => {
 				client.cooldowns.delete(`${interaction.user.id}${command.name}`);
 			},
-			client.utils.checkMultipleRoles('784470505607528448', interaction.user.id, [
-				'787656384808353803',
-				'787656420258086922',
-				'787656471679991829',
-			])
+			client.utils.checkMultipleRoles(
+				'784470505607528448',
+				interaction.user.id,
+				['787656384808353803', '787656420258086922', '787656471679991829']
+			)
 				? command?.cooldown / 2
 				: command?.cooldown
 		);
