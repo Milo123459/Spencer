@@ -59,7 +59,7 @@ We also expect you to be active in the PRs, if we add a review, or request chang
 
 # 🚀 Want to change something?
 
-Please make a PR to change anything! Spelling mistakes, code flaws, performance issues, as long as it's valid, follows our guidelines, you'll most likely be accepted. Happy hacking! 😉
+Please make a PR to change any! Spelling mistakes, code flaws, performance issues, as long as it's valid, follows our guidelines, you'll most likely be accepted. Happy hacking! 😉
 
 # ⌚ Final thing
 

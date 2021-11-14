@@ -1,6 +1,6 @@
 import { MessageReaction, User } from 'discord.js';
 import { RunFunction } from '../../interfaces/Event';
-import { Anything } from '../../interfaces/Anything';
+
 import { emojis } from '../../static/Emojis';
 export const run: RunFunction = async (
 	client,
@@ -19,8 +19,8 @@ export const run: RunFunction = async (
 	const messageID = reaction.message.id;
 	const userID = user.id;
 	const Suggestion = await SuggestionSchema.findOne({ MessageID: messageID });
-	if (!(Suggestion as Anything) || !(Suggestion as Anything).User) return;
-	if ((Suggestion as Anything).User == userID) {
+	if (!(Suggestion as any) || !(Suggestion as any).User) return;
+	if ((Suggestion as any).User == userID) {
 		try {
 			await reaction.users.remove(userID);
 		} catch {}

@@ -1,6 +1,6 @@
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
-import { Anything } from '../interfaces/Anything';
+import { any } from '../interfaces/any';
 import { SortFunction } from '../interfaces/SortFunction';
 import { Document } from 'mongoose';
 
@@ -52,20 +52,20 @@ class DatabaseModule {
 			newData[key] = value;
 			return this.create(newData);
 		} else {
-			if ((data as Anything)[key]) {
-				if (isNaN((data as Anything)[key])) {
-					(data as Anything)[key] = value;
+			if ((data as any)[key]) {
+				if (isNaN((data as any)[key])) {
+					(data as any)[key] = value;
 					await data.save();
 					return data;
 				}
 
-				(data as Anything)[key]
-					? ((data as Anything)[key] += value)
-					: ((data as Anything)[key] = value);
+				(data as any)[key]
+					? ((data as any)[key] += value)
+					: ((data as any)[key] = value);
 				await data.save();
 				return data;
 			} else {
-				(data as Anything)[key] = value;
+				(data as any)[key] = value;
 				await data.save();
 				return data;
 			}
@@ -83,23 +83,20 @@ class DatabaseModule {
 			newData[key] = -value;
 			return this.create(newData);
 		} else {
-			if ((data as Anything)[key]) {
-				if (
-					isNaN((data as Anything)[key]) ||
-					(data as Anything)[key] == undefined
-				) {
-					(data as Anything)[key] = 0;
+			if ((data as any)[key]) {
+				if (isNaN((data as any)[key]) || (data as any)[key] == undefined) {
+					(data as any)[key] = 0;
 					await data.save();
 					return data;
 				}
-				(data as Anything)[key] -= value;
-				if ((data as Anything)[key] < 0) {
-					(data as Anything)[key] = 0;
+				(data as any)[key] -= value;
+				if ((data as any)[key] < 0) {
+					(data as any)[key] = 0;
 				}
 				await data.save();
 				return data;
 			} else {
-				(data as Anything)[key] = 0;
+				(data as any)[key] = 0;
 				await data.save();
 				return data;
 			}

@@ -1,17 +1,19 @@
 import { Message, TextChannel } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 
-export const run: RunFunction = async (client, message) => {
+export const run: RunFunction = async (client, interaction) => {
 	const UserEconomySchema = await client.db.load('usereconomy');
-	const msg: Message = await message.channel.send(
-		client.embed(
-			{ description: `📇 Play a game of double or nothing!` },
-			message
-		)
-	);
+	const msg: Message = await interaction.reply({
+		embeds: [
+			client.embed(
+				{ description: `📇 Play a game of double or nothing!` },
+				interaction
+			),
+		],
+	});
 	try {
 		const reaction: string = await client.utils.awaitReactions(
-			message.author.id,
+			interaction.user.id,
 			msg,
 			['📇']
 		);
@@ -30,11 +32,11 @@ export const run: RunFunction = async (client, message) => {
 					)
 				);
 				const m: Message = await client.utils.awaitMessages(
-					message.author.id,
+					interaction.user.id,
 					message.channel as TextChannel
 				);
 				const balance = await client.utils.calculateMoney(
-					message.author.id,
+					interaction.user.id,
 					m.content,
 					'Coins'
 				);
@@ -54,7 +56,7 @@ export const run: RunFunction = async (client, message) => {
 				const shouldDouble: boolean = client.utils.randomElement([true, false]);
 				if (shouldDouble == true) {
 					await UserEconomySchema.increment(
-						{ User: message.author.id },
+						{ User: interaction.user.id },
 						'Coins',
 						balance
 					);
@@ -70,7 +72,7 @@ export const run: RunFunction = async (client, message) => {
 					);
 				} else {
 					await UserEconomySchema.decrement(
-						{ User: message.author.id },
+						{ User: interaction.user.id },
 						'Coins',
 						balance
 					);
@@ -97,3 +99,4 @@ export const cooldown: number = 30 * 1000;
 export const description: string = 'Test your luck in gamble!';
 export const name: string = 'gamble';
 export const category: string = 'economy';
+export const options: import("discord.js").ApplicationCommandOption[] = []

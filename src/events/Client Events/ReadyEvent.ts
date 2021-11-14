@@ -1,6 +1,6 @@
 import { RunFunction } from '../../interfaces/Event';
 import { Document } from 'mongoose';
-import { Anything } from '../../interfaces/Anything';
+
 import { GuildMember, User } from 'discord.js';
 import express from 'express';
 import ms from 'ms';
@@ -8,6 +8,8 @@ import ms from 'ms';
 export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
 	client.logger.success(`${client.user.tag} is now online!`);
+	const commands = [...client.commands.values()]
+	client.application.commands.set(commands)
 	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
@@ -23,17 +25,16 @@ export const run: RunFunction = async (client) => {
 		const ReminderSchema = await client.db.load('reminder');
 
 		(await ReminderSchema.find({})).map(async (value: Document) => {
-			if (Date.now() >= (value as Anything).Time) {
-				const User: User = client.users.cache.get((value as Anything).User);
+			if (Date.now() >= (value as any).Time) {
+				const User: User = client.users.cache.get((value as any).User);
 				try {
 					await value.delete();
 					await User.send(
 						`I was told to remind you${
-							(value as Anything)?.Guild
-								? ' from ' +
-								  client.guilds.cache.get((value as Anything)?.Guild).name
+							(value as any)?.Guild
+								? ' from ' + client.guilds.cache.get((value as any)?.Guild).name
 								: ''
-						}: **${(value as Anything).Message}**`
+						}: **${(value as any).Message}**`
 					);
 				} catch {}
 			}
@@ -52,7 +53,7 @@ export const run: RunFunction = async (client) => {
 					vote.isWeekend ? 2000 : 1000
 				);
 				const Profile = await EconomySchema.findOne({ User: vote.user });
-				const voteReminder = (Profile as Anything)?.VoteReminder || false;
+				const voteReminder = (Profile as any)?.VoteReminder || false;
 				if (!!voteReminder) {
 					const ReminderSchema = await client.db.load('reminder');
 					await ReminderSchema.create({

@@ -1,56 +1,46 @@
 import { RunFunction } from '../../interfaces/Command';
-import { GuildMember } from 'discord.js';
-import { Anything } from '../../interfaces/Anything';
+import { ApplicationCommandOption, GuildMember } from 'discord.js';
 
-export const run: RunFunction = async (client, message, args) => {
-	if (!args.length)
+export const run: RunFunction = async (client, interaction) => {
+	const member = await interaction.guild.members.fetch(
+		interaction.options.get('user', true).value as string
+	);
+
+	if (member.id == interaction.user.id)
 		return client.utils.fail(
-			message,
-			{ description: 'Please provide someone to rob...' },
-			'rob'
-		);
-	const member: GuildMember = client.utils.ResolveMember(message, args[0]);
-	if (!member)
-		return client.utils.fail(
-			message,
-			{ description: "I couldn't find that user!" },
-			'rob'
-		);
-	if (member.id == message.author.id)
-		return client.utils.fail(
-			message,
+			interaction,
 			{ description: "You can't rob yourself..." },
 			'rob'
 		);
 	const EconomySchema = await client.db.load('usereconomy');
 	const RobberProfile = await EconomySchema.findOne({
-		User: message.author.id,
+		User: interaction.user.id,
 	});
 	const TargetProfile = await EconomySchema.findOne({ User: member.id });
 	if (!RobberProfile)
 		return client.utils.fail(
-			message,
+			interaction,
 			{ description: "Your profile doesn't exist..." },
 			'rob'
 		);
 	if (!TargetProfile)
 		return client.utils.fail(
-			message,
+			interaction,
 			{ description: "Their profile doesn't exist..." },
 			'rob'
 		);
-	if (500 > (RobberProfile as Anything)?.Coins)
+	if (500 > (RobberProfile as any)?.Coins)
 		return client.utils.fail(
-			message,
+			interaction,
 			{
 				description:
 					'You need atleast 500 coins in your wallet before robbing someone...',
 			},
 			'rob'
 		);
-	if (500 > (TargetProfile as Anything)?.Coins)
+	if (500 > (TargetProfile as any)?.Coins)
 		return client.utils.fail(
-			message,
+			interaction,
 			{
 				description:
 					"Uhhh, they have like no money in their wallet, it's not worth it, cancelling...",
@@ -58,43 +48,53 @@ export const run: RunFunction = async (client, message, args) => {
 			'rob'
 		);
 	if (
-		((TargetProfile as Anything)?.Inventory || {})['padlock'] &&
-		((TargetProfile as Anything)?.Inventory || {})['padlock'] > 0
+		((TargetProfile as any)?.Inventory || {})['padlock'] &&
+		((TargetProfile as any)?.Inventory || {})['padlock'] > 0
 	) {
 		await client.utils.decrementItem(member.id, 'padlock');
-		EconomySchema.decrement({ User: message.author.id }, 'Coins', 500);
-		return message.channel.send(
-			client.embed(
-				{ description: 'Ahhhhh they had a padlock on! You lose 500 coins.' },
-				message
-			)
-		);
+		EconomySchema.decrement({ User: interaction.user.id }, 'Coins', 500);
+		return interaction.reply({
+			embeds: [
+				client.embed(
+					{ description: 'Ahhhhh they had a padlock on! You lose 500 coins.' },
+					interaction
+				),
+			],
+		});
 	}
 	const ShouldRob = Math.floor(Math.random() * 100) > 50;
 	if (!!!ShouldRob) {
-		await message.channel.send(
-			client.embed(
-				{
-					description:
-						'Oh no, you got caught, play stupid games, win stupid prizes. Say bye to 500 coins :)',
-				},
-				message
-			)
-		);
-		return EconomySchema.decrement({ User: message.author.id }, 'Coins', 500);
+		await interaction.reply({
+			embeds: [
+				client.embed(
+					{
+						description:
+							'Oh no, you got caught, play stupid games, win stupid prizes. Say bye to 500 coins :)',
+					},
+					interaction
+				),
+			],
+		});
+		return EconomySchema.decrement({ User: interaction.user.id }, 'Coins', 500);
 	} else {
 		const Amount =
-			Math.floor(Math.random() * ((TargetProfile as Anything)?.Coins || 1)) / 2;
+			Math.floor(Math.random() * ((TargetProfile as any)?.Coins || 1)) / 2;
 		await EconomySchema.decrement({ User: member.id }, 'Coins', Amount);
-		await EconomySchema.increment({ User: message.author.id }, 'Coins', Amount);
-		return message.channel.send(
-			client.embed(
-				{
-					description: `Damn bro you stole **${Amount}** coins from **${member.displayName}**`,
-				},
-				message
-			)
+		await EconomySchema.increment(
+			{ User: interaction.user.id },
+			'Coins',
+			Amount
 		);
+		return interaction.reply({
+			embeds: [
+				client.embed(
+					{
+						description: `Damn bro you stole **${Amount}** coins from **${member.displayName}**`,
+					},
+					interaction
+				),
+			],
+		});
 	}
 };
 export const name: string = 'rob';
@@ -102,3 +102,10 @@ export const category: string = 'economy';
 export const cooldown: number = 1000 * 60;
 export const usage: string = '<user>';
 export const description: string = 'Rob someone';
+export const options: ApplicationCommandOption[] = [
+	{
+		name: 'user',
+		description: 'The user to rob',
+		type: 'USER',
+	},
+];

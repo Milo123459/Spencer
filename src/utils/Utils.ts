@@ -7,26 +7,17 @@ import {
 	MessageReaction,
 	TextChannel,
 	MessageEmbedOptions,
+	CommandInteraction,
 } from 'discord.js';
 import { Document } from 'mongoose';
 import { URL } from 'url';
 import { Spencer } from '../client/Client';
-import { Anything } from '../interfaces/Anything';
+
 class UtilsManager {
 	private client: Spencer;
 	public constructor(client: Spencer) {
 		this.client = client;
 		this.client.logger.info('Utils has been constructed');
-	}
-	public ResolveMember(message: Message, arg: string): GuildMember {
-		if (message.mentions.members.first())
-			return message.mentions.members.first();
-		if (!isNaN(parseInt(arg, 10))) return message.guild.members.cache.get(arg);
-	}
-	public ResolveChannel(message: Message, arg: string): GuildChannel {
-		if (message.mentions.channels.first())
-			return message.mentions.channels.first();
-		if (!isNaN(parseInt(arg, 10))) return message.guild.channels.cache.get(arg);
 	}
 	public formatMS(ms: number, noDetails?: boolean): string {
 		const times: object = {
@@ -69,7 +60,7 @@ class UtilsManager {
 			.replace(/YYYY/gi, date.getFullYear().toString());
 	}
 	public async calculateJoinPosition(
-		message: Message,
+		message: CommandInteraction,
 		user: GuildMember
 	): Promise<number> {
 		const sort = (await message.guild.members.fetch()).sort(
@@ -77,7 +68,7 @@ class UtilsManager {
 				firstValue.joinedTimestamp - secondValue.joinedTimestamp
 		);
 		let joinPosition: number;
-		sort.array().map((value: GuildMember, index: number) => {
+		[...sort.values()].map((value: GuildMember, index: number) => {
 			if (value.id == user.id) joinPosition = index + 1;
 		});
 		return joinPosition;
@@ -115,9 +106,9 @@ class UtilsManager {
 		reactions.map(async (value: string) => message.react(value));
 		return new Promise(async (resolve, reject) => {
 			const reactionCollector = message.createReactionCollector(
-				(reaction: MessageReaction, user: User) =>
+				{ filter: (reaction: MessageReaction, user: User) =>
 					reactions.includes(reaction.emoji.name) && user.id == queryUser,
-				{ time: time ?? 30000 }
+				 time: time ?? 30000 }
 			);
 			reactionCollector.on('collect', (reaction: MessageReaction) =>
 				resolve(reaction.emoji.name)
@@ -136,10 +127,9 @@ class UtilsManager {
 		const UserData = await EconomySchema.findOne({ User });
 		amount = amount.replace(new RegExp(',', 'gi'), '');
 		if (amount == 'max' || amount == 'all')
-			return (UserData as Anything)?.[load] || 0;
+			return (UserData as any)?.[load] || 0;
 		if (isNaN(parseInt(amount, 10))) return 0;
-		else if (parseInt(amount, 10) > (UserData as Anything)?.[load] || 0)
-			return 0;
+		else if (parseInt(amount, 10) > (UserData as any)?.[load] || 0) return 0;
 		else return parseInt(amount, 10);
 	}
 	public randomElement(arr: any[]): any {
@@ -156,24 +146,28 @@ class UtilsManager {
 	): Promise<Message> {
 		return new Promise(async (resolve, reject) => {
 			const messageCollector = channel.createMessageCollector(
-				(msg: Message) => msg.author.id == queryUser,
-				{ time: time ?? 30000, max: 1 }
+				{ filter: (msg: Message) => msg.author.id == queryUser,
+				 time: time ?? 30000, max: 1 }
 			);
 			messageCollector.on('collect', (msg: Message) => resolve(msg));
 			messageCollector.on('end', (collected, reason: string) => reject(reason));
 		});
 	}
 	public async fail(
-		message: Message,
+		interaction: CommandInteraction,
 		embed: MessageEmbedOptions,
 		cmd: string
 	): Promise<Message> {
-		this.client.cooldowns.set(`${message.author.id}${cmd}`, Date.now() + 3000);
+		this.client.cooldowns.set(
+			`${interaction.user.id}${cmd}`,
+			Date.now() + 3000
+		);
 		setTimeout(
-			() => this.client.cooldowns.delete(`${message.author.id}${cmd}`),
+			() => this.client.cooldowns.delete(`${interaction.user.id}${cmd}`),
 			3000
 		);
-		return message.channel.send(this.client.embed(embed, message));
+		interaction.reply({ embeds: [this.client.embed(embed, interaction)] });
+		return interaction.fetchReply() as Promise<Message>
 	}
 	public async incrementItem(user: string, id: string): Promise<Document> {
 		const usereconomy = await this.client.db.load('usereconomy');
@@ -186,7 +180,7 @@ class UtilsManager {
 				Inventory: this.proper(id, 1),
 			});
 		else {
-			const inventory = (profile as Anything)?.Inventory || {};
+			const inventory = (profile as any)?.Inventory || {};
 			inventory[id] = inventory[id] ? (inventory[id] += 1) : 1;
 			return usereconomy.update({ User: user }, { Inventory: inventory });
 		}
@@ -202,7 +196,7 @@ class UtilsManager {
 				Inventory: this.proper(id, 1),
 			});
 		else {
-			const inventory = (profile as Anything)?.Inventory || {};
+			const inventory = (profile as any)?.Inventory || {};
 			inventory[id] = inventory[id] ? (inventory[id] -= 1) : 0;
 			if (inventory[id] <= 0) delete inventory[id];
 			return usereconomy.update({ User: user }, { Inventory: inventory });
@@ -219,7 +213,7 @@ class UtilsManager {
 	public checkVC(message: Message): boolean {
 		if (!message.member.voice.channel) return false;
 		if (!message.guild.me.voice.channel) return true;
-		if (message.member.voice.channelID == message.guild.me.voice.channelID)
+		if (message.member.voice.channelId == message.guild.me.voice.channelId)
 			return true;
 		else return false;
 	}
@@ -230,11 +224,6 @@ class UtilsManager {
 		} catch {
 			return false;
 		}
-	}
-	public async getPrefix(id: string): Promise<string> {
-		const Schema = await this.client.db.load('guildconfig');
-		const Config = await Schema.findOne({ Guild: id });
-		return (Config as Anything)?.Prefix || this.client.prefix;
 	}
 }
 export { UtilsManager };

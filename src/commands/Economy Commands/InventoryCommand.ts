@@ -1,19 +1,22 @@
 import { RunFunction } from '../../interfaces/Command';
-import { Anything } from '../../interfaces/Anything';
+
 import { items } from '../../static/Items';
 import { Item } from '../../interfaces/Item';
 import pagination from '../../utils/Pagination';
 import { limitArray } from 'tyvn';
 
-export const run: RunFunction = async (client, message, args) => {
+export const run: RunFunction = async (client, interaction) => {
 	const UserEconomy = await client.db.load('usereconomy');
-	const User =
-		client.utils.ResolveMember(message, args[0])?.id || message.author.id;
+	const user = (
+		await interaction.guild.members.fetch(
+			(interaction.options.get('user')?.value as string) || interaction.user.id
+		)
+	).user;
+	const User = user.id;
 	const Profile = await UserEconomy.findOne({ User: User });
-	const Inventory = (Profile as Anything)?.Inventory || {};
-	const prefix = await client.utils.getPrefix(message.guild.id);
+	const Inventory = (Profile as any)?.Inventory || {};
 	return pagination(
-		message,
+		interaction,
 		limitArray<[string, any]>(Object.entries(Inventory), 5).map((value) =>
 			client.embed(
 				{
@@ -22,18 +25,16 @@ export const run: RunFunction = async (client, message, args) => {
 							name: `${
 								items.find((value_: Item) => value_.id == value[0]).name
 							}`,
-							value: `${User == message.author.id ? 'You have' : 'They have'} ${
-								value[1]
-							} ${items
+							value: `${
+								User == interaction.user.id ? 'You have' : 'They have'
+							} ${value[1]} ${items
 								.find((value_: Item) => value_.id == value[0])
 								.name.toLowerCase()}s.`,
 						};
 					}),
-					description: `${
-						message.guild.member(User).user.tag
-					}'s inventory\nUse ${prefix}buy <item-id> to buy items!`,
+					description: `${user.tag}'s inventory\nUse /buy <item-id> to buy items!`,
 				},
-				message
+				interaction
 			)
 		),
 		['⏪', '⏩'],
@@ -42,6 +43,13 @@ export const run: RunFunction = async (client, message, args) => {
 };
 export const name: string = 'inventory';
 export const category: string = 'economy';
-export const description: string = 'View your inventory';
+export const description: string = 'View your or someone else\'s inventory';
 export const aliases: string[] = ['inv'];
 export const usage: string = '[user]';
+export const options: import("discord.js").ApplicationCommandOption[] = [
+    {
+        type: 'USER',
+        name: 'user',
+        description: 'Check someone else\'s inventory',
+    }
+]

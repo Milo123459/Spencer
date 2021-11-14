@@ -1,28 +1,26 @@
+import { ApplicationCommandOption } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 
-export const run: RunFunction = async (client, message, args) => {
-	if (!args.length)
-		return message.channel.send(
-			client.embed({ description: 'Please provide an actual amount' }, message)
-		);
+export const run: RunFunction = async (client, interaction) => {
+
 	const amount = await client.utils.calculateMoney(
-		message.author.id,
-		args[0],
+		interaction.user.id,
+		interaction.options.get("amount",true).value as string,
 		'DepositedCoins'
 	);
 	const EconomySchema = await client.db.load('usereconomy');
-	await EconomySchema.increment({ User: message.author.id }, 'Coins', amount);
+	await EconomySchema.increment({ User: interaction.user.id }, 'Coins', amount);
 	await EconomySchema.decrement(
-		{ User: message.author.id },
+		{ User: interaction.user.id },
 		'DepositedCoins',
 		amount
 	);
-	return message.channel.send(
-		client.embed(
+	return interaction.reply({
+		embeds: [client.embed(
 			{ description: `Withdrew \`$${amount}\` into your wallet!` },
-			message
-		)
-	);
+			interaction
+		)]
+	});
 };
 
 export const aliases: string[] = ['with'];
@@ -30,3 +28,8 @@ export const name: string = 'withdraw';
 export const category: string = 'economy';
 export const usage: string = '<amount>';
 export const description: string = 'Withdraw some money from the bank';
+export const options: ApplicationCommandOption[] = [{
+	name: "amount",
+	description: "You don't need a description for this",
+	type: "STRING"
+}]

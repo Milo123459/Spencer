@@ -2,10 +2,12 @@ import consola, { Consola } from 'consola';
 import {
 	Client,
 	Collection,
+	CommandInteraction,
 	Intents,
 	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
+	Options,
 } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
 import { UtilsManager } from '../utils/Utils';
@@ -38,11 +40,25 @@ class Spencer extends Client {
 	public topGGWebhook: Webhook;
 	public constructor() {
 		super({
-			ws: { intents: Intents.ALL },
-			messageCacheLifetime: 180,
-			messageCacheMaxSize: 200,
-			messageSweepInterval: 180,
-			messageEditHistoryMaxSize: 200,
+			intents: 32767,
+			makeCache: Options.cacheWithLimits({
+				MessageManager: 0,
+				ApplicationCommandManager: 0,
+				BaseGuildEmojiManager: 0,
+				GuildBanManager: 0,
+				GuildEmojiManager: 0,
+				GuildInviteManager: 0,
+				GuildMemberManager: 0,
+				GuildStickerManager: 0,
+				PresenceManager: 0,
+				ReactionManager: 0,
+				ReactionUserManager: 0,
+				StageInstanceManager: 0,
+				ThreadManager: 0,
+				ThreadMemberManager: 0,
+				UserManager: 0,
+				VoiceStateManager: 0,
+			}),
 			partials: ['MESSAGE', 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
 		});
 	}
@@ -51,12 +67,7 @@ class Spencer extends Client {
 		this.prefix = config.prefix;
 		this.owners = config.owners;
 		this.login(config.token).catch((e) => this.logger.error(e));
-		mongoose
-			.connect(config.mongoURI, {
-				useNewUrlParser: true,
-				useUnifiedTopology: true,
-			})
-			.catch((e) => this.logger.error(e));
+		mongoose.connect(config.mongoURI).catch((e) => this.logger.error(e));
 
 		this.db = new DatabaseManager(this);
 		this.utils = new UtilsManager(this);
@@ -74,9 +85,6 @@ class Spencer extends Client {
 		commandFiles.map(async (cmdFile: string) => {
 			const cmd = (await import(cmdFile)) as Command;
 			this.commands.set(cmd.name, { cooldown: 3000, ...cmd });
-			if (cmd.aliases) {
-				cmd.aliases.map((alias: string) => this.aliases.set(alias, cmd.name));
-			}
 			this.categories.add(cmd.category);
 		});
 		eventFiles.map(async (eventFile: string) => {
@@ -94,13 +102,16 @@ class Spencer extends Client {
 			this.schemas.set(sch.name, sch);
 		});
 	}
-	public embed(data: MessageEmbedOptions, message: Message): MessageEmbed {
+	public embed(
+		data: MessageEmbedOptions,
+		interaction: CommandInteraction
+	): MessageEmbed {
 		return new MessageEmbed({
 			color: 'RANDOM',
 			...data,
 			footer: {
-				text: `${message.author.tag} | 👦 Spencer`,
-				iconURL: message.author.displayAvatarURL({
+				text: `${interaction.user.tag} | 👦 Spencer`,
+				iconURL: interaction.user.displayAvatarURL({
 					dynamic: true,
 					format: 'png',
 				}),

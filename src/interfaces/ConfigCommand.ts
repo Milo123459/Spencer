@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { CommandInteractionOption, CommandInteraction, Message } from 'discord.js';
 import { Spencer } from '../client/Client';
 export interface ValidationResponse {
 	value: boolean;
@@ -8,13 +8,13 @@ export interface ValidationResponse {
 
 export interface SubCommand {
 	schema: string;
-	search: (client: Spencer, message: Message) => object;
+	search: (client: Spencer, interaction: CommandInteraction) => object;
 	key: string;
 	description: string;
 	validate: (
 		client: Spencer,
-		message: Message,
-		args: string[]
+		interaction: CommandInteraction,
+		arg: CommandInteractionOption
 	) => ValidationResponse;
-	parseToDB: (client: Spencer, message: Message, args: string[]) => any;
+	parseToDB: (client: Spencer, interaction: CommandInteraction,arg: CommandInteractionOption) => any;
 }

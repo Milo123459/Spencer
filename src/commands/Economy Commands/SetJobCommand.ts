@@ -1,53 +1,91 @@
-import { Message } from 'discord.js';
+import {
+	Message,
+	MessageActionRow,
+	MessageButton,
+	MessageComponentInteraction,
+} from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 import { Job } from '../../interfaces/Job';
 import { Jobs } from '../../static/Jobs';
-import { Anything } from '../../interfaces/Anything';
 
-export const run: RunFunction = async (client, message) => {
+export const run: RunFunction = async (client, interaction) => {
 	const EconomySchema = await client.db.load('usereconomy');
-	const msg: Message = await message.channel.send(
-		client.embed(
-			{
-				description: `Please pick a job by reacting below.\n${Jobs.map(
-					(value: Job) =>
-						`${value.reaction} **${value.name}**: ${value.description}`
-				).join('\n')}`,
-			},
-			message
-		)
-	);
-	try {
-		const reaction: string = await client.utils.awaitReactions(
-			message.author.id,
-			msg,
-			Jobs.map((opt: Job) => opt.reaction)
-		);
-		await EconomySchema.update(
-			{ User: message.author.id },
-			{ Job: Jobs.find((value: Job) => value.reaction == reaction).name }
-		);
-		await msg.edit(
+	const msg = await interaction.reply({
+		embeds: [
 			client.embed(
 				{
-					description: `Woohoo! You\'re now a${
-						Jobs.find((value: Job) => value.reaction == reaction)?.n ? 'n' : ''
-					} **${Jobs.find(
-						(value: Job) => value.reaction == reaction
-					).name.toLowerCase()}**`,
+					description: `Please pick a job by clicking one of the buttons below.\n${Jobs.map(
+						(value: Job) =>
+							`${value.reaction} **${value.name}**: ${value.description}`
+					).join('\n')}`,
 				},
-				message
-			)
+				interaction
+			),
+		],
+		fetchReply: true,
+		components: [
+			new MessageActionRow().addComponents(
+				Jobs.map((job) =>
+					new MessageButton()
+						.setEmoji(job.reaction)
+						.setCustomId(job.name.toLowerCase().replaceAll(' ', '_'))
+				)
+			),
+		],
+	});
+	try {
+		const newJob = (msg as Message).createMessageComponentCollector({
+			filter: (_interaction) => _interaction.user.id == interaction.user.id,
+			time: 30000,
+			max: 1,
+		});
+		let job: Job;
+		newJob.on(
+			'collect',
+			async (interaction_found: MessageComponentInteraction) => {
+				await EconomySchema.update(
+					{ User: interaction.user.id },
+					{
+						Job: Jobs.find((value: Job) => {
+							const formatted = value.name.toLowerCase().replaceAll(' ', '_');
+							if (formatted == interaction_found.customId) {
+								job = value;
+								return true;
+							} else {
+								return false;
+							}
+						}),
+					}
+				);
+
+				await interaction.editReply({
+					embeds: [
+						client.embed(
+							{
+								description: `Woohoo! You\'re now a${
+									job?.n ? 'n' : ''
+								} **${job.name.toLowerCase()}**`,
+							},
+							interaction
+						),
+					],
+					components: [],
+				});
+			}
 		);
-		return await msg.reactions.removeAll();
 	} catch (e) {
-		await msg.edit(
-			client.embed({ description: `Nice one, you didn\'t respond.` }, message)
-		);
-		return msg.reactions.removeAll();
+		await interaction.editReply({
+			embeds: [
+				client.embed(
+					{ description: `Nice one, you didn\'t respond.` },
+					interaction
+				),
+			],
+			components: [],
+		});
 	}
 };
 export const name: string = 'setjob';
 export const category: string = 'economy';
-export const aliases: string[] = ['jobs', 'job'];
 export const description: string = 'Set a job';
+export const options: import("discord.js").ApplicationCommandOption[] = []

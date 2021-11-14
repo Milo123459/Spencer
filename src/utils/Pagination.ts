@@ -1,7 +1,7 @@
-import { Message, MessageEmbed } from 'discord.js';
+import { CommandInteraction, MessageEmbed, Message } from 'discord.js';
 
 const paginationEmbed = async (
-	msg: Message,
+	msg: CommandInteraction,
 	pages: MessageEmbed[],
 	emojiList: string[] = ['⏪', '⏩'],
 	timeout: number = 120000
@@ -11,18 +11,19 @@ const paginationEmbed = async (
 	if (emojiList.length !== 2) throw new Error('Need two emojis.');
 
 	let page = 0;
-	const curPage = await msg.channel.send(
-		pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)
-	);
+	msg.reply({
+		embeds: [pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)],
+	});
+	const curPage = await msg.fetchReply() as Message
 	for (const emoji of emojiList) await curPage.react(emoji);
 
 	const reactionCollector = curPage.createReactionCollector(
-		(reaction, user) => emojiList.includes(reaction.emoji.name) && !user.bot,
-		{ time: timeout }
+		{filter: (reaction, user) => emojiList.includes(reaction.emoji.name) && !user.bot,
+		 time: timeout }
 	);
 
 	reactionCollector.on('collect', (reaction) => {
-		reaction.users.remove(msg.author);
+		reaction.users.remove(msg.user);
 		switch (reaction.emoji.name) {
 			case emojiList[0]:
 				page = page > 0 ? --page : pages.length - 1;
@@ -34,7 +35,7 @@ const paginationEmbed = async (
 				break;
 		}
 
-		curPage.edit(pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`));
+		curPage.edit({embeds: [pages[page].setAuthor(`Page ${page + 1} / ${pages.length}`)]});
 	});
 
 	reactionCollector.on('end', () => {

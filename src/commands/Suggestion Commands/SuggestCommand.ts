@@ -1,70 +1,63 @@
 import { RunFunction } from '../../interfaces/Command';
-import { Anything } from '../../interfaces/Anything';
-import { emojis } from '../../static/Emojis';
-import { GuildChannel, Message, TextChannel } from 'discord.js';
 
-export const run: RunFunction = async (client, message, args) => {
-	if (!args.length)
-		return message.channel.send(
-			client.embed(
-				{ description: 'Please specify a suggestion next time!' },
-				message
-			)
-		);
+import { emojis } from '../../static/Emojis';
+import { GuildChannel, InteractionCollector, Message, TextChannel } from 'discord.js';
+
+export const run: RunFunction = async (client, interaction) => {
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const SuggestionSchema = await client.db.load('suggestion');
 	const GuildConfig = await GuildConfigSchema.findOne({
-		Guild: message.guild.id,
+		Guild: interaction.guild!.id,
 	});
-	if (!GuildConfig || !(GuildConfig as Anything).SuggestionChannel)
-		return message.channel.send(
-			client.embed(
+	if (!GuildConfig || !(GuildConfig as any).SuggestionChannel)
+		return interaction.reply({
+			embeds: [client.embed(
 				{
 					description:
 						'Get someone with MANAGE_GUILD to set the suggestion channel..',
 				},
-				message
-			)
-		);
-	const channel: GuildChannel = message.guild.channels.cache.get(
-		(GuildConfig as Anything).SuggestionChannel
-	);
+                interaction
+            )]
+            });
+	const channel = (interaction.guild.channels.cache.get(
+		(GuildConfig as any).SuggestionChannel
+	) as GuildChannel);
 	if (!channel)
-		return message.channel.send(
-			client.embed(
+		return interaction.reply({
+			embeds: [client.embed(
 				{ description: "Hey... That channel doesn't exist?" },
-				message
-			)
-		);
+                interaction
+			)]
+            });
 	if (
 		!channel
-			?.permissionsFor(message.guild.me)
+			?.permissionsFor(interaction.guild.me)
 			?.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
 	)
-		return message.channel.send(
-			client.embed(
+		return interaction.reply({
+			embeds: [client.embed(
 				{
 					description: `I either can't send messages in ${channel} or I can't add reactions`,
 				},
-				message
-			)
-		);
-	if (!message.guild.me.permissions.has('USE_EXTERNAL_EMOJIS'))
-		return message.channel.send(
-			client.embed(
+                interaction
+			)]
+            });
+	if (!interaction.guild.me.permissions.has('USE_EXTERNAL_EMOJIS'))
+		return interaction.reply({
+			embeds: [client.embed(
 				{ description: 'I need permission to use external emotes!' },
-				message
-			)
-		);
+                interaction
+			)]
+            });
 	const Suggestion = await SuggestionSchema.create({
-		Guild: message.guild.id,
-		Content: args.join(' '),
-		User: message.author.id,
+		Guild: interaction.guild.id,
+		Content: interaction.options.get("suggestion").value!.toString(),
+		User: interaction.user.id,
 	});
 	let m: Message;
 	try {
-		m = await message.channel.send(
-			client.embed(
+		m = (await interaction.reply({
+			embeds: [client.embed(
 				{
 					description: `
 					**Please make sure you're suggestion hasn't already been suggested**
@@ -77,11 +70,11 @@ export const run: RunFunction = async (client, message, args) => {
 					*You have 1 minute.*
 					`.trim(),
 				},
-				message
-			)
-		);
+                interaction
+        )], fetchReply: true
+            }) as Message);
 		const should = await client.utils.awaitReactions(
-			message.author.id,
+			interaction.user.id,
 			m,
 			['✅', '❌'],
 			60 * 1000
@@ -91,21 +84,21 @@ export const run: RunFunction = async (client, message, args) => {
 	} catch {
 		return m.delete();
 	}
-	const msg: Message = await (channel as TextChannel).send(
-		client
+	const msg: Message = await (channel as TextChannel).send({
+		embeds: [client
 			.embed(
 				{
-					description: `${args.join(' ')}`,
+					description: interaction.options.get("suggestion").value!.toString(),
 				},
-				message
+                interaction
 			)
 			.setTimestamp()
-			.addField('State', 'N/A')
-	);
+			.addField('State', 'N/A')]
+            });
 	await msg.react(emojis.spencerup);
 	await msg.react(emojis.spencerdown);
 	try {
-		await message.react('🚀');
+		await interaction.reply('🚀');
 	} catch {}
 	await SuggestionSchema.update({ _id: Suggestion._id }, { MessageID: msg.id });
 };
@@ -113,3 +106,11 @@ export const name: string = 'suggest';
 export const category: string = 'suggestion';
 export const usage: string = '<...suggestion>';
 export const description: string = 'Suggest something';
+export const options: import("discord.js").ApplicationCommandOption[] = [
+    {
+        name: 'suggestion',
+        type: 'STRING',
+        required: true,
+        description: 'Your suggestion'
+    }
+]
