@@ -6,6 +6,7 @@ import {
 	InteractionCollector,
 	Message,
 	TextChannel,
+	Permissions
 } from 'discord.js';
 
 export const run: RunFunction = async (client, interaction) => {
@@ -38,11 +39,10 @@ export const run: RunFunction = async (client, interaction) => {
 				),
 			],
 		});
- 	console.log(channel?.permissionsFor(interaction.guild.me))
 	if (
 		!channel
 			?.permissionsFor(interaction.guild.me)
-			.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
+			.has([Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.ADD_REACTIONS])
 	)
 		return interaction.reply({
 			embeds: [
