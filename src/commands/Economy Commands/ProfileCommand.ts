@@ -81,10 +81,8 @@ export const run: RunFunction = async (client, interaction) => {
 					],
 					description: `Get userinfo on this user: \`${
 						User == interaction.user.id
-							? `${await client.utils.getPrefix(interaction.guild.id)}userinfo`
-							: `${await client.utils.getPrefix(
-									interaction.guild.id
-							  )}userinfo ${User}`
+							? `/userinfo`
+							: `/userinfo ${User}`
 					}\``,
 				},
 				interaction
