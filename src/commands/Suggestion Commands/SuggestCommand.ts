@@ -39,21 +39,7 @@ export const run: RunFunction = async (client, interaction) => {
 				),
 			],
 		});
-	if (
-		!channel
-			?.permissionsFor(interaction.guild.me)
-			.has([Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.ADD_REACTIONS])
-	)
-		return interaction.reply({
-			embeds: [
-				client.embed(
-					{
-						description: `I either can't send messages in ${channel} or I can't add reactions`,
-					},
-					interaction
-				),
-			],
-		});
+	
 	if (!interaction.guild.me.permissions.has('USE_EXTERNAL_EMOJIS'))
 		return interaction.reply({
 			embeds: [
