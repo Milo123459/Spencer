@@ -38,10 +38,11 @@ export const run: RunFunction = async (client, interaction) => {
 				),
 			],
 		});
+ 	console.log(channel?.permissionsFor(interaction.guild.me))
 	if (
 		!channel
 			?.permissionsFor(interaction.guild.me)
-			?.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
+			.has(['SEND_MESSAGES', 'ADD_REACTIONS'])
 	)
 		return interaction.reply({
 			embeds: [
