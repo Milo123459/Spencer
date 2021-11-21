@@ -1,6 +1,5 @@
 import { Spencer } from '../client/Client';
 import { Schema } from '../interfaces/Schema';
-import { any } from '../interfaces/any';
 import { SortFunction } from '../interfaces/SortFunction';
 import { Document } from 'mongoose';
 

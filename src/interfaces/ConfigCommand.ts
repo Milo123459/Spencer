@@ -1,7 +1,7 @@
 import {
 	CommandInteractionOption,
 	CommandInteraction,
-	Message,
+    CacheType
 } from 'discord.js';
 import { Spencer } from '../client/Client';
 export interface ValidationResponse {
@@ -18,11 +18,11 @@ export interface SubCommand {
 	validate: (
 		client: Spencer,
 		interaction: CommandInteraction,
-		arg: CommandInteractionOption
+		arg: CommandInteractionOption<CacheType>
 	) => ValidationResponse;
 	parseToDB: (
 		client: Spencer,
 		interaction: CommandInteraction,
-		arg: CommandInteractionOption
+        arg: CommandInteractionOption<CacheType>
 	) => any;
 }

@@ -3,14 +3,15 @@ import { RunFunction } from '../../interfaces/Command';
 
 export const run: RunFunction = async (client, interaction) => {
 	const UserEconomySchema = await client.db.load('usereconomy');
-	const msg: Message = await interaction.reply({
+	const msg = await interaction.reply({
 		embeds: [
 			client.embed(
 				{ description: `📇 Play a game of double or nothing!` },
 				interaction
 			),
 		],
-	});
+        fetchReply: true
+	}) as Message;
 	try {
 		const reaction: string = await client.utils.awaitReactions(
 			interaction.user.id,
@@ -22,18 +23,17 @@ export const run: RunFunction = async (client, interaction) => {
 		} catch {}
 		if (reaction == '📇') {
 			try {
-				await msg.edit(
-					client.embed(
-						{
+				await msg.edit({
+					embeds: [
+                        client.embed({
 							description:
 								'How much money do you want to bet? Note, the money has to be in your wallet!',
-						},
-						message
-					)
-				);
+                            },
+                        interaction
+                )]});
 				const m: Message = await client.utils.awaitMessages(
 					interaction.user.id,
-					message.channel as TextChannel
+					interaction.channel as TextChannel
 				);
 				const balance = await client.utils.calculateMoney(
 					interaction.user.id,
@@ -44,12 +44,12 @@ export const run: RunFunction = async (client, interaction) => {
 					await m.delete();
 				} catch {}
 				if (balance == 0)
-					return await msg.edit(
-						client.embed({ description: "You can't bet nothing.." }, message)
-					);
+					return await msg.edit({
+						embeds: [client.embed({ description: "You can't bet nothing.." }, interaction)]
+                    });
 				if (balance > 10000)
 					return await client.utils.fail(
-						message,
+                        interaction,
 						{ description: 'You can only bet less then 10000!' },
 						'gamble'
 					);
@@ -60,28 +60,28 @@ export const run: RunFunction = async (client, interaction) => {
 						'Coins',
 						balance
 					);
-					return await msg.edit(
-						client.embed(
+					return await msg.edit({
+						embeds: [client.embed(
 							{
 								description: `Congratulations, you have gotten **${
 									balance * 2
 								}** coins from that!`,
 							},
-							message
-						)
-					);
+                            interaction
+						)]
+                        });
 				} else {
 					await UserEconomySchema.decrement(
 						{ User: interaction.user.id },
 						'Coins',
 						balance
 					);
-					return await msg.edit(
-						client.embed(
+					return await msg.edit({
+						embeds: [client.embed(
 							{ description: `You lost **${balance}** coins..` },
-							message
-						)
-					);
+                            interaction
+						)]
+                        });
 				}
 			} catch {
 				return await msg.edit("Nice one, you didn't respond.");

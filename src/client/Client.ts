@@ -3,8 +3,6 @@ import {
 	Client,
 	Collection,
 	CommandInteraction,
-	Intents,
-	Message,
 	MessageEmbed,
 	MessageEmbedOptions,
 	Options,
@@ -21,6 +19,8 @@ import { Config } from '../interfaces/Config';
 import { VACEFronJS } from 'vacefron';
 import { Api, Webhook } from '@top-gg/sdk';
 import EventEmitter from 'events';
+import { REST } from '@discordjs/rest';
+import { Routes } from 'discord-api-types/v9';
 
 const globPromise = promisify(glob);
 class Spencer extends Client {
@@ -38,6 +38,7 @@ class Spencer extends Client {
 	public vacefron: VACEFronJS = new VACEFronJS();
 	public topGGApi: Api;
 	public topGGWebhook: Webhook;
+    public sl_rest: REST;
 	public constructor() {
 		super({
 			intents: 32767,
@@ -61,6 +62,7 @@ class Spencer extends Client {
 			}),
 			partials: ['MESSAGE', 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
 		});
+        this.sl_rest = new REST({ version: '9' }).setToken(this.config.token);
 	}
 	public async start(config: Config): Promise<void> {
 		this.config = config;

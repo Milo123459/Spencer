@@ -1,4 +1,4 @@
-import { GuildChannel } from 'discord.js';
+import { GuildChannel, Permissions, TextChannel } from 'discord.js';
 import { SubCommand } from '../interfaces/ConfigCommand';
 import yn from 'yn';
 
@@ -35,7 +35,7 @@ export const subcommands: Array<SubCommand> = [
 			if (!channel) value = undefined;
 			else {
 				value =
-					interaction.member.permissions.has('MANAGE_GUILD') &&
+					(interaction.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') &&
 					channel.isText() &&
 					channel
 						.permissionsFor(interaction.guild.me)
@@ -47,8 +47,8 @@ export const subcommands: Array<SubCommand> = [
 				success: value != undefined,
 			};
 		},
-		parseToDB: (client, interaction, args) =>
-			interaction.guild.channels.cache.get(args.value as string).id,
+		parseToDB: (client, interaction, arg) =>
+			interaction.guild.channels.cache.get((arg.value as string).replace("<#", "").replace(">", "")).id,
 	},
 	{
 		schema: 'guildconfig',
@@ -56,16 +56,16 @@ export const subcommands: Array<SubCommand> = [
 		description:
 			'Toggles if you want to automatically delete accept,consider,deny',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
-		validate: (client, message, args) => {
+		validate: (client, message, arg) => {
 			const value: boolean =
-				message.member.permissions.has('MANAGE_GUILD') && yn(args[0]);
+				(message.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') && yn(arg);
 			return {
 				value,
 				fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off' & make sure you have MANAGE_GUILD`,
 				success: value != undefined,
 			};
 		},
-		parseToDB: (client, message, args) => yn(args[0]),
+		parseToDB: (client, message, arg) => yn(arg),
 	},
 	{
 		schema: 'guildconfig',
@@ -73,18 +73,15 @@ export const subcommands: Array<SubCommand> = [
 		description:
 			'Set up the channel allowing people to report people in your guild',
 		search: (client, message) => new Object({ Guild: message.guild.id }),
-		validate: (client, message, args) => {
+		validate: (client, message, arg) => {
 			let value: boolean;
-			const channel: GuildChannel | undefined = client.utils.ResolveChannel(
-				message,
-				args[0]
-			);
+			const channel = client.channels.cache.get(arg.channel.id);
 			if (!channel) value = undefined;
 			else {
 				value =
-					message.member.permissions.has('MANAGE_GUILD') &&
+					(message.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') &&
 					channel.isText() &&
-					channel.permissionsFor(message.guild.me).has('SEND_MESSAGES');
+					(channel as TextChannel).permissionsFor(message.guild.me).has('SEND_MESSAGES');
 			}
 			return {
 				value,
@@ -92,8 +89,8 @@ export const subcommands: Array<SubCommand> = [
 				success: value != undefined,
 			};
 		},
-		parseToDB: (client, message, args) =>
-			client.utils.ResolveChannel(message, args[0]).id,
+		parseToDB: (client, message, arg) =>
+			message.guild.channels.cache.get(arg.channel.id),
 	},
 	{
 		schema: 'guildconfig',
@@ -101,18 +98,17 @@ export const subcommands: Array<SubCommand> = [
 		description:
 			"Setup the anti-raid level. Make sure my role is higher then the user that'd be banned/kicked.",
 		search: (client, message) => new Object({ Guild: message.guild.id }),
-		validate: (client, message, args) => {
+		validate: (client, message, arg) => {
 			let value: boolean =
-				args.length &&
-				['low', 'high'].includes(args[0].toLowerCase()) &&
-				message.member.permissions.has('ADMINISTRATOR') &&
+				['low', 'high'].includes(arg.value as string) &&
+				(message.member.permissions as unknown as Readonly<Permissions>).has('ADMINISTRATOR') &&
 				message.guild.me.permissions.has('BAN_MEMBERS');
 			return {
 				value,
 				fix: 'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
 				success:
 					value != undefined &&
-					message.member.permissions.has(['ADMINISTRATOR', 'BAN_MEMBERS']) &&
+					(message.member.permissions as unknown as Readonly<Permissions>).has(['ADMINISTRATOR', 'BAN_MEMBERS']) &&
 					message.guild.me.permissions.has('BAN_MEMBERS'),
 			};
 		},
@@ -125,12 +121,12 @@ export const subcommands: Array<SubCommand> = [
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =
-				yn(args[0]) && message.member.permissions.has('MANAGE_GUILD');
+				yn(args[0]) && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD');
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
 				success:
-					value != undefined && message.member.permissions.has('MANAGE_GUILD'),
+					value != undefined && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD'),
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
@@ -142,14 +138,14 @@ export const subcommands: Array<SubCommand> = [
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =
-				yn(args[0]) && message.member.permissions.has('MANAGE_GUILD');
+				yn(args[0]) && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD');
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
 				success:
-					value != undefined && message.member.permissions.has('MANAGE_GUILD'),
+					value != undefined && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD'),
 			};
 		},
-		parseToDB: (client, interactionp) => yn(args[0]),
+		parseToDB: (client, interaction) => yn(interaction.options.get("value").value!.toString()),
 	},
 ];

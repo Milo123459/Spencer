@@ -52,7 +52,7 @@ export const run: RunFunction = async (client, interaction) => {
 	const validated = subcommand.validate(
 		client,
 		interaction,
-		interaction.options.get('key', true)
+		interaction.options.get('value', true)
 	);
 	if (!!!validated.success)
 		return interaction.reply({
