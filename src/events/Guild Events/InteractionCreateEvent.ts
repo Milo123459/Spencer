@@ -56,7 +56,7 @@ export const run: RunFunction = async (
 				? Date.now() + command?.cooldown / 2
 				: Date.now() + command?.cooldown
 		);
-
+		console.log(command.name)
 		await command.run(client, interaction);
 		setTimeout(
 			() => {
