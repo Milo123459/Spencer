@@ -62,13 +62,13 @@ class Spencer extends Client {
 			}),
 			partials: ['MESSAGE', 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
 		});
-        this.sl_rest = new REST({ version: '9' }).setToken(this.config.token);
 	}
 	public async start(config: Config): Promise<void> {
 		this.config = config;
 		this.prefix = config.prefix;
 		this.owners = config.owners;
 		this.login(config.token).catch((e) => this.logger.error(e));
+        this.sl_rest = new REST({ version: '9' }).setToken(config.token);
 		mongoose.connect(config.mongoURI).catch((e) => this.logger.error(e));
 
 		this.db = new DatabaseManager(this);
