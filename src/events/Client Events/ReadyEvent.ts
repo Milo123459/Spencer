@@ -29,7 +29,10 @@ export const run: RunFunction = async (client) => {
             console.log(Date.now() - (value as any).Time, !(Date.now() - (value as any).Time).toString().startsWith('-'), Date.now() - (value as any).Time, (value as any).Message);
 			if (Date.now() >= (value as any).Time) {
                 console.log("passed the if");
-				const User: User = client.users.cache.get((value as any).User);
+				let User: User = client.users.cache.get((value as any).User);
+                if (!User) {
+                    User = await client.users.fetch((value as any).User);
+                }
 				try {
                     console.log("sending message");
 					await User.send(
