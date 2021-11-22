@@ -31,8 +31,6 @@ export const run: RunFunction = async (client) => {
                 console.log("passed the if");
 				const User: User = client.users.cache.get((value as any).User);
 				try {
-                    console.log("deleting the value");
-					await value.delete();
                     console.log("sending message");
 					await User.send(
 						`I was told to remind you${
@@ -42,7 +40,9 @@ export const run: RunFunction = async (client) => {
 						}: **${(value as any).Message}**`
 					);
                     console.log("sent message");
-				} catch {}
+				} catch {} finally {
+                    await value.delete();
+                }
 			}
 		});
 	}, 1000 * 60);
