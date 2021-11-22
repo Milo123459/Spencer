@@ -10,7 +10,7 @@ export const run: RunFunction = async (client) => {
 	client.logger.success(`${client.user.tag} is now online!`);
 	const commands = [...client.commands.values()];
 	client.application.commands.set(commands);
-	await client.user.setActivity(`${client.prefix}help | 👦 Spencer`, {
+	client.user.setActivity(`/help | 👦 Spencer`, {
 		type: 'WATCHING',
 	});
 	if (client.config.onlyUsed) {
@@ -22,9 +22,11 @@ export const run: RunFunction = async (client) => {
 			});
 	}
 	setInterval(async () => {
+        console.log("in setinterval");
 		const ReminderSchema = await client.db.load('reminder');
-
+        console.log("after getting schema");
 		(await ReminderSchema.find({})).map(async (value: Document) => {
+            console.log(value)
 			if (Date.now() >= (value as any).Time) {
 				const User: User = client.users.cache.get((value as any).User);
 				try {
