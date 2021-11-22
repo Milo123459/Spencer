@@ -28,9 +28,12 @@ export const run: RunFunction = async (client) => {
 		(await ReminderSchema.find({})).map(async (value: Document) => {
             console.log(value)
 			if (Date.now() >= (value as any).Time) {
+                console.log("passed the if");
 				const User: User = client.users.cache.get((value as any).User);
 				try {
+                    console.log("deleting the value");
 					await value.delete();
+                    console.log("sending message");
 					await User.send(
 						`I was told to remind you${
 							(value as any)?.Guild
@@ -38,6 +41,7 @@ export const run: RunFunction = async (client) => {
 								: ''
 						}: **${(value as any).Message}**`
 					);
+                    console.log("sent message");
 				} catch {}
 			}
 		});
