@@ -26,7 +26,7 @@ export const run: RunFunction = async (client) => {
 		const ReminderSchema = await client.db.load('reminder');
         console.log("after getting schema");
 		(await ReminderSchema.find({})).forEach(async (value: Document) => {
-            console.log((value as any).Time - Date.now());
+            console.log(Date.now() - (value as any).Time);
 			if (Date.now() >= (value as any).Time) {
                 console.log("passed the if");
 				const User: User = client.users.cache.get((value as any).User);
