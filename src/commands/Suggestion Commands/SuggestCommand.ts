@@ -40,15 +40,6 @@ export const run: RunFunction = async (client, interaction) => {
 			],
 		});
 	
-	if (!interaction.guild.me.permissions.has('USE_EXTERNAL_EMOJIS'))
-		return interaction.reply({
-			embeds: [
-				client.embed(
-					{ description: 'I need permission to use external emotes!' },
-					interaction
-				),
-			],
-		});
 	const Suggestion = await SuggestionSchema.create({
 		Guild: interaction.guild.id,
 		Content: interaction.options.get('suggestion').value!.toString(),
