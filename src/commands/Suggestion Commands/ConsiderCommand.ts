@@ -112,7 +112,7 @@ export const usage: string = '<interaction_id> [...reason]';
 export const description: string = 'Consider a suggestion';
 export const options: import('discord.js').ApplicationCommandOption[] = [
 	{
-		type: 'NUMBER',
+		type: 'STRING',
 		name: 'id',
 		description: 'The message ID of the suggestion you want to consider',
 		required: true,
