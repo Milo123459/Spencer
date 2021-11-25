@@ -12,7 +12,7 @@ export const run: RunFunction = async (client, interaction) => {
 	const SuggestionSchema = await client.db.load('suggestion');
 	const GuildConfigSchema = await client.db.load('guildconfig');
 	const search = {
-		interactionID: interaction.options.get('id').value!.toString(),
+		MessageID: interaction.options.get('id').value!.toString(),
 	};
 	const Suggestion = await SuggestionSchema.findOne(search);
 	const GuildConfig = await GuildConfigSchema.findOne({
