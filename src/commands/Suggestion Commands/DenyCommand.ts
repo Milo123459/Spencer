@@ -39,20 +39,6 @@ export const run: RunFunction = async (client, interaction) => {
 				),
 			],
 		});
-	if (!channel) {
-		await Suggestion.delete();
-		return interaction.reply({
-			embeds: [
-				client.embed(
-					{
-						description:
-							"Suggestion channel is in DB, but the channel doesn't exist",
-					},
-					interaction
-				),
-			],
-		});
-	}
 	const msg: Message = await (channel as TextChannel).messages.fetch(
 		(Suggestion as any).interactionID
 	);
