@@ -33,6 +33,7 @@ export const run: RunFunction = async (
 				client.cooldowns.get(`${interaction.user.id}${command.name}`) -
 					Date.now()
 			);
+			console.log(cooldownTime)
 			return interaction.reply({
 				embeds: [
 					client.embed(
