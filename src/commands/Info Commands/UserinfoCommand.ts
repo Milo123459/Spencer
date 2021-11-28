@@ -16,8 +16,11 @@ export const run: RunFunction = async (client, interaction) => {
 				interaction.options.get('user')?.value as string
 		  )) as GuildMember)
 		: (interaction.member as GuildMember);
+    if (!member) {
+        return interaction.reply({ content: "Could not find that user!" });
+    }
 
-	await interaction.reply({
+	return interaction.reply({
 		embeds: [
 			client.embed(
 				{

@@ -1,7 +1,6 @@
-import { MessageEmbed } from 'discord.js';
 import { RunFunction } from '../../interfaces/Command';
 import * as pkg from '../../../package.json';
-import os from 'os';
+
 export const name: string = 'stats';
 export const run: RunFunction = async (client, interaction) => {
 	const embed = {
