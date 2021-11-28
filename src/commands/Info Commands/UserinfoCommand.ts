@@ -63,36 +63,6 @@ export const run: RunFunction = async (client, interaction) => {
 							true
 						),
 						client.utils.constructField(
-							'Presence',
-							`
-                        Devices logged in on: **${
-													Object.entries(member.presence?.clientStatus || {})
-														.length
-												}**${Object.entries(member.presence?.clientStatus || {})
-								.map(
-									(value: [string, string], index: number) =>
-										`
-                                    Device${
-																			Object.entries(
-																				member.presence.clientStatus
-																			).length > 1
-																				? ` [${index + 1}]:`
-																				: ':'
-																		} **${
-											value[0][0].toUpperCase() + value[0].slice(1)
-										}**`
-								)
-								.join('')}
-                            Status: **${
-															member.presence.status.toLowerCase() == 'dnd'
-																? 'DND'
-																: member.presence.status[0].toUpperCase() +
-																  member.presence.status.slice(1)
-														}**
-                            `.trim(),
-							true
-						),
-						client.utils.constructField(
 							`Badges [${
 								arrayIfy<UserFlags, string>(member.user?.flags).filter(
 									(value: string) => value != 'EARLY_VERIFIED_DEVELOPER'
