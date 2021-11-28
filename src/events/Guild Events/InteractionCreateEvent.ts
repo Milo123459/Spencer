@@ -70,8 +70,8 @@ export const run: RunFunction = async (
 				? command?.cooldown / 2
 				: command?.cooldown
 		);
-	} catch {
-		console.log(`[ERROR] Failed to run command ${interaction.commandName}`);
+	} catch(e) {
+		console.log(`[ERROR] Failed to run command ${interaction.commandName} - why: ${e}`);
 	}
 };
 export const name = "interactionCreate"
