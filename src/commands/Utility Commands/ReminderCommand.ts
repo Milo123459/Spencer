@@ -18,6 +18,7 @@ export const run: RunFunction = async (client, interaction) => {
 					interaction
 				),
 			],
+            ephemeral: true
 		});
 	if (!time)
 		return interaction.reply({
@@ -30,6 +31,7 @@ export const run: RunFunction = async (client, interaction) => {
 					interaction
 				),
 			],
+            ephemeral: true
 		});
 	if (time > ms('30d') && !client.config.owners.includes(interaction.user.id))
 		return interaction.reply({
@@ -39,6 +41,7 @@ export const run: RunFunction = async (client, interaction) => {
 					interaction
 				),
 			],
+            ephemeral: true
 		});
 	const ReminderSchema = await client.db.load('reminder');
 	await ReminderSchema.create({
@@ -57,6 +60,7 @@ export const run: RunFunction = async (client, interaction) => {
 				interaction
 			),
 		],
+        ephemeral: true
 	});
 };
 export const name: string = 'reminder';
