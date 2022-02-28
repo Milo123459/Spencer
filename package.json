@@ -13,7 +13,7 @@
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"new": "ts-node ./src/scripts/New.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
-		"start": "yarn build && node ./dist/src/index.js"
+		"start": "yarn build && node --es-module-specifier-resolution=node ./dist/src/index.js"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
