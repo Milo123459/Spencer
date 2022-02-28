@@ -12,7 +12,7 @@
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"new": "ts-node ./src/scripts/New.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
-		"start": "yarn build && node ./dist/src/index.js"
+		"start": "yarn build && node --loader ts-node/esm ./dist/src/index.js"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
@@ -50,7 +50,7 @@
 		"@types/prompts": "^2.0.14",
 		"del-cli": "^4.0.1",
 		"prettier": "^2.3.2",
-		"ts-node": "^10.4.0",
+		"ts-node": "^10.5.0",
 		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.4.4",
 		"yarn-deduplicate": "^3.1.0"
