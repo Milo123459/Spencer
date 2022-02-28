@@ -8,12 +8,11 @@
 		"dev:language": "ts-node-dev --respawn --transpile-only --poll ./src/language/test.ts",
 		"lint": "prettier --write .",
 		"build": "tsc --diagnostics",
-		"start:core": "del-cli ./dist && yarn && yarn build",
 		"update": "n latest && git pull && yarn && yarn start:core && pm2 reload Spencer --update-env && pm2 logs Spencer",
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"new": "ts-node ./src/scripts/New.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
-		"start": "yarn start:core && node ./dist/src/index.js"
+		"start": "yarn build && node ./dist/src/index.js"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
