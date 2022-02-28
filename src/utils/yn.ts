@@ -123,7 +123,9 @@ export function lenientFunction<T>(input: string, default_: T) {
 
 /**
 Parse yes/no like values.
+
 The following case-insensitive values are recognized: `'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0`, 'on', 'off'
+
 @param input - The value that should be converted.
 @returns The parsed input if it can be parsed or the default value defined in the `default` option.
 @example
@@ -131,16 +133,21 @@ The following case-insensitive values are recognized: `'y', 'yes', 'true', true,
 import yn from 'yn';
 yn('y');
 //=> true
+
 yn('NO');
 //=> false
+
 yn(true);
 //=> true
+
 yn('abomasum');
 //=> undefined
+
 yn('abomasum', {default: false});
 //=> false
+
 yn('mo', {lenient: true});
-//=> false
+//=> false	
 ```
 */
 export function yn(input: unknown, options: OptionsWithDefault): boolean;
