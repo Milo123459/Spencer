@@ -1,6 +1,6 @@
 import { GuildChannel, Permissions, TextChannel } from 'discord.js';
 import { SubCommand } from '../interfaces/ConfigCommand';
-import yn from 'yn';
+import { yn } from '../utils/yn';
 
 export const subcommands: Array<SubCommand> = [
 	{
@@ -35,7 +35,9 @@ export const subcommands: Array<SubCommand> = [
 			if (!channel) value = undefined;
 			else {
 				value =
-					(interaction.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') &&
+					(interaction.member.permissions as Readonly<Permissions>).has(
+						'MANAGE_GUILD'
+					) &&
 					channel.isText() &&
 					channel
 						.permissionsFor(interaction.guild.me)
@@ -48,7 +50,9 @@ export const subcommands: Array<SubCommand> = [
 			};
 		},
 		parseToDB: (client, interaction, arg) =>
-			interaction.guild.channels.cache.get((arg.value as string).replace("<#", "").replace(">", "")).id,
+			interaction.guild.channels.cache.get(
+				(arg.value as string).replace('<#', '').replace('>', '')
+			).id,
 	},
 	{
 		schema: 'guildconfig',
@@ -58,7 +62,9 @@ export const subcommands: Array<SubCommand> = [
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, arg) => {
 			const value: boolean =
-				(message.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') && yn(arg);
+				(message.member.permissions as Readonly<Permissions>).has(
+					'MANAGE_GUILD'
+				) && yn(arg);
 			return {
 				value,
 				fix: `Please provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off' & make sure you have MANAGE_GUILD`,
@@ -79,9 +85,13 @@ export const subcommands: Array<SubCommand> = [
 			if (!channel) value = undefined;
 			else {
 				value =
-					(message.member.permissions as Readonly<Permissions>).has('MANAGE_GUILD') &&
+					(message.member.permissions as Readonly<Permissions>).has(
+						'MANAGE_GUILD'
+					) &&
 					channel.isText() &&
-					(channel as TextChannel).permissionsFor(message.guild.me).has('SEND_MESSAGES');
+					(channel as TextChannel)
+						.permissionsFor(message.guild.me)
+						.has('SEND_MESSAGES');
 			}
 			return {
 				value,
@@ -101,14 +111,19 @@ export const subcommands: Array<SubCommand> = [
 		validate: (client, message, arg) => {
 			let value: boolean =
 				['low', 'high'].includes(arg.value as string) &&
-				(message.member.permissions as unknown as Readonly<Permissions>).has('ADMINISTRATOR') &&
+				(message.member.permissions as unknown as Readonly<Permissions>).has(
+					'ADMINISTRATOR'
+				) &&
 				message.guild.me.permissions.has('BAN_MEMBERS');
 			return {
 				value,
 				fix: 'Make sure you have ADMINISTRATOR, I have BAN_MEMBERS & you specified a valid level. Either low or high\nLow: Gives 3 chances then banned\nHigh: 1 chance then banned\n\nTriggered by: More then 4 mentions in messages',
 				success:
 					value != undefined &&
-					(message.member.permissions as unknown as Readonly<Permissions>).has(['ADMINISTRATOR', 'BAN_MEMBERS']) &&
+					(message.member.permissions as unknown as Readonly<Permissions>).has([
+						'ADMINISTRATOR',
+						'BAN_MEMBERS',
+					]) &&
 					message.guild.me.permissions.has('BAN_MEMBERS'),
 			};
 		},
@@ -121,12 +136,18 @@ export const subcommands: Array<SubCommand> = [
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =
-				yn(args[0]) && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD');
+				yn(args[0]) &&
+				(message.member.permissions as unknown as Readonly<Permissions>).has(
+					'MANAGE_GUILD'
+				);
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
 				success:
-					value != undefined && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD'),
+					value != undefined &&
+					(message.member.permissions as unknown as Readonly<Permissions>).has(
+						'MANAGE_GUILD'
+					),
 			};
 		},
 		parseToDB: (client, message, args) => yn(args[0]),
@@ -138,14 +159,21 @@ export const subcommands: Array<SubCommand> = [
 		search: (client, message) => new Object({ Guild: message.guild.id }),
 		validate: (client, message, args) => {
 			const value: boolean =
-				yn(args[0]) && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD');
+				yn(args[0]) &&
+				(message.member.permissions as unknown as Readonly<Permissions>).has(
+					'MANAGE_GUILD'
+				);
 			return {
 				value,
 				fix: `Make sure you have MANAGE_GUILD & provide a yes/no style value, valid values: 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off'`,
 				success:
-					value != undefined && (message.member.permissions as unknown as Readonly<Permissions>).has('MANAGE_GUILD'),
+					value != undefined &&
+					(message.member.permissions as unknown as Readonly<Permissions>).has(
+						'MANAGE_GUILD'
+					),
 			};
 		},
-		parseToDB: (client, interaction) => yn(interaction.options.get("value").value!.toString()),
+		parseToDB: (client, interaction) =>
+			yn(interaction.options.get('value').value!.toString()),
 	},
 ];

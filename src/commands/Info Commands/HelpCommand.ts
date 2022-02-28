@@ -13,15 +13,15 @@ export const run: RunFunction = async (client, interaction) => {
 		.map((category: string) => {
 			return {
 				name: `${category[0].toUpperCase() + category.slice(1)} [${
-					client.commands.filter((cmd: Command) => cmd.category == category)
-						.size
+					client.commands.filter((cmd) => cmd.category == category).size
 				}]`,
 				value: client.commands
-					.filter((cmd: Command) => cmd.category == category)
-					.map((cmd: Command) => `\`${cmd.name}\``)
+					.filter((cmd) => cmd.category == category)
+					.map((cmd) => `\`${cmd.name}\``)
 					.join(', '),
 			};
 		});
+
 	const commandEmbed: MessageEmbed = client.embed(
 		{
 			fields,

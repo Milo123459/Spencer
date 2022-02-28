@@ -38,7 +38,7 @@ class Spencer extends Client {
 	public vacefron: VACEFronJS = new VACEFronJS();
 	public topGGApi: Api;
 	public topGGWebhook: Webhook;
-    public sl_rest: REST;
+	public sl_rest: REST;
 	public constructor() {
 		super({
 			intents: 32767,
@@ -68,7 +68,7 @@ class Spencer extends Client {
 		this.prefix = config.prefix;
 		this.owners = config.owners;
 		this.login(config.token).catch((e) => this.logger.error(e));
-        this.sl_rest = new REST({ version: '9' }).setToken(config.token);
+		this.sl_rest = new REST({ version: '9' }).setToken(config.token);
 		mongoose.connect(config.mongoURI).catch((e) => this.logger.error(e));
 
 		this.db = new DatabaseManager(this);
@@ -84,13 +84,16 @@ class Spencer extends Client {
 		const schemaFiles: string[] = await globPromise(
 			`${__dirname}/../models/**/*{.js,.ts}`
 		);
+
 		commandFiles.map(async (cmdFile: string) => {
-			const cmd = (await import(cmdFile)) as Command;
+			const cmd = require(cmdFile) as Command;
 			this.commands.set(cmd.name, { cooldown: 3000, ...cmd });
 			this.categories.add(cmd.category);
 		});
+
 		eventFiles.map(async (eventFile: string) => {
-			const ev = (await import(eventFile)) as Event;
+			const ev = require(eventFile) as Event;
+
 			if (ev.emitter && typeof ev.emitter == 'function') {
 				ev.emitter(this).on(ev.name, ev.run.bind(null, this));
 			} else if (ev.emitter && ev.emitter instanceof EventEmitter) {
@@ -99,8 +102,9 @@ class Spencer extends Client {
 				this.on(ev.name, ev.run.bind(null, this));
 			}
 		});
+
 		schemaFiles.map(async (schemaFile: string) => {
-			const sch = (await import(schemaFile)) as Schema;
+			const sch = require(schemaFile) as Schema;
 			this.schemas.set(sch.name, sch);
 		});
 	}
