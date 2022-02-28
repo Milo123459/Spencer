@@ -13,7 +13,7 @@
 		"analyze": "ts-node ./src/analyzers/Analyze.ts",
 		"new": "ts-node ./src/scripts/New.ts",
 		"nb": "git checkout master && git pull && git checkout -b",
-		"start": "yarn start:core && pm2 start dist/src/index.js --name Spencer"
+		"start": "yarn start:core && node ./dist/src/index.js"
 	},
 	"license": "Creative Commons",
 	"dependencies": {
