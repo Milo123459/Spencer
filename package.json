@@ -26,6 +26,7 @@
 		"dayjs": "^1.10.6",
 		"discord-api-types": "^0.24.0",
 		"discord.js": "^13.3.1",
+		"dotenv": "^16.0.0",
 		"express": "^4.17.1",
 		"glob": "^7.1.6",
 		"leven": "^4.0.0",
