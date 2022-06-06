@@ -17,7 +17,7 @@
 	"license": "Creative Commons",
 	"dependencies": {
 		"@discordjs/builders": "^0.8.2",
-		"@discordjs/rest": "^0.1.0-canary.0",
+		"@discordjs/rest": "^0.5.0",
 		"@top-gg/sdk": "^3.1.2",
 		"bufferutil": "^4.0.5",
 		"cleverbot-free": "^1.1.7",
