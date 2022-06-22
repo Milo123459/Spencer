@@ -33,11 +33,11 @@ export const run: RunFunction = async (client, interaction) => {
 			],
             ephemeral: true
 		});
-	if (time > ms('30d') && !client.config.owners.includes(interaction.user.id))
+	if (time > ms('365d') && !client.config.owners.includes(interaction.user.id))
 		return interaction.reply({
 			embeds: [
 				client.embed(
-					{ description: "You can't set a reminder for more then 30 days!" },
+					{ description: "You can't set a reminder for more then 365 days!" },
 					interaction
 				),
 			],
