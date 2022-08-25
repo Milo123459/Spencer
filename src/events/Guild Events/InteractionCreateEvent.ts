@@ -57,8 +57,7 @@ export const run: RunFunction = async (
 				? Date.now() + command?.cooldown / 2
 				: Date.now() + command?.cooldown
 		);
-		await command.run(client, interaction);
-		setTimeout(
+        setTimeout(
 			() => {
 				client.cooldowns.delete(`${interaction.user.id}${command.name}`);
 			},
@@ -70,6 +69,7 @@ export const run: RunFunction = async (
 				? command?.cooldown / 2
 				: command?.cooldown
 		);
+		await command.run(client, interaction);
 	} catch(e) {
 		console.log(`[ERROR] Failed to run command ${interaction.commandName} - why: ${e}`);
 	}
