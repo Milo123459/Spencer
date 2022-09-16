@@ -19,7 +19,7 @@
 		"@discordjs/builders": "^1.2.0",
 		"@discordjs/rest": "^1.1.0",
 		"consola": "^2.15.3",
-		"discord-api-types": "^0.37.8",
+		"discord-api-types": "^0.37.10",
 		"discord.js": "^14.3.0",
 		"dotenv": "^16.0.2",
 		"mongoose": "^6.6.0",
