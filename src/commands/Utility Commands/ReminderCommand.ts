@@ -45,10 +45,12 @@ export const options: ApplicationCommandOption[] = [
 		name: 'time',
 		description: 'The delay for me to send you the reminder',
 		required: true,
+        type: 3
 	} as ApplicationCommandStringOption,
 	{
 		name: 'message',
 		description: 'The reminder message',
 		required: true,
+        type: 3
 	} as ApplicationCommandStringOption,
 ];
