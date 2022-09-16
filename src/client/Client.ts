@@ -1,14 +1,6 @@
 import consola, { Consola } from 'consola';
-import {
-	Client,
-	Collection,
-	CommandInteraction,
-	MessageEmbed,
-	MessageEmbedOptions,
-	Options,
-} from 'discord.js';
+import { Client, Collection, Options } from 'discord.js';
 import { DatabaseManager } from '../db/Database';
-import { UtilsManager } from '../utils/Utils';
 import glob from 'glob';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
@@ -16,8 +8,6 @@ import { Command } from '../interfaces/Command';
 import { Event } from '../interfaces/Event';
 import { Schema } from '../interfaces/Schema';
 import { Config } from '../interfaces/Config';
-import { VACEFronJS } from 'vacefron';
-import { Api, Webhook } from '@top-gg/sdk';
 import EventEmitter from 'events';
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v9';
@@ -31,13 +21,9 @@ class Spencer extends Client {
 	public schemas: Collection<string, Schema> = new Collection();
 	public categories: Set<string> = new Set();
 	public db: DatabaseManager;
-	public utils: UtilsManager;
 	public prefix: string;
 	public owners: Array<string>;
 	public config: Config;
-	public vacefron: VACEFronJS = new VACEFronJS();
-	public topGGApi: Api;
-	public topGGWebhook: Webhook;
 	public sl_rest: REST;
 	public constructor() {
 		super({
@@ -60,7 +46,6 @@ class Spencer extends Client {
 				UserManager: 0,
 				VoiceStateManager: 0,
 			}),
-			partials: ['MESSAGE', 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
 		});
 	}
 	public async start(config: Config): Promise<void> {
@@ -72,9 +57,6 @@ class Spencer extends Client {
 		mongoose.connect(config.mongoURI).catch((e) => this.logger.error(e));
 
 		this.db = new DatabaseManager(this);
-		this.utils = new UtilsManager(this);
-		this.topGGApi = new Api(this.config.topGGToken);
-		this.topGGWebhook = new Webhook(this.config.webAuth);
 		const commandFiles: string[] = await globPromise(
 			`${__dirname}/../commands/**/*{.js,.ts}`
 		);
@@ -106,22 +88,6 @@ class Spencer extends Client {
 		schemaFiles.map(async (schemaFile: string) => {
 			const sch = require(schemaFile) as Schema;
 			this.schemas.set(sch.name, sch);
-		});
-	}
-	public embed(
-		data: MessageEmbedOptions,
-		interaction: CommandInteraction
-	): MessageEmbed {
-		return new MessageEmbed({
-			color: 'RANDOM',
-			...data,
-			footer: {
-				text: `${interaction.user.tag} | 👦 Spencer`,
-				iconURL: interaction.user.displayAvatarURL({
-					dynamic: true,
-					format: 'png',
-				}),
-			},
 		});
 	}
 }
