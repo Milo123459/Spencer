@@ -6,7 +6,12 @@ export const name: string = 'ready';
 export const run: RunFunction = async (client) => {
 	client.logger.success(`${client.user.tag} is now online!`);
 	const commands = [...client.commands.values()];
-	client.application.commands.set(commands);
+	await client.application.commands.set(commands);
+	console.log(
+		`commands: ${(await client.application.commands.fetch())
+			.map((cmd) => cmd.name)
+			.join(', ')}`
+	);
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
 		(await ReminderSchema.find({})).forEach(async (value: Document) => {
