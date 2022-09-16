@@ -10,12 +10,6 @@ export const run: RunFunction = async (client) => {
 	setInterval(async () => {
 		const ReminderSchema = await client.db.load('reminder');
 		(await ReminderSchema.find({})).forEach(async (value: Document) => {
-			console.log(
-				Date.now() - (value as any).Time,
-				!(Date.now() - (value as any).Time).toString().startsWith('-'),
-				Date.now() - (value as any).Time,
-				(value as any).Message
-			);
 			if (Date.now() >= (value as any).Time) {
 				let User: User = client.users.cache.get((value as any).User);
 				if (!User) {
