@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "cargo prisma"
+  output   = "../src/database/prisma.rs"
+}
+
+model Reminder {
+  id         Int      @id @default(autoincrement())
+  discord_id BigInt
+  message    String
+  remindAt   DateTime
+}

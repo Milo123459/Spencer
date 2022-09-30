@@ -3,3 +3,8 @@ dist
 config.json
 .husky/_
 node_modules
+.env
+
+# Added by cargo
+
+/target

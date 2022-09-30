@@ -1,0 +1,37 @@
+{
+    "commit_message": "$1: $2+",
+    "commit_message_arguments": [
+        {
+            "argument": 1,
+            "case": "lower",
+            "type_enums": [
+                "fix",
+                "feat",
+                "chore",
+                "refactor",
+                "docs",
+                "void",
+                "deps",
+                "ci"
+            ]
+        }
+    ],
+    "custom_tasks": [
+        {
+            "name": "fmt",
+            "execute": [
+                "cargo fmt"
+            ]
+        },
+        {
+            "name": "lint",
+            "execute": [
+                "cargo lint"
+            ]
+        }
+    ],
+    "hooks": [
+        "fmt",
+        "lint"
+    ]
+}
