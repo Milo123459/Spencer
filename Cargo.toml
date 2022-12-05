@@ -14,7 +14,7 @@ tokio = { features = ["macros", "rt-multi-thread", "tracing"], version = "1.21.2
 ms = "0.1.1"
 tracing = "0.1.36"
 tracing-subscriber = "0.3.15"
-serde = { version = "1.0.145", features = ["derive"] }
+serde = { version = "1.0.149", features = ["derive"] }
 prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.1" }
 prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.1" }
 
